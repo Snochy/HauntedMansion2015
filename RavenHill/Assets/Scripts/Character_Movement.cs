@@ -20,10 +20,10 @@ public class Character_Movement : MonoBehaviour {
         if (isEnabled)
         {
             if (Input.GetAxis("Couch") <= 0)
-                speedMod = Input.GetAxis("Run") * 3f;
+                speedMod = Input.GetAxis("Run") * 3f * 16;
             else speedMod = defaultSpeed * -.55f;
 
-            transform.localScale = new Vector3(1, 1 - Input.GetAxis("Couch") * .5f, 1);
+            transform.localScale = new Vector3(16, 16 - Input.GetAxis("Couch") * .5f * 16, 16);
 
             currentSpeed = defaultSpeed + speedMod;
             if (currentSpeed <= 0)
@@ -49,11 +49,10 @@ public class Character_Movement : MonoBehaviour {
                     moveDirection.y -= jumpSpeed * Time.deltaTime;
                 }
 
-                moveDirection.y -= 10 * Time.deltaTime;
+                moveDirection.y -= 160 * Time.deltaTime;
 
             }
-            if (Input.GetAxis("LookAround") > 0)
-                transform.Rotate(0, -Input.GetAxis("Rotate") * rotateSpeed, 0);
+            transform.Rotate(0, Input.GetAxis("Rotate") * rotateSpeed, 0);
 
             if ((controller.collisionFlags & CollisionFlags.Above) != 0)
             {

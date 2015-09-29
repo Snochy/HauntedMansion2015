@@ -11,8 +11,14 @@ public class CameraControl : MonoBehaviour {
 
    public float rotationDampening = 3.0f;
    private float z = 0.0f;
+   public float y = 0.0f;
+
+   public float yRotate = 0;
    public int zMinLimit = 140;
    public int zMaxLimit = 220;
+
+   public int yMinLimit = 140;
+   public int yMaxLimit = 220;
 
 	void Start () 
     {
@@ -26,14 +32,13 @@ public class CameraControl : MonoBehaviour {
 
     void LateUpdate()
     {
-        transform.position = tarPlayer.transform.position + Vector3.up;
+        transform.position = tarPlayer.transform.position + Vector3.up * 16;
 
         PositionChecker();
 
         
         z = ClampAngle(z, zMinLimit, zMaxLimit);
-        if (Input.GetAxis("LookAround") <= 0)
-            z -= Input.GetAxis("RotateCam");
+        z -= Input.GetAxis("RotateCam");
 
         if (Input.GetAxis("RotateCam") == 0)
 		{
@@ -43,7 +48,18 @@ public class CameraControl : MonoBehaviour {
 			z = Mathf.LerpAngle(currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime);
 		}
 
-        transform.rotation = Quaternion.Euler(tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y, z);
+        y = ClampAngle(y, yMinLimit, yMaxLimit);
+        y -= Input.GetAxis("LookAround") * 4;
+
+        if (Input.GetAxis("LookAround") == 0)
+        {
+            float targetRotationAngle = 0;
+            float currentRotationAngle = y;
+
+            y = Mathf.LerpAngle(currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime);
+        }
+
+        transform.rotation = Quaternion.Euler(tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y, z);
     }
 
     void PositionChecker()
