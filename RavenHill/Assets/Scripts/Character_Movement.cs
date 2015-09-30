@@ -52,7 +52,7 @@ public class Character_Movement : MonoBehaviour {
                 moveDirection.y -= 160 * Time.deltaTime;
 
             }
-            transform.Rotate(0, Input.GetAxis("Rotate") * rotateSpeed, 0);
+            transform.Rotate(0, -Input.GetAxis("Rotate") * rotateSpeed, 0);
 
             if ((controller.collisionFlags & CollisionFlags.Above) != 0)
             {
