@@ -38,62 +38,67 @@ public class CameraControl : MonoBehaviour {
 
     void LateUpdate()
     {		
-		PositionChecker();
+		if (!GamePause.isFrozen) {
+			//Swap desired shoulder if not looking to the side
+			if (Input.GetAxis ("LookSidetoSide") == 0)
+			if (Input.GetAxis ("Horizontal") > 0) 
+				desiredPosition.z = baseZ;
+			else if (Input.GetAxis ("Horizontal") < 0) 
+				desiredPosition.z = -baseZ;
 
-		if (Input.GetAxis ("Horizontal") > 0) 
-			desiredPosition.z = baseZ;
-		else if (Input.GetAxis ("Horizontal") < 0) 
-			desiredPosition.z = -baseZ;
+			//Angle outwards if stifting based on shoulder
+			angleAdjust = ClampAngle (angleAdjust, camYMinLimit, camYMaxLimit);
+			angleAdjust -= Input.GetAxis ("Horizontal") * 2;
+			//If buttons are pressed or looking up or down or side to side, else angle the camera outwards
+			if (Input.GetAxis ("Horizontal") == 0 || Input.GetAxis ("RotateCamUPDWN") != 0 || Input.GetAxis ("LookSidetoSide") != 0) {
+				float targetRotationAngle = 270;
+				float currentRotationAngle = camera.transform.localEulerAngles.y;			
+				angleAdjust = Mathf.LerpAngle (currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime);
+			} else
+				angleAdjust = Mathf.LerpAngle (camera.transform.localEulerAngles.y, angleAdjust, Time.deltaTime * 20f);
 
-		angleAdjust = ClampAngle(angleAdjust, camYMinLimit, camYMaxLimit);
-		angleAdjust -= Input.GetAxis ("Horizontal") * 2;
-		if (Input.GetAxis ("Horizontal") == 0)
-		{
-			float targetRotationAngle = 270;
-			float currentRotationAngle = camera.transform.localEulerAngles.y;
-			
-			angleAdjust = Mathf.LerpAngle(currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime);
-		}
-		camera.transform.localRotation = Quaternion.Euler(camera.transform.localEulerAngles.x, angleAdjust, camera.transform.localEulerAngles.z);
-
-		camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, desiredPosition, Time.deltaTime * 4f);
-
-		transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + Vector3.up * 16, Time.deltaTime * 8f);
+			//Adjust camera to desired position and rotation
+			camera.transform.localRotation = Quaternion.Euler (camera.transform.localEulerAngles.x, angleAdjust, camera.transform.localEulerAngles.z);
+			camera.transform.localPosition = Vector3.Lerp (camera.transform.localPosition, desiredPosition, Time.deltaTime);
         
-        z = ClampAngle(z, zMinLimit, zMaxLimit);
-        z -= Input.GetAxis("RotateCam") * 2;
-
-        if (Input.GetAxis("RotateCam") == 0)
-		{
-            float targetRotationAngle = 180;
-			float currentRotationAngle = transform.eulerAngles.z;
-
-			z = Mathf.LerpAngle(currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime);
+			//Camera up and down looking
+			z = ClampAngle (z, zMinLimit, zMaxLimit);
+			z -= Input.GetAxis ("RotateCamUPDWN") * 2;
+			if (Input.GetAxis ("RotateCamUPDWN") == 0) {
+				float targetRotationAngle = 180;
+				float currentRotationAngle = transform.eulerAngles.z;
+				z = Mathf.LerpAngle (currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime * 2);
+			}
+			//Camera Looking side to side adjustments
+			y = ClampAngle (y, yMinLimit, yMaxLimit);
+			y -= Input.GetAxis ("LookSidetoSide") * 3;
+			if (Input.GetAxis ("LookSidetoSide") == 0) {
+				float targetRotationAngle = 0;
+				float currentRotationAngle = y;
+				y = Mathf.LerpAngle (currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime * 3);
+			}
+		
+			//Camera Chasr, Also backups with character
+			if (Vector3.Dot (tarPlayer.transform.position - camera.transform.position, camera.transform.forward) < 0f) 
+				transform.position = tarPlayer.transform.position + Vector3.up * 16;
+			else if (Input.GetAxis ("Vertical") >= 0)
+				transform.position = Vector3.Lerp (transform.position, tarPlayer.transform.position + tarPlayer.transform.up * 16, Time.deltaTime * 8f);
+			else
+				transform.position = Vector3.Lerp (transform.position, tarPlayer.transform.position + tarPlayer.transform.up * 16, .5f);		
+			transform.rotation = Quaternion.Euler (tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y, z);
+		
+			WallPenFixer ();
 		}
-
-        y = ClampAngle(y, yMinLimit, yMaxLimit);
-        y -= Input.GetAxis("LookAround") * 4;
-
-        if (Input.GetAxis("LookAround") == 0)
-        {
-            float targetRotationAngle = 0;
-            float currentRotationAngle = y;
-
-            y = Mathf.LerpAngle(currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime);
-        }
-
-        transform.rotation = Quaternion.Euler(tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y, z);
     }
 
-    void PositionChecker()
+    void WallPenFixer()
     {
-
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, camera.transform.position - transform.position, out hit, Mathf.Infinity, layerMask))
-            if (hit.transform.gameObject != camera)
-                camera.transform.position = hit.point;
-		else if (Physics.Raycast(camera.transform.position, camera.transform.position - transform.position, out hit, Vector3.Distance(camera.transform.position, camera.transform.position), layerMask))
-                camera.transform.position = Vector3.Lerp(hit.point, transform.position, 0.1f);
+		if (Vector3.Distance(camera.transform.position, transform.position) > 5f) {
+			RaycastHit hit;
+			if (Physics.Raycast (transform.position, camera.transform.position - transform.position, out hit, Mathf.Infinity, layerMask))
+			if (hit.transform.gameObject != camera)
+				camera.transform.position = hit.point;
+		}
     }
 
     private static float ClampAngle(float angle, float min, float max)

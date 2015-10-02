@@ -16,52 +16,46 @@ public class Character_Movement : MonoBehaviour {
     public bool isEnabled;
 
     void Update() {
+		if (!GamePause.isFrozen) {
+			if (isEnabled) {
+				if (Input.GetAxis ("Couch") <= 0)
+					speedMod = Input.GetAxis ("Run") * 3f * 16;
+				else
+					speedMod = defaultSpeed * -.55f;
 
-        if (isEnabled)
-        {
-            if (Input.GetAxis("Couch") <= 0)
-                speedMod = Input.GetAxis("Run") * 3f * 16;
-            else speedMod = defaultSpeed * -.55f;
+				transform.localScale = new Vector3 (16, 16 - Input.GetAxis ("Couch") * .5f * 16, 16);
 
-            transform.localScale = new Vector3(16, 16 - Input.GetAxis("Couch") * .5f * 16, 16);
+				currentSpeed = defaultSpeed + speedMod;
+				if (currentSpeed <= 0)
+					currentSpeed = 0;
 
-            currentSpeed = defaultSpeed + speedMod;
-            if (currentSpeed <= 0)
-                currentSpeed = 0;
+				CharacterController controller = GetComponent<CharacterController> ();
+				if (controller.isGrounded) {
+					moveDirection = new Vector3 (Input.GetAxis ("Vertical"), 0, -Input.GetAxis ("Horizontal"));
+					moveDirection = transform.TransformDirection (moveDirection);
+					moveDirection *= (float)currentSpeed;
 
-            CharacterController controller = GetComponent<CharacterController>();
-            if (controller.isGrounded)
-            {
-                moveDirection = new Vector3(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal"));
-                moveDirection = transform.TransformDirection(moveDirection);
-                moveDirection *= (float)currentSpeed;
+					if (Input.GetKey (KeyCode.Space)) {
+						moveDirection.y = jumpSpeed;
+					}
+				} else {
 
-                if (Input.GetKey(KeyCode.Space))
-                {
-                    moveDirection.y = jumpSpeed;
-                }
-            }
-            else
-            {
+					if (moveDirection.y >= 1) {
+						moveDirection.y -= jumpSpeed * Time.deltaTime;
+					}
 
-                if (moveDirection.y >= 1)
-                {
-                    moveDirection.y -= jumpSpeed * Time.deltaTime;
-                }
+					moveDirection.y -= 160 * Time.deltaTime;
 
-                moveDirection.y -= 160 * Time.deltaTime;
+				}
+				transform.Rotate (0, -Input.GetAxis ("Rotate") * rotateSpeed, 0);
 
-            }
-            transform.Rotate(0, -Input.GetAxis("Rotate") * rotateSpeed, 0);
-
-            if ((controller.collisionFlags & CollisionFlags.Above) != 0)
-            {
-                if (moveDirection.y > 0)
-                {
-                    moveDirection.y = 0;
-                }
-            }
-            controller.Move(moveDirection * Time.deltaTime);
-        }
+				if ((controller.collisionFlags & CollisionFlags.Above) != 0) {
+					if (moveDirection.y > 0) {
+						moveDirection.y = 0;
+					}
+				}
+				controller.Move (moveDirection * Time.deltaTime);
+			}
+		}
 	}
 }

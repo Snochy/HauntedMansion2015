@@ -1,42 +1,17 @@
 fileFormatVersion: 2
-guid: c260bffdf7b019a46903da7ff4082f89
-timeCreated: 1443553768
+guid: 7f9840933dca68e47a99867f36cbd221
+timeCreated: 1443730931
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: MainHall01
+    100000: Main_Hall_Ground01
     100002: //RootNode
-    100004: Small_Stair_Collider01_polySurface2_GrandCollider
-    100006: Mesh_Main_Hall01_polySurface2_GrandCollider
-    100008: MainHall_Mesh01
-    100010: Main_Hall_Mesh01
-    100012: Mesh_Main_Hall01
-    400000: MainHall01
+    400000: Main_Hall_Ground01
     400002: //RootNode
-    400004: Small_Stair_Collider01_polySurface2_GrandCollider
-    400006: Mesh_Main_Hall01_polySurface2_GrandCollider
-    400008: MainHall_Mesh01
-    400010: Main_Hall_Mesh01
-    400012: Mesh_Main_Hall01
-    2300000: MainHall01
-    2300002: Small_Stair_Collider01_polySurface2_GrandCollider
-    2300004: Mesh_Main_Hall01_polySurface2_GrandCollider
-    2300006: MainHall_Mesh01
-    2300008: Main_Hall_Mesh01
-    2300010: Mesh_Main_Hall01
-    3300000: MainHall01
-    3300002: Small_Stair_Collider01_polySurface2_GrandCollider
-    3300004: Mesh_Main_Hall01_polySurface2_GrandCollider
-    3300006: MainHall_Mesh01
-    3300008: Main_Hall_Mesh01
-    3300010: Mesh_Main_Hall01
-    4300000: MainHall01
-    4300002: Small_Stair_Collider01_polySurface2_GrandCollider
-    4300004: Mesh_Main_Hall01_polySurface2_GrandCollider
-    4300006: MainHall_Mesh01
-    4300008: Main_Hall_Mesh01
-    4300010: Mesh_Main_Hall01
+    2300000: Main_Hall_Ground01
+    3300000: Main_Hall_Ground01
+    4300000: Main_Hall_Ground01
   materials:
     importMaterials: 0
     materialName: 0
