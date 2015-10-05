@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a1ade89e15bd7374db3b2963ea589a38
-timeCreated: 1444026384
+timeCreated: 1444069795
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -85,7 +85,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Depth
       value:
-        scalar[0]: 0
+        scalar[0]: -1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -121,7 +121,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 1, y: 1}
+      scale: {x: 20, y: 20}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 0
@@ -145,6 +145,13 @@ SubstanceImporter:
         data:
           first:
             name: _DetailNormalMap
+          second:
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
+            offset: {x: 0, y: 0}
+        data:
+          first:
+            name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
@@ -184,13 +191,6 @@ SubstanceImporter:
             texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
-        data:
-          first:
-            name: _MetallicGlossMap
-          second:
-            texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
-            offset: {x: 0, y: 0}
       floats:
         data:
           first:
@@ -206,10 +206,6 @@ SubstanceImporter:
           second: .5
         data:
           first:
-            name: _Parallax
-          second: .0199999996
-        data:
-          first:
             name: _ZWrite
           second: 1
         data:
@@ -218,8 +214,16 @@ SubstanceImporter:
           second: .5
         data:
           first:
+            name: _Metallic
+          second: 0
+        data:
+          first:
             name: _BumpScale
           second: 1
+        data:
+          first:
+            name: _Parallax
+          second: .0199999996
         data:
           first:
             name: _OcclusionStrength
@@ -235,10 +239,6 @@ SubstanceImporter:
         data:
           first:
             name: _Mode
-          second: 0
-        data:
-          first:
-            name: _Metallic
           second: 0
       colors:
         data:
