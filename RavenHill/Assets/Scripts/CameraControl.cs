@@ -24,6 +24,8 @@ public class CameraControl : MonoBehaviour {
    public int yMinLimit = 140;
    public int yMaxLimit = 220;
 
+   public bool CamYAxis = false;
+
 	void Start () 
     {
         camera = transform.FindChild("Main Camera").gameObject;
@@ -33,16 +35,19 @@ public class CameraControl : MonoBehaviour {
 
         desiredPosition = camera.transform.localPosition;
 		baseZ = camera.transform.localPosition.z;
+        CamYAxis = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamY");
 
 	}
 
     void LateUpdate()
-    {		
+    {
+        CamYAxis = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamY");
+
 		if (!GamePause.isFrozen) {
 			//Swap desired shoulder if not looking to the side
 			if (Input.GetAxis ("LookSidetoSide") == 0)
-			if (Input.GetAxis ("Horizontal") > 0) 
-				desiredPosition.z = baseZ;
+			    if (Input.GetAxis ("Horizontal") > 0) 
+				    desiredPosition.z = baseZ;
 			else if (Input.GetAxis ("Horizontal") < 0) 
 				desiredPosition.z = -baseZ;
 
@@ -63,7 +68,9 @@ public class CameraControl : MonoBehaviour {
         
 			//Camera up and down looking
 			z = ClampAngle (z, zMinLimit, zMaxLimit);
-			z -= Input.GetAxis ("RotateCamUPDWN") * 2;
+            if(!CamYAxis)
+			    z -= Input.GetAxis ("RotateCamUPDWN") * 2;
+            else z += Input.GetAxis("RotateCamUPDWN") * 2;
 			if (Input.GetAxis ("RotateCamUPDWN") == 0) {
 				float targetRotationAngle = 180;
 				float currentRotationAngle = transform.eulerAngles.z;
@@ -78,7 +85,7 @@ public class CameraControl : MonoBehaviour {
 				y = Mathf.LerpAngle (currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime * 3);
 			}
 		
-			//Camera Chasr, Also backups with character
+			//Camera Chaser, Also backups with character
 			if (Vector3.Dot (tarPlayer.transform.position - camera.transform.position, camera.transform.forward) < 0f) 
 				transform.position = tarPlayer.transform.position + Vector3.up * 16;
 			else if (Input.GetAxis ("Vertical") >= 0)
@@ -89,6 +96,14 @@ public class CameraControl : MonoBehaviour {
 		
 			WallPenFixer ();
 		}
+
+        if (GamePause.isLoading)
+        {
+            camera.transform.localRotation = Quaternion.Euler(camera.transform.localEulerAngles.x, angleAdjust, camera.transform.localEulerAngles.z);
+            camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, desiredPosition, Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * 16, .5f);
+            transform.rotation = Quaternion.Euler(tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y, 180f);
+        }
     }
 
     void WallPenFixer()

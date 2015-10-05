@@ -41,6 +41,15 @@ public class GameConditions : MonoBehaviour {
         go.GetComponent<Character_Movement>().isEnabled = true;
     }
 
+    public void SetPlayerPref(string name, bool condition)
+    {
+        PlayerPrefsX.SetBool(name, condition);
+    }
+    public bool GetPlayerPref(string name)
+    {
+        return PlayerPrefsX.GetBool(name);
+    }
+
 
     
 }
