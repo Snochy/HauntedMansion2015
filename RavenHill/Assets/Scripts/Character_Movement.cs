@@ -17,6 +17,8 @@ public class Character_Movement : MonoBehaviour {
 
     private bool rotationY;
 
+	public GameObject anim;
+
     void Start()
     {
         rotationY = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamX");
@@ -25,7 +27,8 @@ public class Character_Movement : MonoBehaviour {
     void Update() {
         rotationY = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamX");
 
-		if (!GamePause.isFrozen) {
+		if (!GamePause.isFrozen) 
+		{
 			if (isEnabled) {
 				if (Input.GetAxis ("Couch") <= 0)
 					speedMod = Input.GetAxis ("Run") * 3f * 16;
@@ -63,6 +66,13 @@ public class Character_Movement : MonoBehaviour {
 				}
 				controller.Move (moveDirection * Time.deltaTime);
 			}
+
+			if (Input.GetAxis ("Vertical") == 0)
+				anim.GetComponent<Animation>().CrossFade ("Idle");
+			if (Input.GetAxis ("Vertical") != 0)
+				anim.GetComponent<Animation>().CrossFade ("Walk");
+			if(Input.GetAxis ("Run") != 0)
+				anim.GetComponent<Animation>().CrossFade ("Run");
 		}
 
         if (GamePause.isLoading)
