@@ -17,7 +17,7 @@ public class Character_Movement : MonoBehaviour {
 
     private bool rotationY;
 
-	public GameObject anim;
+	public Animator anim;
 
     void Start()
     {
@@ -67,12 +67,10 @@ public class Character_Movement : MonoBehaviour {
 				controller.Move (moveDirection * Time.deltaTime);
 			}
 
-			if (Input.GetAxis ("Vertical") == 0)
-				anim.GetComponent<Animation>().CrossFade ("Idle");
-			if (Input.GetAxis ("Vertical") != 0)
-				anim.GetComponent<Animation>().CrossFade ("Walk");
+			anim.SetFloat("Direction", Input.GetAxis ("Vertical"));
 			if(Input.GetAxis ("Run") != 0)
-				anim.GetComponent<Animation>().CrossFade ("Run");
+				anim.SetBool("Running", true);
+			else anim.SetBool("Running", false);
 		}
 
         if (GamePause.isLoading)

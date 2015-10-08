@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a766bb9fe1c597e4b90c81d9fa9c2b97
-timeCreated: 1444327386
+guid: e4993c297ad95f548b65e33d31711215
+timeCreated: 1444335429
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -314,10 +314,20 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nInbetween bone default rotation found in this file
+      is different from the one found in the source avatar:\n\t'bn_L_Knee_b01' : rotation
+      error = 14.102155 deg\n\t'bn_R_Knee_b01' : rotation error = 11.221809 deg\n\nClip
+      'Take 001' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'bn_spine_d01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'bn_neck_b01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'bn_L_Knee_b01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'bn_L_Ball01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'bn_R_Knee_b01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'bn_R_Ball01'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -334,11 +344,11 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -357,11 +367,11 @@ ModelImporter:
       - path: Joints/bn_spine_a01/be_L_ButtFixer01
         weight: 0
       - path: Joints/bn_spine_a01/be_L_ButtFixer01/bn_L_ButtFixer01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/be_R_ButtFixer01
         weight: 0
       - path: Joints/bn_spine_a01/be_R_ButtFixer01/bn_R_ButtFixer01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_L_Hib01
         weight: 1
       - path: Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01
@@ -399,13 +409,13 @@ ModelImporter:
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/be_L_Shoulder_Fixer01
         weight: 0
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/be_L_Shoulder_Fixer01/bn_L_Shoulder_Fixer01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01
         weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01
         weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_elbowTwist_a01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01
         weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Index_a01
@@ -447,37 +457,37 @@ ModelImporter:
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_LowerLid01
         weight: 0
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_LowerLid01/bn_L_LowerLid01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_UpperLid01
         weight: 0
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_UpperLid01/bn_L_UpperLid01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_LowerLid01
         weight: 0
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_LowerLid01/bn_R_LowerLid01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_UpperLid01
         weight: 0
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_UpperLid01/bn_R_UpperLid01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01/bn_L_Braid_h01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01/bn_L_Braid_h01/bn_L_Braid_i01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_eye01
         weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_eye01/be_L_eye01
@@ -487,23 +497,23 @@ ModelImporter:
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_Mouth01/be_Mouth01
         weight: 0
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01/bn_R_Braid_h01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01/bn_R_Braid_h01/bn_R_Braid_i01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_eye01
         weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_eye01/be_R_eye01
@@ -513,13 +523,13 @@ ModelImporter:
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/be_R_Shoulder_Fixer01
         weight: 0
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/be_R_Shoulder_Fixer01/bn_R_Shoulder_Fixer01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01
         weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01
         weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_elbowTwist_a01
-        weight: 0
+        weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01
         weight: 1
       - path: Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Index_a01
@@ -610,11 +620,11 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -886,11 +896,11 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 1
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
@@ -1178,9 +1188,441 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    human: []
+    human:
+    - boneName: bn_spine_a01
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Hib01
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Hib01
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Knee_a01
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Knee_a01
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Ankle01
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Ankle01
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_spine_b01
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_spine_c01
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_neck_a01
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_neck_c01
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Clavicle01
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Clavicle01
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_shoulder01
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_shoulder01
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_elbow01
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_elbow01
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_wrist01
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_wrist01
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Toes01
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Toes01
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_eye01
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_eye01
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_Mouth01
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_thumb_a01
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_thumb_b01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_thumb_c01
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Index_a01
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Index_b01
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Index_c01
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Middle_a01
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Middle_b01
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Middle_c01
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Ring_a01
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Ring_b01
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_Ring_c01
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_pinky_a01
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_pinky_b01
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_L_pinky_c01
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_thumb_a01
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_thumb_b01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_thumb_c01
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Index_a01
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Index_b01
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Index_c01
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Middle_a01
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Middle_b01
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Middle_c01
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Ring_a01
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Ring_b01
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_Ring_c01
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_pinky_a01
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_pinky_b01
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bn_R_pinky_c01
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     skeleton:
-    - name: Luc_Animation(Clone)
+    - name: Luc_Animation 1(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -1815,7 +2257,7 @@ ModelImporter:
     rootMotionBoneName: bn_spine_a01
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
