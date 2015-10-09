@@ -7,7 +7,7 @@ public class CameraControl : MonoBehaviour {
     private GameObject camera;
     private Vector3 desiredPosition;
     float distance;
-   LayerMask layerMask = ~(1 << 2);
+    LayerMask layerMask = ~(1 << 2);
 
    public float rotationDampening = 3.0f;
    private float z = 0.0f;
@@ -30,12 +30,18 @@ public class CameraControl : MonoBehaviour {
     {
         camera = transform.FindChild("Main Camera").gameObject;
         Physics.IgnoreCollision(GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>(), camera.GetComponent<Collider>());
+
         if(GameObject.FindGameObjectWithTag("Player"))
             tarPlayer = GameObject.FindGameObjectWithTag("Player");
 
         desiredPosition = camera.transform.localPosition;
 		baseZ = camera.transform.localPosition.z;
         CamYAxis = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamY");
+
+		Physics.IgnoreLayerCollision(9,2);
+		Physics.IgnoreLayerCollision(10,10);
+		Physics.IgnoreLayerCollision(10,6);
+		Physics.gravity = Vector3.down * 90f;
 
 	}
 
