@@ -130,6 +130,24 @@ ModelImporter:
     100244: Mesh_Skirt01
     100246: Mesh_Tongue
     100248: Mesh_Upper_Gum01
+    100250: bn_L_Tassle_a01
+    100252: bn_L_Tassle_b01
+    100254: bn_L_Tassle_c01
+    100256: bn_R_Tassle_a01
+    100258: bn_R_Tassle_b01
+    100260: bn_R_Tassle_c01
+    100262: FK_L_elbow01
+    100264: FK_L_shoulder01
+    100266: FK_L_wrist01
+    100268: FK_R_elbow01
+    100270: FK_R_shoulder01
+    100272: FK_R_wrist01
+    100274: IK_L_elbow01
+    100276: IK_L_shoulder01
+    100278: IK_L_wrist01
+    100280: IK_R_elbow01
+    100282: IK_R_shoulder01
+    100284: IK_R_wrist01
     400000: be_L_ButtFixer01
     400002: be_L_eye01
     400004: be_L_LowerLid01
@@ -255,6 +273,24 @@ ModelImporter:
     400244: Mesh_Skirt01
     400246: Mesh_Tongue
     400248: Mesh_Upper_Gum01
+    400250: bn_L_Tassle_a01
+    400252: bn_L_Tassle_b01
+    400254: bn_L_Tassle_c01
+    400256: bn_R_Tassle_a01
+    400258: bn_R_Tassle_b01
+    400260: bn_R_Tassle_c01
+    400262: FK_L_elbow01
+    400264: FK_L_shoulder01
+    400266: FK_L_wrist01
+    400268: FK_R_elbow01
+    400270: FK_R_shoulder01
+    400272: FK_R_wrist01
+    400274: IK_L_elbow01
+    400276: IK_L_shoulder01
+    400278: IK_L_wrist01
+    400280: IK_R_elbow01
+    400282: IK_R_shoulder01
+    400284: IK_R_wrist01
     4300000: Mesh_Legs01
     4300002: Mesh_Front_Bang01
     4300004: Mesh_L_Ear01

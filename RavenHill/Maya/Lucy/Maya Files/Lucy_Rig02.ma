@@ -1,29 +1,29 @@
 //Maya ASCII 2015 scene
 //Name: Lucy_Rig02.ma
-//Last modified: Thu, Oct 08, 2015 11:24:00 AM
+//Last modified: Fri, Oct 09, 2015 10:05:37 AM
 //Codeset: 1252
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
-		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.16 ";
+		 -nodeType "mentalrayItemsList" -dataType "byteArray" "Mayatomr" "2015.0 - 3.12.1.18 ";
 requires -nodeType "ngSkinLayerData" -dataType "ngSkinLayerDataStorage" "ngSkinTools" "1.0.954";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2015";
 fileInfo "version" "2015";
-fileInfo "cutIdentifier" "201405190330-916664";
-fileInfo "osv" "Microsoft Windows 7 Enterprise Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
+fileInfo "cutIdentifier" "201503261530-955654";
+fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -51.600692421126027 24.892257730498319 4.1412117093767975 ;
-	setAttr ".r" -type "double3" 1069.4616466497639 3152.1999999985001 -4.1426624223065531e-014 ;
+	setAttr ".t" -type "double3" 47.847190169904877 33.145849904790239 49.358718409300721 ;
+	setAttr ".r" -type "double3" 1067.0616466490469 4007.7999999954995 -2.3674685068039987e-015 ;
 	setAttr ".rp" -type "double3" 1.7763568394002505e-015 0 -1.7763568394002505e-015 ;
 	setAttr ".rpt" -type "double3" -1.6884878252596137e-015 -2.8823943824091392e-016 
 		4.2703665234962448e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 53.229261204197677;
+	setAttr ".coi" 70.235609294486025;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -45,12 +45,12 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.9966381777175872 18.730430737991032 101.59627277351251 ;
+	setAttr ".t" -type "double3" 1.5931205555526924 21.8288523073489 101.59627277351251 ;
 createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 7.3395295045564684;
+	setAttr ".ow" 9.844452327378491;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -58,13 +58,13 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 23.53126317189238 2.9705490102091039 ;
+	setAttr ".t" -type "double3" 100.1 23.26208689993306 2.2872553967739027 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 3.9708055458554949;
+	setAttr ".ow" 13.645166401630222;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -1714,6 +1714,7 @@ createNode mesh -n "Mesh_Cap01Shape" -p "Mesh_Cap01";
 	setAttr ".uvst[1].uvsn" -type "string" "UVW";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".clst[0].clsn" -type "string" "colorSet1";
 	setAttr ".bw" 9.959091;
 	setAttr ".vcs" 2;
 createNode mesh -n "Mesh_Cap01ShapeOrig" -p "Mesh_Cap01";
@@ -24717,7 +24718,6 @@ createNode pointConstraint -n "IK_R_Eyes01_pointConstraint1" -p "IK_R_Eyes01";
 	setAttr -k on ".w0";
 createNode transform -n "Joints" -p "GlobalControl01";
 	setAttr ".ovdt" 1;
-	setAttr ".ove" yes;
 createNode joint -n "bn_spine_a01" -p "Joints";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
@@ -26579,6 +26579,68 @@ createNode joint -n "be_Mouth01" -p "bn_Mouth01";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -29.744881296942204 89.999999999999972 0 ;
 	setAttr ".radi" 0.62295509369133351;
+createNode joint -n "bn_L_Tassle_a01" -p "bn_neck_c01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 2.6402107361243736 -1.4561003850895975 -2.5359349973576482 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 90.000000000000014 179.99999999999994 0 ;
+	setAttr ".bps" -type "matrix" 5.6655388976479796e-016 -1 1.1102230246251496e-016 0
+		 1 6.7757619222731381e-016 -2.2204460492503141e-016 0 1.1102230246251551e-016 -1.2325951644078309e-031 1 0
+		 2.5359349973576504 23.844641874340923 1.425960465081153 1;
+	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
+createNode joint -n "bn_L_Tassle_b01" -p "bn_L_Tassle_a01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 1.1509740407555424 -2.5556757615853125e-016 -9.4503407565730743e-048 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".bps" -type "matrix" 5.4895730587092782e-016 -1 1.0112771408415094e-016 -7.7037197775489434e-034
+		 1 6.7757619222731381e-016 -2.2204460492503141e-016 6.8422776578360209e-049 1.1102230246251551e-016 -1.2325951644078314e-031 1 -3.2218256853879349e-049
+		 2.5359349973576508 22.693667833585383 1.4259604650811537 1;
+	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
+createNode joint -n "bn_L_Tassle_c01" -p "bn_L_Tassle_b01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 1.2395740020590686 -4.1286107934381881e-016 -2.7524071956254599e-016 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".bps" -type "matrix" 5.526761019569835e-016 -1 9.7144514654700828e-017 0
+		 1 6.7757619222731381e-016 -2.2204460492503136e-016 0 1.1102230246251551e-016 -2.6312004261255756e-031 1 0
+		 2.5359349973576517 21.454093831526315 1.4259604650811535 1;
+	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
+createNode joint -n "bn_R_Tassle_a01" -p "bn_neck_c01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 2.6401688617834509 -1.4560999200084426 2.5359300000000022 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" -90.000000000000028 7.0167092985349115e-015 7.0167092985348507e-015 ;
+	setAttr ".bps" -type "matrix" 4.4408920985006271e-016 1 -1.1102230246251541e-016 0
+		 1 -3.3306690738754681e-016 -4.9303806576313238e-032 0 1.110223024625158e-016 -1.4791141972893967e-031 -1 0
+		 -2.53593 23.8446 1.4259600000000003 1;
+	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
+createNode joint -n "bn_R_Tassle_b01" -p "bn_R_Tassle_a01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -1.1509 4.4408920985006262e-016 4.4408920985006262e-016 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".bps" -type "matrix" 4.4408920985006262e-016 1 -1.040834085586084e-016 0
+		 1 -3.3306690738754696e-016 0 0 1.110223024625158e-016 -1.4791141972893967e-031 -1 0
+		 -2.53593 22.6937 1.4259600000000001 1;
+	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
+createNode joint -n "bn_R_Tassle_c01" -p "bn_R_Tassle_b01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" -1.2395999999999994 8.8817841970012523e-016 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".bps" -type "matrix" 4.3021142204224816e-016 1 -1.2490009027033001e-016 0
+		 1 -3.3306690738754681e-016 1.1102230246251565e-016 0 1.110223024625158e-016 -1.4791141972893963e-031 -1 0
+		 -2.53593 21.4541 1.4259600000000001 1;
+	setAttr ".radi" 0.5;
+	setAttr ".liw" yes;
 createNode orientConstraint -n "bn_neck_b01_orientConstraint1" -p "bn_neck_b01";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "cc_Neck_b01W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -30148,49 +30210,49 @@ createNode hyperGraphInfo -n "nodeEditorPanel2Info";
 createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n"
-		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n"
+		+ "                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n"
 		+ "                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n"
 		+ "                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
 		+ "            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n"
 		+ "            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
-		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
-		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
-		+ "            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n"
+		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n"
+		+ "                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n"
+		+ "                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n"
+		+ "            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n"
 		+ "            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 1\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n"
-		+ "                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n"
+		+ "                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"vp2Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n"
 		+ "                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n"
 		+ "                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n"
+		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n"
 		+ "            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n"
 		+ "            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n"
-		+ "                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 8192\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n"
-		+ "                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 0\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n"
+		+ "                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 1\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n"
+		+ "                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n"
 		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                $editorName;\n            modelEditor -e -viewSelected 0 $editorName;\n            modelEditor -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
-		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 8192\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
+		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
+		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
 		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -docTag \"isolOutln_fromSeln\" \n                -showShapes 0\n"
 		+ "                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n"
 		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                -ignoreHiddenAttribute 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n"
 		+ "            -showShapes 0\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n"
-		+ "            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
-		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n"
-		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n"
-		+ "                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
-		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
-		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
-		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n"
-		+ "                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
+		+ "            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n"
+		+ "                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n"
+		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n"
+		+ "                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
+		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
+		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
 		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n"
 		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
@@ -30203,8 +30265,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
 		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
 		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 8192\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -30367,11 +30429,11 @@ createNode hyperGraphInfo -n "nodeView4";
 createNode ikSCsolver -n "ikSCsolver";
 createNode hyperGraphInfo -n "nodeView5";
 createNode dagPose -n "bindPose2";
-	setAttr -s 77 ".wm";
+	setAttr -s 83 ".wm";
 	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".wm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".wm[2]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr -s 81 ".xm";
+	setAttr -s 87 ".xm";
 	setAttr ".xm[0]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
 	setAttr ".xm[1]" -type "matrix" "xform" 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -30625,12 +30687,30 @@ createNode dagPose -n "bindPose2";
 	setAttr ".xm[80]" -type "matrix" "xform" 1 1 1 1.3877787807814457e-017 1.0408340855860843e-017
 		 0 0 1.7763568394002505e-015 9.4108748571741785e-017 4.4408920985006262e-016 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
-	setAttr -s 77 ".m";
-	setAttr -s 77 ".p";
-	setAttr -s 81 ".g[0:80]" yes yes yes yes no no no no no no no no no 
+	setAttr ".xm[81]" -type "matrix" "xform" 1 1 1 1.5707963267948968 3.1415926535897922
+		 0 0 2.6402107361243736 -1.4561003850895979 -2.5359349973576482 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[82]" -type "matrix" "xform" 1 1 1 -4.9303806576313238e-032 2.9556944744573645e-018
+		 -6.1542064416504563e-018 0 1.1509740407555427 -8.8817841970012523e-016 2.2204460492503131e-016 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[83]" -type "matrix" "xform" 1 1 1 0 2.4651903288156619e-031 1.1442377452219681e-017 0 1.2395740020590686
+		 4.4408920985006262e-016 -2.2204460492503131e-016 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+		0 0 0 1 1 1 1 yes;
+	setAttr ".xm[84]" -type "matrix" "xform" 1 1 1 -1.570796326794897 3.697785493223483e-032
+		 -4.4373425918681914e-031 0 2.6401688617834509 -1.456099920008443 2.5359300000000022 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[85]" -type "matrix" "xform" 0.99999999999999989 1.0000000000000002 1 7.915668120972459e-017
+		 -1.2325951644078312e-032 1.3877787807814546e-017 0 -1.1509 0 0 0 0 0 0 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr ".xm[86]" -type "matrix" "xform" 1 1 1 4.9303806576313238e-032 4.9303806576313238e-032
+		 -1.3866695599588106e-032 0 -1.2396000000000029 8.8817841970012523e-016 0 0 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 1 yes;
+	setAttr -s 83 ".m";
+	setAttr -s 83 ".p";
+	setAttr -s 87 ".g[0:86]" yes yes yes yes no no no no no no no no no 
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
 		no no no no no no no no no no no no no no no no no no no no no no no no no no no 
-		no no no no no no no yes yes yes yes no yes yes;
+		no no no no no no no yes yes yes yes no yes yes yes yes yes yes yes yes;
 	setAttr ".bp" yes;
 createNode unitConversion -n "unitConversion23";
 	setAttr ".cf" 0.017453292519943295;
@@ -32706,18 +32786,15 @@ createNode objectSet -n "tweakSet17";
 	setAttr ".ihi" 0;
 	setAttr ".vo" yes;
 createNode skinCluster -n "SkinCluster_Cap01";
-	setAttr -s 40 ".bw";
+	setAttr -s 37 ".bw";
 	setAttr ".bw[17]" 0.0036630479791842016;
 	setAttr ".bw[20]" 1.1233218778941041e-007;
-	setAttr ".bw[25]" -1.#INF;
 	setAttr ".bw[63]" 1.2607157479804669e-009;
 	setAttr ".bw[65]" 3.8545975042288041e-009;
 	setAttr ".bw[67]" 9.3633740227436975e-009;
 	setAttr ".bw[69]" 5.5605333511927408e-008;
 	setAttr ".bw[71]" 9.6740801553152784e-009;
 	setAttr ".bw[73]" 1.2607157479804669e-009;
-	setAttr ".bw[74]" -1.#INF;
-	setAttr ".bw[75]" -1.#INF;
 	setAttr ".bw[221]" 6.8584131703977959e-006;
 	setAttr ".bw[222]" 1;
 	setAttr ".bw[225]" 1;
@@ -32776,32 +32853,55 @@ createNode skinCluster -n "SkinCluster_Cap01";
 	setAttr ".wl[25].w[0]"  1;
 	setAttr ".wl[26].w[0]"  1;
 	setAttr ".wl[27].w[0]"  1;
-	setAttr ".wl[28].w[0]"  1;
-	setAttr ".wl[29].w[0]"  1;
-	setAttr ".wl[30].w[0]"  1;
-	setAttr ".wl[31].w[0]"  1;
+	setAttr -s 4 ".wl[28].w[0:3]"  0.99356768800642947 0.0064067436435255214 
+		2.5505719826631373e-005 6.263021837396491e-008;
+	setAttr -s 4 ".wl[29].w[0:3]"  0.99699842205419309 0.0029962667643045815 
+		5.303904171228561e-006 7.2773311005398405e-009;
+	setAttr -s 4 ".wl[30].w[0:3]"  0.98414000506205435 0.015818111950892423 
+		4.1803537499546322e-005 7.9449553685815214e-008;
+	setAttr -s 4 ".wl[31].w[0:3]"  0.9724131751881806 0.027404385006441392 
+		0.00018159846417218934 8.4134120581847117e-007;
 	setAttr ".wl[32].w[0]"  1;
-	setAttr ".wl[33].w[0]"  1;
-	setAttr ".wl[34].w[0]"  1;
-	setAttr ".wl[35].w[0]"  1;
-	setAttr ".wl[36].w[0]"  1;
-	setAttr ".wl[37].w[0]"  1;
-	setAttr ".wl[38].w[0]"  1;
-	setAttr ".wl[39].w[0]"  1;
+	setAttr -s 4 ".wl[33].w[0:3]"  0.99999431801546212 5.6781848891653093e-006 
+		3.7990175153669425e-009 6.311945970576302e-013;
+	setAttr -s 4 ".wl[34].w[0:3]"  0.99996636635810587 3.3592065787662786e-005 
+		4.1560986799412999e-008 1.5119664122344835e-011;
+	setAttr -s 4 ".wl[35].w[0:3]"  0.99999419120493049 5.8021662961328417e-006 
+		6.6266364974709502e-009 2.1368759546858935e-012;
+	setAttr -s 4 ".wl[36].w[0:3]"  0.99992061170717483 7.9303794245985518e-005 
+		8.4449443226136578e-008 4.9135954905616936e-011;
+	setAttr -s 4 ".wl[37].w[0:3]"  0.99971970600387772 0.00027972770864385086 
+		5.6573691728679786e-007 5.5056114513008464e-010;
+	setAttr -s 4 ".wl[38].w[0:3]"  0.93047930661957734 0.069162360852721566 
+		0.0003570312973729932 1.3012303281023263e-006;
+	setAttr -s 4 ".wl[39].w[0:3]"  0.89600695651071516 0.10274515061225241 
+		0.0012376048346592055 1.0288042373233015e-005;
 	setAttr ".wl[40].w[0]"  1;
 	setAttr ".wl[41].w[0]"  1;
-	setAttr ".wl[42].w[0]"  1;
-	setAttr ".wl[43].w[0]"  1;
-	setAttr ".wl[44].w[0]"  1;
-	setAttr ".wl[45].w[0]"  1;
-	setAttr ".wl[46].w[0]"  1;
-	setAttr ".wl[47].w[0]"  1;
-	setAttr ".wl[48].w[0]"  1;
-	setAttr ".wl[49].w[0]"  1;
-	setAttr ".wl[50].w[0]"  1;
-	setAttr ".wl[51].w[0]"  1;
-	setAttr ".wl[52].w[0]"  1;
-	setAttr ".wl[53].w[0]"  1;
+	setAttr -s 4 ".wl[42].w[0:3]"  0.9999956558730857 4.339072630268089e-006 
+		5.051959591985231e-009 2.3244417855945131e-012;
+	setAttr -s 4 ".wl[43].w[0:3]"  0.99999805717588552 1.9405605737960819e-006 
+		2.2624794122284302e-009 1.0612675724624306e-012;
+	setAttr -s 4 ".wl[44].w[0:3]"  0.99999315110567233 6.840666339033797e-006 
+		8.2241168908055671e-009 3.8717466143082992e-012;
+	setAttr -s 4 ".wl[45].w[0:3]"  0.99993859319920708 6.1296693006393865e-005 
+		1.0999371230325454e-007 1.1407422093702291e-010;
+	setAttr -s 4 ".wl[46].w[0:3]"  0.99995142623764666 4.8489501578216531e-005 
+		8.4176158588572665e-008 8.461653821731351e-011;
+	setAttr -s 4 ".wl[47].w[0:3]"  0.99957870550744199 0.00042011478424407845 
+		1.1773577697170856e-006 2.350544215396968e-009;
+	setAttr -s 4 ".wl[48].w[0:3]"  0.99969524373181617 0.00030395056447568542 
+		8.0418050703982355e-007 1.5232011003758713e-009;
+	setAttr -s 4 ".wl[49].w[0:3]"  0.99997677848242783 2.3184512800342517e-005 
+		3.6971008353727811e-008 3.3763473257703444e-011;
+	setAttr -s 4 ".wl[50].w[0:3]"  0.66835326399470429 0.32784790794335206 
+		0.0037740187583534062 2.4809303590225593e-005;
+	setAttr -s 4 ".wl[51].w[0:3]"  0.3339922103323496 0.6445368568181391 
+		0.02120622654697922 0.0002647063025321086;
+	setAttr -s 4 ".wl[52].w[0:3]"  0.34935911383544127 0.62163523635123907 
+		0.028461792041551248 0.00054385777176849733;
+	setAttr -s 4 ".wl[53].w[0:3]"  0.65084453803938236 0.34084217954244911 
+		0.008197044643605933 0.00011623777456257772;
 	setAttr ".wl[54].w[0]"  1;
 	setAttr ".wl[55].w[0]"  1;
 	setAttr ".wl[56].w[0]"  1;
@@ -32811,88 +32911,146 @@ createNode skinCluster -n "SkinCluster_Cap01";
 	setAttr ".wl[60].w[0]"  1;
 	setAttr ".wl[61].w[0]"  1;
 	setAttr ".wl[62].w[0]"  1;
-	setAttr ".wl[63].w[0]"  1;
-	setAttr ".wl[64].w[0]"  1;
-	setAttr ".wl[65].w[0]"  1;
+	setAttr -s 4 ".wl[63].w[0:3]"  0.99828655199619154 0.0017078756575959436 
+		5.5608480230318921e-006 1.1498189484538132e-008;
+	setAttr -s 4 ".wl[64].w[0:3]"  0.99928098582885738 0.00071777634903926228 
+		1.2360861795492543e-006 1.7359238062951717e-009;
+	setAttr -s 4 ".wl[65].w[0:3]"  0.99985504923071611 0.00014460918832090615 
+		3.4100436440610581e-007 5.7659857915448497e-010;
 	setAttr ".wl[66].w[0]"  1;
-	setAttr ".wl[67].w[0]"  1;
-	setAttr ".wl[68].w[0]"  1;
-	setAttr ".wl[69].w[0]"  1;
-	setAttr ".wl[70].w[0]"  1;
-	setAttr ".wl[71].w[0]"  1;
-	setAttr ".wl[72].w[0]"  1;
-	setAttr ".wl[73].w[0]"  1;
-	setAttr ".wl[74].w[0]"  1;
-	setAttr ".wl[75].w[0]"  1;
-	setAttr ".wl[76].w[0]"  1;
-	setAttr ".wl[77].w[0]"  1;
-	setAttr ".wl[78].w[0]"  1;
-	setAttr ".wl[79].w[0]"  1;
-	setAttr ".wl[80].w[0]"  1;
+	setAttr -s 4 ".wl[67].w[0:3]"  0.91551973835373368 0.083602088606521588 
+		0.00087220146239236828 5.9715773523668209e-006;
+	setAttr -s 4 ".wl[68].w[0:3]"  0.9742395722032271 0.025569124678465008 
+		0.00019027875490773409 1.0243634001562881e-006;
+	setAttr -s 4 ".wl[69].w[0:3]"  0.33497604901220746 0.63874661932694132 
+		0.02585328334948659 0.00042404831136465796;
+	setAttr -s 4 ".wl[70].w[0:3]"  0.72444490872831513 0.27042335432201098 
+		0.0050761654572067704 5.5571492467115482e-005;
+	setAttr -s 4 ".wl[71].w[0:3]"  0.99215590258641151 0.0078002814970357017 
+		4.3627879210258655e-005 1.8803734252950769e-007;
+	setAttr -s 4 ".wl[72].w[0:3]"  0.99773740943068989 0.0022526389602309932 
+		9.9167433886380154e-006 3.4865690477116225e-008;
+	setAttr -s 4 ".wl[73].w[0:3]"  0.96453715420463393 0.035197566667032033 
+		0.0002638621408331718 1.416987500860855e-006;
+	setAttr -s 4 ".wl[74].w[0:3]"  0.98647723994528591 0.013441334641302441 
+		8.1056664537214947e-005 3.6874887443143375e-007;
+	setAttr -s 4 ".wl[75].w[0:3]"  0.99524478593353771 0.0047320034940613147 
+		2.3121976830868388e-005 8.8595570105135182e-008;
+	setAttr -s 4 ".wl[76].w[0:3]"  0.99847079338926248 0.0015230438184346661 
+		6.1428601787361566e-006 1.9932124118896128e-008;
+	setAttr -s 4 ".wl[77].w[0:3]"  0.9884919104997647 0.011446702923613465 
+		6.1135293667139424e-005 2.5128295469342451e-007;
+	setAttr -s 4 ".wl[78].w[0:3]"  0.99480078855817045 0.0051746267770878948 
+		2.4493241875130263e-005 9.1422866529780689e-008;
+	setAttr -s 4 ".wl[79].w[0:3]"  0.99796262876156128 0.0020291051258469694 
+		8.2392028851733919e-006 2.6909706580754548e-008;
+	setAttr -s 4 ".wl[80].w[0:3]"  0.99929045639879477 0.00070707167696158562 
+		2.4649187891032823e-006 7.005454542482747e-009;
 	setAttr ".wl[81].w[0]"  1;
 	setAttr ".wl[82].w[0]"  1;
 	setAttr ".wl[83].w[0]"  1;
 	setAttr ".wl[84].w[0]"  1;
 	setAttr ".wl[85].w[0]"  1;
-	setAttr ".wl[86].w[0]"  1;
-	setAttr ".wl[87].w[0]"  1;
-	setAttr ".wl[88].w[0]"  1;
-	setAttr ".wl[89].w[0]"  1;
-	setAttr ".wl[90].w[0]"  1;
-	setAttr ".wl[91].w[0]"  1;
+	setAttr -s 4 ".wl[86].w[0:3]"  0.99994918228071039 5.0711168013074091e-005 
+		1.063917738387498e-007 1.5950269581365097e-010;
+	setAttr -s 4 ".wl[87].w[0:3]"  0.99998821575015495 1.1762835668478828e-005 
+		2.1387425108347354e-008 2.6751461044392691e-011;
+	setAttr -s 4 ".wl[88].w[0:3]"  0.99702139279202084 0.0029659346766593097 
+		1.2629150465152901e-005 4.3380854693193165e-008;
+	setAttr -s 4 ".wl[89].w[0:3]"  0.99839366122542317 0.0016001272954211296 
+		6.1919933118073928e-006 1.9485843894969704e-008;
+	setAttr -s 4 ".wl[90].w[0:3]"  0.99930451783205076 0.00069310664078633261 
+		2.3688879113962456e-006 6.6392515063392002e-009;
+	setAttr -s 4 ".wl[91].w[0:3]"  0.99974306502457266 0.00025616162894832802 
+		7.7143302755788712e-007 1.9134514505392472e-009;
 	setAttr ".wl[92].w[0]"  1;
 	setAttr ".wl[93].w[0]"  1;
 	setAttr ".wl[94].w[0]"  1;
 	setAttr ".wl[95].w[0]"  1;
 	setAttr ".wl[96].w[0]"  1;
-	setAttr ".wl[97].w[0]"  1;
-	setAttr ".wl[98].w[0]"  1;
-	setAttr ".wl[99].w[0]"  1;
-	setAttr ".wl[100].w[0]"  1;
-	setAttr ".wl[101].w[0]"  1;
-	setAttr ".wl[102].w[0]"  1;
-	setAttr ".wl[103].w[0]"  1;
-	setAttr ".wl[104].w[0]"  1;
+	setAttr -s 4 ".wl[97].w[0:3]"  0.99998463177144359 1.5339214074963028e-005 
+		2.897583197080255e-008 3.8649477794010598e-011;
+	setAttr -s 4 ".wl[98].w[0:3]"  0.99999480526993756 5.1855251725863653e-006 
+		9.1936995960602939e-009 1.1190258662455529e-011;
+	setAttr -s 4 ".wl[99].w[0:3]"  0.99936373461258232 0.00063405090060407465 
+		2.2080544074159245e-006 6.4324061876990523e-009;
+	setAttr -s 4 ".wl[100].w[0:3]"  0.99957761406494661 0.00042101755722415596 
+		1.3647030824778981e-006 3.6747467593856575e-009;
+	setAttr -s 4 ".wl[101].w[0:3]"  0.99961929669597382 0.00037986925935744792 
+		8.3301385475358793e-007 1.0308139738214034e-009;
+	setAttr -s 4 ".wl[102].w[0:3]"  0.99989076044211334 0.00010904193034936492 
+		1.9741682303841717e-007 2.1071426116441901e-010;
+	setAttr -s 4 ".wl[103].w[0:3]"  0.99961303048193484 0.00038602809714041031 
+		9.3976981775460532e-007 1.6511069961630569e-009;
+	setAttr -s 4 ".wl[104].w[0:3]"  0.99764616188910016 0.0023458204874126773 
+		7.999236547036088e-006 1.838694012865984e-008;
 	setAttr ".wl[105].w[0]"  1;
 	setAttr ".wl[106].w[0]"  1;
-	setAttr ".wl[107].w[0]"  1;
-	setAttr ".wl[108].w[0]"  1;
-	setAttr ".wl[109].w[0]"  1;
-	setAttr ".wl[110].w[0]"  1;
-	setAttr ".wl[111].w[0]"  1;
-	setAttr ".wl[112].w[0]"  1;
-	setAttr ".wl[113].w[0]"  1;
-	setAttr ".wl[114].w[0]"  1;
-	setAttr ".wl[115].w[0]"  1;
-	setAttr ".wl[116].w[0]"  1;
+	setAttr -s 4 ".wl[107].w[0:3]"  0.99999861494248066 1.3833625213556811e-006 
+		1.6941042683667782e-009 8.9371898813905435e-013;
+	setAttr -s 4 ".wl[108].w[0:3]"  0.9999983484847299 1.6492001817912346e-006 
+		2.3137833447941964e-009 1.3049597425165006e-012;
+	setAttr -s 4 ".wl[109].w[0:3]"  0.99994275401927002 5.7137765799992889e-005 
+		1.081027546677424e-007 1.1217532014190771e-010;
+	setAttr -s 4 ".wl[110].w[0:3]"  0.99997257250603178 2.738199027305988e-005 
+		4.546089247500949e-008 4.2802689081002131e-011;
+	setAttr -s 4 ".wl[111].w[0:3]"  0.99979443287656111 0.00020496563431607196 
+		6.0003155006142457e-007 1.4575727544521628e-009;
+	setAttr -s 4 ".wl[112].w[0:3]"  0.99991841765572986 8.136752697329727e-005 
+		2.1435041499080959e-007 4.6688184879603326e-010;
+	setAttr -s 4 ".wl[113].w[0:3]"  0.99986132836515806 0.00013826676924292487 
+		4.038599639244806e-007 1.0056350865399884e-009;
+	setAttr -s 4 ".wl[114].w[0:3]"  0.99989607512294454 0.00010363665292088779 
+		2.8755428430452611e-007 6.6985026898074669e-010;
+	setAttr -s 4 ".wl[115].w[0:3]"  0.99997179764952571 2.8157083181307936e-005 
+		4.5222571216938736e-008 4.4721768546984135e-011;
+	setAttr -s 4 ".wl[116].w[0:3]"  0.99990598096040539 9.3808624921498074e-005 
+		2.1005114013527051e-007 3.6353297277129068e-010;
 	setAttr ".wl[117].w[0]"  1;
 	setAttr ".wl[118].w[0]"  1;
-	setAttr ".wl[119].w[0]"  1;
-	setAttr ".wl[120].w[0]"  1;
-	setAttr ".wl[121].w[0]"  1;
-	setAttr ".wl[122].w[0]"  1;
+	setAttr -s 4 ".wl[119].w[0:3]"  0.99999134132642964 8.6455655425310571e-006 
+		1.3096529501872716e-008 1.149832794417553e-011;
+	setAttr -s 4 ".wl[120].w[0:3]"  0.99994372641728302 5.6129782221311742e-005 
+		1.4349526814538616e-007 3.0522752422373264e-010;
+	setAttr -s 4 ".wl[121].w[0:3]"  0.99997600467396841 2.3938908604229317e-005 
+		5.6308392765350823e-008 1.090345948273857e-010;
+	setAttr -s 4 ".wl[122].w[0:3]"  0.99999375668229673 6.2307715312731646e-006 
+		1.2526472674276064e-008 1.9699322027764682e-011;
 	setAttr ".wl[123].w[0]"  1;
-	setAttr ".wl[124].w[0]"  1;
+	setAttr -s 4 ".wl[124].w[0:3]"  0.99999881161671822 1.1860799432943208e-006 
+		2.2999322620037798e-009 3.4062241782772686e-012;
 	setAttr ".wl[125].w[0]"  1;
 	setAttr ".wl[126].w[0]"  1;
-	setAttr ".wl[127].w[0]"  1;
-	setAttr ".wl[128].w[0]"  1;
-	setAttr ".wl[129].w[0]"  1;
-	setAttr ".wl[130].w[0]"  1;
+	setAttr -s 4 ".wl[127].w[0:3]"  0.99997139715715522 2.8530752094095081e-005 
+		7.1935964252467452e-008 1.547864350999478e-010;
+	setAttr -s 4 ".wl[128].w[0:3]"  0.99997582487393089 2.4116174866764116e-005 
+		5.8831059970282509e-008 1.2014238036027589e-010;
+	setAttr -s 4 ".wl[129].w[0:3]"  0.999994134530648 5.8565011211209299e-006 
+		8.9596247298848344e-009 8.6061446858692257e-012;
+	setAttr -s 4 ".wl[130].w[0:3]"  0.99997986220432389 2.0095987718879637e-005 
+		4.1739211797022989e-008 6.8745435076620877e-011;
 	setAttr ".wl[131].w[0]"  1;
 	setAttr ".wl[132].w[0]"  1;
-	setAttr ".wl[133].w[0]"  1;
-	setAttr ".wl[134].w[0]"  1;
-	setAttr ".wl[135].w[0]"  1;
-	setAttr ".wl[136].w[0]"  1;
-	setAttr ".wl[137].w[0]"  1;
+	setAttr -s 4 ".wl[133].w[0:3]"  0.99999830127885136 1.696140496374956e-006 
+		2.578313328337305e-009 2.3389319361256947e-012;
+	setAttr -s 4 ".wl[134].w[0:3]"  0.99998580457303721 1.4162830185408983e-005 
+		3.2535178227897844e-008 6.1599156198287604e-011;
+	setAttr -s 4 ".wl[135].w[0:3]"  0.99999354409478158 6.4418753918682023e-006 
+		1.4005128167884909e-008 2.4698380458398368e-011;
+	setAttr -s 4 ".wl[136].w[0:3]"  0.9999943820910917 5.6050266399864024e-006 
+		1.2857539413768682e-008 2.472889510668752e-011;
+	setAttr -s 4 ".wl[137].w[0:3]"  0.99999479498039356 5.1933237023236476e-006 
+		1.1674284622463923e-008 2.1619489600451816e-011;
 	setAttr ".wl[138].w[0]"  1;
-	setAttr ".wl[139].w[0]"  1;
+	setAttr -s 4 ".wl[139].w[0:3]"  0.99999595499981098 4.0368294176099462e-006 
+		8.157662471714411e-009 1.3108941878963731e-011;
 	setAttr ".wl[140].w[0]"  1;
 	setAttr ".wl[141].w[0]"  1;
 	setAttr ".wl[142].w[0]"  1;
-	setAttr ".wl[143].w[0]"  1;
-	setAttr ".wl[144].w[0]"  1;
+	setAttr -s 4 ".wl[143].w[0:3]"  0.99999694087993285 3.0524322529427162e-006 
+		6.6759566859130314e-009 1.1857521738382341e-011;
+	setAttr -s 4 ".wl[144].w[0:3]"  0.99999882915450333 1.168296782788336e-006 
+		2.5442180679777399e-009 4.4958111471379642e-012;
 	setAttr ".wl[145].w[0]"  1;
 	setAttr ".wl[146].w[0]"  1;
 	setAttr ".wl[147].w[0]"  1;
@@ -32911,101 +33069,171 @@ createNode skinCluster -n "SkinCluster_Cap01";
 	setAttr ".wl[160].w[0]"  1;
 	setAttr ".wl[161].w[0]"  1;
 	setAttr ".wl[162].w[0]"  1;
-	setAttr ".wl[163].w[0]"  1;
-	setAttr ".wl[164].w[0]"  1;
+	setAttr -s 4 ".wl[163].w[0:3]"  0.9799749795415893 0.019906826594906758 
+		0.00011769628937723926 4.9757412670654116e-007;
+	setAttr -s 4 ".wl[164].w[0:3]"  0.92505880532724882 0.074142145453980887 
+		0.00079303050753864177 6.0187112316591681e-006;
 	setAttr ".wl[165].w[0]"  1;
 	setAttr ".wl[166].w[0]"  1;
 	setAttr ".wl[167].w[0]"  1;
-	setAttr ".wl[168].w[0]"  1;
-	setAttr ".wl[169].w[0]"  1;
-	setAttr ".wl[170].w[0]"  1;
-	setAttr ".wl[171].w[0]"  1;
-	setAttr ".wl[172].w[0]"  1;
-	setAttr ".wl[173].w[0]"  1;
-	setAttr ".wl[174].w[0]"  1;
+	setAttr -s 4 ".wl[168].w[0:3]"  0.99999505463721161 4.9434773022043334e-006 
+		1.8852012795096014e-009 2.8490501961921152e-013;
+	setAttr -s 4 ".wl[169].w[0:3]"  0.99992789947441574 7.2055935447475544e-005 
+		4.4570941670914879e-008 1.9195115712954928e-011;
+	setAttr -s 4 ".wl[170].w[0:3]"  0.9970802137518131 0.0029165661287707876 
+		3.2177120781018533e-006 2.4073380057151905e-009;
+	setAttr -s 4 ".wl[171].w[0:3]"  0.98410547969889239 0.015861425679117112 
+		3.3051230262170333e-005 4.3391728324239793e-008;
+	setAttr -s 4 ".wl[172].w[0:3]"  0.93429431209522118 0.065421979357027205 
+		0.00028295725499787332 7.5129275374969317e-007;
+	setAttr -s 4 ".wl[173].w[0:3]"  0.67019747191652357 0.32632567766149034 
+		0.003458263894924742 1.8586527061304782e-005;
+	setAttr -s 4 ".wl[174].w[0:3]"  0.34131615688090733 0.63706128590698008 
+		0.021372492662099899 0.0002500645500126463;
 	setAttr ".wl[175].w[0]"  1;
 	setAttr ".wl[176].w[0]"  1;
-	setAttr ".wl[177].w[0]"  1;
-	setAttr ".wl[178].w[0]"  1;
-	setAttr ".wl[179].w[0]"  1;
-	setAttr ".wl[180].w[0]"  1;
-	setAttr ".wl[181].w[0]"  1;
-	setAttr ".wl[182].w[0]"  1;
+	setAttr -s 4 ".wl[177].w[0:3]"  0.99934078195527043 0.00065854879254571982 
+		6.6867867798565221e-007 5.7350586500690303e-010;
+	setAttr -s 4 ".wl[178].w[0:3]"  0.33616149769217407 0.63723234492874659 
+		0.02621564017737462 0.00039051720170467494;
+	setAttr -s 4 ".wl[179].w[0:3]"  0.70619942505618039 0.28809997038968282 
+		0.0056426742013777542 5.7930352759011159e-005;
+	setAttr -s 4 ".wl[180].w[0:3]"  0.99689363415481402 0.0030934639871591512 
+		1.2866645739650411e-005 3.5212287175299861e-008;
+	setAttr -s 4 ".wl[181].w[0:3]"  0.99935382378330528 0.00064410928595816646 
+		2.0626215466927285e-006 4.3091898568518712e-009;
+	setAttr -s 4 ".wl[182].w[0:3]"  0.99999706518249631 2.9294188985652048e-006 
+		5.393825585637046e-009 4.7795350077390606e-012;
 	setAttr ".wl[183].w[0]"  1;
 	setAttr ".wl[184].w[0]"  1;
-	setAttr ".wl[185].w[0]"  1;
+	setAttr -s 4 ".wl[185].w[0:3]"  0.99991532406521877 8.445799841581249e-005 
+		2.1757999588978305e-007 3.5636952863487701e-010;
 	setAttr ".wl[186].w[0]"  1;
 	setAttr ".wl[187].w[0]"  1;
 	setAttr ".wl[188].w[0]"  1;
 	setAttr ".wl[189].w[0]"  1;
 	setAttr ".wl[190].w[0]"  1;
-	setAttr ".wl[191].w[0]"  1;
-	setAttr ".wl[192].w[0]"  1;
+	setAttr -s 4 ".wl[191].w[0:3]"  0.91541744869984054 0.083618825401061331 
+		0.00095671468440086704 7.0112146972668469e-006;
+	setAttr -s 4 ".wl[192].w[0:3]"  0.97432180062618534 0.025487103997668577 
+		0.00019010409136375721 9.9128478232454978e-007;
 	setAttr ".wl[193].w[0]"  1;
 	setAttr ".wl[194].w[0]"  1;
 	setAttr ".wl[195].w[0]"  1;
-	setAttr ".wl[196].w[0]"  1;
-	setAttr ".wl[197].w[0]"  1;
-	setAttr ".wl[198].w[0]"  1;
-	setAttr ".wl[199].w[0]"  1;
-	setAttr ".wl[200].w[0]"  1;
-	setAttr ".wl[201].w[0]"  1;
-	setAttr ".wl[202].w[0]"  1;
+	setAttr -s 4 ".wl[196].w[0:3]"  0.99998719833251959 1.2798564437128926e-005 
+		3.102841670010352e-009 2.0161206758384946e-013;
+	setAttr -s 4 ".wl[197].w[0:3]"  0.99986275701131133 0.00013717296243527511 
+		7.0010765737252328e-008 1.5487655967118999e-011;
+	setAttr -s 4 ".wl[198].w[0:3]"  0.99554007119166865 0.0044542346893323391 
+		5.6906829670051603e-006 3.4360320043037843e-009;
+	setAttr -s 4 ".wl[199].w[0:3]"  0.97959142005576472 0.020354761625123813 
+		5.3740614544312408e-005 7.7704567157621619e-008;
+	setAttr -s 4 ".wl[200].w[0:3]"  0.92560949483836996 0.07397973867729879 
+		0.00040950226838270713 1.2642159485368583e-006;
+	setAttr -s 4 ".wl[201].w[0:3]"  0.65415593319117682 0.34112905040419195 
+		0.0046852396725522733 2.9776732078934641e-005;
+	setAttr -s 4 ".wl[202].w[0:3]"  0.36534009892831421 0.61047072843804029 
+		0.02388551645224497 0.00030365618140046856;
 	setAttr ".wl[203].w[0]"  1;
 	setAttr ".wl[204].w[0]"  1;
 	setAttr ".wl[205].w[0]"  1;
-	setAttr ".wl[206].w[0]"  1;
-	setAttr ".wl[207].w[0]"  1;
-	setAttr ".wl[208].w[0]"  1;
-	setAttr ".wl[209].w[0]"  1;
-	setAttr ".wl[210].w[0]"  1;
-	setAttr ".wl[211].w[0]"  1;
+	setAttr -s 4 ".wl[206].w[0:3]"  0.99893615757370635 0.0010627707549573661 
+		1.0710727950038454e-006 5.9854127846960192e-010;
+	setAttr -s 4 ".wl[207].w[0:3]"  0.34363460050530992 0.62589379712864546 
+		0.030003463165194276 0.00046813920085029913;
+	setAttr -s 4 ".wl[208].w[0:3]"  0.68636367123456554 0.30654005408747753 
+		0.0070191466304633052 7.7128047493594057e-005;
+	setAttr -s 4 ".wl[209].w[0:3]"  0.99497876143767305 0.0049921467464356349 
+		2.8981439560485005e-005 1.10376330825919e-007;
+	setAttr -s 4 ".wl[210].w[0:3]"  0.99875979538999338 0.0012345691063495819 
+		5.6180373200763711e-006 1.7466336965020233e-008;
+	setAttr -s 4 ".wl[211].w[0:3]"  0.99999280551029224 7.1769727117252752e-006 
+		1.7492077917410218e-008 2.4918119801623329e-011;
 	setAttr ".wl[212].w[0]"  1;
 	setAttr ".wl[213].w[0]"  1;
-	setAttr ".wl[214].w[0]"  1;
+	setAttr -s 4 ".wl[214].w[0:3]"  0.99985909717909527 0.00014040772600776362 
+		4.9386954551356032e-007 1.2253514541973969e-009;
 	setAttr ".wl[215].w[0]"  1;
 	setAttr ".wl[216].w[0]"  1;
 	setAttr ".wl[217].w[0]"  1;
 	setAttr ".wl[218].w[0]"  1;
 	setAttr ".wl[219].w[0]"  1;
-	setAttr ".wl[220].w[0]"  1;
-	setAttr ".wl[221].w[0]"  1;
-	setAttr ".wl[222].w[0]"  1;
-	setAttr ".wl[223].w[0]"  1;
-	setAttr ".wl[224].w[0]"  1;
-	setAttr ".wl[225].w[0]"  1;
-	setAttr ".wl[226].w[0]"  1;
-	setAttr ".wl[227].w[0]"  1;
-	setAttr ".wl[228].w[0]"  1;
-	setAttr ".wl[229].w[0]"  1;
-	setAttr ".wl[230].w[0]"  1;
-	setAttr ".wl[231].w[0]"  1;
-	setAttr ".wl[232].w[0]"  1;
-	setAttr ".wl[233].w[0]"  1;
-	setAttr ".wl[234].w[0]"  1;
-	setAttr ".wl[235].w[0]"  1;
-	setAttr ".wl[236].w[0]"  1;
-	setAttr ".wl[237].w[0]"  1;
-	setAttr ".wl[238].w[0]"  1;
-	setAttr ".wl[239].w[0]"  1;
-	setAttr ".wl[240].w[0]"  1;
-	setAttr ".wl[241].w[0]"  1;
-	setAttr ".wl[242].w[0]"  1;
-	setAttr ".wl[243].w[0]"  1;
-	setAttr ".wl[244].w[0]"  1;
-	setAttr ".wl[245].w[0]"  1;
-	setAttr ".wl[246].w[0]"  1;
-	setAttr ".wl[247].w[0]"  1;
-	setAttr ".wl[248].w[0]"  1;
-	setAttr ".wl[249].w[0]"  1;
-	setAttr ".wl[250].w[0]"  1;
-	setAttr ".wl[251].w[0]"  1;
-	setAttr ".wl[252].w[0]"  1;
-	setAttr ".wl[253].w[0]"  1;
-	setAttr ".wl[254].w[0]"  1;
-	setAttr ".wl[255].w[0]"  1;
-	setAttr ".wl[256].w[0]"  1;
-	setAttr ".wl[257].w[0]"  1;
+	setAttr -s 4 ".wl[220].w[0:3]"  0.89684542562763059 0.10167001875613417 
+		0.0014721725673053983 1.2383048929832303e-005;
+	setAttr -s 4 ".wl[221].w[0:3]"  0.96455220082971771 0.035094555946433584 
+		0.00035093014377189738 2.3130800768085464e-006;
+	setAttr -s 4 ".wl[222].w[0:3]"  0.060430602319149318 0.79803610330270003 
+		0.1376930201636079 0.0038402742145428174;
+	setAttr -s 4 ".wl[223].w[0:3]"  0.069644343069985237 0.77104420128971562 
+		0.15347394491203453 0.0058375107282645621;
+	setAttr -s 4 ".wl[224].w[0:3]"  0.062390135882572251 0.78336898535679478 
+		0.14903424814787983 0.0052066306127532139;
+	setAttr -s 4 ".wl[225].w[0:3]"  0.05990545746233622 0.79966762912746303 
+		0.13689586717703964 0.0035310462331611648;
+	setAttr -s 4 ".wl[226].w[0:3]"  0.060889998266187462 0.78634731442485917 
+		0.14810782249797566 0.0046548648109776825;
+	setAttr -s 4 ".wl[227].w[0:3]"  0.063692230448927023 0.78686273431332887 
+		0.14547462639401618 0.0039704088437279407;
+	setAttr -s 4 ".wl[228].w[0:3]"  0.065947077624708861 0.77447004663734742 
+		0.15467750356033527 0.0049053721776084564;
+	setAttr -s 4 ".wl[229].w[0:3]"  0.0018650147720209453 0.050799510752278364 
+		0.87527204783991708 0.072063426635783578;
+	setAttr -s 4 ".wl[230].w[0:3]"  0.002360672353354798 0.054502858459481107 
+		0.85409794855097676 0.089038520636187377;
+	setAttr -s 4 ".wl[231].w[0:3]"  0.0022265715488268834 0.054673589654228548 
+		0.8561771676819866 0.086922671114958022;
+	setAttr -s 4 ".wl[232].w[0:3]"  0.0019188664060770799 0.051454072956899265 
+		0.87650304066012608 0.070124019976897545;
+	setAttr -s 4 ".wl[233].w[0:3]"  0.0021003408215622965 0.053699762529142103 
+		0.86507421237320026 0.07912568427609537;
+	setAttr -s 4 ".wl[234].w[0:3]"  0.0020115008627175079 0.051957427297288028 
+		0.87763535182283947 0.068395720017155034;
+	setAttr -s 4 ".wl[235].w[0:3]"  0.0021759209551404091 0.053491538984088406 
+		0.86986701368068042 0.074465526380090685;
+	setAttr -s 4 ".wl[236].w[0:3]"  0.00037992692028609998 0.015453057970013326 
+		0.77558098542091003 0.20858602968879061;
+	setAttr -s 4 ".wl[237].w[0:3]"  0.00052717994735962392 0.018106252136348078 
+		0.74784694296529097 0.23351962495100126;
+	setAttr -s 4 ".wl[238].w[0:3]"  0.00052048860464104507 0.018543743891901485 
+		0.75565173030488431 0.22528403719857321;
+	setAttr -s 4 ".wl[239].w[0:3]"  0.00039149291838225242 0.015793149171168502 
+		0.78615250090285849 0.19766285700759081;
+	setAttr -s 4 ".wl[240].w[0:3]"  0.00048469574776555113 0.018076213773709611 
+		0.77170070774195609 0.20973838273656872;
+	setAttr -s 4 ".wl[241].w[0:3]"  0.00042535636361162865 0.016668462215808602 
+		0.79589881467614065 0.1870073667444391;
+	setAttr -s 4 ".wl[242].w[0:3]"  0.00049022409419663404 0.018050948647578099 
+		0.78603781263397154 0.19542101462425382;
+	setAttr -s 4 ".wl[243].w[0:3]"  9.7108639237841743e-005 0.0049744598735122101 
+		0.4229934131051617 0.57193501838208827;
+	setAttr -s 4 ".wl[244].w[0:3]"  0.00014676384932377218 0.0063669484044234694 
+		0.43913814671719598 0.55434814102905672;
+	setAttr -s 4 ".wl[245].w[0:3]"  0.00013482577312295962 0.006083883661487763 
+		0.42379573029773215 0.56998556026765712;
+	setAttr -s 4 ".wl[246].w[0:3]"  9.5396223549482073e-005 0.0049072251765479736 
+		0.42211823742661492 0.57287914117328764;
+	setAttr -s 4 ".wl[247].w[0:3]"  0.00012115601677509247 0.0057347068164390232 
+		0.41938634598221591 0.57475779118456993;
+	setAttr -s 4 ".wl[248].w[0:3]"  0.00010322992687727961 0.0051513011038364868 
+		0.42383534707209458 0.57091012189719159;
+	setAttr -s 4 ".wl[249].w[0:3]"  0.00012628365607825209 0.0058808777402655178 
+		0.42941770569870386 0.56457513290495243;
+	setAttr -s 4 ".wl[250].w[0:3]"  3.5346872915731353e-005 0.0021947976739224986 
+		0.27319651657525051 0.72457333887791131;
+	setAttr -s 4 ".wl[251].w[0:3]"  5.1937348882313827e-005 0.0027807189328449868 
+		0.28827459334862382 0.70889275036964883;
+	setAttr -s 4 ".wl[252].w[0:3]"  4.9962392131064348e-005 0.0027475765106482518 
+		0.28359110396111131 0.71361135713610935;
+	setAttr -s 4 ".wl[253].w[0:3]"  3.465546921121998e-005 0.0021775047085970055 
+		0.27504478910625429 0.72274305071593747;
+	setAttr -s 4 ".wl[254].w[0:3]"  4.6770457649669694e-005 0.0026764832747815724 
+		0.28444676494458815 0.71282998132298059;
+	setAttr -s 4 ".wl[255].w[0:3]"  3.8930405936055124e-005 0.0023655114501530878 
+		0.28286319369920243 0.71473236444470845;
+	setAttr -s 4 ".wl[256].w[0:3]"  5.0315221749919203e-005 0.0028265224827019367 
+		0.29558597101947243 0.70153719127607572;
+	setAttr -s 4 ".wl[257].w[0:3]"  3.1092766215712331e-005 0.0019471676355351812 
+		0.24901753220743647 0.74900420739081264;
 	setAttr ".wl[258].w[0]"  1;
 	setAttr ".wl[259].w[0]"  1;
 	setAttr ".wl[260].w[0]"  1;
@@ -33014,32 +33242,124 @@ createNode skinCluster -n "SkinCluster_Cap01";
 	setAttr ".wl[263].w[0]"  1;
 	setAttr ".wl[264].w[0]"  1;
 	setAttr ".wl[265].w[0]"  1;
-	setAttr ".wl[266].w[0]"  1;
-	setAttr ".wl[267].w[0]"  1;
-	setAttr ".wl[268].w[0]"  1;
-	setAttr ".wl[269].w[0]"  1;
+	setAttr -s 4 ".wl[266].w";
+	setAttr ".wl[266].w[0]" 0.99356758881103224;
+	setAttr ".wl[266].w[4]" 0.0064068428292750855;
+	setAttr ".wl[266].w[5]" 2.5505238611088028e-005;
+	setAttr ".wl[266].w[6]" 6.3121081583787061e-008;
+	setAttr -s 4 ".wl[267].w";
+	setAttr ".wl[267].w[0]" 0.9969983844921656;
+	setAttr ".wl[267].w[4]" 0.0029963042619082642;
+	setAttr ".wl[267].w[5]" 5.3038917065790914e-006;
+	setAttr ".wl[267].w[6]" 7.3542195558469399e-009;
+	setAttr -s 4 ".wl[268].w";
+	setAttr ".wl[268].w[0]" 0.98413985523073921;
+	setAttr ".wl[268].w[4]" 0.015818261036884149;
+	setAttr ".wl[268].w[5]" 4.1803620955596864e-005;
+	setAttr ".wl[268].w[6]" 8.0111421041728337e-008;
+	setAttr -s 4 ".wl[269].w";
+	setAttr ".wl[269].w[0]" 0.97241284962285301;
+	setAttr ".wl[269].w[4]" 0.027404710333858443;
+	setAttr ".wl[269].w[5]" 0.00018159436416445254;
+	setAttr ".wl[269].w[6]" 8.4567912408632831e-007;
 	setAttr ".wl[270].w[0]"  1;
-	setAttr ".wl[271].w[0]"  1;
-	setAttr ".wl[272].w[0]"  1;
-	setAttr ".wl[273].w[0]"  1;
-	setAttr ".wl[274].w[0]"  1;
-	setAttr ".wl[275].w[0]"  1;
-	setAttr ".wl[276].w[0]"  1;
-	setAttr ".wl[277].w[0]"  1;
+	setAttr -s 4 ".wl[271].w";
+	setAttr ".wl[271].w[0]" 0.99999431785468884;
+	setAttr ".wl[271].w[4]" 5.6783456343196911e-006;
+	setAttr ".wl[271].w[5]" 3.7990204022703143e-009;
+	setAttr ".wl[271].w[6]" 6.564368867921417e-013;
+	setAttr -s 4 ".wl[272].w";
+	setAttr ".wl[272].w[0]" 0.99996636541959605;
+	setAttr ".wl[272].w[4]" 3.3593004429621825e-005;
+	setAttr ".wl[272].w[5]" 4.1560474254074185e-008;
+	setAttr ".wl[272].w[6]" 1.5500075830682804e-011;
+	setAttr -s 4 ".wl[273].w";
+	setAttr ".wl[273].w[0]" 0.99999419103452958;
+	setAttr ".wl[273].w[4]" 5.8023367208467167e-006;
+	setAttr ".wl[273].w[5]" 6.6265553965787943e-009;
+	setAttr ".wl[273].w[6]" 2.1941785711486764e-012;
+	setAttr -s 4 ".wl[274].w";
+	setAttr ".wl[274].w[0]" 0.99992060939957317;
+	setAttr ".wl[274].w[4]" 7.9306100438845801e-005;
+	setAttr ".wl[274].w[5]" 8.4449959023780267e-008;
+	setAttr ".wl[274].w[6]" 5.0028962306593676e-011;
+	setAttr -s 4 ".wl[275].w";
+	setAttr ".wl[275].w[0]" 0.99971969959988249;
+	setAttr ".wl[275].w[4]" 0.00027973411358701248;
+	setAttr ".wl[275].w[5]" 5.6572845102693831e-007;
+	setAttr ".wl[275].w[6]" 5.5807946639866832e-010;
+	setAttr -s 4 ".wl[276].w";
+	setAttr ".wl[276].w[0]" 0.93047881919895692;
+	setAttr ".wl[276].w[4]" 0.069162841603565783;
+	setAttr ".wl[276].w[5]" 0.00035703121432800115;
+	setAttr ".wl[276].w[6]" 1.3079831492837939e-006;
+	setAttr -s 4 ".wl[277].w";
+	setAttr ".wl[277].w[0]" 0.89600610103222711;
+	setAttr ".wl[277].w[4]" 0.10274600462163329;
+	setAttr ".wl[277].w[5]" 0.0012375712720936445;
+	setAttr ".wl[277].w[6]" 1.0323074045951603e-005;
 	setAttr ".wl[278].w[0]"  1;
 	setAttr ".wl[279].w[0]"  1;
-	setAttr ".wl[280].w[0]"  1;
-	setAttr ".wl[281].w[0]"  1;
-	setAttr ".wl[282].w[0]"  1;
-	setAttr ".wl[283].w[0]"  1;
-	setAttr ".wl[284].w[0]"  1;
-	setAttr ".wl[285].w[0]"  1;
-	setAttr ".wl[286].w[0]"  1;
-	setAttr ".wl[287].w[0]"  1;
-	setAttr ".wl[288].w[0]"  1;
-	setAttr ".wl[289].w[0]"  1;
-	setAttr ".wl[290].w[0]"  1;
-	setAttr ".wl[291].w[0]"  1;
+	setAttr -s 4 ".wl[280].w";
+	setAttr ".wl[280].w[0]" 0.99999565563649573;
+	setAttr ".wl[280].w[4]" 4.3393092876330314e-006;
+	setAttr ".wl[280].w[5]" 5.0518449532318936e-009;
+	setAttr ".wl[280].w[6]" 2.3716854337662398e-012;
+	setAttr -s 4 ".wl[281].w";
+	setAttr ".wl[281].w[0]" 0.99999805706374323;
+	setAttr ".wl[281].w[4]" 1.9406727481314503e-006;
+	setAttr ".wl[281].w[5]" 2.2624261015469204e-009;
+	setAttr ".wl[281].w[6]" 1.0825383351597386e-012;
+	setAttr -s 4 ".wl[282].w";
+	setAttr ".wl[282].w[0]" 0.99999315079826023;
+	setAttr ".wl[282].w[4]" 6.8409738470541677e-006;
+	setAttr ".wl[282].w[5]" 8.2239431337996832e-009;
+	setAttr ".wl[282].w[6]" 3.9495790300270885e-012;
+	setAttr -s 4 ".wl[283].w";
+	setAttr ".wl[283].w[0]" 0.99993859086292924;
+	setAttr ".wl[283].w[4]" 6.1299030508871942e-005;
+	setAttr ".wl[283].w[5]" 1.0999110989030963e-007;
+	setAttr ".wl[283].w[6]" 1.154519936480948e-010;
+	setAttr -s 4 ".wl[284].w";
+	setAttr ".wl[284].w[0]" 0.9999514239859828;
+	setAttr ".wl[284].w[4]" 4.8491754291133392e-005;
+	setAttr ".wl[284].w[5]" 8.4174072959843488e-008;
+	setAttr ".wl[284].w[6]" 8.5653105452346121e-011;
+	setAttr -s 4 ".wl[285].w";
+	setAttr ".wl[285].w[0]" 0.99957869153200385;
+	setAttr ".wl[285].w[4]" 0.00042012876831977247;
+	setAttr ".wl[285].w[5]" 1.1773303910841031e-006;
+	setAttr ".wl[285].w[6]" 2.3692852943161855e-009;
+	setAttr -s 4 ".wl[286].w";
+	setAttr ".wl[286].w[0]" 0.9996952319205753;
+	setAttr ".wl[286].w[4]" 0.00030396238516213321;
+	setAttr ".wl[286].w[5]" 8.0415867494695761e-007;
+	setAttr ".wl[286].w[6]" 1.5355876197195494e-009;
+	setAttr -s 4 ".wl[287].w";
+	setAttr ".wl[287].w[0]" 0.99997677727247136;
+	setAttr ".wl[287].w[4]" 2.3185723266372343e-005;
+	setAttr ".wl[287].w[5]" 3.6970063372851638e-008;
+	setAttr ".wl[287].w[6]" 3.4198892658036048e-011;
+	setAttr -s 4 ".wl[288].w";
+	setAttr ".wl[288].w[0]" 0.66835165668437613;
+	setAttr ".wl[288].w[4]" 0.32784943746700229;
+	setAttr ".wl[288].w[5]" 0.0037740138147401717;
+	setAttr ".wl[288].w[6]" 2.4892033881419756e-005;
+	setAttr -s 4 ".wl[289].w";
+	setAttr ".wl[289].w[0]" 0.33399314659826673;
+	setAttr ".wl[289].w[4]" 0.64453584504403194;
+	setAttr ".wl[289].w[5]" 0.021205733788657314;
+	setAttr ".wl[289].w[6]" 0.00026527456904401251;
+	setAttr -s 4 ".wl[290].w";
+	setAttr ".wl[290].w[0]" 0.3493584205666449;
+	setAttr ".wl[290].w[4]" 0.62163593888345614;
+	setAttr ".wl[290].w[5]" 0.028460768788270897;
+	setAttr ".wl[290].w[6]" 0.00054487176162807424;
+	setAttr -s 4 ".wl[291].w";
+	setAttr ".wl[291].w[0]" 0.65084304807785665;
+	setAttr ".wl[291].w[4]" 0.34084366329696725;
+	setAttr ".wl[291].w[5]" 0.008196786990336366;
+	setAttr ".wl[291].w[6]" 0.00011650163483971675;
 	setAttr ".wl[292].w[0]"  1;
 	setAttr ".wl[293].w[0]"  1;
 	setAttr ".wl[294].w[0]"  1;
@@ -33049,88 +33369,320 @@ createNode skinCluster -n "SkinCluster_Cap01";
 	setAttr ".wl[298].w[0]"  1;
 	setAttr ".wl[299].w[0]"  1;
 	setAttr ".wl[300].w[0]"  1;
-	setAttr ".wl[301].w[0]"  1;
-	setAttr ".wl[302].w[0]"  1;
-	setAttr ".wl[303].w[0]"  1;
+	setAttr -s 4 ".wl[301].w";
+	setAttr ".wl[301].w[0]" 0.99828652114644501;
+	setAttr ".wl[301].w[4]" 0.0017079065127926832;
+	setAttr ".wl[301].w[5]" 5.5607444794272257e-006;
+	setAttr ".wl[301].w[6]" 1.1596282884313895e-008;
+	setAttr -s 4 ".wl[302].w";
+	setAttr ".wl[302].w[0]" 0.99928097608450261;
+	setAttr ".wl[302].w[4]" 0.00071778608586265801;
+	setAttr ".wl[302].w[5]" 1.2360756579218692e-006;
+	setAttr ".wl[302].w[6]" 1.7539768054640912e-009;
+	setAttr -s 4 ".wl[303].w";
+	setAttr ".wl[303].w[0]" 0.99985504272722414;
+	setAttr ".wl[303].w[4]" 0.00014461569638046066;
+	setAttr ".wl[303].w[5]" 3.4099481785002789e-007;
+	setAttr ".wl[303].w[6]" 5.8157754787705297e-010;
 	setAttr ".wl[304].w[0]"  1;
-	setAttr ".wl[305].w[0]"  1;
-	setAttr ".wl[306].w[0]"  1;
-	setAttr ".wl[307].w[0]"  1;
-	setAttr ".wl[308].w[0]"  1;
-	setAttr ".wl[309].w[0]"  1;
-	setAttr ".wl[310].w[0]"  1;
-	setAttr ".wl[311].w[0]"  1;
-	setAttr ".wl[312].w[0]"  1;
-	setAttr ".wl[313].w[0]"  1;
-	setAttr ".wl[314].w[0]"  1;
-	setAttr ".wl[315].w[0]"  1;
-	setAttr ".wl[316].w[0]"  1;
-	setAttr ".wl[317].w[0]"  1;
-	setAttr ".wl[318].w[0]"  1;
+	setAttr -s 4 ".wl[305].w";
+	setAttr ".wl[305].w[0]" 0.91551857490850264;
+	setAttr ".wl[305].w[4]" 0.083603262429105624;
+	setAttr ".wl[305].w[5]" 0.00087217044473681109;
+	setAttr ".wl[305].w[6]" 5.9922176549354775e-006;
+	setAttr -s 4 ".wl[306].w";
+	setAttr ".wl[306].w[0]" 0.97423911825847864;
+	setAttr ".wl[306].w[4]" 0.025569580533392217;
+	setAttr ".wl[306].w[5]" 0.00019027259712674286;
+	setAttr ".wl[306].w[6]" 1.0286110023997096e-006;
+	setAttr -s 4 ".wl[307].w";
+	setAttr ".wl[307].w[0]" 0.33497400055612769;
+	setAttr ".wl[307].w[4]" 0.63874889632879395;
+	setAttr ".wl[307].w[5]" 0.025852308717647092;
+	setAttr ".wl[307].w[6]" 0.00042479439743129738;
+	setAttr -s 4 ".wl[308].w";
+	setAttr ".wl[308].w[0]" 0.7244427498700583;
+	setAttr ".wl[308].w[4]" 0.27042559417663437;
+	setAttr ".wl[308].w[5]" 0.0050759584429815258;
+	setAttr ".wl[308].w[6]" 5.56975103258782e-005;
+	setAttr -s 4 ".wl[309].w";
+	setAttr ".wl[309].w[0]" 0.99215573689461778;
+	setAttr ".wl[309].w[4]" 0.0078004476037129081;
+	setAttr ".wl[309].w[5]" 4.3626559290133309e-005;
+	setAttr ".wl[309].w[6]" 1.8894237917936923e-007;
+	setAttr -s 4 ".wl[310].w";
+	setAttr ".wl[310].w[0]" 0.99773735618790893;
+	setAttr ".wl[310].w[4]" 0.0022526923030779002;
+	setAttr ".wl[310].w[5]" 9.9164519842892204e-006;
+	setAttr ".wl[310].w[6]" 3.5057028880751347e-008;
+	setAttr -s 4 ".wl[311].w";
+	setAttr ".wl[311].w[0]" 0.96453633236010194;
+	setAttr ".wl[311].w[4]" 0.035198392197623878;
+	setAttr ".wl[311].w[5]" 0.00026385291259956842;
+	setAttr ".wl[311].w[6]" 1.4225296746093674e-006;
+	setAttr -s 4 ".wl[312].w";
+	setAttr ".wl[312].w[0]" 0.98647689124096027;
+	setAttr ".wl[312].w[4]" 0.013441684376838623;
+	setAttr ".wl[312].w[5]" 8.1053980218941902e-005;
+	setAttr ".wl[312].w[6]" 3.7040198216033828e-007;
+	setAttr -s 4 ".wl[313].w";
+	setAttr ".wl[313].w[0]" 0.9952446500221579;
+	setAttr ".wl[313].w[4]" 0.0047321396851867405;
+	setAttr ".wl[313].w[5]" 2.3121248176774139e-005;
+	setAttr ".wl[313].w[6]" 8.9044478589803189e-008;
+	setAttr -s 4 ".wl[314].w";
+	setAttr ".wl[314].w[0]" 0.99847074568857885;
+	setAttr ".wl[314].w[4]" 0.0015230915920474452;
+	setAttr ".wl[314].w[5]" 6.1426743737409452e-006;
+	setAttr ".wl[314].w[6]" 2.0044999960236017e-008;
+	setAttr -s 4 ".wl[315].w";
+	setAttr ".wl[315].w[0]" 0.98849152904607518;
+	setAttr ".wl[315].w[4]" 0.011447085265875533;
+	setAttr ".wl[315].w[5]" 6.1133257948436766e-005;
+	setAttr ".wl[315].w[6]" 2.5243010085147789e-007;
+	setAttr -s 4 ".wl[316].w";
+	setAttr ".wl[316].w[0]" 0.99480061217090832;
+	setAttr ".wl[316].w[4]" 0.0051748035054919777;
+	setAttr ".wl[316].w[5]" 2.4492442916341365e-005;
+	setAttr ".wl[316].w[6]" 9.1880683364175942e-008;
+	setAttr -s 4 ".wl[317].w";
+	setAttr ".wl[317].w[0]" 0.99796255639349407;
+	setAttr ".wl[317].w[4]" 0.0020291776074442391;
+	setAttr ".wl[317].w[5]" 8.2389405600937663e-006;
+	setAttr ".wl[317].w[6]" 2.7058501595530433e-008;
+	setAttr -s 4 ".wl[318].w";
+	setAttr ".wl[318].w[0]" 0.99929042883806529;
+	setAttr ".wl[318].w[4]" 0.00070709926756642365;
+	setAttr ".wl[318].w[5]" 2.4648463028710435e-006;
+	setAttr ".wl[318].w[6]" 7.0480654130570094e-009;
 	setAttr ".wl[319].w[0]"  1;
 	setAttr ".wl[320].w[0]"  1;
 	setAttr ".wl[321].w[0]"  1;
 	setAttr ".wl[322].w[0]"  1;
 	setAttr ".wl[323].w[0]"  1;
-	setAttr ".wl[324].w[0]"  1;
-	setAttr ".wl[325].w[0]"  1;
-	setAttr ".wl[326].w[0]"  1;
-	setAttr ".wl[327].w[0]"  1;
-	setAttr ".wl[328].w[0]"  1;
-	setAttr ".wl[329].w[0]"  1;
+	setAttr -s 4 ".wl[324].w";
+	setAttr ".wl[324].w[0]" 0.99994917972632213;
+	setAttr ".wl[324].w[4]" 5.0713723889487517e-005;
+	setAttr ".wl[324].w[5]" 1.0638881376459918e-007;
+	setAttr ".wl[324].w[6]" 1.6097461300669107e-010;
+	setAttr -s 4 ".wl[325].w";
+	setAttr ".wl[325].w[0]" 0.99998821515006309;
+	setAttr ".wl[325].w[4]" 1.1763436101439509e-005;
+	setAttr ".wl[325].w[5]" 2.1386808251335471e-008;
+	setAttr ".wl[325].w[6]" 2.702722246491714e-011;
+	setAttr -s 4 ".wl[326].w";
+	setAttr ".wl[326].w[0]" 0.99702127338427449;
+	setAttr ".wl[326].w[4]" 0.0029660542697370509;
+	setAttr ".wl[326].w[5]" 1.2628742885683172e-005;
+	setAttr ".wl[326].w[6]" 4.3603102778985751e-008;
+	setAttr -s 4 ".wl[327].w";
+	setAttr ".wl[327].w[0]" 0.99839359549325346;
+	setAttr ".wl[327].w[4]" 0.0016001931142921714;
+	setAttr ".wl[327].w[5]" 6.191798507824365e-006;
+	setAttr ".wl[327].w[6]" 1.9593946543617119e-008;
+	setAttr -s 4 ".wl[328].w";
+	setAttr ".wl[328].w[0]" 0.99930448860182386;
+	setAttr ".wl[328].w[4]" 0.0006931359044542179;
+	setAttr ".wl[328].w[5]" 2.3688143516138877e-006;
+	setAttr ".wl[328].w[6]" 6.6793703089250194e-009;
+	setAttr -s 4 ".wl[329].w";
+	setAttr ".wl[329].w[0]" 0.99974305374166317;
+	setAttr ".wl[329].w[4]" 0.0002561729223286034;
+	setAttr ".wl[329].w[5]" 7.7140998366438399e-007;
+	setAttr ".wl[329].w[6]" 1.926024564258308e-009;
 	setAttr ".wl[330].w[0]"  1;
 	setAttr ".wl[331].w[0]"  1;
 	setAttr ".wl[332].w[0]"  1;
 	setAttr ".wl[333].w[0]"  1;
 	setAttr ".wl[334].w[0]"  1;
-	setAttr ".wl[335].w[0]"  1;
-	setAttr ".wl[336].w[0]"  1;
-	setAttr ".wl[337].w[0]"  1;
-	setAttr ".wl[338].w[0]"  1;
-	setAttr ".wl[339].w[0]"  1;
-	setAttr ".wl[340].w[0]"  1;
-	setAttr ".wl[341].w[0]"  1;
-	setAttr ".wl[342].w[0]"  1;
+	setAttr -s 4 ".wl[335].w";
+	setAttr ".wl[335].w[0]" 0.99998463095358447;
+	setAttr ".wl[335].w[4]" 1.534003238877725e-005;
+	setAttr ".wl[335].w[5]" 2.897499617603609e-008;
+	setAttr ".wl[335].w[6]" 3.9030572101410922e-011;
+	setAttr -s 4 ".wl[336].w";
+	setAttr ".wl[336].w[0]" 0.99999480497114634;
+	setAttr ".wl[336].w[4]" 5.1858240716831805e-006;
+	setAttr ".wl[336].w[5]" 9.1934746906515016e-009;
+	setAttr ".wl[336].w[6]" 1.1307281248223093e-011;
+	setAttr -s 4 ".wl[337].w";
+	setAttr ".wl[337].w[0]" 0.99936370546250641;
+	setAttr ".wl[337].w[4]" 0.00063408008491934963;
+	setAttr ".wl[337].w[5]" 2.2079834967331576e-006;
+	setAttr ".wl[337].w[6]" 6.4690775041401769e-009;
+	setAttr -s 4 ".wl[338].w";
+	setAttr ".wl[338].w[0]" 0.99957759464122264;
+	setAttr ".wl[338].w[4]" 0.00042103700147575862;
+	setAttr ".wl[338].w[5]" 1.3646601301188485e-006;
+	setAttr ".wl[338].w[6]" 3.6971714783204217e-009;
+	setAttr -s 4 ".wl[339].w";
+	setAttr ".wl[339].w[0]" 0.99961927483023882;
+	setAttr ".wl[339].w[4]" 0.0003798911345688742;
+	setAttr ".wl[339].w[5]" 8.3299628930032092e-007;
+	setAttr ".wl[339].w[6]" 1.0389030012232522e-009;
+	setAttr -s 4 ".wl[340].w";
+	setAttr ".wl[340].w[0]" 0.99989075339362032;
+	setAttr ".wl[340].w[4]" 0.00010904898144080942;
+	setAttr ".wl[340].w[5]" 1.9741228816636342e-007;
+	setAttr ".wl[340].w[6]" 2.1265070020014364e-010;
+	setAttr -s 4 ".wl[341].w";
+	setAttr ".wl[341].w[0]" 0.99961300861018532;
+	setAttr ".wl[341].w[4]" 0.000386049982794025;
+	setAttr ".wl[341].w[5]" 9.3974381269387391e-007;
+	setAttr ".wl[341].w[6]" 1.6632079648912638e-009;
+	setAttr -s 4 ".wl[342].w";
+	setAttr ".wl[342].w[0]" 0.99764605415381258;
+	setAttr ".wl[342].w[4]" 0.0023459283311302792;
+	setAttr ".wl[342].w[5]" 7.9990225329281982e-006;
+	setAttr ".wl[342].w[6]" 1.8492524214453651e-008;
 	setAttr ".wl[343].w[0]"  1;
 	setAttr ".wl[344].w[0]"  1;
-	setAttr ".wl[345].w[0]"  1;
-	setAttr ".wl[346].w[0]"  1;
-	setAttr ".wl[347].w[0]"  1;
-	setAttr ".wl[348].w[0]"  1;
-	setAttr ".wl[349].w[0]"  1;
-	setAttr ".wl[350].w[0]"  1;
-	setAttr ".wl[351].w[0]"  1;
-	setAttr ".wl[352].w[0]"  1;
-	setAttr ".wl[353].w[0]"  1;
-	setAttr ".wl[354].w[0]"  1;
+	setAttr -s 4 ".wl[345].w";
+	setAttr ".wl[345].w[0]" 0.99999861483758368;
+	setAttr ".wl[345].w[4]" 1.3834674368025857e-006;
+	setAttr ".wl[345].w[5]" 1.6940734515213626e-009;
+	setAttr ".wl[345].w[6]" 9.0606891972674771e-013;
+	setAttr -s 4 ".wl[346].w";
+	setAttr ".wl[346].w[0]" 0.99999834837307944;
+	setAttr ".wl[346].w[4]" 1.6493118515428381e-006;
+	setAttr ".wl[346].w[5]" 2.3137489936499357e-009;
+	setAttr ".wl[346].w[6]" 1.3200259333401871e-012;
+	setAttr -s 4 ".wl[347].w";
+	setAttr ".wl[347].w[0]" 0.99994275052790527;
+	setAttr ".wl[347].w[4]" 5.7141258220590703e-005;
+	setAttr ".wl[347].w[5]" 1.0810078818250011e-007;
+	setAttr ".wl[347].w[6]" 1.130859604380439e-010;
+	setAttr -s 4 ".wl[348].w";
+	setAttr ".wl[348].w[0]" 0.99997257062590439;
+	setAttr ".wl[348].w[4]" 2.7383870847785812e-005;
+	setAttr ".wl[348].w[5]" 4.5460043775005741e-008;
+	setAttr ".wl[348].w[6]" 4.3204050262157856e-011;
+	setAttr -s 4 ".wl[349].w";
+	setAttr ".wl[349].w[0]" 0.99979442318127587;
+	setAttr ".wl[349].w[4]" 0.00020497533839547113;
+	setAttr ".wl[349].w[5]" 6.0001316717115686e-007;
+	setAttr ".wl[349].w[6]" 1.4671614868375261e-009;
+	setAttr -s 4 ".wl[350].w";
+	setAttr ".wl[350].w[0]" 0.99991841370115142;
+	setAttr ".wl[350].w[4]" 8.1371484610183421e-005;
+	setAttr ".wl[350].w[5]" 2.1434404721864206e-007;
+	setAttr ".wl[350].w[6]" 4.7019117730185636e-010;
+	setAttr -s 4 ".wl[351].w";
+	setAttr ".wl[351].w[0]" 0.99986132096190294;
+	setAttr ".wl[351].w[4]" 0.00013827417787697354;
+	setAttr ".wl[351].w[5]" 4.0384824132107025e-007;
+	setAttr ".wl[351].w[6]" 1.0119787613513074e-009;
+	setAttr -s 4 ".wl[352].w";
+	setAttr ".wl[352].w[0]" 0.99989606978984624;
+	setAttr ".wl[352].w[4]" 0.00010364199028666215;
+	setAttr ".wl[352].w[5]" 2.8754554746048025e-007;
+	setAttr ".wl[352].w[6]" 6.7431963496428816e-010;
+	setAttr -s 4 ".wl[353].w";
+	setAttr ".wl[353].w[0]" 0.99997179569538552;
+	setAttr ".wl[353].w[4]" 2.81590379474087e-005;
+	setAttr ".wl[353].w[5]" 4.5221492980732535e-008;
+	setAttr ".wl[353].w[6]" 4.5174086999769247e-011;
+	setAttr -s 4 ".wl[354].w";
+	setAttr ".wl[354].w[0]" 0.99990597529010572;
+	setAttr ".wl[354].w[4]" 9.3814298280350133e-005;
+	setAttr ".wl[354].w[5]" 2.1004534278068107e-007;
+	setAttr ".wl[354].w[6]" 3.6627114954795052e-010;
 	setAttr ".wl[355].w[0]"  1;
 	setAttr ".wl[356].w[0]"  1;
-	setAttr ".wl[357].w[0]"  1;
-	setAttr ".wl[358].w[0]"  1;
-	setAttr ".wl[359].w[0]"  1;
-	setAttr ".wl[360].w[0]"  1;
+	setAttr -s 4 ".wl[357].w";
+	setAttr ".wl[357].w[0]" 0.999991340715775;
+	setAttr ".wl[357].w[4]" 8.6461763609072724e-006;
+	setAttr ".wl[357].w[5]" 1.3096247768419644e-008;
+	setAttr ".wl[357].w[6]" 1.1616323151810044e-011;
+	setAttr -s 4 ".wl[358].w";
+	setAttr ".wl[358].w[0]" 0.99994372351301952;
+	setAttr ".wl[358].w[4]" 5.613268861898796e-005;
+	setAttr ".wl[358].w[5]" 1.4349095902934991e-007;
+	setAttr ".wl[358].w[6]" 3.0740246039559679e-010;
+	setAttr -s 4 ".wl[359].w";
+	setAttr ".wl[359].w[0]" 0.99997600342020876;
+	setAttr ".wl[359].w[4]" 2.3940163189397299e-005;
+	setAttr ".wl[359].w[5]" 5.6306738642725456e-008;
+	setAttr ".wl[359].w[6]" 1.0986320112135782e-010;
+	setAttr -s 4 ".wl[360].w";
+	setAttr ".wl[360].w[0]" 0.99999375634319654;
+	setAttr ".wl[360].w[4]" 6.23111082122353e-006;
+	setAttr ".wl[360].w[5]" 1.2526111475870359e-008;
+	setAttr ".wl[360].w[6]" 1.9870762438646116e-011;
 	setAttr ".wl[361].w[0]"  1;
-	setAttr ".wl[362].w[0]"  1;
+	setAttr -s 4 ".wl[362].w";
+	setAttr ".wl[362].w[0]" 0.99999881155072456;
+	setAttr ".wl[362].w[4]" 1.1861459722669637e-006;
+	setAttr ".wl[362].w[5]" 2.2998660937453762e-009;
+	setAttr ".wl[362].w[6]" 3.4370747789592749e-012;
 	setAttr ".wl[363].w[0]"  1;
 	setAttr ".wl[364].w[0]"  1;
-	setAttr ".wl[365].w[0]"  1;
-	setAttr ".wl[366].w[0]"  1;
-	setAttr ".wl[367].w[0]"  1;
-	setAttr ".wl[368].w[0]"  1;
+	setAttr -s 4 ".wl[365].w";
+	setAttr ".wl[365].w[0]" 0.99997139557518344;
+	setAttr ".wl[365].w[4]" 2.8532335206488161e-005;
+	setAttr ".wl[365].w[5]" 7.1933752008753901e-008;
+	setAttr ".wl[365].w[6]" 1.5585806153141681e-010;
+	setAttr -s 4 ".wl[366].w";
+	setAttr ".wl[366].w[0]" 0.99997582354551529;
+	setAttr ".wl[366].w[4]" 2.4117504176007316e-005;
+	setAttr ".wl[366].w[5]" 5.8829296457874564e-008;
+	setAttr ".wl[366].w[6]" 1.2101224931454986e-010;
+	setAttr -s 4 ".wl[367].w";
+	setAttr ".wl[367].w[0]" 0.99999413411436855;
+	setAttr ".wl[367].w[4]" 5.8569175287657185e-006;
+	setAttr ".wl[367].w[5]" 8.9594052441856485e-009;
+	setAttr ".wl[367].w[6]" 8.6974409471469546e-012;
+	setAttr -s 4 ".wl[368].w";
+	setAttr ".wl[368].w[0]" 0.99997986094437197;
+	setAttr ".wl[368].w[4]" 2.0097248296624974e-005;
+	setAttr ".wl[368].w[5]" 4.1738044472973762e-008;
+	setAttr ".wl[368].w[6]" 6.928693436002739e-011;
 	setAttr ".wl[369].w[0]"  1;
 	setAttr ".wl[370].w[0]"  1;
-	setAttr ".wl[371].w[0]"  1;
-	setAttr ".wl[372].w[0]"  1;
-	setAttr ".wl[373].w[0]"  1;
-	setAttr ".wl[374].w[0]"  1;
-	setAttr ".wl[375].w[0]"  1;
+	setAttr -s 4 ".wl[371].w";
+	setAttr ".wl[371].w[0]" 0.99999830115878274;
+	setAttr ".wl[371].w[4]" 1.6962605988769431e-006;
+	setAttr ".wl[371].w[5]" 2.5782551429155523e-009;
+	setAttr ".wl[371].w[6]" 2.3632370823835392e-012;
+	setAttr -s 4 ".wl[372].w";
+	setAttr ".wl[372].w[0]" 0.99998580379436819;
+	setAttr ".wl[372].w[4]" 1.4163609345834549e-005;
+	setAttr ".wl[372].w[5]" 3.2534215481686016e-008;
+	setAttr ".wl[372].w[6]" 6.2070494996844196e-011;
+	setAttr -s 4 ".wl[373].w";
+	setAttr ".wl[373].w[0]" 0.99999354374547966;
+	setAttr ".wl[373].w[4]" 6.4422249120752407e-006;
+	setAttr ".wl[373].w[5]" 1.4004711184067983e-008;
+	setAttr ".wl[373].w[6]" 2.4897077959173867e-011;
+	setAttr -s 4 ".wl[374].w";
+	setAttr ".wl[374].w[0]" 0.99999438176659794;
+	setAttr ".wl[374].w[4]" 5.6053513388918605e-006;
+	setAttr ".wl[374].w[5]" 1.2857149999845572e-008;
+	setAttr ".wl[374].w[6]" 2.4913168762774819e-011;
+	setAttr -s 4 ".wl[375].w";
+	setAttr ".wl[375].w[0]" 0.9999947946829737;
+	setAttr ".wl[375].w[4]" 5.1936213021577752e-006;
+	setAttr ".wl[375].w[5]" 1.1673938050641358e-008;
+	setAttr ".wl[375].w[6]" 2.1786093808790591e-011;
 	setAttr ".wl[376].w[0]"  1;
-	setAttr ".wl[377].w[0]"  1;
+	setAttr -s 4 ".wl[377].w";
+	setAttr ".wl[377].w[0]" 0.99999595474474667;
+	setAttr ".wl[377].w[4]" 4.0370846064322571e-006;
+	setAttr ".wl[377].w[5]" 8.1574318841505828e-009;
+	setAttr ".wl[377].w[6]" 1.3215010143139974e-011;
 	setAttr ".wl[378].w[0]"  1;
 	setAttr ".wl[379].w[0]"  1;
 	setAttr ".wl[380].w[0]"  1;
-	setAttr ".wl[381].w[0]"  1;
-	setAttr ".wl[382].w[0]"  1;
+	setAttr -s 4 ".wl[381].w";
+	setAttr ".wl[381].w[0]" 0.99999694070741274;
+	setAttr ".wl[381].w[4]" 3.052604875012156e-006;
+	setAttr ".wl[381].w[5]" 6.6757602635066147e-009;
+	setAttr ".wl[381].w[6]" 1.1951984014196146e-011;
+	setAttr -s 4 ".wl[382].w";
+	setAttr ".wl[382].w[0]" 0.99999882908812299;
+	setAttr ".wl[382].w[4]" 1.1683631976065763e-006;
+	setAttr ".wl[382].w[5]" 2.5441475175977052e-009;
+	setAttr ".wl[382].w[6]" 4.53188895165032e-012;
 	setAttr ".wl[383].w[0]"  1;
 	setAttr ".wl[384].w[0]"  1;
 	setAttr ".wl[385].w[0]"  1;
@@ -33149,108 +33701,411 @@ createNode skinCluster -n "SkinCluster_Cap01";
 	setAttr ".wl[398].w[0]"  1;
 	setAttr ".wl[399].w[0]"  1;
 	setAttr ".wl[400].w[0]"  1;
-	setAttr ".wl[401].w[0]"  1;
-	setAttr ".wl[402].w[0]"  1;
+	setAttr -s 4 ".wl[401].w";
+	setAttr ".wl[401].w[0]" 0.97997434499835467;
+	setAttr ".wl[401].w[4]" 0.019907462836721113;
+	setAttr ".wl[401].w[5]" 0.00011769262893714257;
+	setAttr ".wl[401].w[6]" 4.9953598706963176e-007;
+	setAttr -s 4 ".wl[402].w";
+	setAttr ".wl[402].w[0]" 0.92505738361880518;
+	setAttr ".wl[402].w[4]" 0.074143579331907156;
+	setAttr ".wl[402].w[5]" 0.00079300169567651422;
+	setAttr ".wl[402].w[6]" 6.0353536111353273e-006;
 	setAttr ".wl[403].w[0]"  1;
 	setAttr ".wl[404].w[0]"  1;
 	setAttr ".wl[405].w[0]"  1;
-	setAttr ".wl[406].w[0]"  1;
-	setAttr ".wl[407].w[0]"  1;
-	setAttr ".wl[408].w[0]"  1;
-	setAttr ".wl[409].w[0]"  1;
-	setAttr ".wl[410].w[0]"  1;
-	setAttr ".wl[411].w[0]"  1;
-	setAttr ".wl[412].w[0]"  1;
+	setAttr -s 4 ".wl[406].w";
+	setAttr ".wl[406].w[0]" 0.99999505454422621;
+	setAttr ".wl[406].w[4]" 4.9435702574627438e-006;
+	setAttr ".wl[406].w[5]" 1.8852199827892259e-009;
+	setAttr ".wl[406].w[6]" 2.9634048908283722e-013;
+	setAttr -s 4 ".wl[407].w";
+	setAttr ".wl[407].w[0]" 0.99992789825219131;
+	setAttr ".wl[407].w[4]" 7.2057156817853629e-005;
+	setAttr ".wl[407].w[5]" 4.4571411045458668e-008;
+	setAttr ".wl[407].w[6]" 1.9579795851279437e-011;
+	setAttr -s 4 ".wl[408].w";
+	setAttr ".wl[408].w[0]" 0.99708019059667974;
+	setAttr ".wl[408].w[4]" 0.0029165892107248259;
+	setAttr ".wl[408].w[5]" 3.217754198536689e-006;
+	setAttr ".wl[408].w[6]" 2.4383968987165123e-009;
+	setAttr -s 4 ".wl[409].w";
+	setAttr ".wl[409].w[0]" 0.98410538259766689;
+	setAttr ".wl[409].w[4]" 0.01586152206026837;
+	setAttr ".wl[409].w[5]" 3.30515883400741e-005;
+	setAttr ".wl[409].w[6]" 4.3753724666043957e-008;
+	setAttr -s 4 ".wl[410].w";
+	setAttr ".wl[410].w[0]" 0.93429402524155014;
+	setAttr ".wl[410].w[4]" 0.065422261023416639;
+	setAttr ".wl[410].w[5]" 0.00028295872649386115;
+	setAttr ".wl[410].w[6]" 7.5500853935356789e-007;
+	setAttr -s 4 ".wl[411].w";
+	setAttr ".wl[411].w[0]" 0.67019661471379166;
+	setAttr ".wl[411].w[4]" 0.32632648360747368;
+	setAttr ".wl[411].w[5]" 0.0034582594093230546;
+	setAttr ".wl[411].w[6]" 1.8642269411626477e-005;
+	setAttr -s 4 ".wl[412].w";
+	setAttr ".wl[412].w[0]" 0.34131738824509406;
+	setAttr ".wl[412].w[4]" 0.63705997726781349;
+	setAttr ".wl[412].w[5]" 0.021372107250510839;
+	setAttr ".wl[412].w[6]" 0.00025052723658162057;
 	setAttr ".wl[413].w[0]"  1;
 	setAttr ".wl[414].w[0]"  1;
-	setAttr ".wl[415].w[0]"  1;
-	setAttr ".wl[416].w[0]"  1;
-	setAttr ".wl[417].w[0]"  1;
-	setAttr ".wl[418].w[0]"  1;
-	setAttr ".wl[419].w[0]"  1;
-	setAttr ".wl[420].w[0]"  1;
+	setAttr -s 4 ".wl[415].w";
+	setAttr ".wl[415].w[0]" 0.9993407758652999;
+	setAttr ".wl[415].w[4]" 0.00065855487103930589;
+	setAttr ".wl[415].w[5]" 6.6868305496531812e-007;
+	setAttr ".wl[415].w[6]" 5.8060582701786982e-010;
+	setAttr -s 4 ".wl[416].w";
+	setAttr ".wl[416].w[0]" 0.33615985702437534;
+	setAttr ".wl[416].w[4]" 0.63723417266207216;
+	setAttr ".wl[416].w[5]" 0.026214843014537664;
+	setAttr ".wl[416].w[6]" 0.00039112729901479416;
+	setAttr -s 4 ".wl[417].w";
+	setAttr ".wl[417].w[0]" 0.70619762698331345;
+	setAttr ".wl[417].w[4]" 0.28810185461750215;
+	setAttr ".wl[417].w[5]" 0.0056424701188947544;
+	setAttr ".wl[417].w[6]" 5.8048280289612609e-005;
+	setAttr -s 4 ".wl[418].w";
+	setAttr ".wl[418].w[0]" 0.99689351000324578;
+	setAttr ".wl[418].w[4]" 0.0030935882635098363;
+	setAttr ".wl[418].w[5]" 1.286637009560833e-005;
+	setAttr ".wl[418].w[6]" 3.5363148780535955e-008;
+	setAttr -s 4 ".wl[419].w";
+	setAttr ".wl[419].w[0]" 0.99935379353006026;
+	setAttr ".wl[419].w[4]" 0.0006441395561820523;
+	setAttr ".wl[419].w[5]" 2.0625840461861218e-006;
+	setAttr ".wl[419].w[6]" 4.3297114978830922e-009;
+	setAttr -s 4 ".wl[420].w";
+	setAttr ".wl[420].w[0]" 0.9999970650123986;
+	setAttr ".wl[420].w[4]" 2.9295890246114734e-006;
+	setAttr ".wl[420].w[5]" 5.3937629662056071e-009;
+	setAttr ".wl[420].w[6]" 4.8138218619367082e-012;
 	setAttr ".wl[421].w[0]"  1;
 	setAttr ".wl[422].w[0]"  1;
-	setAttr ".wl[423].w[0]"  1;
+	setAttr -s 4 ".wl[423].w";
+	setAttr ".wl[423].w[0]" 0.99991531966349601;
+	setAttr ".wl[423].w[4]" 8.4462401660989712e-005;
+	setAttr ".wl[423].w[5]" 2.1757660893491793e-007;
+	setAttr ".wl[423].w[6]" 3.5823407035090154e-010;
 	setAttr ".wl[424].w[0]"  1;
 	setAttr ".wl[425].w[0]"  1;
 	setAttr ".wl[426].w[0]"  1;
 	setAttr ".wl[427].w[0]"  1;
 	setAttr ".wl[428].w[0]"  1;
-	setAttr ".wl[429].w[0]"  1;
-	setAttr ".wl[430].w[0]"  1;
+	setAttr -s 4 ".wl[429].w";
+	setAttr ".wl[429].w[0]" 0.91541599913555138;
+	setAttr ".wl[429].w[4]" 0.083620287095128143;
+	setAttr ".wl[429].w[5]" 0.0009566850155987033;
+	setAttr ".wl[429].w[6]" 7.0287537217698527e-006;
+	setAttr -s 4 ".wl[430].w";
+	setAttr ".wl[430].w[0]" 0.97432111113373066;
+	setAttr ".wl[430].w[4]" 0.025487795580826329;
+	setAttr ".wl[430].w[5]" 0.00019009905529738429;
+	setAttr ".wl[430].w[6]" 9.9423014563653438e-007;
 	setAttr ".wl[431].w[0]"  1;
 	setAttr ".wl[432].w[0]"  1;
 	setAttr ".wl[433].w[0]"  1;
-	setAttr ".wl[434].w[0]"  1;
-	setAttr ".wl[435].w[0]"  1;
-	setAttr ".wl[436].w[0]"  1;
-	setAttr ".wl[437].w[0]"  1;
-	setAttr ".wl[438].w[0]"  1;
-	setAttr ".wl[439].w[0]"  1;
-	setAttr ".wl[440].w[0]"  1;
+	setAttr -s 4 ".wl[434].w";
+	setAttr ".wl[434].w[0]" 0.99998719825379201;
+	setAttr ".wl[434].w[4]" 1.2798643045720445e-005;
+	setAttr ".wl[434].w[5]" 3.1029503773846261e-009;
+	setAttr ".wl[434].w[6]" 2.1189318644884054e-013;
+	setAttr -s 4 ".wl[435].w";
+	setAttr ".wl[435].w[0]" 0.99986275621756215;
+	setAttr ".wl[435].w[4]" 0.00013717375410606016;
+	setAttr ".wl[435].w[5]" 7.001251870483907e-008;
+	setAttr ".wl[435].w[6]" 1.581308081266185e-011;
+	setAttr -s 4 ".wl[436].w";
+	setAttr ".wl[436].w[0]" 0.99554005527704215;
+	setAttr ".wl[436].w[4]" 0.0044542504737701072;
+	setAttr ".wl[436].w[5]" 5.6907805783399858e-006;
+	setAttr ".wl[436].w[6]" 3.4686094064206246e-009;
+	setAttr -s 4 ".wl[437].w";
+	setAttr ".wl[437].w[0]" 0.97959135703225386;
+	setAttr ".wl[437].w[4]" 0.020354823715157906;
+	setAttr ".wl[437].w[5]" 5.3741125881690481e-005;
+	setAttr ".wl[437].w[6]" 7.8126706541587507e-008;
+	setAttr -s 4 ".wl[438].w";
+	setAttr ".wl[438].w[0]" 0.92560931265988022;
+	setAttr ".wl[438].w[4]" 0.073979915654217285;
+	setAttr ".wl[438].w[5]" 0.00040950312890307699;
+	setAttr ".wl[438].w[6]" 1.2685569994147577e-006;
+	setAttr -s 4 ".wl[439].w";
+	setAttr ".wl[439].w[0]" 0.65415556939957087;
+	setAttr ".wl[439].w[4]" 0.3411293790384855;
+	setAttr ".wl[439].w[5]" 0.0046852099920984642;
+	setAttr ".wl[439].w[6]" 2.984156984512726e-005;
+	setAttr -s 4 ".wl[440].w";
+	setAttr ".wl[440].w[0]" 0.36534100432065997;
+	setAttr ".wl[440].w[4]" 0.61046976875814329;
+	setAttr ".wl[440].w[5]" 0.023885144351247677;
+	setAttr ".wl[440].w[6]" 0.00030408256994907064;
 	setAttr ".wl[441].w[0]"  1;
 	setAttr ".wl[442].w[0]"  1;
-	setAttr ".wl[443].w[0]"  1;
-	setAttr ".wl[444].w[0]"  1;
-	setAttr ".wl[445].w[0]"  1;
-	setAttr ".wl[446].w[0]"  1;
-	setAttr ".wl[447].w[0]"  1;
-	setAttr ".wl[448].w[0]"  1;
+	setAttr -s 4 ".wl[443].w";
+	setAttr ".wl[443].w[0]" 0.99893615276089043;
+	setAttr ".wl[443].w[4]" 0.0010627755426299154;
+	setAttr ".wl[443].w[5]" 1.0710914125723986e-006;
+	setAttr ".wl[443].w[6]" 6.0506708438530823e-010;
+	setAttr -s 4 ".wl[444].w";
+	setAttr ".wl[444].w[0]" 0.34363409199491735;
+	setAttr ".wl[444].w[4]" 0.62589436309750379;
+	setAttr ".wl[444].w[5]" 0.0300028230893809;
+	setAttr ".wl[444].w[6]" 0.00046872181819800616;
+	setAttr -s 4 ".wl[445].w";
+	setAttr ".wl[445].w[0]" 0.68636228033112945;
+	setAttr ".wl[445].w[4]" 0.30654149052627427;
+	setAttr ".wl[445].w[5]" 0.0070189772724164289;
+	setAttr ".wl[445].w[6]" 7.7251870179872111e-005;
+	setAttr -s 4 ".wl[446].w";
+	setAttr ".wl[446].w[0]" 0.99497860041909569;
+	setAttr ".wl[446].w[4]" 0.0049923079459775329;
+	setAttr ".wl[446].w[5]" 2.8980918972421963e-005;
+	setAttr ".wl[446].w[6]" 1.1071595435143874e-007;
+	setAttr -s 4 ".wl[447].w";
+	setAttr ".wl[447].w[0]" 0.99875974808258428;
+	setAttr ".wl[447].w[4]" 0.0012346164485010636;
+	setAttr ".wl[447].w[5]" 5.6179426795566044e-006;
+	setAttr ".wl[447].w[6]" 1.7526235104157792e-008;
+	setAttr -s 4 ".wl[448].w";
+	setAttr ".wl[448].w[0]" 0.99999280514074596;
+	setAttr ".wl[448].w[4]" 7.1773423415294456e-006;
+	setAttr ".wl[448].w[5]" 1.7491866455386865e-008;
+	setAttr ".wl[448].w[6]" 2.504606011664121e-011;
 	setAttr ".wl[449].w[0]"  1;
 	setAttr ".wl[450].w[0]"  1;
-	setAttr ".wl[451].w[0]"  1;
+	setAttr -s 4 ".wl[451].w";
+	setAttr ".wl[451].w[0]" 0.99985909088546421;
+	setAttr ".wl[451].w[4]" 0.00014041402260306374;
+	setAttr ".wl[451].w[5]" 4.9386185244032367e-007;
+	setAttr ".wl[451].w[6]" 1.2300802880532445e-009;
 	setAttr ".wl[452].w[0]"  1;
 	setAttr ".wl[453].w[0]"  1;
 	setAttr ".wl[454].w[0]"  1;
 	setAttr ".wl[455].w[0]"  1;
 	setAttr ".wl[456].w[0]"  1;
-	setAttr ".wl[457].w[0]"  1;
-	setAttr ".wl[458].w[0]"  1;
-	setAttr ".wl[459].w[0]"  1;
-	setAttr ".wl[460].w[0]"  1;
-	setAttr ".wl[461].w[0]"  1;
-	setAttr ".wl[462].w[0]"  1;
-	setAttr ".wl[463].w[0]"  1;
-	setAttr ".wl[464].w[0]"  1;
-	setAttr ".wl[465].w[0]"  1;
-	setAttr ".wl[466].w[0]"  1;
-	setAttr ".wl[467].w[0]"  1;
-	setAttr ".wl[468].w[0]"  1;
-	setAttr ".wl[469].w[0]"  1;
-	setAttr ".wl[470].w[0]"  1;
-	setAttr ".wl[471].w[0]"  1;
-	setAttr ".wl[472].w[0]"  1;
-	setAttr ".wl[473].w[0]"  1;
-	setAttr ".wl[474].w[0]"  1;
-	setAttr ".wl[475].w[0]"  1;
-	setAttr ".wl[476].w[0]"  1;
-	setAttr ".wl[477].w[0]"  1;
-	setAttr ".wl[478].w[0]"  1;
-	setAttr ".wl[479].w[0]"  1;
-	setAttr ".wl[480].w[0]"  1;
-	setAttr ".wl[481].w[0]"  1;
-	setAttr ".wl[482].w[0]"  1;
-	setAttr ".wl[483].w[0]"  1;
-	setAttr ".wl[484].w[0]"  1;
-	setAttr ".wl[485].w[0]"  1;
-	setAttr ".wl[486].w[0]"  1;
-	setAttr ".wl[487].w[0]"  1;
-	setAttr ".wl[488].w[0]"  1;
-	setAttr ".wl[489].w[0]"  1;
-	setAttr ".wl[490].w[0]"  1;
-	setAttr ".wl[491].w[0]"  1;
-	setAttr ".wl[492].w[0]"  1;
-	setAttr ".wl[493].w[0]"  1;
-	setAttr ".wl[494].w[0]"  1;
+	setAttr -s 4 ".wl[457].w";
+	setAttr ".wl[457].w[0]" 0.89684395038282494;
+	setAttr ".wl[457].w[4]" 0.10167150108755378;
+	setAttr ".wl[457].w[5]" 0.0014721414417182986;
+	setAttr ".wl[457].w[6]" 1.2407087902977327e-005;
+	setAttr -s 4 ".wl[458].w";
+	setAttr ".wl[458].w[0]" 0.96455144398295611;
+	setAttr ".wl[458].w[4]" 0.035095315040905295;
+	setAttr ".wl[458].w[5]" 0.00035092265270835187;
+	setAttr ".wl[458].w[6]" 2.3183234302403324e-006;
+	setAttr -s 4 ".wl[459].w";
+	setAttr ".wl[459].w[0]" 0.060431087026575736;
+	setAttr ".wl[459].w[4]" 0.79803541313552151;
+	setAttr ".wl[459].w[5]" 0.13768832163028036;
+	setAttr ".wl[459].w[6]" 0.0038451782076224543;
+	setAttr -s 4 ".wl[460].w";
+	setAttr ".wl[460].w[0]" 0.069644526402469209;
+	setAttr ".wl[460].w[4]" 0.77104388037076776;
+	setAttr ".wl[460].w[5]" 0.15346740579953055;
+	setAttr ".wl[460].w[6]" 0.0058441874272324845;
+	setAttr -s 4 ".wl[461].w";
+	setAttr ".wl[461].w[0]" 0.062390134370323924;
+	setAttr ".wl[461].w[4]" 0.78336889540716259;
+	setAttr ".wl[461].w[5]" 0.14902892850058586;
+	setAttr ".wl[461].w[6]" 0.0052120417219277152;
+	setAttr -s 4 ".wl[462].w";
+	setAttr ".wl[462].w[0]" 0.059906031876198362;
+	setAttr ".wl[462].w[4]" 0.79966684054815385;
+	setAttr ".wl[462].w[5]" 0.13689223951893548;
+	setAttr ".wl[462].w[6]" 0.0035348880567123001;
+	setAttr -s 4 ".wl[463].w";
+	setAttr ".wl[463].w[0]" 0.060890066002254217;
+	setAttr ".wl[463].w[4]" 0.78634714820632556;
+	setAttr ".wl[463].w[5]" 0.14810365410895809;
+	setAttr ".wl[463].w[6]" 0.0046591316824621115;
+	setAttr -s 4 ".wl[464].w";
+	setAttr ".wl[464].w[0]" 0.063692756018601804;
+	setAttr ".wl[464].w[4]" 0.78686201906802145;
+	setAttr ".wl[464].w[5]" 0.14547136492658672;
+	setAttr ".wl[464].w[6]" 0.0039738599867900435;
+	setAttr -s 4 ".wl[465].w";
+	setAttr ".wl[465].w[0]" 0.065947299805587223;
+	setAttr ".wl[465].w[4]" 0.77446970224226719;
+	setAttr ".wl[465].w[5]" 0.15467378949432459;
+	setAttr ".wl[465].w[6]" 0.0049092084578210302;
+	setAttr -s 4 ".wl[466].w";
+	setAttr ".wl[466].w[0]" 0.0018650435557082679;
+	setAttr ".wl[466].w[4]" 0.050799635588099891;
+	setAttr ".wl[466].w[5]" 0.87522471065999374;
+	setAttr ".wl[466].w[6]" 0.072110610196198105;
+	setAttr -s 4 ".wl[467].w";
+	setAttr ".wl[467].w[0]" 0.0023607020435642001;
+	setAttr ".wl[467].w[4]" 0.054503056593013278;
+	setAttr ".wl[467].w[5]" 0.85404389076821052;
+	setAttr ".wl[467].w[6]" 0.089092350595212033;
+	setAttr -s 4 ".wl[468].w";
+	setAttr ".wl[468].w[0]" 0.0022265871533270198;
+	setAttr ".wl[468].w[4]" 0.054673697682815381;
+	setAttr ".wl[468].w[5]" 0.85613147289036773;
+	setAttr ".wl[468].w[6]" 0.086968242273489843;
+	setAttr -s 4 ".wl[469].w";
+	setAttr ".wl[469].w[0]" 0.0019188951367705709;
+	setAttr ".wl[469].w[4]" 0.051454135009291184;
+	setAttr ".wl[469].w[5]" 0.87646440276092952;
+	setAttr ".wl[469].w[6]" 0.070162567093008776;
+	setAttr -s 4 ".wl[470].w";
+	setAttr ".wl[470].w[0]" 0.0021003551598772763;
+	setAttr ".wl[470].w[4]" 0.053699810145234464;
+	setAttr ".wl[470].w[5]" 0.86503964719389681;
+	setAttr ".wl[470].w[6]" 0.079160187500991464;
+	setAttr -s 4 ".wl[471].w";
+	setAttr ".wl[471].w[0]" 0.0020115265751700084;
+	setAttr ".wl[471].w[4]" 0.051957445422270765;
+	setAttr ".wl[471].w[5]" 0.87760704193521311;
+	setAttr ".wl[471].w[6]" 0.068423986067346149;
+	setAttr -s 4 ".wl[472].w";
+	setAttr ".wl[472].w[0]" 0.0021759407585312251;
+	setAttr ".wl[472].w[4]" 0.053491559598049833;
+	setAttr ".wl[472].w[5]" 0.86983856940909821;
+	setAttr ".wl[472].w[6]" 0.074493930234320729;
+	setAttr -s 4 ".wl[473].w";
+	setAttr ".wl[473].w[0]" 0.00037993482073361839;
+	setAttr ".wl[473].w[4]" 0.015453132360735108;
+	setAttr ".wl[473].w[5]" 0.77552086991221847;
+	setAttr ".wl[473].w[6]" 0.20864606290631282;
+	setAttr -s 4 ".wl[474].w";
+	setAttr ".wl[474].w[0]" 0.00052718915298133329;
+	setAttr ".wl[474].w[4]" 0.018106346012042036;
+	setAttr ".wl[474].w[5]" 0.747781789208396;
+	setAttr ".wl[474].w[6]" 0.23358467562658056;
+	setAttr -s 4 ".wl[475].w";
+	setAttr ".wl[475].w[0]" 0.00052049486910854537;
+	setAttr ".wl[475].w[4]" 0.018543809384979373;
+	setAttr ".wl[475].w[5]" 0.75559780087422868;
+	setAttr ".wl[475].w[6]" 0.22533789487168346;
+	setAttr -s 4 ".wl[476].w";
+	setAttr ".wl[476].w[0]" 0.00039150055020353847;
+	setAttr ".wl[476].w[4]" 0.015793194310464852;
+	setAttr ".wl[476].w[5]" 0.78610441049511859;
+	setAttr ".wl[476].w[6]" 0.19771089464421293;
+	setAttr -s 4 ".wl[477].w";
+	setAttr ".wl[477].w[0]" 0.00048470117733900864;
+	setAttr ".wl[477].w[4]" 0.018076248308951482;
+	setAttr ".wl[477].w[5]" 0.77165984641877594;
+	setAttr ".wl[477].w[6]" 0.20977920409493361;
+	setAttr -s 4 ".wl[478].w";
+	setAttr ".wl[478].w[0]" 0.00042536354939137766;
+	setAttr ".wl[478].w[4]" 0.016668485718026507;
+	setAttr ".wl[478].w[5]" 0.79586322580485869;
+	setAttr ".wl[478].w[6]" 0.18704292492772343;
+	setAttr -s 4 ".wl[479].w";
+	setAttr ".wl[479].w[0]" 0.00049023062053410449;
+	setAttr ".wl[479].w[4]" 0.018050970812972383;
+	setAttr ".wl[479].w[5]" 0.7860037111807856;
+	setAttr ".wl[479].w[6]" 0.19545508738570797;
+	setAttr -s 4 ".wl[480].w";
+	setAttr ".wl[480].w[0]" 9.7111066437616245e-005;
+	setAttr ".wl[480].w[4]" 0.0049744981507085263;
+	setAttr ".wl[480].w[5]" 0.42295632176942999;
+	setAttr ".wl[480].w[6]" 0.57197206901342379;
+	setAttr -s 4 ".wl[481].w";
+	setAttr ".wl[481].w[0]" 0.00014676835896088036;
+	setAttr ".wl[481].w[4]" 0.0063670485206817886;
+	setAttr ".wl[481].w[5]" 0.43909597789717081;
+	setAttr ".wl[481].w[6]" 0.55439020522318649;
+	setAttr -s 4 ".wl[482].w";
+	setAttr ".wl[482].w[0]" 0.00013482803686248879;
+	setAttr ".wl[482].w[4]" 0.0060839222543860802;
+	setAttr ".wl[482].w[5]" 0.42376137439153644;
+	setAttr ".wl[482].w[6]" 0.57001987531721499;
+	setAttr -s 4 ".wl[483].w";
+	setAttr ".wl[483].w[0]" 9.53984029774535e-005;
+	setAttr ".wl[483].w[4]" 0.0049072455872539843;
+	setAttr ".wl[483].w[5]" 0.4220927741164307;
+	setAttr ".wl[483].w[6]" 0.57290458189333782;
+	setAttr -s 4 ".wl[484].w";
+	setAttr ".wl[484].w[0]" 0.00012115775186449795;
+	setAttr ".wl[484].w[4]" 0.005734724763587099;
+	setAttr ".wl[484].w[5]" 0.41936327900743231;
+	setAttr ".wl[484].w[6]" 0.57478083847711614;
+	setAttr -s 4 ".wl[485].w";
+	setAttr ".wl[485].w[0]" 0.00010323202444251223;
+	setAttr ".wl[485].w[4]" 0.0051513131695233088;
+	setAttr ".wl[485].w[5]" 0.42381812587607187;
+	setAttr ".wl[485].w[6]" 0.57092732892996234;
+	setAttr -s 4 ".wl[486].w";
+	setAttr ".wl[486].w[0]" 0.00012628564403649456;
+	setAttr ".wl[486].w[4]" 0.0058808890735061441;
+	setAttr ".wl[486].w[5]" 0.42940078848894847;
+	setAttr ".wl[486].w[6]" 0.56459203679350889;
+	setAttr -s 4 ".wl[487].w";
+	setAttr ".wl[487].w[0]" 3.5347862051171575e-005;
+	setAttr ".wl[487].w[4]" 0.0021948179093421744;
+	setAttr ".wl[487].w[5]" 0.27317246248523758;
+	setAttr ".wl[487].w[6]" 0.72459737174336902;
+	setAttr -s 4 ".wl[488].w";
+	setAttr ".wl[488].w[0]" 5.1938923446348539e-005;
+	setAttr ".wl[488].w[4]" 0.002780757555735099;
+	setAttr ".wl[488].w[5]" 0.28824627076841347;
+	setAttr ".wl[488].w[6]" 0.70892103275240503;
+	setAttr -s 4 ".wl[489].w";
+	setAttr ".wl[489].w[0]" 4.9963423384369321e-005;
+	setAttr ".wl[489].w[4]" 0.0027475982773746449;
+	setAttr ".wl[489].w[5]" 0.28356776397455336;
+	setAttr ".wl[489].w[6]" 0.71363467432468763;
+	setAttr -s 4 ".wl[490].w";
+	setAttr ".wl[490].w[0]" 3.4656365721530413e-005;
+	setAttr ".wl[490].w[4]" 0.0021775168839200869;
+	setAttr ".wl[490].w[5]" 0.27502826702804206;
+	setAttr ".wl[490].w[6]" 0.72275955972231631;
+	setAttr -s 4 ".wl[491].w";
+	setAttr ".wl[491].w[0]" 4.6771283287116994e-005;
+	setAttr ".wl[491].w[4]" 0.002676495290203763;
+	setAttr ".wl[491].w[5]" 0.28443062392751894;
+	setAttr ".wl[491].w[6]" 0.71284610949899019;
+	setAttr -s 4 ".wl[492].w";
+	setAttr ".wl[492].w[0]" 3.8931311999834683e-005;
+	setAttr ".wl[492].w[4]" 0.0023655199437686491;
+	setAttr ".wl[492].w[5]" 0.28285137743882383;
+	setAttr ".wl[492].w[6]" 0.71474417130540768;
+	setAttr -s 4 ".wl[493].w";
+	setAttr ".wl[493].w[0]" 5.0316143492712406e-005;
+	setAttr ".wl[493].w[4]" 0.002826531012357233;
+	setAttr ".wl[493].w[5]" 0.29557374136138476;
+	setAttr ".wl[493].w[6]" 0.70154941148276528;
+	setAttr -s 4 ".wl[494].w";
+	setAttr ".wl[494].w[0]" 3.1093524122005611e-005;
+	setAttr ".wl[494].w[4]" 0.0019471817671368706;
+	setAttr ".wl[494].w[5]" 0.24900073988024315;
+	setAttr ".wl[494].w[6]" 0.74902098482849799;
+	setAttr -s 7 ".pm";
 	setAttr ".pm[0]" -type "matrix" 3.3306690738754681e-016 -4.4408920985006262e-016 -1 0
 		 1 -1.1102230246251541e-016 4.4408920985006262e-016 0 -1.1093356479670472e-031 -1 3.3306690738754681e-016 0
 		 -21.204431138216549 -0.030139920008441082 -9.0292568265037638e-015 1;
+	setAttr ".pm[1]" -type "matrix" -9.7890996213542449e-047 1 2.2204460492503131e-016 6.0771633572862712e-064
+		 -0.99999999999999989 5.6898930012039273e-016 1.0408340855860843e-016 6.9388939039072284e-018
+		 -4.4086185407023641e-031 -1.1102230246251551e-016 1 2.7369110631344083e-048 23.844641874340919 -2.5359349973576641 -1.4259604650811561 0.99999999999999989;
+	setAttr ".pm[2]" -type "matrix" -3.1055275278418649e-047 1 2.2204460492503131e-016 0
+		 -1 5.4123372450476381e-016 9.7144514654701197e-017 0 -1.398605261717744e-031 -1.1102230246251552e-016 1 0
+		 22.693667833585383 -2.5359349973576628 -1.4259604650811564 1;
+	setAttr ".pm[3]" -type "matrix" -2.9358973378514014e-047 1 2.2204460492503131e-016 0
+		 -0.99999999999999989 5.4123372450476381e-016 8.3266726846886741e-017 0 -1.3222106156745603e-031 -1.1102230246251552e-016 1 0
+		 21.454093831526311 -2.5359349973576628 -1.4259604650811557 1;
+	setAttr ".pm[4]" -type "matrix" -1.3236411966488504e-015 1.0000000000000002 7.9156681209724565e-017 0
+		 0.99999999999999989 -4.3021142204224816e-016 -1.0408340855860843e-016 0 -1.4695369328619483e-031 1.110223024625158e-016 -1 0
+		 -23.8446 2.5359300000000102 1.4259600000000028 1;
+	setAttr ".pm[5]" -type "matrix" 0 1 0 0 1 -4.5796699765787707e-016 -1.2490009027033011e-016 0
+		 -4.1958217323782985e-031 1.110223024625158e-016 -1 0 -22.6937 2.5359300000000098 1.4259600000000026 1;
+	setAttr ".pm[6]" -type "matrix" 1.1909417896305286e-015 0.99999999999999989 3.1865621252791064e-017 0
+		 1.0000000000000002 -4.4408920985006262e-016 -1.3877787807814457e-016 0 -1.3222109958361023e-031 1.110223024625158e-016 -1 0
+		 -21.4541 2.5359300000000089 1.4259600000000032 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".dpf[0]"  4;
+	setAttr -s 7 ".ma";
+	setAttr -s 7 ".dpf[0:6]"  4 4 4 4 4 4 4;
+	setAttr -s 7 ".lw";
+	setAttr -s 7 ".lw";
 	setAttr ".mmi" yes;
 	setAttr ".mi" 3;
 	setAttr ".ucm" yes;
+	setAttr -s 7 ".ifcl";
+	setAttr -s 7 ".ifcl";
 createNode groupParts -n "skinCluster15GroupParts";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[0:494]";
@@ -36952,7 +37807,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.49439917834525182 0.00062377976825990316;
 	setAttr -s 3 ".wl[19].w[2:4]"  1.3317034375712851e-035 0.45135523197003713 
 		0.54864476802996287;
-	setAttr -s 4 ".wl[20].w[2:5]"  2.511468148465336e-040 0.67920659271599282 
+	setAttr -s 4 ".wl[20].w[2:5]"  2.5114681484653356e-040 0.67920659271599282 
 		0.29927018628907459 0.021523220994932576;
 	setAttr -s 4 ".wl[21].w[2:5]"  3.2734295888955204e-038 0.59292714626048437 
 		0.40083576070171456 0.0062370930378010132;
@@ -37016,27 +37871,23 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.00051249578393357568 0.41151842102838537;
 	setAttr -s 4 ".wl[51].w[2:5]"  1.5160388839074451e-021 0.57588287815799544 
 		0.0039511464835172974 0.42016597535848726;
-	setAttr -s 3 ".wl[52].w";
-	setAttr ".wl[52].w[3]" 1;
+	setAttr ".wl[52].w[3]"  1;
 	setAttr -s 4 ".wl[53].w";
 	setAttr ".wl[53].w[0]" -1.1594333249938968e-019;
 	setAttr ".wl[53].w[2]" 1.2390127275393139e-013;
 	setAttr ".wl[53].w[3]" 0.00052216234891644376;
 	setAttr ".wl[53].w[8]" 0.99947783765095966;
-	setAttr -s 3 ".wl[54].w";
-	setAttr ".wl[54].w[3]" 1;
+	setAttr ".wl[54].w[3]"  1;
 	setAttr -s 3 ".wl[55].w";
 	setAttr ".wl[55].w[2]" 5.1645684482041571e-015;
 	setAttr ".wl[55].w[3]" 0.0004610851129865347;
 	setAttr ".wl[55].w[8]" 0.9995389148870083;
-	setAttr -s 3 ".wl[56].w";
-	setAttr ".wl[56].w[3]" 1;
+	setAttr ".wl[56].w[3]"  1;
 	setAttr -s 3 ".wl[57].w";
 	setAttr ".wl[57].w[2]" 1.3985031766833881e-011;
 	setAttr ".wl[57].w[3]" 0.0011066864580037176;
 	setAttr ".wl[57].w[8]" 0.99889331352801125;
-	setAttr -s 3 ".wl[58].w";
-	setAttr ".wl[58].w[3]" 1;
+	setAttr ".wl[58].w[3]"  1;
 	setAttr -s 4 ".wl[59].w";
 	setAttr ".wl[59].w[0]" 2.9523115086281652e-017;
 	setAttr ".wl[59].w[2]" 1.4915608458348026e-009;
@@ -37149,7 +38000,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[82].w[1]" 0.93166207013414692;
 	setAttr ".wl[82].w[2]" 0.038416193695038819;
 	setAttr ".wl[82].w[3]" 0.00036551851325392483;
-	setAttr ".wl[82].w[9]" 8.435214141058766e-007;
+	setAttr ".wl[82].w[9]" 8.435214141058767e-007;
 	setAttr ".wl[82].w[10]" 8.4244153265451302e-007;
 	setAttr -s 7 ".wl[83].w";
 	setAttr ".wl[83].w[0]" 0.0025400139202494732;
@@ -37260,11 +38111,11 @@ createNode skinCluster -n "SkinCluster_Head01";
 		6.2108704889426531e-012 0.99999999999378808;
 	setAttr -s 3 ".wl[108].w[1:3]"  3.5765608412463638e-022 8.883042012249741e-018 
 		1;
-	setAttr -s 3 ".wl[109].w[1:3]"  1.448599153662017e-031 1.3028405729399288e-023 
+	setAttr -s 3 ".wl[109].w[1:3]"  1.4485991536620172e-031 1.3028405729399288e-023 
 		1;
 	setAttr -s 3 ".wl[110].w[1:3]"  1.5840804689409086e-032 1.4307145401013768e-024 
 		1;
-	setAttr -s 3 ".wl[111].w[1:3]"  9.2603059468415517e-034 8.678975073040291e-026 
+	setAttr -s 3 ".wl[111].w[1:3]"  9.2603059468415517e-034 8.6789750730402921e-026 
 		1;
 	setAttr -s 3 ".wl[112].w[1:3]"  3.0164882949535956e-035 2.9972542912038089e-027 
 		1;
@@ -37274,13 +38125,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr -s 3 ".wl[115].w[1:3]"  4.2475167662624496e-038 4.8538694709877582e-030 
 		1;
 	setAttr -s 2 ".wl[116].w[2:3]"  4.6602629533741209e-033 1;
-	setAttr -s 2 ".wl[117].w[2:3]"  2.744285746090085e-031 1;
+	setAttr -s 2 ".wl[117].w[2:3]"  2.7442857460900855e-031 1;
 	setAttr -s 3 ".wl[118].w[1:3]"  2.6171581605128227e-034 1.8409225367427932e-028 
 		1;
 	setAttr -s 3 ".wl[119].w[1:3]"  7.8054595377509883e-033 5.4908645207931777e-026 
 		1;
-	setAttr -s 3 ".wl[120].w[3]"  1;
-	setAttr -s 3 ".wl[121].w[3]"  1;
+	setAttr ".wl[120].w[3]"  1;
+	setAttr ".wl[121].w[3]"  1;
 	setAttr -s 5 ".wl[122].w";
 	setAttr ".wl[122].w[0]" 1.09155537801031e-019;
 	setAttr ".wl[122].w[1]" 6.1691623003638824e-014;
@@ -37299,87 +38150,70 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[124].w[2]" 6.4799089773814378e-007;
 	setAttr ".wl[124].w[3]" 0.0043266408913577711;
 	setAttr ".wl[124].w[8]" 0.99567271045691075;
-	setAttr -s 3 ".wl[125].w";
-	setAttr ".wl[125].w[3]" 1;
-	setAttr -s 3 ".wl[126].w";
-	setAttr ".wl[126].w[3]" 1;
-	setAttr -s 3 ".wl[127].w";
-	setAttr ".wl[127].w[3]" 1;
-	setAttr -s 3 ".wl[128].w";
-	setAttr ".wl[128].w[3]" 1;
-	setAttr -s 5 ".wl[129].w";
+	setAttr ".wl[125].w[3]"  1;
+	setAttr ".wl[126].w[3]"  1;
+	setAttr ".wl[127].w[3]"  1;
+	setAttr ".wl[128].w[3]"  1;
+	setAttr -s 2 ".wl[129].w";
 	setAttr ".wl[129].w[3]" 0.0048083573112840394;
 	setAttr ".wl[129].w[8]" 0.99519164268871596;
-	setAttr -s 4 ".wl[130].w";
+	setAttr -s 2 ".wl[130].w";
 	setAttr ".wl[130].w[3]" 0.0040902224433754242;
 	setAttr ".wl[130].w[8]" 0.99590977755662458;
-	setAttr -s 2 ".wl[131].w";
-	setAttr ".wl[131].w[3]" 1;
-	setAttr -s 2 ".wl[132].w";
-	setAttr ".wl[132].w[3]" 1;
-	setAttr -s 3 ".wl[133].w";
-	setAttr ".wl[133].w[3]" 1;
-	setAttr -s 3 ".wl[134].w";
-	setAttr ".wl[134].w[3]" 1;
-	setAttr -s 3 ".wl[135].w";
-	setAttr ".wl[135].w[3]" 1;
-	setAttr -s 4 ".wl[136].w[3]"  1;
-	setAttr -s 2 ".wl[137].w[3]"  1;
-	setAttr -s 2 ".wl[138].w[3]"  1;
-	setAttr -s 5 ".wl[139].w";
+	setAttr ".wl[131].w[3]"  1;
+	setAttr ".wl[132].w[3]"  1;
+	setAttr ".wl[133].w[3]"  1;
+	setAttr ".wl[134].w[3]"  1;
+	setAttr ".wl[135].w[3]"  1;
+	setAttr ".wl[136].w[3]"  1;
+	setAttr ".wl[137].w[3]"  1;
+	setAttr ".wl[138].w[3]"  1;
+	setAttr -s 2 ".wl[139].w";
 	setAttr ".wl[139].w[3]" 0.0045310127451723137;
 	setAttr ".wl[139].w[8]" 0.99546898725482769;
-	setAttr -s 3 ".wl[140].w";
-	setAttr ".wl[140].w[3]" 1;
-	setAttr -s 4 ".wl[141].w[3]"  1;
-	setAttr -s 4 ".wl[142].w[3]"  1;
-	setAttr -s 4 ".wl[143].w[3]"  1;
-	setAttr -s 3 ".wl[144].w";
-	setAttr ".wl[144].w[3]" 1;
-	setAttr -s 3 ".wl[145].w";
-	setAttr ".wl[145].w[3]" 1;
-	setAttr -s 4 ".wl[146].w[3]"  1;
-	setAttr -s 4 ".wl[147].w[3]"  1;
-	setAttr -s 4 ".wl[148].w[3]"  1;
+	setAttr ".wl[140].w[3]"  1;
+	setAttr ".wl[141].w[3]"  1;
+	setAttr ".wl[142].w[3]"  1;
+	setAttr ".wl[143].w[3]"  1;
+	setAttr ".wl[144].w[3]"  1;
+	setAttr ".wl[145].w[3]"  1;
+	setAttr ".wl[146].w[3]"  1;
+	setAttr ".wl[147].w[3]"  1;
+	setAttr ".wl[148].w[3]"  1;
 	setAttr -s 5 ".wl[149].w";
 	setAttr ".wl[149].w[0]" 2.4925997159061155e-031;
 	setAttr ".wl[149].w[1]" 4.7476923585852442e-015;
-	setAttr ".wl[149].w[2]" 2.61745410809086e-011;
+	setAttr ".wl[149].w[2]" 2.6174541080908603e-011;
 	setAttr ".wl[149].w[3]" 0.0013317240224035498;
 	setAttr ".wl[149].w[8]" 0.99866827595141716;
-	setAttr -s 5 ".wl[150].w";
+	setAttr -s 2 ".wl[150].w";
 	setAttr ".wl[150].w[3]" 0.0026585090735455896;
 	setAttr ".wl[150].w[8]" 0.99734149092645441;
-	setAttr -s 3 ".wl[151].w";
-	setAttr ".wl[151].w[3]" 1;
-	setAttr -s 3 ".wl[152].w";
-	setAttr ".wl[152].w[3]" 1;
-	setAttr -s 3 ".wl[153].w";
-	setAttr ".wl[153].w[3]" 1;
-	setAttr -s 4 ".wl[154].w[3]"  1;
-	setAttr -s 4 ".wl[155].w";
+	setAttr ".wl[151].w[3]"  1;
+	setAttr ".wl[152].w[3]"  1;
+	setAttr ".wl[153].w[3]"  1;
+	setAttr ".wl[154].w[3]"  1;
+	setAttr -s 2 ".wl[155].w";
 	setAttr ".wl[155].w[3]" 0.00086098414827529002;
 	setAttr ".wl[155].w[8]" 0.99913901585172471;
-	setAttr -s 4 ".wl[156].w[3]"  1;
-	setAttr -s 5 ".wl[157].w";
+	setAttr ".wl[156].w[3]"  1;
+	setAttr -s 2 ".wl[157].w";
 	setAttr ".wl[157].w[3]" 0.0021238643536816149;
 	setAttr ".wl[157].w[8]" 0.99787613564631839;
-	setAttr -s 4 ".wl[158].w";
+	setAttr -s 2 ".wl[158].w";
 	setAttr ".wl[158].w[3]" 0.99999872310616111;
 	setAttr ".wl[158].w[8]" 1.2768938388862949e-006;
-	setAttr -s 3 ".wl[159].w";
+	setAttr -s 2 ".wl[159].w";
 	setAttr ".wl[159].w[3]" 0.99996797402350945;
 	setAttr ".wl[159].w[8]" 3.2025976490546171e-005;
-	setAttr -s 4 ".wl[160].w";
+	setAttr -s 2 ".wl[160].w";
 	setAttr ".wl[160].w[3]" 0.99989411665508499;
 	setAttr ".wl[160].w[8]" 0.00010588334491501428;
-	setAttr -s 4 ".wl[161].w";
+	setAttr -s 2 ".wl[161].w";
 	setAttr ".wl[161].w[3]" 0.99998563293373488;
 	setAttr ".wl[161].w[8]" 1.4367066265119631e-005;
-	setAttr -s 3 ".wl[162].w";
-	setAttr ".wl[162].w[3]" 1;
-	setAttr -s 3 ".wl[163].w";
-	setAttr ".wl[163].w[3]" 1;
+	setAttr ".wl[162].w[3]"  1;
+	setAttr ".wl[163].w[3]"  1;
 	setAttr -s 4 ".wl[164].w";
 	setAttr ".wl[164].w[0]" 4.5766746728492749e-019;
 	setAttr ".wl[164].w[2]" 9.6916068418148884e-015;
@@ -37449,7 +38283,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[177].w[3]" 0.84422401118739654;
 	setAttr ".wl[177].w[8]" 0.1557759888070871;
 	setAttr -s 5 ".wl[178].w";
-	setAttr ".wl[178].w[0]" 1.033125177253614e-016;
+	setAttr ".wl[178].w[0]" 1.0331251772536141e-016;
 	setAttr ".wl[178].w[1]" 1.2246599186412251e-030;
 	setAttr ".wl[178].w[2]" 6.1598389042512033e-014;
 	setAttr ".wl[178].w[3]" 0.930556432661229;
@@ -37466,15 +38300,15 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[180].w[3]" 0.032023908294377505;
 	setAttr ".wl[180].w[8]" 0.96797609170557497;
 	setAttr -s 5 ".wl[181].w";
-	setAttr ".wl[181].w[0]" -1.108030723398414e-017;
+	setAttr ".wl[181].w[0]" -1.1080307233984139e-017;
 	setAttr ".wl[181].w[1]" 1.9863122205610475e-027;
 	setAttr ".wl[181].w[2]" 6.4065151340869006e-012;
 	setAttr ".wl[181].w[3]" 0.049901267523715077;
 	setAttr ".wl[181].w[8]" 0.95009873246987842;
-	setAttr -s 4 ".wl[182].w";
+	setAttr -s 2 ".wl[182].w";
 	setAttr ".wl[182].w[3]" 0.99976650785916865;
 	setAttr ".wl[182].w[8]" 0.00023349214083134839;
-	setAttr -s 5 ".wl[183].w";
+	setAttr -s 2 ".wl[183].w";
 	setAttr ".wl[183].w[3]" 0.9994027203897351;
 	setAttr ".wl[183].w[8]" 0.00059727961026490028;
 	setAttr -s 5 ".wl[184].w";
@@ -37488,13 +38322,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[185].w[2]" 7.8743583485569164e-013;
 	setAttr ".wl[185].w[3]" 0.16376235711919124;
 	setAttr ".wl[185].w[8]" 0.83623764288002134;
-	setAttr -s 4 ".wl[186].w";
+	setAttr -s 2 ".wl[186].w";
 	setAttr ".wl[186].w[3]" 0.99980159002686653;
 	setAttr ".wl[186].w[8]" 0.00019840997313347319;
-	setAttr -s 4 ".wl[187].w";
+	setAttr -s 2 ".wl[187].w";
 	setAttr ".wl[187].w[3]" 0.99996496559340409;
 	setAttr ".wl[187].w[8]" 3.5034406595912948e-005;
-	setAttr -s 4 ".wl[188].w";
+	setAttr -s 2 ".wl[188].w";
 	setAttr ".wl[188].w[3]" 0.99999544260475282;
 	setAttr ".wl[188].w[8]" 4.5573952471844592e-006;
 	setAttr -s 3 ".wl[189].w";
@@ -37564,11 +38398,11 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[200].w[2]" 1.1067472334417784e-007;
 	setAttr ".wl[200].w[3]" 0.99967131008317445;
 	setAttr ".wl[200].w[8]" 0.00032857918773088191;
-	setAttr -s 4 ".wl[201].w";
+	setAttr -s 3 ".wl[201].w";
 	setAttr ".wl[201].w[0]" 3.9382927807604946e-009;
 	setAttr ".wl[201].w[3]" 0.99993295798852011;
 	setAttr ".wl[201].w[8]" 6.7038073187086766e-005;
-	setAttr -s 4 ".wl[202].w";
+	setAttr -s 2 ".wl[202].w";
 	setAttr ".wl[202].w[3]" 0.99998855031961331;
 	setAttr ".wl[202].w[8]" 1.1449680386688142e-005;
 	setAttr -s 4 ".wl[203].w";
@@ -37594,7 +38428,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[206].w[8]" 0.067700223575723029;
 	setAttr -s 5 ".wl[207].w";
 	setAttr ".wl[207].w[0]" 1.7948756044869107e-013;
-	setAttr ".wl[207].w[1]" 2.382425710824616e-029;
+	setAttr ".wl[207].w[1]" 2.3824257108246163e-029;
 	setAttr ".wl[207].w[2]" 1.013007397797447e-007;
 	setAttr ".wl[207].w[3]" 0.55026546054684422;
 	setAttr ".wl[207].w[8]" 0.44973443815223657;
@@ -37849,7 +38683,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[251].w[8]" 0.025503711079694732;
 	setAttr -s 5 ".wl[252].w";
 	setAttr ".wl[252].w[0]" 1.7733594410659873e-007;
-	setAttr ".wl[252].w[1]" 8.660260059219819e-038;
+	setAttr ".wl[252].w[1]" 8.6602600592198211e-038;
 	setAttr ".wl[252].w[2]" 0.0026830199306268504;
 	setAttr ".wl[252].w[3]" 0.98459877699501774;
 	setAttr ".wl[252].w[8]" 0.012718025738411298;
@@ -37974,7 +38808,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[273].w[8]" 0.040598732729377529;
 	setAttr -s 5 ".wl[274].w";
 	setAttr ".wl[274].w[0]" 6.6422873661554636e-006;
-	setAttr ".wl[274].w[1]" 8.900326045684833e-038;
+	setAttr ".wl[274].w[1]" 8.9003260456848351e-038;
 	setAttr ".wl[274].w[2]" 0.84198484000356788;
 	setAttr ".wl[274].w[3]" 0.12403431610794156;
 	setAttr ".wl[274].w[8]" 0.033974201601124403;
@@ -38075,7 +38909,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[290].w[3]" 0.40952999795715317;
 	setAttr ".wl[290].w[8]" 0.59019003617777965;
 	setAttr -s 5 ".wl[291].w";
-	setAttr ".wl[291].w[0]" 1.126944561118583e-009;
+	setAttr ".wl[291].w[0]" 1.1269445611185832e-009;
 	setAttr ".wl[291].w[1]" 0.00019599469302664877;
 	setAttr ".wl[291].w[2]" 0.027293658545958142;
 	setAttr ".wl[291].w[3]" 0.55331370088926546;
@@ -38374,7 +39208,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.0021415087340980552 0.99785399678009512;
 	setAttr -s 4 ".wl[348].w[0:3]"  1.5941485165188823e-009 0.00010908594015067541 
 		0.0240876538649075 0.97580325860079331;
-	setAttr -s 4 ".wl[349].w[0:3]"  1.021207263291961e-007 0.0021479794627454166 
+	setAttr -s 4 ".wl[349].w[0:3]"  1.0212072632919612e-007 0.0021479794627454166 
 		0.18726778554574103 0.81058413287078723;
 	setAttr -s 4 ".wl[350].w[0:3]"  1.0615116572009333e-007 0.0021128670864326874 
 		0.18505170564197596 0.81283532112042567;
@@ -38721,7 +39555,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[411].w[2]" 0.00015203904226860165;
 	setAttr ".wl[411].w[3]" 1.3286307400222344e-006;
 	setAttr ".wl[411].w[8]" 3.7196882316471377e-005;
-	setAttr ".wl[411].w[9]" 1.688983075826166e-006;
+	setAttr ".wl[411].w[9]" 1.6889830758261658e-006;
 	setAttr -s 7 ".wl[412].w";
 	setAttr ".wl[412].w[0]" 0.68524401353708397;
 	setAttr ".wl[412].w[1]" 0.29683456893968296;
@@ -38748,7 +39582,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[415].w[0]" 0.081655484488710309;
 	setAttr ".wl[415].w[1]" 0.0044317556079857745;
 	setAttr ".wl[415].w[2]" 1.2655507550754843e-005;
-	setAttr ".wl[415].w[3]" 1.04395753109623e-007;
+	setAttr ".wl[415].w[3]" 1.0439575310962299e-007;
 	setAttr ".wl[415].w[10]" 0.9139;
 	setAttr -s 6 ".wl[416].w";
 	setAttr ".wl[416].w[0]" 0.079986631680092443;
@@ -38767,7 +39601,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[418].w[0]" 0.70875223828781886;
 	setAttr ".wl[418].w[1]" 0.065536404609777638;
 	setAttr ".wl[418].w[2]" 8.4610834948637008e-005;
-	setAttr ".wl[418].w[3]" 8.428862564260666e-007;
+	setAttr ".wl[418].w[3]" 8.4288625642606649e-007;
 	setAttr ".wl[418].w[8]" 6.2852833704477944e-006;
 	setAttr ".wl[418].w[9]" 1.2881258947396058e-005;
 	setAttr ".wl[418].w[10]" 0.22560673683888052;
@@ -38815,7 +39649,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr -s 5 ".wl[427].w";
 	setAttr ".wl[427].w[0]" 0.085241557009985786;
 	setAttr ".wl[427].w[1]" 0.00085754619125736806;
-	setAttr ".wl[427].w[2]" 8.923214011080968e-007;
+	setAttr ".wl[427].w[2]" 8.923214011080969e-007;
 	setAttr ".wl[427].w[3]" 4.4773556854903258e-009;
 	setAttr ".wl[427].w[10]" 0.9139;
 	setAttr -s 5 ".wl[428].w";
@@ -38938,13 +39772,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[455].w[1:3]"  3.0402454554157816e-030 9.292211552965163e-024 
 		1;
-	setAttr -s 3 ".wl[456].w[1:3]"  1.990134935034096e-026 1.8976342106237529e-021 
+	setAttr -s 3 ".wl[456].w[1:3]"  1.9901349350340963e-026 1.8976342106237529e-021 
 		1;
 	setAttr -s 3 ".wl[457].w[1:3]"  1.0561108381752036e-022 2.0899436051865662e-018 
 		1;
 	setAttr -s 3 ".wl[458].w[1:3]"  5.7998895572224234e-024 1.2726852956095871e-019 
 		1;
-	setAttr -s 3 ".wl[459].w[1:3]"  2.286848200441517e-025 1.000441478762245e-020 
+	setAttr -s 3 ".wl[459].w[1:3]"  2.2868482004415175e-025 1.0004414787622452e-020 
 		1;
 	setAttr -s 3 ".wl[460].w[1:3]"  8.3106840936068822e-024 1.0825113230958776e-018 
 		1;
@@ -39135,7 +39969,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr -s 4 ".wl[547].w[0:3]"  1.5795638445827591e-021 6.0117512234309443e-015 
 		1.5516742935407455e-011 0.99999999998447731;
 	setAttr -s 4 ".wl[548].w[0:3]"  1.1102457062196214e-016 1.6260015599303469e-014 
-		5.45154881853361e-011 0.99999999994546818;
+		5.4515488185336094e-011 0.99999999994546818;
 	setAttr -s 4 ".wl[549].w[0:3]"  -2.2204443035524442e-016 1.15193164713795e-015 
 		4.1414801701522478e-012 0.99999999999585754;
 	setAttr -s 4 ".wl[550].w[0:3]"  -2.2180358916579356e-016 7.4037646595441277e-013 
@@ -39165,16 +39999,16 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr -s 4 ".wl[562].w[0:3]"  1.2914906437450738e-017 8.8188524991095303e-012 
 		1.1235137393759728e-008 0.99999998875604379;
 	setAttr -s 4 ".wl[563].w[0:3]"  -2.2143975270499147e-016 5.4661124089646008e-013 
-		8.803930585914151e-010 0.99999999911906046;
+		8.80393058591415e-010 0.99999999911906046;
 	setAttr -s 4 ".wl[564].w[0:3]"  2.6843890462349728e-020 3.2311267949588244e-014 
 		6.5030354660703423e-011 0.99999999993493738;
-	setAttr -s 2 ".wl[565].w[2:3]"  5.753848097492405e-030 1;
+	setAttr -s 2 ".wl[565].w[2:3]"  5.7538480974924057e-030 1;
 	setAttr -s 2 ".wl[566].w[2:3]"  1.7964855275361448e-028 1;
-	setAttr -s 2 ".wl[567].w[2:3]"  6.542968254816969e-030 1;
+	setAttr -s 2 ".wl[567].w[2:3]"  6.5429682548169704e-030 1;
 	setAttr -s 2 ".wl[568].w[2:3]"  5.5813012411873751e-031 1;
 	setAttr -s 2 ".wl[569].w[2:3]"  5.2122088717646102e-026 1;
 	setAttr -s 2 ".wl[570].w[2:3]"  3.7351267961832804e-027 1;
-	setAttr -s 3 ".wl[571].w[1:3]"  1.9058581329925112e-030 2.064628001720854e-025 
+	setAttr -s 3 ".wl[571].w[1:3]"  1.9058581329925112e-030 2.0646280017208542e-025 
 		1;
 	setAttr -s 3 ".wl[572].w[1:3]"  3.4197582293575587e-029 3.6738942560810791e-024 
 		1;
@@ -39292,7 +40126,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[614].w[4]" 9.2750054500758315e-007;
 	setAttr ".wl[614].w[5]" 0.008084986752918048;
 	setAttr ".wl[614].w[8]" 1.0180454310896055e-006;
-	setAttr -s 5 ".wl[615].w[1:5]"  1.603469524190816e-024 2.7011457724005113e-016 
+	setAttr -s 5 ".wl[615].w[1:5]"  1.6034695241908158e-024 2.7011457724005113e-016 
 		0.87704196836509773 2.3487005645684672e-005 0.12293454462925635;
 	setAttr -s 3 ".wl[616].w[1:3]"  1.3204660421477379e-023 1.4907036158539375e-015 
 		0.99999999999999856;
@@ -39304,7 +40138,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.9628977376369513 0.00090597981782314656 0.036196282545225437;
 	setAttr -s 3 ".wl[620].w[1:3]"  1.0750839071617605e-024 1.239888331857438e-016 
 		0.99999999999999989;
-	setAttr -s 5 ".wl[621].w[1:5]"  6.391714592244976e-026 7.6297828775941711e-018 
+	setAttr -s 5 ".wl[621].w[1:5]"  6.3917145922449771e-026 7.6297828775941711e-018 
 		0.97107969264449978 0.0078136208358328355 0.021106686519667382;
 	setAttr -s 3 ".wl[622].w[1:3]"  1.4569261748741272e-027 2.1578954758429093e-019 
 		1;
@@ -39366,14 +40200,14 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.96862621819723671 0.0010357817295891779 0.03033800007317411;
 	setAttr -s 5 ".wl[654].w[1:5]"  2.2172780689419365e-022 2.7814143895274975e-017 
 		0.99238672124372784 1.2851792968190283e-005 0.0076004269633039656;
-	setAttr -s 3 ".wl[655].w[3]"  1;
+	setAttr ".wl[655].w[3]"  1;
 	setAttr -s 3 ".wl[656].w[1:3]"  1.4334577186012501e-025 2.4004823052714948e-020 
 		1;
-	setAttr -s 3 ".wl[657].w[3]"  1;
-	setAttr -s 3 ".wl[658].w[1:3]"  1.5034841566303554e-026 2.718666119488441e-021 
+	setAttr ".wl[657].w[3]"  1;
+	setAttr -s 3 ".wl[658].w[1:3]"  1.5034841566303554e-026 2.7186661194884413e-021 
 		1;
 	setAttr -s 2 ".wl[659].w[2:3]"  1.1354706817527781e-026 1;
-	setAttr -s 3 ".wl[660].w[1:3]"  1.217453003036523e-020 3.4507557720694621e-014 
+	setAttr -s 3 ".wl[660].w[1:3]"  1.2174530030365229e-020 3.4507557720694621e-014 
 		0.99999999999996558;
 	setAttr -s 3 ".wl[661].w[1:3]"  1.1156849730885451e-020 1.7333024907121967e-014 
 		0.99999999999998268;
@@ -39458,7 +40292,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[677].w[3]" 0.99995940849399823;
 	setAttr ".wl[677].w[8]" 4.058919948124462e-005;
 	setAttr -s 4 ".wl[678].w";
-	setAttr ".wl[678].w[1]" 2.128152523582078e-011;
+	setAttr ".wl[678].w[1]" 2.1281525235820783e-011;
 	setAttr ".wl[678].w[2]" 8.4217575793708266e-008;
 	setAttr ".wl[678].w[3]" 0.99985118680967788;
 	setAttr ".wl[678].w[8]" 0.00014872895146489373;
@@ -39491,17 +40325,17 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[683].w[4]" 3.2306535319300506e-007;
 	setAttr ".wl[683].w[5]" 0.010253834178082398;
 	setAttr ".wl[683].w[8]" 1.8462763559460228e-005;
-	setAttr -s 4 ".wl[684].w";
+	setAttr -s 2 ".wl[684].w";
 	setAttr ".wl[684].w[3]" 0.99999622808190358;
 	setAttr ".wl[684].w[8]" 3.7719180964179695e-006;
-	setAttr -s 5 ".wl[685].w";
+	setAttr -s 3 ".wl[685].w";
 	setAttr ".wl[685].w[0]" 8.9698146708663253e-014;
 	setAttr ".wl[685].w[3]" 0.99991222795278134;
 	setAttr ".wl[685].w[8]" 8.7772047128953368e-005;
-	setAttr -s 5 ".wl[686].w";
+	setAttr -s 2 ".wl[686].w";
 	setAttr ".wl[686].w[3]" 0.99998939766113459;
 	setAttr ".wl[686].w[8]" 1.0602338865406402e-005;
-	setAttr -s 5 ".wl[687].w";
+	setAttr -s 2 ".wl[687].w";
 	setAttr ".wl[687].w[3]" 0.99982337484269446;
 	setAttr ".wl[687].w[8]" 0.00017662515730554329;
 	setAttr -s 4 ".wl[688].w";
@@ -39509,14 +40343,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[688].w[2]" 2.0321442001741892e-006;
 	setAttr ".wl[688].w[3]" 0.99955348932274757;
 	setAttr ".wl[688].w[8]" 0.00044447726892349326;
-	setAttr -s 5 ".wl[689].w";
+	setAttr -s 2 ".wl[689].w";
 	setAttr ".wl[689].w[3]" 0.99856036404935788;
 	setAttr ".wl[689].w[8]" 0.0014396359506421152;
-	setAttr -s 3 ".wl[690].w";
-	setAttr ".wl[690].w[3]" 1;
-	setAttr -s 4 ".wl[691].w[3]"  1;
-	setAttr -s 3 ".wl[692].w[3]"  1;
-	setAttr -s 4 ".wl[693].w[3]"  1;
+	setAttr ".wl[690].w[3]"  1;
+	setAttr ".wl[691].w[3]"  1;
+	setAttr ".wl[692].w[3]"  1;
+	setAttr ".wl[693].w[3]"  1;
 	setAttr -s 5 ".wl[694].w";
 	setAttr ".wl[694].w[0]" 5.6969260908305291e-014;
 	setAttr ".wl[694].w[1]" 5.1004571360967747e-008;
@@ -39553,7 +40386,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[699].w[2]" 3.5185607499134968e-008;
 	setAttr ".wl[699].w[3]" 0.54837456858287348;
 	setAttr ".wl[699].w[8]" 0.4516253962218042;
-	setAttr -s 5 ".wl[700].w[1:5]"  2.545405093665324e-026 4.6336056802436209e-021 
+	setAttr -s 5 ".wl[700].w[1:5]"  2.5454050936653243e-026 4.6336056802436209e-021 
 		0.87094948420933171 0.012095190940084833 0.11695532485058346;
 	setAttr -s 3 ".wl[701].w[1:3]"  7.2678920159220586e-028 1.4592686968515242e-022 
 		1;
@@ -39561,9 +40394,9 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[703].w[1:3]"  1.7575420199992889e-036 3.2073880237190477e-026 
 		1;
-	setAttr -s 3 ".wl[704].w[1:3]"  2.552889865489423e-029 5.9374584325577355e-024 
+	setAttr -s 3 ".wl[704].w[1:3]"  2.5528898654894235e-029 5.9374584325577355e-024 
 		1;
-	setAttr -s 3 ".wl[705].w[1:3]"  1.2120875078276699e-037 1.762408123313075e-027 
+	setAttr -s 3 ".wl[705].w[1:3]"  1.2120875078276699e-037 1.7624081233130754e-027 
 		1;
 	setAttr -s 2 ".wl[706].w[2:3]"  1.1027611512655624e-031 1;
 	setAttr -s 3 ".wl[707].w[1:3]"  7.4592470101931162e-039 7.7950224725532883e-029 
@@ -39571,7 +40404,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr -s 2 ".wl[708].w[2:3]"  1.2314551188777763e-030 1;
 	setAttr -s 2 ".wl[709].w[2:3]"  2.5406275065594709e-029 1;
 	setAttr -s 2 ".wl[710].w[2:3]"  7.6011780441643224e-031 1;
-	setAttr -s 2 ".wl[711].w[2:3]"  7.727271250104192e-032 1;
+	setAttr -s 2 ".wl[711].w[2:3]"  7.7272712501041909e-032 1;
 	setAttr -s 3 ".wl[712].w[1:3]"  2.1027245619717769e-031 3.4921748203594794e-025 
 		1;
 	setAttr -s 3 ".wl[713].w[1:3]"  7.2894383412539658e-033 1.2946355917813012e-026 
@@ -39580,13 +40413,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[715].w[1:3]"  1.1730989721653381e-032 5.5876263009648506e-026 
 		1;
-	setAttr -s 3 ".wl[716].w[3]"  1;
-	setAttr -s 4 ".wl[717].w[3]"  1;
+	setAttr ".wl[716].w[3]"  1;
+	setAttr ".wl[717].w[3]"  1;
 	setAttr -s 3 ".wl[718].w[1:3]"  1.6837463969648571e-026 3.0625823817918061e-021 
 		1;
 	setAttr -s 5 ".wl[719].w[1:5]"  1.4607403101287644e-027 2.8504762444977209e-022 
 		0.88389468557647666 0.070569932776088293 0.045535381647435043;
-	setAttr -s 3 ".wl[720].w[1:3]"  8.923049728941668e-028 2.4680629981206136e-022 
+	setAttr -s 3 ".wl[720].w[1:3]"  8.9230497289416698e-028 2.4680629981206136e-022 
 		1;
 	setAttr -s 3 ".wl[721].w[1:3]"  2.5410409854297049e-026 2.5744324483814254e-021 
 		1;
@@ -39604,7 +40437,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[723].w[8]" 0.63555562651534847;
 	setAttr -s 5 ".wl[724].w";
 	setAttr ".wl[724].w[0]" 1.9761333958286301e-016;
-	setAttr ".wl[724].w[1]" 1.581533196910737e-009;
+	setAttr ".wl[724].w[1]" 1.5815331969107368e-009;
 	setAttr ".wl[724].w[2]" 1.8123127820599744e-006;
 	setAttr ".wl[724].w[3]" 0.19586543940453346;
 	setAttr ".wl[724].w[8]" 0.80413274670115109;
@@ -39797,7 +40630,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		4.1837156318264265e-010 0.99999999958142671;
 	setAttr -s 4 ".wl[769].w[0:3]"  3.0933522717523722e-017 1.8750419728577565e-011 
 		2.1064142984020719e-008 0.99999997891710657;
-	setAttr -s 4 ".wl[770].w[0:3]"  1.263663521302033e-018 1.4700494605312264e-012 
+	setAttr -s 4 ".wl[770].w[0:3]"  1.2636635213020332e-018 1.4700494605312264e-012 
 		2.5301093147337331e-009 0.99999999746842072;
 	setAttr -s 4 ".wl[771].w[0:3]"  8.5276919676152232e-020 1.0457205401851817e-013 
 		2.0378017342839974e-010 0.99999999979611531;
@@ -39845,242 +40678,210 @@ createNode skinCluster -n "SkinCluster_Head01";
 		2.9799932628561574e-011 0.99999999997018807;
 	setAttr -s 4 ".wl[793].w[0:3]"  -2.2203936751981068e-016 7.5499140785743939e-015 
 		1.6337298151472363e-011 0.9999999999836553;
-	setAttr -s 4 ".wl[794].w[0:3]"  9.0002982864563807e-022 1.560439916137936e-015 
+	setAttr -s 4 ".wl[794].w[0:3]"  9.0002982864563807e-022 1.5604399161379362e-015 
 		3.9022931655514638e-012 0.99999999999609623;
 	setAttr -s 4 ".wl[795].w[0:3]"  1.1114396926006885e-016 1.1488406788485808e-013 
 		1.866014815370465e-010 0.99999999981328347;
 	setAttr -s 2 ".wl[796].w[2:3]"  8.8993058884668682e-031 1;
 	setAttr -s 3 ".wl[797].w[1:3]"  3.861514431109944e-040 5.0642782015711544e-028 
 		1;
-	setAttr -s 3 ".wl[798].w";
-	setAttr ".wl[798].w[3]" 1;
-	setAttr -s 3 ".wl[799].w";
-	setAttr ".wl[799].w[3]" 1;
-	setAttr -s 3 ".wl[800].w";
-	setAttr ".wl[800].w[3]" 1;
-	setAttr -s 3 ".wl[801].w";
-	setAttr ".wl[801].w[3]" 1;
-	setAttr -s 4 ".wl[802].w[3]"  1;
-	setAttr -s 4 ".wl[803].w[3]"  1;
-	setAttr -s 4 ".wl[804].w[3]"  1;
-	setAttr -s 4 ".wl[805].w[3]"  1;
-	setAttr -s 5 ".wl[806].w";
+	setAttr ".wl[798].w[3]"  1;
+	setAttr ".wl[799].w[3]"  1;
+	setAttr ".wl[800].w[3]"  1;
+	setAttr ".wl[801].w[3]"  1;
+	setAttr ".wl[802].w[3]"  1;
+	setAttr ".wl[803].w[3]"  1;
+	setAttr ".wl[804].w[3]"  1;
+	setAttr ".wl[805].w[3]"  1;
+	setAttr -s 2 ".wl[806].w";
 	setAttr ".wl[806].w[3]" 0.99990627950043809;
 	setAttr ".wl[806].w[8]" 9.3720499561911197e-005;
-	setAttr -s 5 ".wl[807].w";
+	setAttr -s 2 ".wl[807].w";
 	setAttr ".wl[807].w[3]" 0.99999047034771427;
 	setAttr ".wl[807].w[8]" 9.5296522857335475e-006;
-	setAttr -s 5 ".wl[808].w";
+	setAttr -s 2 ".wl[808].w";
 	setAttr ".wl[808].w[3]" 0.99999730386867447;
 	setAttr ".wl[808].w[8]" 2.6961313255302599e-006;
-	setAttr -s 5 ".wl[809].w";
+	setAttr -s 2 ".wl[809].w";
 	setAttr ".wl[809].w[3]" 0.99996265707367793;
 	setAttr ".wl[809].w[8]" 3.7342926322070369e-005;
-	setAttr -s 4 ".wl[810].w";
+	setAttr -s 2 ".wl[810].w";
 	setAttr ".wl[810].w[3]" 0.16083687996612195;
 	setAttr ".wl[810].w[8]" 0.83916312003387805;
-	setAttr -s 4 ".wl[811].w";
+	setAttr -s 2 ".wl[811].w";
 	setAttr ".wl[811].w[3]" 0.16036914150279391;
 	setAttr ".wl[811].w[8]" 0.83963085849720609;
-	setAttr -s 5 ".wl[812].w";
+	setAttr -s 2 ".wl[812].w";
 	setAttr ".wl[812].w[3]" 0.3630819167459769;
 	setAttr ".wl[812].w[8]" 0.6369180832540231;
-	setAttr -s 4 ".wl[813].w";
+	setAttr -s 2 ".wl[813].w";
 	setAttr ".wl[813].w[3]" 0.36472032055499071;
 	setAttr ".wl[813].w[8]" 0.63527967944500929;
-	setAttr -s 4 ".wl[814].w";
+	setAttr -s 2 ".wl[814].w";
 	setAttr ".wl[814].w[3]" 0.82276211148952116;
 	setAttr ".wl[814].w[8]" 0.17723788851047884;
-	setAttr -s 4 ".wl[815].w";
+	setAttr -s 2 ".wl[815].w";
 	setAttr ".wl[815].w[3]" 0.83216002968556602;
 	setAttr ".wl[815].w[8]" 0.16783997031443398;
-	setAttr -s 4 ".wl[816].w";
+	setAttr -s 2 ".wl[816].w";
 	setAttr ".wl[816].w[3]" 0.74100972473551863;
 	setAttr ".wl[816].w[8]" 0.25899027526448137;
-	setAttr -s 4 ".wl[817].w";
+	setAttr -s 2 ".wl[817].w";
 	setAttr ".wl[817].w[3]" 0.72972238571474057;
 	setAttr ".wl[817].w[8]" 0.27027761428525943;
-	setAttr -s 4 ".wl[818].w";
+	setAttr -s 2 ".wl[818].w";
 	setAttr ".wl[818].w[3]" 0.0048754410686885352;
 	setAttr ".wl[818].w[8]" 0.99512455893131146;
-	setAttr -s 4 ".wl[819].w";
+	setAttr -s 2 ".wl[819].w";
 	setAttr ".wl[819].w[3]" 0.0056039025556133826;
 	setAttr ".wl[819].w[8]" 0.99439609744438662;
-	setAttr -s 5 ".wl[820].w";
+	setAttr -s 2 ".wl[820].w";
 	setAttr ".wl[820].w[3]" 0.003312261898616109;
 	setAttr ".wl[820].w[8]" 0.99668773810138389;
-	setAttr -s 4 ".wl[821].w";
+	setAttr -s 2 ".wl[821].w";
 	setAttr ".wl[821].w[3]" 0.0040563247362064292;
 	setAttr ".wl[821].w[8]" 0.99594367526379357;
-	setAttr -s 5 ".wl[822].w";
+	setAttr -s 2 ".wl[822].w";
 	setAttr ".wl[822].w[3]" 0.039297721847477929;
 	setAttr ".wl[822].w[8]" 0.96070227815252207;
-	setAttr -s 5 ".wl[823].w";
+	setAttr -s 2 ".wl[823].w";
 	setAttr ".wl[823].w[3]" 0.040150438246985831;
 	setAttr ".wl[823].w[8]" 0.95984956175301417;
-	setAttr -s 4 ".wl[824].w[3]"  1;
-	setAttr -s 4 ".wl[825].w[3]"  1;
-	setAttr -s 4 ".wl[826].w[3]"  1;
-	setAttr -s 4 ".wl[827].w[3]"  1;
-	setAttr -s 3 ".wl[828].w";
-	setAttr ".wl[828].w[3]" 1;
-	setAttr -s 3 ".wl[829].w";
-	setAttr ".wl[829].w[3]" 1;
-	setAttr -s 3 ".wl[830].w";
-	setAttr ".wl[830].w[3]" 1;
-	setAttr -s 3 ".wl[831].w";
-	setAttr ".wl[831].w[3]" 1;
-	setAttr -s 3 ".wl[832].w";
-	setAttr ".wl[832].w[3]" 1;
-	setAttr -s 3 ".wl[833].w";
-	setAttr ".wl[833].w[3]" 1;
-	setAttr -s 3 ".wl[834].w";
-	setAttr ".wl[834].w[3]" 1;
-	setAttr -s 3 ".wl[835].w";
-	setAttr ".wl[835].w[3]" 1;
-	setAttr -s 3 ".wl[836].w";
-	setAttr ".wl[836].w[3]" 1;
-	setAttr -s 3 ".wl[837].w";
-	setAttr ".wl[837].w[3]" 1;
-	setAttr -s 3 ".wl[838].w";
-	setAttr ".wl[838].w[3]" 1;
-	setAttr -s 3 ".wl[839].w";
-	setAttr ".wl[839].w[3]" 1;
-	setAttr -s 5 ".wl[840].w";
+	setAttr ".wl[824].w[3]"  1;
+	setAttr ".wl[825].w[3]"  1;
+	setAttr ".wl[826].w[3]"  1;
+	setAttr ".wl[827].w[3]"  1;
+	setAttr ".wl[828].w[3]"  1;
+	setAttr ".wl[829].w[3]"  1;
+	setAttr ".wl[830].w[3]"  1;
+	setAttr ".wl[831].w[3]"  1;
+	setAttr ".wl[832].w[3]"  1;
+	setAttr ".wl[833].w[3]"  1;
+	setAttr ".wl[834].w[3]"  1;
+	setAttr ".wl[835].w[3]"  1;
+	setAttr ".wl[836].w[3]"  1;
+	setAttr ".wl[837].w[3]"  1;
+	setAttr ".wl[838].w[3]"  1;
+	setAttr ".wl[839].w[3]"  1;
+	setAttr -s 2 ".wl[840].w";
 	setAttr ".wl[840].w[3]" 0.99999304784857612;
 	setAttr ".wl[840].w[8]" 6.9521514238779503e-006;
-	setAttr -s 5 ".wl[841].w";
+	setAttr -s 2 ".wl[841].w";
 	setAttr ".wl[841].w[3]" 0.99999782524249026;
 	setAttr ".wl[841].w[8]" 2.1747575097430527e-006;
-	setAttr -s 4 ".wl[842].w[3]"  1;
-	setAttr -s 4 ".wl[843].w[3]"  1;
-	setAttr -s 2 ".wl[844].w";
-	setAttr ".wl[844].w[3]" 1;
-	setAttr -s 3 ".wl[845].w";
-	setAttr ".wl[845].w[3]" 1;
-	setAttr -s 3 ".wl[846].w";
-	setAttr ".wl[846].w[3]" 1;
-	setAttr -s 3 ".wl[847].w";
-	setAttr ".wl[847].w[3]" 1;
-	setAttr -s 3 ".wl[848].w";
-	setAttr ".wl[848].w[3]" 1;
-	setAttr -s 3 ".wl[849].w";
-	setAttr ".wl[849].w[3]" 1;
-	setAttr -s 3 ".wl[850].w";
-	setAttr ".wl[850].w[3]" 1;
-	setAttr -s 4 ".wl[851].w[3]"  1;
-	setAttr -s 4 ".wl[852].w[3]"  1;
-	setAttr -s 4 ".wl[853].w[3]"  1;
-	setAttr -s 5 ".wl[854].w";
+	setAttr ".wl[842].w[3]"  1;
+	setAttr ".wl[843].w[3]"  1;
+	setAttr ".wl[844].w[3]"  1;
+	setAttr ".wl[845].w[3]"  1;
+	setAttr ".wl[846].w[3]"  1;
+	setAttr ".wl[847].w[3]"  1;
+	setAttr ".wl[848].w[3]"  1;
+	setAttr ".wl[849].w[3]"  1;
+	setAttr ".wl[850].w[3]"  1;
+	setAttr ".wl[851].w[3]"  1;
+	setAttr ".wl[852].w[3]"  1;
+	setAttr ".wl[853].w[3]"  1;
+	setAttr -s 2 ".wl[854].w";
 	setAttr ".wl[854].w[3]" 0.99785948979808792;
 	setAttr ".wl[854].w[8]" 0.0021405102019120825;
-	setAttr -s 5 ".wl[855].w";
+	setAttr -s 2 ".wl[855].w";
 	setAttr ".wl[855].w[3]" 0.99401039644440115;
 	setAttr ".wl[855].w[8]" 0.0059896035555988547;
-	setAttr -s 5 ".wl[856].w";
+	setAttr -s 2 ".wl[856].w";
 	setAttr ".wl[856].w[3]" 0.99999886686430728;
 	setAttr ".wl[856].w[8]" 1.1331356927213319e-006;
-	setAttr -s 5 ".wl[857].w";
+	setAttr -s 2 ".wl[857].w";
 	setAttr ".wl[857].w[3]" 0.99999324278004564;
 	setAttr ".wl[857].w[8]" 6.7572199543564082e-006;
-	setAttr -s 3 ".wl[858].w[3]"  1;
-	setAttr -s 4 ".wl[859].w";
+	setAttr ".wl[858].w[3]"  1;
+	setAttr -s 2 ".wl[859].w";
 	setAttr ".wl[859].w[3]" 0.99233322418331693;
 	setAttr ".wl[859].w[8]" 0.0076667758166830682;
-	setAttr -s 3 ".wl[860].w";
-	setAttr ".wl[860].w[3]" 1;
-	setAttr -s 3 ".wl[861].w";
-	setAttr ".wl[861].w[3]" 1;
-	setAttr -s 3 ".wl[862].w[3]"  1;
-	setAttr -s 4 ".wl[863].w[3]"  1;
-	setAttr -s 5 ".wl[864].w";
+	setAttr ".wl[860].w[3]"  1;
+	setAttr ".wl[861].w[3]"  1;
+	setAttr ".wl[862].w[3]"  1;
+	setAttr ".wl[863].w[3]"  1;
+	setAttr -s 2 ".wl[864].w";
 	setAttr ".wl[864].w[3]" 0.0052389053646951789;
 	setAttr ".wl[864].w[8]" 0.99476109463530482;
-	setAttr -s 5 ".wl[865].w";
+	setAttr -s 2 ".wl[865].w";
 	setAttr ".wl[865].w[3]" 0.86996990742550517;
 	setAttr ".wl[865].w[8]" 0.13003009257449483;
-	setAttr -s 4 ".wl[866].w";
+	setAttr -s 2 ".wl[866].w";
 	setAttr ".wl[866].w[3]" 0.77303559307937308;
 	setAttr ".wl[866].w[8]" 0.22696440692062692;
-	setAttr -s 5 ".wl[867].w";
+	setAttr -s 2 ".wl[867].w";
 	setAttr ".wl[867].w[3]" 0.36782620783735498;
 	setAttr ".wl[867].w[8]" 0.63217379216264502;
-	setAttr -s 5 ".wl[868].w";
+	setAttr -s 2 ".wl[868].w";
 	setAttr ".wl[868].w[3]" 0.17474173068092858;
 	setAttr ".wl[868].w[8]" 0.82525826931907142;
-	setAttr -s 4 ".wl[869].w";
+	setAttr -s 2 ".wl[869].w";
 	setAttr ".wl[869].w[3]" 0.050674814666450185;
 	setAttr ".wl[869].w[8]" 0.94932518533354981;
-	setAttr -s 4 ".wl[870].w";
+	setAttr -s 2 ".wl[870].w";
 	setAttr ".wl[870].w[3]" 0.0062820096720030971;
 	setAttr ".wl[870].w[8]" 0.9937179903279969;
-	setAttr -s 4 ".wl[871].w[3]"  1;
-	setAttr -s 4 ".wl[872].w[3]"  1;
-	setAttr -s 4 ".wl[873].w[3]"  1;
-	setAttr -s 5 ".wl[874].w";
+	setAttr ".wl[871].w[3]"  1;
+	setAttr ".wl[872].w[3]"  1;
+	setAttr ".wl[873].w[3]"  1;
+	setAttr -s 2 ".wl[874].w";
 	setAttr ".wl[874].w[3]" 0.67009941120177496;
 	setAttr ".wl[874].w[8]" 0.32990058879822504;
-	setAttr -s 4 ".wl[875].w";
+	setAttr -s 2 ".wl[875].w";
 	setAttr ".wl[875].w[3]" 0.67108884306586614;
 	setAttr ".wl[875].w[8]" 0.32891115693413386;
-	setAttr -s 4 ".wl[876].w";
+	setAttr -s 2 ".wl[876].w";
 	setAttr ".wl[876].w[3]" 0.67235246305549556;
 	setAttr ".wl[876].w[8]" 0.32764753694450449;
-	setAttr -s 4 ".wl[877].w";
+	setAttr -s 2 ".wl[877].w";
 	setAttr ".wl[877].w[3]" 0.57741203568455357;
 	setAttr ".wl[877].w[8]" 0.42258796431544637;
-	setAttr -s 5 ".wl[878].w";
+	setAttr -s 2 ".wl[878].w";
 	setAttr ".wl[878].w[3]" 0.59098900375178798;
 	setAttr ".wl[878].w[8]" 0.40901099624821208;
-	setAttr -s 5 ".wl[879].w";
+	setAttr -s 2 ".wl[879].w";
 	setAttr ".wl[879].w[3]" 0.59561926418290345;
 	setAttr ".wl[879].w[8]" 0.40438073581709655;
-	setAttr -s 3 ".wl[880].w";
-	setAttr ".wl[880].w[3]" 1;
-	setAttr -s 3 ".wl[881].w";
-	setAttr ".wl[881].w[3]" 1;
-	setAttr -s 3 ".wl[882].w";
-	setAttr ".wl[882].w[3]" 1;
-	setAttr -s 3 ".wl[883].w";
-	setAttr ".wl[883].w[3]" 1;
-	setAttr -s 4 ".wl[884].w[3]"  1;
-	setAttr -s 4 ".wl[885].w[3]"  1;
-	setAttr -s 4 ".wl[886].w[3]"  1;
-	setAttr -s 5 ".wl[887].w";
+	setAttr ".wl[880].w[3]"  1;
+	setAttr ".wl[881].w[3]"  1;
+	setAttr ".wl[882].w[3]"  1;
+	setAttr ".wl[883].w[3]"  1;
+	setAttr ".wl[884].w[3]"  1;
+	setAttr ".wl[885].w[3]"  1;
+	setAttr ".wl[886].w[3]"  1;
+	setAttr -s 2 ".wl[887].w";
 	setAttr ".wl[887].w[3]" 0.95391910863984852;
 	setAttr ".wl[887].w[8]" 0.046080891360151477;
-	setAttr -s 5 ".wl[888].w";
+	setAttr -s 2 ".wl[888].w";
 	setAttr ".wl[888].w[3]" 0.93391049436202467;
 	setAttr ".wl[888].w[8]" 0.066089505637975332;
-	setAttr -s 4 ".wl[889].w";
+	setAttr -s 2 ".wl[889].w";
 	setAttr ".wl[889].w[3]" 0.92497596636026636;
 	setAttr ".wl[889].w[8]" 0.075024033639733645;
-	setAttr -s 4 ".wl[890].w[3]"  1;
-	setAttr -s 4 ".wl[891].w[3]"  1;
-	setAttr -s 4 ".wl[892].w[3]"  1;
-	setAttr -s 4 ".wl[893].w[3]"  1;
-	setAttr -s 4 ".wl[894].w[3]"  1;
-	setAttr -s 4 ".wl[895].w[3]"  1;
-	setAttr -s 4 ".wl[896].w[3]"  1;
-	setAttr -s 3 ".wl[897].w";
-	setAttr ".wl[897].w[3]" 1;
-	setAttr -s 4 ".wl[898].w[3]"  1;
-	setAttr -s 3 ".wl[899].w";
-	setAttr ".wl[899].w[3]" 1;
-	setAttr -s 3 ".wl[900].w";
-	setAttr ".wl[900].w[3]" 1;
-	setAttr -s 4 ".wl[901].w[3]"  1;
-	setAttr -s 4 ".wl[902].w[3]"  1;
+	setAttr ".wl[890].w[3]"  1;
+	setAttr ".wl[891].w[3]"  1;
+	setAttr ".wl[892].w[3]"  1;
+	setAttr ".wl[893].w[3]"  1;
+	setAttr ".wl[894].w[3]"  1;
+	setAttr ".wl[895].w[3]"  1;
+	setAttr ".wl[896].w[3]"  1;
+	setAttr ".wl[897].w[3]"  1;
+	setAttr ".wl[898].w[3]"  1;
+	setAttr ".wl[899].w[3]"  1;
+	setAttr ".wl[900].w[3]"  1;
+	setAttr ".wl[901].w[3]"  1;
+	setAttr ".wl[902].w[3]"  1;
 	setAttr -s 5 ".wl[903].w";
 	setAttr ".wl[903].w[0]" -6.3280422274807603e-019;
 	setAttr ".wl[903].w[1]" 5.9766905405226881e-014;
 	setAttr ".wl[903].w[2]" 1.5250832037486676e-010;
 	setAttr ".wl[903].w[3]" 0.0028502161724079764;
 	setAttr ".wl[903].w[8]" 0.99714978367502394;
-	setAttr -s 5 ".wl[904].w";
+	setAttr -s 2 ".wl[904].w";
 	setAttr ".wl[904].w[3]" 0.0038317888367931374;
 	setAttr ".wl[904].w[8]" 0.99616821116320686;
-	setAttr -s 5 ".wl[905].w";
+	setAttr -s 2 ".wl[905].w";
 	setAttr ".wl[905].w[3]" 0.016480701249504737;
 	setAttr ".wl[905].w[8]" 0.98351929875049526;
 	setAttr -s 5 ".wl[906].w";
@@ -40089,21 +40890,21 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[906].w[2]" 5.1748166945098239e-010;
 	setAttr ".wl[906].w[3]" 0.014704132375006508;
 	setAttr ".wl[906].w[8]" 0.98529586710736172;
-	setAttr -s 5 ".wl[907].w";
+	setAttr -s 2 ".wl[907].w";
 	setAttr ".wl[907].w[3]" 0.1997620129147808;
 	setAttr ".wl[907].w[8]" 0.8002379870852192;
-	setAttr -s 5 ".wl[908].w";
+	setAttr -s 2 ".wl[908].w";
 	setAttr ".wl[908].w[3]" 0.3707799350831843;
 	setAttr ".wl[908].w[8]" 0.6292200649168157;
-	setAttr -s 5 ".wl[909].w";
+	setAttr -s 3 ".wl[909].w";
 	setAttr ".wl[909].w[0]" 2.8310126796803882e-009;
 	setAttr ".wl[909].w[3]" 0.36332406468008843;
 	setAttr ".wl[909].w[8]" 0.63667593248889887;
-	setAttr -s 5 ".wl[910].w";
+	setAttr -s 3 ".wl[910].w";
 	setAttr ".wl[910].w[0]" 8.0178752810769012e-009;
 	setAttr ".wl[910].w[3]" 0.19959791916673206;
 	setAttr ".wl[910].w[8]" 0.80040207281539266;
-	setAttr -s 5 ".wl[911].w";
+	setAttr -s 2 ".wl[911].w";
 	setAttr ".wl[911].w[3]" 0.0722434019007413;
 	setAttr ".wl[911].w[8]" 0.9277565980992587;
 	setAttr -s 5 ".wl[912].w";
@@ -40112,16 +40913,16 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[912].w[2]" 2.0616626513232918e-009;
 	setAttr ".wl[912].w[3]" 0.059125580161422706;
 	setAttr ".wl[912].w[8]" 0.94087441777619851;
-	setAttr -s 5 ".wl[913].w";
+	setAttr -s 2 ".wl[913].w";
 	setAttr ".wl[913].w[3]" 0.67799160444371864;
 	setAttr ".wl[913].w[8]" 0.32200839555628136;
-	setAttr -s 5 ".wl[914].w";
+	setAttr -s 2 ".wl[914].w";
 	setAttr ".wl[914].w[3]" 0.84217609996806087;
 	setAttr ".wl[914].w[8]" 0.15782390003193913;
-	setAttr -s 5 ".wl[915].w";
+	setAttr -s 2 ".wl[915].w";
 	setAttr ".wl[915].w[3]" 0.84700245097034643;
 	setAttr ".wl[915].w[8]" 0.15299754902965357;
-	setAttr -s 5 ".wl[916].w";
+	setAttr -s 3 ".wl[916].w";
 	setAttr ".wl[916].w[0]" 5.0057985305585999e-012;
 	setAttr ".wl[916].w[3]" 0.69052047282381945;
 	setAttr ".wl[916].w[8]" 0.30947952717117477;
@@ -40131,83 +40932,82 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[917].w[2]" 1.9133813915715555e-009;
 	setAttr ".wl[917].w[3]" 0.53825905993850331;
 	setAttr ".wl[917].w[8]" 0.46174093814768291;
-	setAttr -s 5 ".wl[918].w";
+	setAttr -s 2 ".wl[918].w";
 	setAttr ".wl[918].w[3]" 0.55376784100072995;
 	setAttr ".wl[918].w[8]" 0.44623215899927005;
-	setAttr -s 5 ".wl[919].w";
+	setAttr -s 2 ".wl[919].w";
 	setAttr ".wl[919].w[3]" 0.99242127132637348;
 	setAttr ".wl[919].w[8]" 0.0075787286736265216;
-	setAttr -s 5 ".wl[920].w";
+	setAttr -s 2 ".wl[920].w";
 	setAttr ".wl[920].w[3]" 0.99553447074809931;
 	setAttr ".wl[920].w[8]" 0.0044655292519006906;
-	setAttr -s 5 ".wl[921].w";
+	setAttr -s 2 ".wl[921].w";
 	setAttr ".wl[921].w[3]" 0.99976031206632632;
 	setAttr ".wl[921].w[8]" 0.00023968793367368235;
-	setAttr -s 5 ".wl[922].w";
+	setAttr -s 2 ".wl[922].w";
 	setAttr ".wl[922].w[3]" 0.99922655286553208;
 	setAttr ".wl[922].w[8]" 0.00077344713446791935;
-	setAttr -s 5 ".wl[923].w";
+	setAttr -s 2 ".wl[923].w";
 	setAttr ".wl[923].w[3]" 0.9991937198724159;
 	setAttr ".wl[923].w[8]" 0.0008062801275841025;
-	setAttr -s 5 ".wl[924].w";
+	setAttr -s 2 ".wl[924].w";
 	setAttr ".wl[924].w[3]" 0.99855644152192735;
 	setAttr ".wl[924].w[8]" 0.0014435584780726485;
-	setAttr -s 5 ".wl[925].w";
+	setAttr -s 2 ".wl[925].w";
 	setAttr ".wl[925].w[3]" 0.99975163443748105;
 	setAttr ".wl[925].w[8]" 0.00024836556251894848;
-	setAttr -s 5 ".wl[926].w";
+	setAttr -s 2 ".wl[926].w";
 	setAttr ".wl[926].w[3]" 0.99874825903598941;
 	setAttr ".wl[926].w[8]" 0.0012517409640105948;
-	setAttr -s 4 ".wl[927].w[3]"  1;
-	setAttr -s 4 ".wl[928].w[3]"  1;
-	setAttr -s 4 ".wl[929].w[3]"  1;
-	setAttr -s 4 ".wl[930].w[3]"  1;
-	setAttr -s 4 ".wl[931].w[3]"  1;
-	setAttr -s 4 ".wl[932].w[3]"  1;
-	setAttr -s 5 ".wl[933].w";
+	setAttr ".wl[927].w[3]"  1;
+	setAttr ".wl[928].w[3]"  1;
+	setAttr ".wl[929].w[3]"  1;
+	setAttr ".wl[930].w[3]"  1;
+	setAttr ".wl[931].w[3]"  1;
+	setAttr ".wl[932].w[3]"  1;
+	setAttr -s 2 ".wl[933].w";
 	setAttr ".wl[933].w[3]" 0.99998356614166217;
 	setAttr ".wl[933].w[8]" 1.6433858337827623e-005;
-	setAttr -s 5 ".wl[934].w";
+	setAttr -s 2 ".wl[934].w";
 	setAttr ".wl[934].w[3]" 0.99999415513079837;
 	setAttr ".wl[934].w[8]" 5.8448692016321857e-006;
-	setAttr -s 4 ".wl[935].w[3]"  1;
-	setAttr -s 5 ".wl[936].w";
+	setAttr ".wl[935].w[3]"  1;
+	setAttr -s 2 ".wl[936].w";
 	setAttr ".wl[936].w[3]" 0.99999094836960745;
 	setAttr ".wl[936].w[8]" 9.0516303925536334e-006;
-	setAttr -s 4 ".wl[937].w[3]"  1;
-	setAttr -s 4 ".wl[938].w[3]"  1;
-	setAttr -s 4 ".wl[939].w[3]"  1;
-	setAttr -s 4 ".wl[940].w[3]"  1;
-	setAttr -s 4 ".wl[941].w[3]"  1;
-	setAttr -s 5 ".wl[942].w";
+	setAttr ".wl[937].w[3]"  1;
+	setAttr ".wl[938].w[3]"  1;
+	setAttr ".wl[939].w[3]"  1;
+	setAttr ".wl[940].w[3]"  1;
+	setAttr ".wl[941].w[3]"  1;
+	setAttr -s 2 ".wl[942].w";
 	setAttr ".wl[942].w[3]" 0.99999383234172645;
 	setAttr ".wl[942].w[8]" 6.167658273548148e-006;
-	setAttr -s 5 ".wl[943].w";
+	setAttr -s 2 ".wl[943].w";
 	setAttr ".wl[943].w[3]" 0.99993917818860845;
 	setAttr ".wl[943].w[8]" 6.0821811391553737e-005;
-	setAttr -s 5 ".wl[944].w";
+	setAttr -s 2 ".wl[944].w";
 	setAttr ".wl[944].w[3]" 0.9999208882438001;
 	setAttr ".wl[944].w[8]" 7.911175619990106e-005;
-	setAttr -s 5 ".wl[945].w";
+	setAttr -s 2 ".wl[945].w";
 	setAttr ".wl[945].w[3]" 0.99996967710312623;
 	setAttr ".wl[945].w[8]" 3.0322896873768986e-005;
-	setAttr -s 4 ".wl[946].w[3]"  1;
-	setAttr -s 5 ".wl[947].w";
+	setAttr ".wl[946].w[3]"  1;
+	setAttr -s 2 ".wl[947].w";
 	setAttr ".wl[947].w[3]" 0.99977981068701172;
 	setAttr ".wl[947].w[8]" 0.0002201893129882837;
-	setAttr -s 4 ".wl[948].w";
+	setAttr -s 2 ".wl[948].w";
 	setAttr ".wl[948].w[3]" 0.99825578872532506;
 	setAttr ".wl[948].w[8]" 0.001744211274674945;
-	setAttr -s 2 ".wl[949].w[3]"  1;
-	setAttr -s 3 ".wl[950].w";
-	setAttr ".wl[950].w[3]" 1;
-	setAttr -s 4 ".wl[951].w";
+	setAttr ".wl[949].w[3]"  1;
+	setAttr ".wl[950].w[3]"  1;
+	setAttr -s 2 ".wl[951].w";
 	setAttr ".wl[951].w[3]" 0.0012730749699737531;
 	setAttr ".wl[951].w[8]" 0.99872692503002625;
-	setAttr -s 4 ".wl[952].w";
+	setAttr -s 2 ".wl[952].w";
 	setAttr ".wl[952].w[3]" 0.0046815667625990098;
 	setAttr ".wl[952].w[8]" 0.99531843323740099;
-	setAttr -s 4 ".wl[953].w";
+	setAttr -s 2 ".wl[953].w";
 	setAttr ".wl[953].w[3]" 0.73829942392129966;
 	setAttr ".wl[953].w[8]" 0.26170057607870034;
 	setAttr -s 4 ".wl[954].w";
@@ -40215,181 +41015,139 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[954].w[2]" 1.0794448049092368e-014;
 	setAttr ".wl[954].w[3]" 0.67606078133976977;
 	setAttr ".wl[954].w[8]" 0.32393921866021946;
-	setAttr -s 4 ".wl[955].w";
+	setAttr -s 2 ".wl[955].w";
 	setAttr ".wl[955].w[3]" 0.60189550215443655;
 	setAttr ".wl[955].w[8]" 0.39810449784556345;
-	setAttr -s 4 ".wl[956].w";
+	setAttr -s 2 ".wl[956].w";
 	setAttr ".wl[956].w[3]" 0.35855555026255936;
 	setAttr ".wl[956].w[8]" 0.64144444973744064;
-	setAttr -s 4 ".wl[957].w";
+	setAttr -s 2 ".wl[957].w";
 	setAttr ".wl[957].w[3]" 0.83525551178901858;
 	setAttr ".wl[957].w[8]" 0.16474448821098142;
-	setAttr -s 3 ".wl[958].w";
-	setAttr ".wl[958].w[3]" 1;
-	setAttr -s 3 ".wl[959].w";
-	setAttr ".wl[959].w[3]" 1;
-	setAttr -s 4 ".wl[960].w[3]"  1;
-	setAttr -s 4 ".wl[961].w[3]"  1;
-	setAttr -s 4 ".wl[962].w[3]"  1;
-	setAttr -s 4 ".wl[963].w[3]"  1;
-	setAttr -s 4 ".wl[964].w[3]"  1;
-	setAttr -s 4 ".wl[965].w[3]"  1;
-	setAttr -s 4 ".wl[966].w[3]"  1;
-	setAttr -s 4 ".wl[967].w[3]"  1;
-	setAttr -s 4 ".wl[968].w[3]"  1;
-	setAttr -s 4 ".wl[969].w[3]"  1;
-	setAttr -s 3 ".wl[970].w";
-	setAttr ".wl[970].w[3]" 1;
-	setAttr -s 3 ".wl[971].w";
-	setAttr ".wl[971].w[3]" 1;
-	setAttr -s 3 ".wl[972].w";
-	setAttr ".wl[972].w[3]" 1;
-	setAttr -s 3 ".wl[973].w";
-	setAttr ".wl[973].w[3]" 1;
-	setAttr -s 3 ".wl[974].w";
-	setAttr ".wl[974].w[3]" 1;
-	setAttr -s 3 ".wl[975].w";
-	setAttr ".wl[975].w[3]" 1;
-	setAttr -s 3 ".wl[976].w";
-	setAttr ".wl[976].w[3]" 1;
-	setAttr -s 3 ".wl[977].w";
-	setAttr ".wl[977].w[3]" 1;
-	setAttr -s 4 ".wl[978].w[3]"  1;
-	setAttr -s 4 ".wl[979].w[3]"  1;
-	setAttr -s 3 ".wl[980].w";
-	setAttr ".wl[980].w[3]" 1;
-	setAttr -s 3 ".wl[981].w";
-	setAttr ".wl[981].w[3]" 1;
-	setAttr -s 3 ".wl[982].w";
-	setAttr ".wl[982].w[3]" 1;
-	setAttr -s 3 ".wl[983].w";
-	setAttr ".wl[983].w[3]" 1;
-	setAttr -s 3 ".wl[984].w";
-	setAttr ".wl[984].w[3]" 1;
-	setAttr -s 3 ".wl[985].w";
-	setAttr ".wl[985].w[3]" 1;
-	setAttr -s 3 ".wl[986].w";
-	setAttr ".wl[986].w[3]" 1;
-	setAttr -s 4 ".wl[987].w[3]"  1;
-	setAttr -s 4 ".wl[988].w[3]"  1;
-	setAttr -s 4 ".wl[989].w[3]"  1;
-	setAttr -s 3 ".wl[990].w";
-	setAttr ".wl[990].w[3]" 1;
-	setAttr -s 3 ".wl[991].w";
-	setAttr ".wl[991].w[3]" 1;
-	setAttr -s 3 ".wl[992].w";
-	setAttr ".wl[992].w[3]" 1;
-	setAttr -s 4 ".wl[993].w[3]"  1;
-	setAttr -s 3 ".wl[994].w";
-	setAttr ".wl[994].w[3]" 1;
-	setAttr -s 3 ".wl[995].w";
-	setAttr ".wl[995].w[3]" 1;
-	setAttr -s 3 ".wl[996].w";
-	setAttr ".wl[996].w[3]" 1;
-	setAttr -s 3 ".wl[997].w";
-	setAttr ".wl[997].w[3]" 1;
-	setAttr -s 3 ".wl[998].w";
-	setAttr ".wl[998].w[3]" 1;
-	setAttr -s 3 ".wl[999].w";
-	setAttr ".wl[999].w[3]" 1;
-	setAttr -s 3 ".wl[1000].w";
-	setAttr ".wl[1000].w[3]" 1;
-	setAttr -s 3 ".wl[1001].w";
-	setAttr ".wl[1001].w[3]" 1;
-	setAttr -s 4 ".wl[1002].w[3]"  1;
-	setAttr -s 4 ".wl[1003].w[3]"  1;
-	setAttr -s 3 ".wl[1004].w";
-	setAttr ".wl[1004].w[3]" 1;
-	setAttr -s 3 ".wl[1005].w";
-	setAttr ".wl[1005].w[3]" 1;
-	setAttr -s 3 ".wl[1006].w";
-	setAttr ".wl[1006].w[3]" 1;
-	setAttr -s 3 ".wl[1007].w";
-	setAttr ".wl[1007].w[3]" 1;
-	setAttr -s 3 ".wl[1008].w";
-	setAttr ".wl[1008].w[3]" 1;
-	setAttr -s 3 ".wl[1009].w";
-	setAttr ".wl[1009].w[3]" 1;
-	setAttr -s 3 ".wl[1010].w";
-	setAttr ".wl[1010].w[3]" 1;
-	setAttr -s 3 ".wl[1011].w";
-	setAttr ".wl[1011].w[3]" 1;
-	setAttr -s 4 ".wl[1012].w[3]"  1;
-	setAttr -s 4 ".wl[1013].w[3]"  1;
-	setAttr -s 3 ".wl[1014].w";
-	setAttr ".wl[1014].w[3]" 1;
-	setAttr -s 3 ".wl[1015].w";
-	setAttr ".wl[1015].w[3]" 1;
-	setAttr -s 3 ".wl[1016].w";
-	setAttr ".wl[1016].w[3]" 1;
-	setAttr -s 3 ".wl[1017].w";
-	setAttr ".wl[1017].w[3]" 1;
-	setAttr -s 3 ".wl[1018].w";
-	setAttr ".wl[1018].w[3]" 1;
-	setAttr -s 3 ".wl[1019].w";
-	setAttr ".wl[1019].w[3]" 1;
-	setAttr -s 4 ".wl[1020].w[3]"  1;
-	setAttr -s 5 ".wl[1021].w";
+	setAttr ".wl[958].w[3]"  1;
+	setAttr ".wl[959].w[3]"  1;
+	setAttr ".wl[960].w[3]"  1;
+	setAttr ".wl[961].w[3]"  1;
+	setAttr ".wl[962].w[3]"  1;
+	setAttr ".wl[963].w[3]"  1;
+	setAttr ".wl[964].w[3]"  1;
+	setAttr ".wl[965].w[3]"  1;
+	setAttr ".wl[966].w[3]"  1;
+	setAttr ".wl[967].w[3]"  1;
+	setAttr ".wl[968].w[3]"  1;
+	setAttr ".wl[969].w[3]"  1;
+	setAttr ".wl[970].w[3]"  1;
+	setAttr ".wl[971].w[3]"  1;
+	setAttr ".wl[972].w[3]"  1;
+	setAttr ".wl[973].w[3]"  1;
+	setAttr ".wl[974].w[3]"  1;
+	setAttr ".wl[975].w[3]"  1;
+	setAttr ".wl[976].w[3]"  1;
+	setAttr ".wl[977].w[3]"  1;
+	setAttr ".wl[978].w[3]"  1;
+	setAttr ".wl[979].w[3]"  1;
+	setAttr ".wl[980].w[3]"  1;
+	setAttr ".wl[981].w[3]"  1;
+	setAttr ".wl[982].w[3]"  1;
+	setAttr ".wl[983].w[3]"  1;
+	setAttr ".wl[984].w[3]"  1;
+	setAttr ".wl[985].w[3]"  1;
+	setAttr ".wl[986].w[3]"  1;
+	setAttr ".wl[987].w[3]"  1;
+	setAttr ".wl[988].w[3]"  1;
+	setAttr ".wl[989].w[3]"  1;
+	setAttr ".wl[990].w[3]"  1;
+	setAttr ".wl[991].w[3]"  1;
+	setAttr ".wl[992].w[3]"  1;
+	setAttr ".wl[993].w[3]"  1;
+	setAttr ".wl[994].w[3]"  1;
+	setAttr ".wl[995].w[3]"  1;
+	setAttr ".wl[996].w[3]"  1;
+	setAttr ".wl[997].w[3]"  1;
+	setAttr ".wl[998].w[3]"  1;
+	setAttr ".wl[999].w[3]"  1;
+	setAttr ".wl[1000].w[3]"  1;
+	setAttr ".wl[1001].w[3]"  1;
+	setAttr ".wl[1002].w[3]"  1;
+	setAttr ".wl[1003].w[3]"  1;
+	setAttr ".wl[1004].w[3]"  1;
+	setAttr ".wl[1005].w[3]"  1;
+	setAttr ".wl[1006].w[3]"  1;
+	setAttr ".wl[1007].w[3]"  1;
+	setAttr ".wl[1008].w[3]"  1;
+	setAttr ".wl[1009].w[3]"  1;
+	setAttr ".wl[1010].w[3]"  1;
+	setAttr ".wl[1011].w[3]"  1;
+	setAttr ".wl[1012].w[3]"  1;
+	setAttr ".wl[1013].w[3]"  1;
+	setAttr ".wl[1014].w[3]"  1;
+	setAttr ".wl[1015].w[3]"  1;
+	setAttr ".wl[1016].w[3]"  1;
+	setAttr ".wl[1017].w[3]"  1;
+	setAttr ".wl[1018].w[3]"  1;
+	setAttr ".wl[1019].w[3]"  1;
+	setAttr ".wl[1020].w[3]"  1;
+	setAttr -s 2 ".wl[1021].w";
 	setAttr ".wl[1021].w[3]" 0.35605810123301662;
 	setAttr ".wl[1021].w[8]" 0.64394189876698338;
-	setAttr -s 4 ".wl[1022].w";
+	setAttr -s 2 ".wl[1022].w";
 	setAttr ".wl[1022].w[3]" 0.16065394275245337;
 	setAttr ".wl[1022].w[8]" 0.83934605724754663;
-	setAttr -s 4 ".wl[1023].w";
+	setAttr -s 2 ".wl[1023].w";
 	setAttr ".wl[1023].w[3]" 0.14914821266813716;
 	setAttr ".wl[1023].w[8]" 0.85085178733186284;
-	setAttr -s 4 ".wl[1024].w";
+	setAttr -s 2 ".wl[1024].w";
 	setAttr ".wl[1024].w[3]" 0.59751246486568133;
 	setAttr ".wl[1024].w[8]" 0.40248753513431862;
-	setAttr -s 4 ".wl[1025].w";
+	setAttr -s 2 ".wl[1025].w";
 	setAttr ".wl[1025].w[3]" 0.045996101584971139;
 	setAttr ".wl[1025].w[8]" 0.95400389841502886;
-	setAttr -s 5 ".wl[1026].w";
+	setAttr -s 2 ".wl[1026].w";
 	setAttr ".wl[1026].w[3]" 0.038152706326789465;
 	setAttr ".wl[1026].w[8]" 0.96184729367321053;
-	setAttr -s 4 ".wl[1027].w";
+	setAttr -s 2 ".wl[1027].w";
 	setAttr ".wl[1027].w[3]" 0.99947882773792185;
 	setAttr ".wl[1027].w[8]" 0.00052117226207815115;
-	setAttr -s 4 ".wl[1028].w";
+	setAttr -s 2 ".wl[1028].w";
 	setAttr ".wl[1028].w[3]" 0.98301112954248271;
 	setAttr ".wl[1028].w[8]" 0.016988870457517291;
-	setAttr -s 4 ".wl[1029].w";
+	setAttr -s 2 ".wl[1029].w";
 	setAttr ".wl[1029].w[3]" 0.98139157207318961;
 	setAttr ".wl[1029].w[8]" 0.018608427926810389;
-	setAttr -s 4 ".wl[1030].w";
+	setAttr -s 2 ".wl[1030].w";
 	setAttr ".wl[1030].w[3]" 0.91780798839773703;
 	setAttr ".wl[1030].w[8]" 0.082192011602262971;
-	setAttr -s 4 ".wl[1031].w";
+	setAttr -s 2 ".wl[1031].w";
 	setAttr ".wl[1031].w[3]" 0.91888510758699815;
 	setAttr ".wl[1031].w[8]" 0.081114892413001849;
-	setAttr -s 4 ".wl[1032].w[3]"  1;
-	setAttr -s 3 ".wl[1033].w[3]"  1;
-	setAttr -s 4 ".wl[1034].w";
+	setAttr ".wl[1032].w[3]"  1;
+	setAttr ".wl[1033].w[3]"  1;
+	setAttr -s 2 ".wl[1034].w";
 	setAttr ".wl[1034].w[3]" 0.002642014016171923;
 	setAttr ".wl[1034].w[8]" 0.99735798598382808;
-	setAttr -s 4 ".wl[1035].w";
+	setAttr -s 2 ".wl[1035].w";
 	setAttr ".wl[1035].w[3]" 0.003112672472569411;
 	setAttr ".wl[1035].w[8]" 0.99688732752743059;
-	setAttr -s 4 ".wl[1036].w";
+	setAttr -s 2 ".wl[1036].w";
 	setAttr ".wl[1036].w[3]" 0.82240530532539324;
 	setAttr ".wl[1036].w[8]" 0.17759469467460676;
-	setAttr -s 4 ".wl[1037].w";
+	setAttr -s 2 ".wl[1037].w";
 	setAttr ".wl[1037].w[3]" 0.73241716331310591;
 	setAttr ".wl[1037].w[8]" 0.26758283668689409;
-	setAttr -s 5 ".wl[1038].w";
+	setAttr -s 2 ".wl[1038].w";
 	setAttr ".wl[1038].w[3]" 0.6740447312169715;
 	setAttr ".wl[1038].w[8]" 0.3259552687830285;
-	setAttr -s 5 ".wl[1039].w";
+	setAttr -s 2 ".wl[1039].w";
 	setAttr ".wl[1039].w[3]" 0.94550923825150535;
 	setAttr ".wl[1039].w[8]" 0.054490761748494654;
 	setAttr -s 5 ".wl[1040].w[1:5]"  1.2177618592247475e-024 8.4027576824436946e-018 
 		0.61686038532391307 1.2946260529885081e-005 0.38312666841555704;
-	setAttr -s 5 ".wl[1041].w[1:5]"  4.324443417904133e-023 4.9984381432647796e-018 
+	setAttr -s 5 ".wl[1041].w[1:5]"  4.3244434179041335e-023 4.9984381432647796e-018 
 		0.55946693087877819 2.2099860795042735e-005 0.44051096926042677;
 	setAttr -s 5 ".wl[1042].w[1:5]"  2.3761457015370462e-024 3.0002737803338763e-019 
 		0.47007082528625777 5.2615649188002167e-005 0.52987655906455422;
 	setAttr -s 5 ".wl[1043].w[1:5]"  1.0013594707931638e-025 4.0651175214716928e-019 
-		0.51185318210537312 2.232227196897558e-005 0.48812449562265792;
+		0.51185318210537312 2.2322271968975583e-005 0.48812449562265792;
 	setAttr -s 5 ".wl[1044].w[1:5]"  4.4572779211430377e-026 8.2779453286487344e-021 
 		0.58646881534105955 0.00021157400395500726 0.41331961065498551;
 	setAttr -s 5 ".wl[1045].w[1:5]"  2.209475726547773e-024 3.1567756116467617e-019 
@@ -40412,13 +41170,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.70701918069897496 0.0048676028485311129 0.28811321645249394;
 	setAttr -s 3 ".wl[1054].w[2:4]"  2.290468298355197e-033 0.58080852537983851 
 		0.41919147462016154;
-	setAttr -s 4 ".wl[1055].w[1:4]"  6.343821990798428e-038 1.2125949613922133e-029 
+	setAttr -s 4 ".wl[1055].w[1:4]"  6.3438219907984301e-038 1.2125949613922133e-029 
 		0.69473973331148398 0.30526026668851602;
 	setAttr -s 4 ".wl[1056].w[1:4]"  1.9227778065697106e-039 4.0495025077567992e-031 
 		0.52758722479552667 0.47241277520447328;
 	setAttr -s 3 ".wl[1057].w[2:4]"  1.430495214471277e-032 0.49810950640968321 
 		0.50189049359031679;
-	setAttr -s 4 ".wl[1058].w[1:4]"  5.8483766489206721e-038 1.199314891494164e-029 
+	setAttr -s 4 ".wl[1058].w[1:4]"  5.8483766489206721e-038 1.1993148914941641e-029 
 		0.51573923625734164 0.48426076374265836;
 	setAttr -s 4 ".wl[1059].w[1:4]"  1.8107448983474483e-036 3.5606578242276513e-028 
 		0.54072863941072669 0.45927136058927326;
@@ -40438,7 +41196,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.29783804659426172 0.70216195340573828;
 	setAttr -s 4 ".wl[1067].w[1:4]"  1.6168024839466646e-038 3.7317079668613532e-030 
 		0.36052600468814322 0.63947399531185678;
-	setAttr -s 4 ".wl[1068].w[1:4]"  4.180448902766585e-030 6.0198311112045522e-022 
+	setAttr -s 4 ".wl[1068].w[1:4]"  4.1804489027665857e-030 6.0198311112045522e-022 
 		0.4101960467696858 0.5898039532303142;
 	setAttr -s 4 ".wl[1069].w[1:4]"  5.4971921986663044e-033 9.6430746280678075e-025 
 		0.26211612309470333 0.73788387690529667;
@@ -40460,13 +41218,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.18459381516459805 0.81540618483540195;
 	setAttr -s 4 ".wl[1078].w[1:4]"  2.2198507712167335e-037 2.2579090210061039e-026 
 		0.35311284826878042 0.64688715173121958;
-	setAttr -s 3 ".wl[1079].w[1:3]"  4.8375161771300618e-039 1.1013505390633e-030 
+	setAttr -s 3 ".wl[1079].w[1:3]"  4.8375161771300618e-039 1.1013505390633001e-030 
 		1;
 	setAttr -s 4 ".wl[1080].w[1:4]"  4.6320316865753605e-038 9.2831486422649598e-030 
 		0.11711287994555231 0.88288712005444769;
 	setAttr -s 4 ".wl[1081].w[1:4]"  7.8552006416382584e-039 5.9563558589444864e-028 
 		0.30847872135044152 0.69152127864955848;
-	setAttr -s 5 ".wl[1082].w[1:5]"  5.474121398179452e-040 7.973303023555835e-026 
+	setAttr -s 5 ".wl[1082].w[1:5]"  5.474121398179452e-040 7.9733030235558361e-026 
 		0.67458528577206622 0.31225141620317132 0.013163298024762488;
 	setAttr ".wl[1083].w[4]"  1;
 	setAttr ".wl[1084].w[4]"  1;
@@ -40474,9 +41232,9 @@ createNode skinCluster -n "SkinCluster_Head01";
 		0.050190829950672478 0.94980917004932752;
 	setAttr -s 4 ".wl[1086].w[1:4]"  1.1604989565663998e-031 1.7892656542272053e-023 
 		0.42254588306866803 0.57745411693133197;
-	setAttr -s 5 ".wl[1087].w[1:5]"  3.475342370548543e-030 5.9965883199582092e-022 
+	setAttr -s 5 ".wl[1087].w[1:5]"  3.4753423705485437e-030 5.9965883199582092e-022 
 		0.77936724197312968 0.21871902683493621 0.0019137311919341501;
-	setAttr -s 5 ".wl[1088].w[1:5]"  6.437108552389353e-029 1.3915721835847349e-023 
+	setAttr -s 5 ".wl[1088].w[1:5]"  6.4371085523893542e-029 1.3915721835847349e-023 
 		0.79054060995641939 0.13399987466824853 0.075459515375332076;
 	setAttr -s 5 ".wl[1089].w[1:5]"  7.7830602224907134e-028 1.5219618422256914e-022 
 		0.7884278806070667 0.05143382669568218 0.16013829269725111;
@@ -40531,7 +41289,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1108].w[7]" 3.1124741972040136e-006;
 	setAttr -s 4 ".wl[1109].w";
 	setAttr ".wl[1109].w[1]" 6.2890590163995483e-042;
-	setAttr ".wl[1109].w[2]" 7.643170718780379e-033;
+	setAttr ".wl[1109].w[2]" 7.6431707187803776e-033;
 	setAttr ".wl[1109].w[3]" 0.00072349003497307329;
 	setAttr ".wl[1109].w[6]" 0.99927650996502693;
 	setAttr -s 4 ".wl[1110].w";
@@ -40618,13 +41376,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1124].w[6]" 0.083795969830270073;
 	setAttr ".wl[1124].w[7]" 0.15382664800759657;
 	setAttr -s 5 ".wl[1125].w";
-	setAttr ".wl[1125].w[1]" 1.303284493058882e-031;
+	setAttr ".wl[1125].w[1]" 1.3032844930588822e-031;
 	setAttr ".wl[1125].w[2]" 5.0701758324515689e-026;
 	setAttr ".wl[1125].w[3]" 0.8327784876674561;
 	setAttr ".wl[1125].w[6]" 0.032315830891613793;
 	setAttr ".wl[1125].w[7]" 0.13490568144093013;
 	setAttr -s 5 ".wl[1126].w";
-	setAttr ".wl[1126].w[1]" 1.092506591210784e-030;
+	setAttr ".wl[1126].w[1]" 1.0925065912107842e-030;
 	setAttr ".wl[1126].w[2]" 5.4716026358030381e-025;
 	setAttr ".wl[1126].w[3]" 0.71476340857263887;
 	setAttr ".wl[1126].w[6]" 0.014189998704953823;
@@ -40700,12 +41458,12 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1138].w[6]" 3.117482951826578e-005;
 	setAttr ".wl[1138].w[7]" 4.850872382309808e-007;
 	setAttr -s 4 ".wl[1139].w";
-	setAttr ".wl[1139].w[1]" 3.13964769769373e-044;
+	setAttr ".wl[1139].w[1]" 3.1396476976937295e-044;
 	setAttr ".wl[1139].w[2]" 4.0627154557723277e-034;
 	setAttr ".wl[1139].w[3]" 0.99998811105248786;
 	setAttr ".wl[1139].w[6]" 1.1888947512126871e-005;
 	setAttr -s 4 ".wl[1140].w";
-	setAttr ".wl[1140].w[2]" 1.103090454777979e-030;
+	setAttr ".wl[1140].w[2]" 1.1030904547779792e-030;
 	setAttr ".wl[1140].w[3]" 0.99999229031487891;
 	setAttr ".wl[1140].w[6]" 4.516513871651868e-006;
 	setAttr ".wl[1140].w[7]" 3.1931712494199441e-006;
@@ -40755,7 +41513,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1149].w[3]" 0.79809986549807677;
 	setAttr ".wl[1149].w[6]" 0.057076332061238834;
 	setAttr ".wl[1149].w[7]" 0.14482380244068438;
-	setAttr -s 3 ".wl[1150].w[1:3]"  7.8812473977805874e-031 2.277310868998012e-024 
+	setAttr -s 3 ".wl[1150].w[1:3]"  7.8812473977805874e-031 2.2773108689980124e-024 
 		1;
 	setAttr -s 3 ".wl[1151].w[1:3]"  7.8102377356667584e-032 3.5395137491373493e-025 
 		1;
@@ -40781,22 +41539,20 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[1157].w[1:3]"  2.6083410187621223e-031 1.0061864720181904e-023 
 		1;
-	setAttr -s 3 ".wl[1158].w";
+	setAttr -s 2 ".wl[1158].w";
 	setAttr ".wl[1158].w[3]" 0.99999873293528141;
 	setAttr ".wl[1158].w[8]" 1.2670647185381156e-006;
-	setAttr -s 4 ".wl[1159].w";
+	setAttr -s 2 ".wl[1159].w";
 	setAttr ".wl[1159].w[3]" 0.99998573569096605;
 	setAttr ".wl[1159].w[8]" 1.4264309033996334e-005;
-	setAttr -s 4 ".wl[1160].w";
+	setAttr -s 2 ".wl[1160].w";
 	setAttr ".wl[1160].w[3]" 0.99989475358747171;
 	setAttr ".wl[1160].w[8]" 0.00010524641252825655;
-	setAttr -s 4 ".wl[1161].w";
+	setAttr -s 2 ".wl[1161].w";
 	setAttr ".wl[1161].w[3]" 0.99996816186388815;
 	setAttr ".wl[1161].w[8]" 3.1838136111850925e-005;
-	setAttr -s 3 ".wl[1162].w";
-	setAttr ".wl[1162].w[3]" 1;
-	setAttr -s 3 ".wl[1163].w";
-	setAttr ".wl[1163].w[3]" 1;
+	setAttr ".wl[1162].w[3]"  1;
+	setAttr ".wl[1163].w[3]"  1;
 	setAttr -s 4 ".wl[1164].w";
 	setAttr ".wl[1164].w[1]" 4.1031815645384436e-032;
 	setAttr ".wl[1164].w[2]" 6.5742236658351748e-015;
@@ -40892,7 +41648,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1179].w[8]" 0.084019000737963534;
 	setAttr -s 4 ".wl[1180].w";
 	setAttr ".wl[1180].w[1]" 3.1892769239004518e-030;
-	setAttr ".wl[1180].w[2]" 4.037888239274277e-014;
+	setAttr ".wl[1180].w[2]" 4.0378882392742776e-014;
 	setAttr ".wl[1180].w[3]" 0.03184391964097736;
 	setAttr ".wl[1180].w[8]" 0.96815608035898226;
 	setAttr -s 5 ".wl[1181].w";
@@ -40901,11 +41657,11 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1181].w[2]" 5.6421782161823814e-012;
 	setAttr ".wl[1181].w[3]" 0.049638822671692916;
 	setAttr ".wl[1181].w[8]" 0.95036117732266456;
-	setAttr -s 5 ".wl[1182].w";
+	setAttr -s 3 ".wl[1182].w";
 	setAttr ".wl[1182].w[0]" 1.1262091029256514e-013;
 	setAttr ".wl[1182].w[3]" 0.99940786133530102;
 	setAttr ".wl[1182].w[8]" 0.00059213866458639479;
-	setAttr -s 5 ".wl[1183].w";
+	setAttr -s 2 ".wl[1183].w";
 	setAttr ".wl[1183].w[3]" 0.99976817879655788;
 	setAttr ".wl[1183].w[8]" 0.00023182120344212358;
 	setAttr -s 5 ".wl[1184].w";
@@ -40920,13 +41676,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1185].w[2]" 1.7362792738486489e-011;
 	setAttr ".wl[1185].w[3]" 0.17044311071198315;
 	setAttr ".wl[1185].w[8]" 0.82955688927063154;
-	setAttr -s 4 ".wl[1186].w";
+	setAttr -s 2 ".wl[1186].w";
 	setAttr ".wl[1186].w[3]" 0.9999651821826766;
 	setAttr ".wl[1186].w[8]" 3.4817817323450018e-005;
-	setAttr -s 4 ".wl[1187].w";
+	setAttr -s 2 ".wl[1187].w";
 	setAttr ".wl[1187].w[3]" 0.99980288791864269;
 	setAttr ".wl[1187].w[8]" 0.00019711208135728413;
-	setAttr -s 4 ".wl[1188].w";
+	setAttr -s 2 ".wl[1188].w";
 	setAttr ".wl[1188].w[3]" 0.9999954623925309;
 	setAttr ".wl[1188].w[8]" 4.5376074691335875e-006;
 	setAttr -s 5 ".wl[1189].w";
@@ -41005,7 +41761,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1201].w[2]" 1.4584395779792314e-007;
 	setAttr ".wl[1201].w[3]" 0.99967348069142314;
 	setAttr ".wl[1201].w[8]" 0.00032637331676280454;
-	setAttr -s 4 ".wl[1202].w";
+	setAttr -s 2 ".wl[1202].w";
 	setAttr ".wl[1202].w[3]" 0.9999886091160719;
 	setAttr ".wl[1202].w[8]" 1.1390883928139977e-005;
 	setAttr -s 5 ".wl[1203].w";
@@ -41103,7 +41859,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1218].w[8]" 0.9875437835395694;
 	setAttr -s 5 ".wl[1219].w";
 	setAttr ".wl[1219].w[0]" 4.3815954930108938e-008;
-	setAttr ".wl[1219].w[1]" 2.929165616859077e-036;
+	setAttr ".wl[1219].w[1]" 2.9291656168590773e-036;
 	setAttr ".wl[1219].w[2]" 2.4069401793017957e-006;
 	setAttr ".wl[1219].w[3]" 0.95239489407405931;
 	setAttr ".wl[1219].w[8]" 0.047602655169806489;
@@ -41289,7 +42045,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1250].w[8]" 0.47988045165031223;
 	setAttr -s 5 ".wl[1251].w";
 	setAttr ".wl[1251].w[0]" 2.8303763646916549e-005;
-	setAttr ".wl[1251].w[1]" 2.056620425343745e-040;
+	setAttr ".wl[1251].w[1]" 2.0566204253437446e-040;
 	setAttr ".wl[1251].w[2]" 0.0021677387431839625;
 	setAttr ".wl[1251].w[3]" 0.97247178075365515;
 	setAttr ".wl[1251].w[8]" 0.02533217673951383;
@@ -42107,7 +42863,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1402].w[1]" 0.17892896296998684;
 	setAttr ".wl[1402].w[2]" 0.00088890770638990542;
 	setAttr ".wl[1402].w[3]" 1.0113663636712996e-005;
-	setAttr ".wl[1402].w[8]" 2.228030299438782e-005;
+	setAttr ".wl[1402].w[8]" 2.2280302994387823e-005;
 	setAttr ".wl[1402].w[9]" 0.4052435192308374;
 	setAttr ".wl[1402].w[10]" 1.6189571234270974e-006;
 	setAttr -s 7 ".wl[1403].w";
@@ -42252,7 +43008,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr -s 6 ".wl[1422].w";
 	setAttr ".wl[1422].w[0]" 0.96808751215537325;
 	setAttr ".wl[1422].w[1]" 0.031826159481938433;
-	setAttr ".wl[1422].w[2]" 4.171550946099067e-005;
+	setAttr ".wl[1422].w[2]" 4.1715509460990677e-005;
 	setAttr ".wl[1422].w[3]" 2.1865721851604955e-007;
 	setAttr ".wl[1422].w[9]" 4.4393840051071639e-005;
 	setAttr ".wl[1422].w[10]" 3.5595782117187477e-010;
@@ -42403,7 +43159,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1446].w[2]" 0.00066765196375529682;
 	setAttr ".wl[1446].w[3]" 0.99917903807724162;
 	setAttr ".wl[1446].w[8]" 0.00015087493854837989;
-	setAttr -s 3 ".wl[1447].w[1:3]"  1.564554534426468e-030 1.6342999213134407e-023 
+	setAttr -s 3 ".wl[1447].w[1:3]"  1.5645545344264682e-030 1.6342999213134407e-023 
 		1;
 	setAttr -s 3 ".wl[1448].w[1:3]"  3.2685646024046343e-026 3.573882719648193e-021 
 		1;
@@ -42419,7 +43175,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[1454].w[1:3]"  1.3313804027130111e-026 6.3346617636198754e-022 
 		1;
-	setAttr -s 3 ".wl[1455].w[1:3]"  7.767015900466872e-028 7.1964018099699576e-023 
+	setAttr -s 3 ".wl[1455].w[1:3]"  7.7670159004668729e-028 7.1964018099699576e-023 
 		1;
 	setAttr -s 3 ".wl[1456].w[1:3]"  7.5342810016996831e-026 7.0226045397028974e-021 
 		1;
@@ -42438,7 +43194,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr -s 4 ".wl[1463].w[0:3]"  -2.2204449418574974e-016 5.3894896692052063e-016 
 		1.7237945599042855e-012 0.99999999999827582;
 	setAttr -s 4 ".wl[1464].w[0:3]"  1.1102231108314582e-016 5.4515403817890921e-017 
-		2.09417942322937e-013 0.99999999999979039;
+		2.0941794232293697e-013 0.99999999999979039;
 	setAttr -s 5 ".wl[1465].w";
 	setAttr ".wl[1465].w[0]" 1.7207835583247666e-012;
 	setAttr ".wl[1465].w[1]" 1.8541644365522886e-007;
@@ -42469,13 +43225,13 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[1473].w[1:3]"  7.7604138499748028e-022 8.6476464803406585e-018 
 		1;
-	setAttr -s 3 ".wl[1474].w[1:3]"  1.4053429144657662e-022 2.325077898812155e-018 
+	setAttr -s 3 ".wl[1474].w[1:3]"  1.4053429144657662e-022 2.3250778988121553e-018 
 		1;
 	setAttr -s 3 ".wl[1475].w[1:3]"  4.1017755758417364e-023 1.0177261013666582e-018 
 		1;
 	setAttr -s 3 ".wl[1476].w[1:3]"  2.7747064156941184e-023 8.1748201626431815e-019 
 		1;
-	setAttr -s 4 ".wl[1477].w[0:3]"  1.1102230246251565e-016 2.600755699140503e-020 
+	setAttr -s 4 ".wl[1477].w[0:3]"  1.1102230246251565e-016 2.6007556991405033e-020 
 		2.3017285546222292e-016 0.99999999999999967;
 	setAttr -s 3 ".wl[1478].w[1:3]"  1.8725485585594046e-021 1.8729594021372672e-017 
 		1;
@@ -42483,7 +43239,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		4.6719723397807774e-011 0.99999999995326461;
 	setAttr -s 4 ".wl[1480].w[0:3]"  1.5964844142811811e-022 9.1281229515688148e-016 
 		3.1904065452683003e-012 0.99999999999680877;
-	setAttr -s 4 ".wl[1481].w[0:3]"  1.299956941166489e-016 1.1904940835949875e-011 
+	setAttr -s 4 ".wl[1481].w[0:3]"  1.2999569411664892e-016 1.1904940835949875e-011 
 		1.4667513611441699e-008 0.99999998532058132;
 	setAttr -s 4 ".wl[1482].w[0:3]"  2.0182752715970881e-017 1.5226398933267589e-011 
 		2.0890920416959614e-008 0.99999997909385319;
@@ -42569,7 +43325,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		3.0082105755587146e-005 0.99996987348517297;
 	setAttr -s 4 ".wl[1523].w[0:3]"  8.5750884709361008e-015 3.0258983759818811e-009 
 		2.6911780592369014e-006 0.99999730579603385;
-	setAttr -s 4 ".wl[1524].w[0:3]"  5.4816336332310635e-016 2.015732639410903e-010 
+	setAttr -s 4 ".wl[1524].w[0:3]"  5.4816336332310635e-016 2.0157326394109032e-010 
 		2.2721814504051754e-007 0.99999977258028117;
 	setAttr -s 4 ".wl[1525].w[0:3]"  1.0155486468825121e-024 1.3262720150693371e-017 
 		7.507218524431712e-014 0.99999999999992495;
@@ -42589,7 +43345,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1.045897892279591e-012 0.99999999999895384;
 	setAttr -s 4 ".wl[1533].w[0:3]"  2.4857757793056347e-018 3.7709369431779417e-012 
 		7.7795714661227964e-009 0.9999999922166577;
-	setAttr -s 4 ".wl[1534].w[0:3]"  -2.199868500456535e-016 2.7527318064900732e-012 
+	setAttr -s 4 ".wl[1534].w[0:3]"  -2.1998685004565348e-016 2.7527318064900732e-012 
 		6.0275387633926742e-009 0.99999999396970862;
 	setAttr -s 4 ".wl[1535].w[0:3]"  8.9035242910723337e-020 1.5100271930819827e-013 
 		4.0208531965152664e-010 0.99999999959776376;
@@ -42655,7 +43411,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[1566].w[1:3]"  1.1833601853672747e-033 2.3900115318360638e-028 
 		1;
-	setAttr -s 3 ".wl[1567].w[1:3]"  6.5687046804482821e-035 2.008798652802791e-028 
+	setAttr -s 3 ".wl[1567].w[1:3]"  6.5687046804482821e-035 2.0087986528027912e-028 
 		1;
 	setAttr -s 3 ".wl[1568].w[1:3]"  1.8897016638521861e-033 3.4849284446839113e-026 
 		1;
@@ -42667,7 +43423,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[1572].w[1:3]"  2.7850488033144022e-029 1.5103960564880496e-024 
 		1;
-	setAttr -s 2 ".wl[1573].w[2:3]"  2.297963521614751e-028 1;
+	setAttr -s 2 ".wl[1573].w[2:3]"  2.2979635216147514e-028 1;
 	setAttr -s 2 ".wl[1574].w[2:3]"  5.8202497740966138e-026 1;
 	setAttr -s 2 ".wl[1575].w[2:3]"  1.9821267350683759e-024 1;
 	setAttr -s 3 ".wl[1576].w[1:3]"  2.9180130328837655e-036 1.2280859474513568e-025 
@@ -42677,11 +43433,11 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1577].w[2]" 4.9727670017032619e-023;
 	setAttr ".wl[1577].w[3]" 0.99994083166524461;
 	setAttr ".wl[1577].w[6]" 5.9168334755361824e-005;
-	setAttr -s 3 ".wl[1578].w[1:3]"  2.766871083891291e-027 3.6887383940294217e-022 
+	setAttr -s 3 ".wl[1578].w[1:3]"  2.7668710838912913e-027 3.6887383940294217e-022 
 		1;
 	setAttr -s 3 ".wl[1579].w[1:3]"  5.382489323352623e-022 1.2550915423732691e-017 
 		1;
-	setAttr -s 3 ".wl[1580].w[1:3]"  2.012893525828382e-023 5.3277462198987765e-019 
+	setAttr -s 3 ".wl[1580].w[1:3]"  2.0128935258283823e-023 5.3277462198987765e-019 
 		1;
 	setAttr -s 3 ".wl[1581].w[1:3]"  2.0821224033057734e-023 1.2884958491756872e-017 
 		1;
@@ -42700,7 +43456,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr -s 3 ".wl[1588].w[1:3]"  2.5329232795103136e-025 1.8212022945056725e-020 
 		1;
 	setAttr -s 4 ".wl[1589].w[0:3]"  1.1102230246251565e-016 1.5117912450366595e-018 
-		2.747643064177552e-014 0.99999999999997247;
+		2.7476430641775523e-014 0.99999999999997247;
 	setAttr -s 3 ".wl[1590].w[1:3]"  1.2901479441107942e-031 2.8037900375348999e-024 
 		1;
 	setAttr -s 3 ".wl[1591].w[1:3]"  1.9567488400831685e-030 3.8497885779551434e-023 
@@ -42910,7 +43666,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1632].w[3]" 0.73054387859358005;
 	setAttr ".wl[1632].w[6]" 0.26945612140642;
 	setAttr -s 4 ".wl[1633].w";
-	setAttr ".wl[1633].w[1]" 7.244745271351859e-030;
+	setAttr ".wl[1633].w[1]" 7.2447452713518604e-030;
 	setAttr ".wl[1633].w[2]" 9.4518561950828083e-024;
 	setAttr ".wl[1633].w[3]" 0.94863620340833166;
 	setAttr ".wl[1633].w[6]" 0.051363796591668377;
@@ -42954,7 +43710,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1646].w[2]" 7.4872578137862029e-031;
 	setAttr ".wl[1646].w[3]" 0.73876055821022324;
 	setAttr ".wl[1646].w[6]" 0.26123944178977671;
-	setAttr -s 2 ".wl[1647].w[2:3]"  1.060543899469722e-029 1;
+	setAttr -s 2 ".wl[1647].w[2:3]"  1.0605438994697221e-029 1;
 	setAttr -s 4 ".wl[1648].w";
 	setAttr ".wl[1648].w[1]" 3.0852028890723229e-033;
 	setAttr ".wl[1648].w[2]" 9.6921835595073801e-026;
@@ -43116,7 +43872,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1681].w[8]" 0.00086746962798597111;
 	setAttr -s 6 ".wl[1682].w";
 	setAttr ".wl[1682].w[1]" 2.4925270773983889e-017;
-	setAttr ".wl[1682].w[2]" 4.223619913158013e-013;
+	setAttr ".wl[1682].w[2]" 4.2236199131580135e-013;
 	setAttr ".wl[1682].w[3]" 0.99985186578718332;
 	setAttr ".wl[1682].w[6]" 6.5929686675492497e-010;
 	setAttr ".wl[1682].w[7]" 2.0925551684880146e-005;
@@ -43128,17 +43884,17 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1683].w[6]" 3.5560802424259518e-007;
 	setAttr ".wl[1683].w[7]" 0.010234636867994432;
 	setAttr ".wl[1683].w[8]" 1.8496151420698836e-005;
-	setAttr -s 4 ".wl[1684].w";
+	setAttr -s 2 ".wl[1684].w";
 	setAttr ".wl[1684].w[3]" 0.99999624637845697;
 	setAttr ".wl[1684].w[8]" 3.7536215430027353e-006;
-	setAttr -s 5 ".wl[1685].w";
+	setAttr -s 3 ".wl[1685].w";
 	setAttr ".wl[1685].w[0]" 2.6643014799376619e-015;
 	setAttr ".wl[1685].w[3]" 0.99991226268749023;
 	setAttr ".wl[1685].w[8]" 8.7737312507115201e-005;
-	setAttr -s 5 ".wl[1686].w";
+	setAttr -s 2 ".wl[1686].w";
 	setAttr ".wl[1686].w[3]" 0.99998944999440587;
 	setAttr ".wl[1686].w[8]" 1.0550005594094077e-005;
-	setAttr -s 5 ".wl[1687].w";
+	setAttr -s 2 ".wl[1687].w";
 	setAttr ".wl[1687].w[3]" 0.99982365008253526;
 	setAttr ".wl[1687].w[8]" 0.0001763499174647086;
 	setAttr -s 5 ".wl[1688].w";
@@ -43147,14 +43903,14 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1688].w[2]" 2.8014465664814719e-006;
 	setAttr ".wl[1688].w[3]" 0.99954932113997641;
 	setAttr ".wl[1688].w[8]" 0.00044787542888831151;
-	setAttr -s 5 ".wl[1689].w";
+	setAttr -s 3 ".wl[1689].w";
 	setAttr ".wl[1689].w[0]" 2.3613756141233575e-014;
 	setAttr ".wl[1689].w[3]" 0.99856247284952837;
 	setAttr ".wl[1689].w[8]" 0.0014375271504480081;
-	setAttr -s 3 ".wl[1690].w[3]"  1;
-	setAttr -s 3 ".wl[1691].w[3]"  1;
-	setAttr -s 3 ".wl[1692].w[3]"  1;
-	setAttr -s 3 ".wl[1693].w[3]"  1;
+	setAttr ".wl[1690].w[3]"  1;
+	setAttr ".wl[1691].w[3]"  1;
+	setAttr ".wl[1692].w[3]"  1;
+	setAttr ".wl[1693].w[3]"  1;
 	setAttr -s 5 ".wl[1694].w";
 	setAttr ".wl[1694].w[0]" 4.1927934647991633e-013;
 	setAttr ".wl[1694].w[1]" 1.4390050509011749e-007;
@@ -43175,7 +43931,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1696].w[8]" 0.091454962641140405;
 	setAttr -s 5 ".wl[1697].w";
 	setAttr ".wl[1697].w[0]" 1.0838888919435203e-015;
-	setAttr ".wl[1697].w[1]" 1.038807343420682e-008;
+	setAttr ".wl[1697].w[1]" 1.0388073434206819e-008;
 	setAttr ".wl[1697].w[2]" 1.1657467749733798e-005;
 	setAttr ".wl[1697].w[3]" 0.78149459817612177;
 	setAttr ".wl[1697].w[8]" 0.2184937339680538;
@@ -43227,8 +43983,8 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[1715].w[1:3]"  4.0832884989407831e-030 2.777740716170314e-025 
 		1;
-	setAttr -s 3 ".wl[1716].w[3]"  1;
-	setAttr -s 3 ".wl[1717].w[3]"  1;
+	setAttr ".wl[1716].w[3]"  1;
+	setAttr ".wl[1717].w[3]"  1;
 	setAttr -s 3 ".wl[1718].w[1:3]"  5.9540083964243777e-026 5.8765545719670455e-021 
 		1;
 	setAttr -s 5 ".wl[1719].w";
@@ -43308,7 +44064,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1732].w[3]" 0.54668309270997539;
 	setAttr ".wl[1732].w[8]" 0.45330303186427889;
 	setAttr -s 5 ".wl[1733].w";
-	setAttr ".wl[1733].w[0]" 2.719405450690574e-014;
+	setAttr ".wl[1733].w[0]" 2.7194054506905737e-014;
 	setAttr ".wl[1733].w[1]" 2.0491933869653162e-007;
 	setAttr ".wl[1733].w[2]" 0.00013200008136885164;
 	setAttr ".wl[1733].w[3]" 0.71766063116322132;
@@ -43429,7 +44185,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 		5.0814567969504388e-011 0.99999999994916711;
 	setAttr -s 4 ".wl[1761].w[0:3]"  3.4299500561179063e-022 1.2739771913782001e-015 
 		4.0669033039880294e-012 0.99999999999593181;
-	setAttr -s 4 ".wl[1762].w[0:3]"  8.4229802001776758e-023 2.013574101876306e-016 
+	setAttr -s 4 ".wl[1762].w[0:3]"  8.4229802001776758e-023 2.0135741018763057e-016 
 		6.5023094630250497e-013 0.99999999999934963;
 	setAttr -s 4 ".wl[1763].w[0:3]"  -2.2204356167175066e-016 1.3381695285012687e-015 
 		2.9601055936412388e-012 0.99999999999703881;
@@ -43505,214 +44261,194 @@ createNode skinCluster -n "SkinCluster_Head01";
 		1;
 	setAttr -s 3 ".wl[1797].w[1:3]"  1.8132169034708215e-035 4.0781165276091998e-028 
 		1;
-	setAttr -s 3 ".wl[1798].w";
-	setAttr ".wl[1798].w[3]" 1;
-	setAttr -s 3 ".wl[1799].w";
-	setAttr ".wl[1799].w[3]" 1;
-	setAttr -s 4 ".wl[1800].w[3]"  1;
-	setAttr -s 4 ".wl[1801].w[3]"  1;
-	setAttr -s 4 ".wl[1802].w[3]"  1;
-	setAttr -s 4 ".wl[1803].w[3]"  1;
-	setAttr -s 4 ".wl[1804].w[3]"  1;
-	setAttr -s 4 ".wl[1805].w[3]"  1;
-	setAttr -s 5 ".wl[1806].w";
+	setAttr ".wl[1798].w[3]"  1;
+	setAttr ".wl[1799].w[3]"  1;
+	setAttr ".wl[1800].w[3]"  1;
+	setAttr ".wl[1801].w[3]"  1;
+	setAttr ".wl[1802].w[3]"  1;
+	setAttr ".wl[1803].w[3]"  1;
+	setAttr ".wl[1804].w[3]"  1;
+	setAttr ".wl[1805].w[3]"  1;
+	setAttr -s 2 ".wl[1806].w";
 	setAttr ".wl[1806].w[3]" 0.9999068953978244;
 	setAttr ".wl[1806].w[8]" 9.3104602175559154e-005;
-	setAttr -s 5 ".wl[1807].w";
+	setAttr -s 2 ".wl[1807].w";
 	setAttr ".wl[1807].w[3]" 0.99996293968345729;
 	setAttr ".wl[1807].w[8]" 3.7060316542703623e-005;
-	setAttr -s 5 ".wl[1808].w";
+	setAttr -s 2 ".wl[1808].w";
 	setAttr ".wl[1808].w[3]" 0.99999732516464535;
 	setAttr ".wl[1808].w[8]" 2.6748353546259907e-006;
-	setAttr -s 5 ".wl[1809].w";
+	setAttr -s 2 ".wl[1809].w";
 	setAttr ".wl[1809].w[3]" 0.99999053909956781;
 	setAttr ".wl[1809].w[8]" 9.4609004321830093e-006;
-	setAttr -s 5 ".wl[1810].w";
+	setAttr -s 2 ".wl[1810].w";
 	setAttr ".wl[1810].w[3]" 0.16006790696249429;
 	setAttr ".wl[1810].w[8]" 0.83993209303750571;
-	setAttr -s 4 ".wl[1811].w";
+	setAttr -s 2 ".wl[1811].w";
 	setAttr ".wl[1811].w[3]" 0.36346721195839371;
 	setAttr ".wl[1811].w[8]" 0.63653278804160629;
-	setAttr -s 4 ".wl[1812].w";
+	setAttr -s 2 ".wl[1812].w";
 	setAttr ".wl[1812].w[3]" 0.36153768470870451;
 	setAttr ".wl[1812].w[8]" 0.63846231529129549;
-	setAttr -s 5 ".wl[1813].w";
+	setAttr -s 2 ".wl[1813].w";
 	setAttr ".wl[1813].w[3]" 0.15955506096181571;
 	setAttr ".wl[1813].w[8]" 0.84044493903818429;
-	setAttr -s 4 ".wl[1814].w";
+	setAttr -s 2 ".wl[1814].w";
 	setAttr ".wl[1814].w[3]" 0.82389232527541767;
 	setAttr ".wl[1814].w[8]" 0.17610767472458236;
-	setAttr -s 4 ".wl[1815].w";
+	setAttr -s 2 ".wl[1815].w";
 	setAttr ".wl[1815].w[3]" 0.73168248064681696;
 	setAttr ".wl[1815].w[8]" 0.26831751935318299;
-	setAttr -s 4 ".wl[1816].w";
+	setAttr -s 2 ".wl[1816].w";
 	setAttr ".wl[1816].w[3]" 0.74241734710695462;
 	setAttr ".wl[1816].w[8]" 0.25758265289304538;
-	setAttr -s 4 ".wl[1817].w";
+	setAttr -s 2 ".wl[1817].w";
 	setAttr ".wl[1817].w[3]" 0.83301235939094498;
 	setAttr ".wl[1817].w[8]" 0.16698764060905505;
-	setAttr -s 4 ".wl[1818].w";
+	setAttr -s 2 ".wl[1818].w";
 	setAttr ".wl[1818].w[3]" 0.0055976860702087183;
 	setAttr ".wl[1818].w[8]" 0.99440231392979128;
-	setAttr -s 5 ".wl[1819].w";
+	setAttr -s 2 ".wl[1819].w";
 	setAttr ".wl[1819].w[3]" 0.0048692029111140345;
 	setAttr ".wl[1819].w[8]" 0.99513079708888597;
-	setAttr -s 4 ".wl[1820].w";
+	setAttr -s 2 ".wl[1820].w";
 	setAttr ".wl[1820].w[3]" 0.0040636288641513474;
 	setAttr ".wl[1820].w[8]" 0.99593637113584865;
-	setAttr -s 4 ".wl[1821].w";
+	setAttr -s 2 ".wl[1821].w";
 	setAttr ".wl[1821].w[3]" 0.0033163424101834149;
 	setAttr ".wl[1821].w[8]" 0.99668365758981659;
-	setAttr -s 4 ".wl[1822].w";
+	setAttr -s 2 ".wl[1822].w";
 	setAttr ".wl[1822].w[3]" 0.039906575466527316;
 	setAttr ".wl[1822].w[8]" 0.96009342453347268;
-	setAttr -s 4 ".wl[1823].w";
+	setAttr -s 2 ".wl[1823].w";
 	setAttr ".wl[1823].w[3]" 0.039078204323465426;
 	setAttr ".wl[1823].w[8]" 0.96092179567653457;
-	setAttr -s 4 ".wl[1824].w[3]"  1;
-	setAttr -s 4 ".wl[1825].w[3]"  1;
-	setAttr -s 4 ".wl[1826].w[3]"  1;
-	setAttr -s 4 ".wl[1827].w[3]"  1;
-	setAttr -s 4 ".wl[1828].w[3]"  1;
-	setAttr -s 4 ".wl[1829].w[3]"  1;
-	setAttr -s 4 ".wl[1830].w[3]"  1;
-	setAttr -s 4 ".wl[1831].w[3]"  1;
-	setAttr -s 3 ".wl[1832].w";
-	setAttr ".wl[1832].w[3]" 1;
-	setAttr -s 3 ".wl[1833].w";
-	setAttr ".wl[1833].w[3]" 1;
-	setAttr -s 3 ".wl[1834].w";
-	setAttr ".wl[1834].w[3]" 1;
-	setAttr -s 3 ".wl[1835].w";
-	setAttr ".wl[1835].w[3]" 1;
-	setAttr -s 3 ".wl[1836].w";
-	setAttr ".wl[1836].w[3]" 1;
-	setAttr -s 3 ".wl[1837].w";
-	setAttr ".wl[1837].w[3]" 1;
-	setAttr -s 3 ".wl[1838].w";
-	setAttr ".wl[1838].w[3]" 1;
-	setAttr -s 3 ".wl[1839].w";
-	setAttr ".wl[1839].w[3]" 1;
-	setAttr -s 5 ".wl[1840].w";
+	setAttr ".wl[1824].w[3]"  1;
+	setAttr ".wl[1825].w[3]"  1;
+	setAttr ".wl[1826].w[3]"  1;
+	setAttr ".wl[1827].w[3]"  1;
+	setAttr ".wl[1828].w[3]"  1;
+	setAttr ".wl[1829].w[3]"  1;
+	setAttr ".wl[1830].w[3]"  1;
+	setAttr ".wl[1831].w[3]"  1;
+	setAttr ".wl[1832].w[3]"  1;
+	setAttr ".wl[1833].w[3]"  1;
+	setAttr ".wl[1834].w[3]"  1;
+	setAttr ".wl[1835].w[3]"  1;
+	setAttr ".wl[1836].w[3]"  1;
+	setAttr ".wl[1837].w[3]"  1;
+	setAttr ".wl[1838].w[3]"  1;
+	setAttr ".wl[1839].w[3]"  1;
+	setAttr -s 2 ".wl[1840].w";
 	setAttr ".wl[1840].w[3]" 0.99999310542704523;
 	setAttr ".wl[1840].w[8]" 6.8945729547869317e-006;
-	setAttr -s 5 ".wl[1841].w";
+	setAttr -s 2 ".wl[1841].w";
 	setAttr ".wl[1841].w[3]" 0.99999784385309021;
 	setAttr ".wl[1841].w[8]" 2.1561469097997979e-006;
-	setAttr -s 4 ".wl[1842].w[3]"  1;
-	setAttr -s 4 ".wl[1843].w[3]"  1;
-	setAttr -s 3 ".wl[1844].w";
-	setAttr ".wl[1844].w[3]" 1;
-	setAttr -s 3 ".wl[1845].w";
-	setAttr ".wl[1845].w[3]" 1;
-	setAttr -s 3 ".wl[1846].w";
-	setAttr ".wl[1846].w[3]" 1;
-	setAttr -s 3 ".wl[1847].w";
-	setAttr ".wl[1847].w[3]" 1;
-	setAttr -s 3 ".wl[1848].w";
-	setAttr ".wl[1848].w[3]" 1;
-	setAttr -s 4 ".wl[1849].w[3]"  1;
-	setAttr -s 3 ".wl[1850].w";
-	setAttr ".wl[1850].w[3]" 1;
-	setAttr -s 4 ".wl[1851].w[3]"  1;
-	setAttr -s 4 ".wl[1852].w[3]"  1;
-	setAttr -s 4 ".wl[1853].w[3]"  1;
-	setAttr -s 5 ".wl[1854].w";
+	setAttr ".wl[1842].w[3]"  1;
+	setAttr ".wl[1843].w[3]"  1;
+	setAttr ".wl[1844].w[3]"  1;
+	setAttr ".wl[1845].w[3]"  1;
+	setAttr ".wl[1846].w[3]"  1;
+	setAttr ".wl[1847].w[3]"  1;
+	setAttr ".wl[1848].w[3]"  1;
+	setAttr ".wl[1849].w[3]"  1;
+	setAttr ".wl[1850].w[3]"  1;
+	setAttr ".wl[1851].w[3]"  1;
+	setAttr ".wl[1852].w[3]"  1;
+	setAttr ".wl[1853].w[3]"  1;
+	setAttr -s 2 ".wl[1854].w";
 	setAttr ".wl[1854].w[3]" 0.9978733849763094;
 	setAttr ".wl[1854].w[8]" 0.0021266150236906364;
-	setAttr -s 5 ".wl[1855].w";
+	setAttr -s 2 ".wl[1855].w";
 	setAttr ".wl[1855].w[3]" 0.99999328768326312;
 	setAttr ".wl[1855].w[8]" 6.7123167368837931e-006;
-	setAttr -s 5 ".wl[1856].w";
+	setAttr -s 2 ".wl[1856].w";
 	setAttr ".wl[1856].w[3]" 0.99999887637197604;
 	setAttr ".wl[1856].w[8]" 1.1236280239844634e-006;
-	setAttr -s 5 ".wl[1857].w";
+	setAttr -s 2 ".wl[1857].w";
 	setAttr ".wl[1857].w[3]" 0.99404787966887709;
 	setAttr ".wl[1857].w[8]" 0.0059521203311229103;
-	setAttr -s 4 ".wl[1858].w[3]"  1;
-	setAttr -s 5 ".wl[1859].w";
+	setAttr ".wl[1858].w[3]"  1;
+	setAttr -s 2 ".wl[1859].w";
 	setAttr ".wl[1859].w[3]" 0.99237167031618101;
 	setAttr ".wl[1859].w[8]" 0.007628329683818982;
-	setAttr -s 4 ".wl[1860].w[3]"  1;
-	setAttr -s 3 ".wl[1861].w[3]"  1;
-	setAttr -s 4 ".wl[1862].w[3]"  1;
-	setAttr -s 4 ".wl[1863].w[3]"  1;
-	setAttr -s 5 ".wl[1864].w";
+	setAttr ".wl[1860].w[3]"  1;
+	setAttr ".wl[1861].w[3]"  1;
+	setAttr ".wl[1862].w[3]"  1;
+	setAttr ".wl[1863].w[3]"  1;
+	setAttr -s 2 ".wl[1864].w";
 	setAttr ".wl[1864].w[3]" 0.005235033664215627;
 	setAttr ".wl[1864].w[8]" 0.99476496633578437;
-	setAttr -s 5 ".wl[1865].w";
+	setAttr -s 2 ".wl[1865].w";
 	setAttr ".wl[1865].w[3]" 0.77407496967227629;
 	setAttr ".wl[1865].w[8]" 0.22592503032772374;
-	setAttr -s 5 ".wl[1866].w";
+	setAttr -s 2 ".wl[1866].w";
 	setAttr ".wl[1866].w[3]" 0.87068064868927098;
 	setAttr ".wl[1866].w[8]" 0.12931935131072905;
-	setAttr -s 4 ".wl[1867].w";
+	setAttr -s 2 ".wl[1867].w";
 	setAttr ".wl[1867].w[3]" 0.17394718055661185;
 	setAttr ".wl[1867].w[8]" 0.82605281944338815;
-	setAttr -s 5 ".wl[1868].w";
+	setAttr -s 2 ".wl[1868].w";
 	setAttr ".wl[1868].w[3]" 0.36665425093894344;
 	setAttr ".wl[1868].w[8]" 0.63334574906105656;
-	setAttr -s 5 ".wl[1869].w";
+	setAttr -s 2 ".wl[1869].w";
 	setAttr ".wl[1869].w[3]" 0.050400288958714734;
 	setAttr ".wl[1869].w[8]" 0.94959971104128527;
-	setAttr -s 5 ".wl[1870].w";
+	setAttr -s 2 ".wl[1870].w";
 	setAttr ".wl[1870].w[3]" 0.0062761107586722931;
 	setAttr ".wl[1870].w[8]" 0.99372388924132771;
-	setAttr -s 4 ".wl[1871].w[3]"  1;
-	setAttr -s 4 ".wl[1872].w[3]"  1;
-	setAttr -s 4 ".wl[1873].w[3]"  1;
-	setAttr -s 4 ".wl[1874].w";
+	setAttr ".wl[1871].w[3]"  1;
+	setAttr ".wl[1872].w[3]"  1;
+	setAttr ".wl[1873].w[3]"  1;
+	setAttr -s 2 ".wl[1874].w";
 	setAttr ".wl[1874].w[3]" 0.67546856088180485;
 	setAttr ".wl[1874].w[8]" 0.32453143911819515;
-	setAttr -s 5 ".wl[1875].w";
+	setAttr -s 2 ".wl[1875].w";
 	setAttr ".wl[1875].w[3]" 0.6734605167559734;
 	setAttr ".wl[1875].w[8]" 0.3265394832440266;
-	setAttr -s 5 ".wl[1876].w";
+	setAttr -s 3 ".wl[1876].w";
 	setAttr ".wl[1876].w[0]" 1.947303344107955e-015;
 	setAttr ".wl[1876].w[3]" 0.67460573960783698;
 	setAttr ".wl[1876].w[8]" 0.32539426039216102;
-	setAttr -s 4 ".wl[1877].w";
+	setAttr -s 2 ".wl[1877].w";
 	setAttr ".wl[1877].w[3]" 0.58944803478722185;
 	setAttr ".wl[1877].w[8]" 0.41055196521277815;
-	setAttr -s 5 ".wl[1878].w";
+	setAttr -s 2 ".wl[1878].w";
 	setAttr ".wl[1878].w[3]" 0.5764054165282495;
 	setAttr ".wl[1878].w[8]" 0.4235945834717505;
-	setAttr -s 4 ".wl[1879].w";
+	setAttr -s 2 ".wl[1879].w";
 	setAttr ".wl[1879].w[3]" 0.59336503166656829;
 	setAttr ".wl[1879].w[8]" 0.40663496833343171;
-	setAttr -s 3 ".wl[1880].w";
-	setAttr ".wl[1880].w[3]" 1;
-	setAttr -s 3 ".wl[1881].w";
-	setAttr ".wl[1881].w[3]" 1;
-	setAttr -s 3 ".wl[1882].w";
-	setAttr ".wl[1882].w[3]" 1;
-	setAttr -s 4 ".wl[1883].w[3]"  1;
-	setAttr -s 4 ".wl[1884].w[3]"  1;
-	setAttr -s 4 ".wl[1885].w[3]"  1;
-	setAttr -s 4 ".wl[1886].w[3]"  1;
-	setAttr -s 4 ".wl[1887].w";
+	setAttr ".wl[1880].w[3]"  1;
+	setAttr ".wl[1881].w[3]"  1;
+	setAttr ".wl[1882].w[3]"  1;
+	setAttr ".wl[1883].w[3]"  1;
+	setAttr ".wl[1884].w[3]"  1;
+	setAttr ".wl[1885].w[3]"  1;
+	setAttr ".wl[1886].w[3]"  1;
+	setAttr -s 2 ".wl[1887].w";
 	setAttr ".wl[1887].w[3]" 0.9342830487766236;
 	setAttr ".wl[1887].w[8]" 0.065716951223376355;
-	setAttr -s 5 ".wl[1888].w";
+	setAttr -s 2 ".wl[1888].w";
 	setAttr ".wl[1888].w[3]" 0.95421364927579033;
 	setAttr ".wl[1888].w[8]" 0.04578635072420964;
-	setAttr -s 4 ".wl[1889].w";
+	setAttr -s 2 ".wl[1889].w";
 	setAttr ".wl[1889].w[3]" 0.9254685382425033;
 	setAttr ".wl[1889].w[8]" 0.07453146175749667;
-	setAttr -s 4 ".wl[1890].w[3]"  1;
-	setAttr -s 4 ".wl[1891].w[3]"  1;
-	setAttr -s 4 ".wl[1892].w[3]"  1;
-	setAttr -s 4 ".wl[1893].w[3]"  1;
-	setAttr -s 4 ".wl[1894].w[3]"  1;
-	setAttr -s 4 ".wl[1895].w[3]"  1;
-	setAttr -s 4 ".wl[1896].w[3]"  1;
-	setAttr -s 4 ".wl[1897].w[3]"  1;
-	setAttr -s 4 ".wl[1898].w[3]"  1;
-	setAttr -s 4 ".wl[1899].w[3]"  1;
-	setAttr -s 3 ".wl[1900].w";
-	setAttr ".wl[1900].w[3]" 1;
-	setAttr -s 4 ".wl[1901].w[3]"  1;
-	setAttr -s 4 ".wl[1902].w[3]"  1;
+	setAttr ".wl[1890].w[3]"  1;
+	setAttr ".wl[1891].w[3]"  1;
+	setAttr ".wl[1892].w[3]"  1;
+	setAttr ".wl[1893].w[3]"  1;
+	setAttr ".wl[1894].w[3]"  1;
+	setAttr ".wl[1895].w[3]"  1;
+	setAttr ".wl[1896].w[3]"  1;
+	setAttr ".wl[1897].w[3]"  1;
+	setAttr ".wl[1898].w[3]"  1;
+	setAttr ".wl[1899].w[3]"  1;
+	setAttr ".wl[1900].w[3]"  1;
+	setAttr ".wl[1901].w[3]"  1;
+	setAttr ".wl[1902].w[3]"  1;
 	setAttr -s 5 ".wl[1903].w";
 	setAttr ".wl[1903].w[0]" 1.4909590425723704e-028;
 	setAttr ".wl[1903].w[1]" 5.9376372919517796e-014;
@@ -43725,11 +44461,11 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1904].w[2]" 5.1523725874510773e-010;
 	setAttr ".wl[1904].w[3]" 0.014652247786499704;
 	setAttr ".wl[1904].w[8]" 0.9853477516981155;
-	setAttr -s 5 ".wl[1905].w";
+	setAttr -s 3 ".wl[1905].w";
 	setAttr ".wl[1905].w[0]" 2.9116677688186798e-012;
 	setAttr ".wl[1905].w[3]" 0.016413071989356157;
 	setAttr ".wl[1905].w[8]" 0.98358692800773218;
-	setAttr -s 5 ".wl[1906].w";
+	setAttr -s 2 ".wl[1906].w";
 	setAttr ".wl[1906].w[3]" 0.0038264316141697341;
 	setAttr ".wl[1906].w[8]" 0.99617356838583027;
 	setAttr -s 5 ".wl[1907].w";
@@ -43745,7 +44481,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1908].w[3]" 0.19896058992217217;
 	setAttr ".wl[1908].w[8]" 0.80103940219062186;
 	setAttr -s 5 ".wl[1909].w";
-	setAttr ".wl[1909].w[0]" 4.026873874478389e-017;
+	setAttr ".wl[1909].w[0]" 4.0268738744783896e-017;
 	setAttr ".wl[1909].w[1]" 7.4682832478253602e-013;
 	setAttr ".wl[1909].w[2]" 2.6942314740725756e-009;
 	setAttr ".wl[1909].w[3]" 0.36269908809978513;
@@ -43756,7 +44492,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1910].w[2]" 1.5802609023477136e-010;
 	setAttr ".wl[1910].w[3]" 0.3698579436056611;
 	setAttr ".wl[1910].w[8]" 0.63014205623627595;
-	setAttr -s 5 ".wl[1911].w";
+	setAttr -s 3 ".wl[1911].w";
 	setAttr ".wl[1911].w[0]" 6.453137271506565e-011;
 	setAttr ".wl[1911].w[3]" 0.07192485816715001;
 	setAttr ".wl[1911].w[8]" 0.92807514176831862;
@@ -43766,7 +44502,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1912].w[2]" 2.039188557895622e-009;
 	setAttr ".wl[1912].w[3]" 0.05893497888941112;
 	setAttr ".wl[1912].w[8]" 0.94106501907070905;
-	setAttr -s 5 ".wl[1913].w";
+	setAttr -s 3 ".wl[1913].w";
 	setAttr ".wl[1913].w[0]" 3.0080666863614286e-013;
 	setAttr ".wl[1913].w[3]" 0.67837396133184413;
 	setAttr ".wl[1913].w[8]" 0.32162603866785516;
@@ -43782,10 +44518,10 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1915].w[2]" 1.662689376454106e-011;
 	setAttr ".wl[1915].w[3]" 0.84702349950992861;
 	setAttr ".wl[1915].w[8]" 0.1529765004734423;
-	setAttr -s 5 ".wl[1916].w";
+	setAttr -s 2 ".wl[1916].w";
 	setAttr ".wl[1916].w[3]" 0.84267176884593731;
 	setAttr ".wl[1916].w[8]" 0.15732823115406269;
-	setAttr -s 5 ".wl[1917].w";
+	setAttr -s 3 ".wl[1917].w";
 	setAttr ".wl[1917].w[0]" 4.6312049221411299e-011;
 	setAttr ".wl[1917].w[3]" 0.55324440471212566;
 	setAttr ".wl[1917].w[8]" 0.44675559524156233;
@@ -43795,76 +44531,76 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1918].w[2]" 2.3391147402337668e-009;
 	setAttr ".wl[1918].w[3]" 0.53763385218731197;
 	setAttr ".wl[1918].w[8]" 0.46236614547279165;
-	setAttr -s 5 ".wl[1919].w";
+	setAttr -s 2 ".wl[1919].w";
 	setAttr ".wl[1919].w[3]" 0.99243923168662174;
 	setAttr ".wl[1919].w[8]" 0.0075607683133782919;
-	setAttr -s 5 ".wl[1920].w";
+	setAttr -s 2 ".wl[1920].w";
 	setAttr ".wl[1920].w[3]" 0.99555520705337619;
 	setAttr ".wl[1920].w[8]" 0.0044447929466237658;
-	setAttr -s 5 ".wl[1921].w";
+	setAttr -s 2 ".wl[1921].w";
 	setAttr ".wl[1921].w[3]" 0.99976201940374931;
 	setAttr ".wl[1921].w[8]" 0.00023798059625071788;
-	setAttr -s 5 ".wl[1922].w";
+	setAttr -s 2 ".wl[1922].w";
 	setAttr ".wl[1922].w[3]" 0.99923040278409614;
 	setAttr ".wl[1922].w[8]" 0.00076959721590385741;
-	setAttr -s 5 ".wl[1923].w";
+	setAttr -s 2 ".wl[1923].w";
 	setAttr ".wl[1923].w[3]" 0.99919713836832158;
 	setAttr ".wl[1923].w[8]" 0.00080286163167841442;
-	setAttr -s 5 ".wl[1924].w";
+	setAttr -s 2 ".wl[1924].w";
 	setAttr ".wl[1924].w[3]" 0.99856086569305313;
 	setAttr ".wl[1924].w[8]" 0.0014391343069469172;
-	setAttr -s 5 ".wl[1925].w";
+	setAttr -s 2 ".wl[1925].w";
 	setAttr ".wl[1925].w[3]" 0.99975309001882073;
 	setAttr ".wl[1925].w[8]" 0.00024690998117930373;
-	setAttr -s 5 ".wl[1926].w";
+	setAttr -s 2 ".wl[1926].w";
 	setAttr ".wl[1926].w[3]" 0.99875598548914024;
 	setAttr ".wl[1926].w[8]" 0.0012440145108597882;
-	setAttr -s 4 ".wl[1927].w[3]"  1;
-	setAttr -s 4 ".wl[1928].w[3]"  1;
-	setAttr -s 4 ".wl[1929].w[3]"  1;
-	setAttr -s 4 ".wl[1930].w[3]"  1;
-	setAttr -s 4 ".wl[1931].w[3]"  1;
-	setAttr -s 4 ".wl[1932].w[3]"  1;
-	setAttr -s 5 ".wl[1933].w";
+	setAttr ".wl[1927].w[3]"  1;
+	setAttr ".wl[1928].w[3]"  1;
+	setAttr ".wl[1929].w[3]"  1;
+	setAttr ".wl[1930].w[3]"  1;
+	setAttr ".wl[1931].w[3]"  1;
+	setAttr ".wl[1932].w[3]"  1;
+	setAttr -s 2 ".wl[1933].w";
 	setAttr ".wl[1933].w[3]" 0.99999421071961314;
 	setAttr ".wl[1933].w[8]" 5.7892803868111912e-006;
-	setAttr -s 5 ".wl[1934].w";
+	setAttr -s 2 ".wl[1934].w";
 	setAttr ".wl[1934].w[3]" 0.99998364587936217;
 	setAttr ".wl[1934].w[8]" 1.6354120637880595e-005;
-	setAttr -s 4 ".wl[1935].w[3]"  1;
-	setAttr -s 5 ".wl[1936].w";
+	setAttr ".wl[1935].w[3]"  1;
+	setAttr -s 2 ".wl[1936].w";
 	setAttr ".wl[1936].w[3]" 0.99999104286811913;
 	setAttr ".wl[1936].w[8]" 8.9571318808859073e-006;
-	setAttr -s 4 ".wl[1937].w[3]"  1;
-	setAttr -s 4 ".wl[1938].w[3]"  1;
-	setAttr -s 4 ".wl[1939].w[3]"  1;
-	setAttr -s 4 ".wl[1940].w[3]"  1;
-	setAttr -s 4 ".wl[1941].w[3]"  1;
-	setAttr -s 5 ".wl[1942].w";
+	setAttr ".wl[1937].w[3]"  1;
+	setAttr ".wl[1938].w[3]"  1;
+	setAttr ".wl[1939].w[3]"  1;
+	setAttr ".wl[1940].w[3]"  1;
+	setAttr ".wl[1941].w[3]"  1;
+	setAttr -s 2 ".wl[1942].w";
 	setAttr ".wl[1942].w[3]" 0.9999938940739489;
 	setAttr ".wl[1942].w[8]" 6.1059260511334128e-006;
-	setAttr -s 5 ".wl[1943].w";
+	setAttr -s 2 ".wl[1943].w";
 	setAttr ".wl[1943].w[3]" 0.99993970403004595;
 	setAttr ".wl[1943].w[8]" 6.0295969954092723e-005;
-	setAttr -s 5 ".wl[1944].w";
+	setAttr -s 2 ".wl[1944].w";
 	setAttr ".wl[1944].w[3]" 0.99992148442432205;
 	setAttr ".wl[1944].w[8]" 7.8515575677996514e-005;
-	setAttr -s 5 ".wl[1945].w";
+	setAttr -s 2 ".wl[1945].w";
 	setAttr ".wl[1945].w[3]" 0.99996993316816762;
 	setAttr ".wl[1945].w[8]" 3.0066831832370475e-005;
-	setAttr -s 4 ".wl[1946].w[3]"  1;
-	setAttr -s 5 ".wl[1947].w";
+	setAttr ".wl[1946].w[3]"  1;
+	setAttr -s 2 ".wl[1947].w";
 	setAttr ".wl[1947].w[3]" 0.99978073713493643;
 	setAttr ".wl[1947].w[8]" 0.00021926286506360033;
-	setAttr -s 4 ".wl[1948].w";
+	setAttr -s 2 ".wl[1948].w";
 	setAttr ".wl[1948].w[3]" 0.99827001060020071;
 	setAttr ".wl[1948].w[8]" 0.0017299893997992719;
-	setAttr -s 3 ".wl[1949].w[3]"  1;
-	setAttr -s 4 ".wl[1950].w[3]"  1;
-	setAttr -s 5 ".wl[1951].w";
+	setAttr ".wl[1949].w[3]"  1;
+	setAttr ".wl[1950].w[3]"  1;
+	setAttr -s 2 ".wl[1951].w";
 	setAttr ".wl[1951].w[3]" 0.0012706347235940108;
 	setAttr ".wl[1951].w[8]" 0.99872936527640599;
-	setAttr -s 4 ".wl[1952].w";
+	setAttr -s 2 ".wl[1952].w";
 	setAttr ".wl[1952].w[3]" 0.0046572872286082534;
 	setAttr ".wl[1952].w[8]" 0.99534271277139175;
 	setAttr -s 5 ".wl[1953].w";
@@ -43879,162 +44615,129 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[1954].w[2]" 5.8646874210779886e-015;
 	setAttr ".wl[1954].w[3]" 0.74091735159596139;
 	setAttr ".wl[1954].w[8]" 0.25908264840403272;
-	setAttr -s 5 ".wl[1955].w";
+	setAttr -s 2 ".wl[1955].w";
 	setAttr ".wl[1955].w[3]" 0.59808091100375571;
 	setAttr ".wl[1955].w[8]" 0.40191908899624434;
-	setAttr -s 5 ".wl[1956].w";
+	setAttr -s 2 ".wl[1956].w";
 	setAttr ".wl[1956].w[3]" 0.35642879511543912;
 	setAttr ".wl[1956].w[8]" 0.64357120488456088;
-	setAttr -s 4 ".wl[1957].w";
+	setAttr -s 2 ".wl[1957].w";
 	setAttr ".wl[1957].w[3]" 0.83691631535837552;
 	setAttr ".wl[1957].w[8]" 0.16308368464162448;
-	setAttr -s 4 ".wl[1958].w[3]"  1;
-	setAttr -s 4 ".wl[1959].w[3]"  1;
-	setAttr -s 4 ".wl[1960].w[3]"  1;
-	setAttr -s 4 ".wl[1961].w[3]"  1;
-	setAttr -s 4 ".wl[1962].w[3]"  1;
-	setAttr -s 4 ".wl[1963].w[3]"  1;
-	setAttr -s 4 ".wl[1964].w[3]"  1;
-	setAttr -s 4 ".wl[1965].w[3]"  1;
-	setAttr -s 4 ".wl[1966].w[3]"  1;
-	setAttr -s 4 ".wl[1967].w[3]"  1;
-	setAttr -s 4 ".wl[1968].w[3]"  1;
-	setAttr -s 4 ".wl[1969].w[3]"  1;
-	setAttr -s 3 ".wl[1970].w";
-	setAttr ".wl[1970].w[3]" 1;
-	setAttr -s 3 ".wl[1971].w";
-	setAttr ".wl[1971].w[3]" 1;
-	setAttr -s 3 ".wl[1972].w";
-	setAttr ".wl[1972].w[3]" 1;
-	setAttr -s 3 ".wl[1973].w";
-	setAttr ".wl[1973].w[3]" 1;
-	setAttr -s 3 ".wl[1974].w";
-	setAttr ".wl[1974].w[3]" 1;
-	setAttr -s 3 ".wl[1975].w";
-	setAttr ".wl[1975].w[3]" 1;
-	setAttr -s 3 ".wl[1976].w";
-	setAttr ".wl[1976].w[3]" 1;
-	setAttr -s 3 ".wl[1977].w";
-	setAttr ".wl[1977].w[3]" 1;
-	setAttr -s 4 ".wl[1978].w[3]"  1;
-	setAttr -s 4 ".wl[1979].w[3]"  1;
-	setAttr -s 3 ".wl[1980].w";
-	setAttr ".wl[1980].w[3]" 1;
-	setAttr -s 3 ".wl[1981].w";
-	setAttr ".wl[1981].w[3]" 1;
-	setAttr -s 3 ".wl[1982].w";
-	setAttr ".wl[1982].w[3]" 1;
-	setAttr -s 3 ".wl[1983].w";
-	setAttr ".wl[1983].w[3]" 1;
-	setAttr -s 4 ".wl[1984].w[3]"  1;
-	setAttr -s 4 ".wl[1985].w[3]"  1;
-	setAttr -s 3 ".wl[1986].w";
-	setAttr ".wl[1986].w[3]" 1;
-	setAttr -s 3 ".wl[1987].w";
-	setAttr ".wl[1987].w[3]" 1;
-	setAttr -s 4 ".wl[1988].w[3]"  1;
-	setAttr -s 4 ".wl[1989].w[3]"  1;
-	setAttr -s 4 ".wl[1990].w[3]"  1;
-	setAttr -s 4 ".wl[1991].w[3]"  1;
-	setAttr -s 3 ".wl[1992].w";
-	setAttr ".wl[1992].w[3]" 1;
-	setAttr -s 3 ".wl[1993].w";
-	setAttr ".wl[1993].w[3]" 1;
-	setAttr -s 3 ".wl[1994].w";
-	setAttr ".wl[1994].w[3]" 1;
-	setAttr -s 3 ".wl[1995].w";
-	setAttr ".wl[1995].w[3]" 1;
-	setAttr -s 3 ".wl[1996].w";
-	setAttr ".wl[1996].w[3]" 1;
-	setAttr -s 3 ".wl[1997].w";
-	setAttr ".wl[1997].w[3]" 1;
-	setAttr -s 3 ".wl[1998].w";
-	setAttr ".wl[1998].w[3]" 1;
-	setAttr -s 3 ".wl[1999].w";
-	setAttr ".wl[1999].w[3]" 1;
-	setAttr -s 3 ".wl[2000].w";
-	setAttr ".wl[2000].w[3]" 1;
-	setAttr -s 3 ".wl[2001].w";
-	setAttr ".wl[2001].w[3]" 1;
-	setAttr -s 3 ".wl[2002].w";
-	setAttr ".wl[2002].w[3]" 1;
-	setAttr -s 3 ".wl[2003].w";
-	setAttr ".wl[2003].w[3]" 1;
-	setAttr -s 3 ".wl[2004].w";
-	setAttr ".wl[2004].w[3]" 1;
-	setAttr -s 3 ".wl[2005].w";
-	setAttr ".wl[2005].w[3]" 1;
-	setAttr -s 3 ".wl[2006].w";
-	setAttr ".wl[2006].w[3]" 1;
-	setAttr -s 3 ".wl[2007].w";
-	setAttr ".wl[2007].w[3]" 1;
-	setAttr -s 4 ".wl[2008].w[3]"  1;
-	setAttr -s 4 ".wl[2009].w[3]"  1;
-	setAttr -s 3 ".wl[2010].w";
-	setAttr ".wl[2010].w[3]" 1;
-	setAttr -s 4 ".wl[2011].w[3]"  1;
-	setAttr -s 4 ".wl[2012].w[3]"  1;
-	setAttr -s 4 ".wl[2013].w[3]"  1;
-	setAttr -s 4 ".wl[2014].w[3]"  1;
-	setAttr -s 4 ".wl[2015].w[3]"  1;
-	setAttr -s 3 ".wl[2016].w";
-	setAttr ".wl[2016].w[3]" 1;
-	setAttr -s 4 ".wl[2017].w[3]"  1;
-	setAttr -s 3 ".wl[2018].w";
-	setAttr ".wl[2018].w[3]" 1;
-	setAttr -s 4 ".wl[2019].w[3]"  1;
-	setAttr -s 4 ".wl[2020].w[3]"  1;
-	setAttr -s 5 ".wl[2021].w";
+	setAttr ".wl[1958].w[3]"  1;
+	setAttr ".wl[1959].w[3]"  1;
+	setAttr ".wl[1960].w[3]"  1;
+	setAttr ".wl[1961].w[3]"  1;
+	setAttr ".wl[1962].w[3]"  1;
+	setAttr ".wl[1963].w[3]"  1;
+	setAttr ".wl[1964].w[3]"  1;
+	setAttr ".wl[1965].w[3]"  1;
+	setAttr ".wl[1966].w[3]"  1;
+	setAttr ".wl[1967].w[3]"  1;
+	setAttr ".wl[1968].w[3]"  1;
+	setAttr ".wl[1969].w[3]"  1;
+	setAttr ".wl[1970].w[3]"  1;
+	setAttr ".wl[1971].w[3]"  1;
+	setAttr ".wl[1972].w[3]"  1;
+	setAttr ".wl[1973].w[3]"  1;
+	setAttr ".wl[1974].w[3]"  1;
+	setAttr ".wl[1975].w[3]"  1;
+	setAttr ".wl[1976].w[3]"  1;
+	setAttr ".wl[1977].w[3]"  1;
+	setAttr ".wl[1978].w[3]"  1;
+	setAttr ".wl[1979].w[3]"  1;
+	setAttr ".wl[1980].w[3]"  1;
+	setAttr ".wl[1981].w[3]"  1;
+	setAttr ".wl[1982].w[3]"  1;
+	setAttr ".wl[1983].w[3]"  1;
+	setAttr ".wl[1984].w[3]"  1;
+	setAttr ".wl[1985].w[3]"  1;
+	setAttr ".wl[1986].w[3]"  1;
+	setAttr ".wl[1987].w[3]"  1;
+	setAttr ".wl[1988].w[3]"  1;
+	setAttr ".wl[1989].w[3]"  1;
+	setAttr ".wl[1990].w[3]"  1;
+	setAttr ".wl[1991].w[3]"  1;
+	setAttr ".wl[1992].w[3]"  1;
+	setAttr ".wl[1993].w[3]"  1;
+	setAttr ".wl[1994].w[3]"  1;
+	setAttr ".wl[1995].w[3]"  1;
+	setAttr ".wl[1996].w[3]"  1;
+	setAttr ".wl[1997].w[3]"  1;
+	setAttr ".wl[1998].w[3]"  1;
+	setAttr ".wl[1999].w[3]"  1;
+	setAttr ".wl[2000].w[3]"  1;
+	setAttr ".wl[2001].w[3]"  1;
+	setAttr ".wl[2002].w[3]"  1;
+	setAttr ".wl[2003].w[3]"  1;
+	setAttr ".wl[2004].w[3]"  1;
+	setAttr ".wl[2005].w[3]"  1;
+	setAttr ".wl[2006].w[3]"  1;
+	setAttr ".wl[2007].w[3]"  1;
+	setAttr ".wl[2008].w[3]"  1;
+	setAttr ".wl[2009].w[3]"  1;
+	setAttr ".wl[2010].w[3]"  1;
+	setAttr ".wl[2011].w[3]"  1;
+	setAttr ".wl[2012].w[3]"  1;
+	setAttr ".wl[2013].w[3]"  1;
+	setAttr ".wl[2014].w[3]"  1;
+	setAttr ".wl[2015].w[3]"  1;
+	setAttr ".wl[2016].w[3]"  1;
+	setAttr ".wl[2017].w[3]"  1;
+	setAttr ".wl[2018].w[3]"  1;
+	setAttr ".wl[2019].w[3]"  1;
+	setAttr ".wl[2020].w[3]"  1;
+	setAttr -s 2 ".wl[2021].w";
 	setAttr ".wl[2021].w[3]" 0.14803769099809561;
 	setAttr ".wl[2021].w[8]" 0.85196230900190439;
-	setAttr -s 4 ".wl[2022].w";
+	setAttr -s 2 ".wl[2022].w";
 	setAttr ".wl[2022].w[3]" 0.15937555606147258;
 	setAttr ".wl[2022].w[8]" 0.84062444393852742;
-	setAttr -s 5 ".wl[2023].w";
+	setAttr -s 2 ".wl[2023].w";
 	setAttr ".wl[2023].w[3]" 0.35359379720642392;
 	setAttr ".wl[2023].w[8]" 0.64640620279357608;
-	setAttr -s 4 ".wl[2024].w";
+	setAttr -s 2 ".wl[2024].w";
 	setAttr ".wl[2024].w[3]" 0.59438311028714297;
 	setAttr ".wl[2024].w[8]" 0.40561688971285703;
-	setAttr -s 4 ".wl[2025].w";
+	setAttr -s 2 ".wl[2025].w";
 	setAttr ".wl[2025].w[3]" 0.037889492770110555;
 	setAttr ".wl[2025].w[8]" 0.96211050722988944;
-	setAttr -s 5 ".wl[2026].w";
+	setAttr -s 2 ".wl[2026].w";
 	setAttr ".wl[2026].w[3]" 0.045689189567758026;
 	setAttr ".wl[2026].w[8]" 0.95431081043224197;
-	setAttr -s 5 ".wl[2027].w";
+	setAttr -s 2 ".wl[2027].w";
 	setAttr ".wl[2027].w[3]" 0.98159640032082196;
 	setAttr ".wl[2027].w[8]" 0.018403599679178026;
-	setAttr -s 4 ".wl[2028].w";
+	setAttr -s 2 ".wl[2028].w";
 	setAttr ".wl[2028].w[3]" 0.98316448427767245;
 	setAttr ".wl[2028].w[8]" 0.016835515722327575;
-	setAttr -s 5 ".wl[2029].w";
+	setAttr -s 2 ".wl[2029].w";
 	setAttr ".wl[2029].w[3]" 0.99948283701206009;
 	setAttr ".wl[2029].w[8]" 0.00051716298793991579;
-	setAttr -s 5 ".wl[2030].w";
+	setAttr -s 2 ".wl[2030].w";
 	setAttr ".wl[2030].w[3]" 0.91987263186859125;
 	setAttr ".wl[2030].w[8]" 0.080127368131408791;
-	setAttr -s 4 ".wl[2031].w";
+	setAttr -s 2 ".wl[2031].w";
 	setAttr ".wl[2031].w[3]" 0.91855455652777507;
 	setAttr ".wl[2031].w[8]" 0.081445443472224988;
-	setAttr -s 4 ".wl[2032].w[3]"  1;
-	setAttr -s 3 ".wl[2033].w[3]"  1;
-	setAttr -s 5 ".wl[2034].w";
+	setAttr ".wl[2032].w[3]"  1;
+	setAttr ".wl[2033].w[3]"  1;
+	setAttr -s 2 ".wl[2034].w";
 	setAttr ".wl[2034].w[3]" 0.0026352580430344386;
 	setAttr ".wl[2034].w[8]" 0.99736474195696556;
-	setAttr -s 5 ".wl[2035].w";
+	setAttr -s 2 ".wl[2035].w";
 	setAttr ".wl[2035].w[3]" 0.0031048734150379564;
 	setAttr ".wl[2035].w[8]" 0.99689512658496204;
-	setAttr -s 4 ".wl[2036].w";
+	setAttr -s 2 ".wl[2036].w";
 	setAttr ".wl[2036].w[3]" 0.82398593654541852;
 	setAttr ".wl[2036].w[8]" 0.17601406345458154;
-	setAttr -s 4 ".wl[2037].w";
+	setAttr -s 2 ".wl[2037].w";
 	setAttr ".wl[2037].w[3]" 0.73493211357820432;
 	setAttr ".wl[2037].w[8]" 0.26506788642179568;
-	setAttr -s 5 ".wl[2038].w";
+	setAttr -s 2 ".wl[2038].w";
 	setAttr ".wl[2038].w[3]" 0.67803933911671099;
 	setAttr ".wl[2038].w[8]" 0.32196066088328906;
-	setAttr -s 5 ".wl[2039].w";
+	setAttr -s 2 ".wl[2039].w";
 	setAttr ".wl[2039].w[3]" 0.94587930228469985;
 	setAttr ".wl[2039].w[8]" 0.054120697715300203;
 	setAttr -s 5 ".wl[2040].w";
@@ -44100,7 +44803,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[2049].w[7]" 0.38288498516850356;
 	setAttr -s 5 ".wl[2050].w";
 	setAttr ".wl[2050].w[1]" 6.9422389069681469e-022;
-	setAttr ".wl[2050].w[2]" 1.02221994970678e-016;
+	setAttr ".wl[2050].w[2]" 1.0222199497067801e-016;
 	setAttr ".wl[2050].w[3]" 0.75445716468878976;
 	setAttr ".wl[2050].w[6]" 0.00045399402927637439;
 	setAttr ".wl[2050].w[7]" 0.2450888412819337;
@@ -44143,7 +44846,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[2058].w[3]" 0.515977978448387;
 	setAttr ".wl[2058].w[6]" 0.484022021551613;
 	setAttr -s 3 ".wl[2059].w";
-	setAttr ".wl[2059].w[2]" 1.08826407506178e-030;
+	setAttr ".wl[2059].w[2]" 1.0882640750617801e-030;
 	setAttr ".wl[2059].w[3]" 0.5385836320873193;
 	setAttr ".wl[2059].w[6]" 0.4614163679126807;
 	setAttr -s 3 ".wl[2060].w";
@@ -44171,7 +44874,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[2064].w[3]" 0.37859758941839317;
 	setAttr ".wl[2064].w[6]" 0.62140241058160683;
 	setAttr -s 4 ".wl[2065].w";
-	setAttr ".wl[2065].w[1]" 4.38660173528618e-035;
+	setAttr ".wl[2065].w[1]" 4.3866017352861805e-035;
 	setAttr ".wl[2065].w[2]" 4.1503472180793485e-028;
 	setAttr ".wl[2065].w[3]" 0.3334442124805328;
 	setAttr ".wl[2065].w[6]" 0.6665557875194672;
@@ -44181,7 +44884,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[2066].w[3]" 0.29886228366672152;
 	setAttr ".wl[2066].w[6]" 0.70113771633327848;
 	setAttr -s 4 ".wl[2067].w";
-	setAttr ".wl[2067].w[1]" 5.585958228243643e-038;
+	setAttr ".wl[2067].w[1]" 5.5859582282436441e-038;
 	setAttr ".wl[2067].w[2]" 1.1716507535000691e-030;
 	setAttr ".wl[2067].w[3]" 0.36243907004888321;
 	setAttr ".wl[2067].w[6]" 0.63756092995111679;
@@ -44196,7 +44899,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[2069].w[3]" 0.26201035136229234;
 	setAttr ".wl[2069].w[6]" 0.73798964863770766;
 	setAttr -s 4 ".wl[2070].w";
-	setAttr ".wl[2070].w[1]" 2.788220223903126e-030;
+	setAttr ".wl[2070].w[1]" 2.7882202239031264e-030;
 	setAttr ".wl[2070].w[2]" 7.7392413878475161e-024;
 	setAttr ".wl[2070].w[3]" 0.17463536393583323;
 	setAttr ".wl[2070].w[6]" 0.82536463606416677;
@@ -44207,7 +44910,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[2071].w[6]" 0.80233386491803604;
 	setAttr -s 4 ".wl[2072].w";
 	setAttr ".wl[2072].w[1]" 4.5174050197640841e-032;
-	setAttr ".wl[2072].w[2]" 1.312390363756671e-025;
+	setAttr ".wl[2072].w[2]" 1.3123903637566712e-025;
 	setAttr ".wl[2072].w[3]" 0.0873248337426068;
 	setAttr ".wl[2072].w[6]" 0.9126751662573932;
 	setAttr -s 4 ".wl[2073].w";
@@ -44217,12 +44920,12 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[2073].w[6]" 0.81864757029857294;
 	setAttr -s 4 ".wl[2074].w";
 	setAttr ".wl[2074].w[1]" 1.4155323378947984e-033;
-	setAttr ".wl[2074].w[2]" 4.298260215479917e-027;
+	setAttr ".wl[2074].w[2]" 4.2982602154799177e-027;
 	setAttr ".wl[2074].w[3]" 0.081877253527517402;
 	setAttr ".wl[2074].w[6]" 0.9181227464724826;
 	setAttr -s 4 ".wl[2075].w";
 	setAttr ".wl[2075].w[1]" 3.6545639714105313e-036;
-	setAttr ".wl[2075].w[2]" 3.893758546450332e-028;
+	setAttr ".wl[2075].w[2]" 3.8937585464503325e-028;
 	setAttr ".wl[2075].w[3]" 0.37531710455542544;
 	setAttr ".wl[2075].w[6]" 0.62468289544457456;
 	setAttr -s 5 ".wl[2076].w";
@@ -44365,7 +45068,7 @@ createNode skinCluster -n "SkinCluster_Head01";
 	setAttr ".wl[2102].w[6]" 0.14363130762081791;
 	setAttr ".wl[2102].w[7]" 0.081528793162868499;
 	setAttr -s 5 ".wl[2103].w";
-	setAttr ".wl[2103].w[1]" 1.707800154371411e-029;
+	setAttr ".wl[2103].w[1]" 1.7078001543714112e-029;
 	setAttr ".wl[2103].w[2]" 1.9506427933281522e-024;
 	setAttr ".wl[2103].w[3]" 0.99641725959223848;
 	setAttr ".wl[2103].w[6]" 0.0022058634652370799;
@@ -50444,6 +51147,40 @@ createNode ngSkinLayerData -n "ngSkinToolsData_skinCluster48";
 "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
 "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8D8AAAAAAADwPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwPwAAAAAAAPA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
 "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"};
+createNode ngSkinLayerData -n "ngSkinToolsData_SkinCluster_Cap01";
+	setAttr ".ld" -type "ngSkinLayerDataStorage" 7 31819 {
+"AgAAAAwAAABCYXNlIFdlaWdodHMBAAAAAAAAAAAA8D8AAAAA7wEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABw3Mbo9wFuPwAAAAAAAAAAAAAAAAAAAAAp8hG/aCd+PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8P8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJHDQr6vqBU+AAAAAAAAAAAXqyO+LI4wPgAAAAAAAAAAlPwTvpEbRD4AAAAAAAAAAEh5kb5W2m0+AAAAAAAAAACf00K+YcZEPgAAAAAAAAAAkcNCvq+oFT4AAAAAAADw/wAAAAAAAPD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMU52kEqxNw+AAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA8D8AAAAAAAAAAHxb2kEo6Rc+AAAAAAAA8D8AAAAAAAAAAFM51UEsb+M+AAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA8D8AAAAAAAAAAFM51UEsb+M+AAAAAAAA8D8AAAAAAAAAAGgh3UF4tgQ/AAAAAAAA8D8AAAAAAAAAAMYa4kEoRds+AAAAAAAA8D8AAAAAAAAAAFXu4EGC8wo/AAAAAAAA8D8AAAAAAAAAABLz4UFwvBc+AAAAAAAA8D8AAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAADwPwAAAAAAAAAAMVvfQdCz/D0AAAAAAADwPwAAAAAAAAAAfFvaQSjpFz4AAAAAAADwPwAAAAAAAAAAkDHQQbAvnT4AAAAAAADwPwAAAAAAAAAAfFvaQSjpFz4AAAAAAADwPwAAAAAAAAAAUznVQSxv4z4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA3N4WvRKPNz4AAAAAAAAAAO8BAAABAAAAAAAAAAAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAA==",
+"AADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAA==",
+"AADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAA==",
+"AADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAA==",
+"AADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAcAAABUYXNzbGVzAQAAAAAAAAAAAPA/AAAAAAAAAADvAQAABgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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"};
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -50562,7 +51299,7 @@ select -ne :hardwareRenderingGlobals;
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
 select -ne :ikSystem;
-	setAttr -s 3 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "skinCluster2Set.mwc" "Mesh_Legs01Shape.iog.og[0].gco";
 connectAttr "skinCluster2GroupId.id" "Mesh_Legs01Shape.iog.og[0].gid";
 connectAttr "tweakSet2.mwc" "Mesh_Legs01Shape.iog.og[1].gco";
@@ -51457,6 +52194,12 @@ connectAttr "bn_R_Braid_a01_orientConstraint1.w0" "bn_R_Braid_a01_orientConstrai
 connectAttr "bn_neck_c01.s" "bn_Mouth01.is";
 connectAttr "unitConversion23.o" "bn_Mouth01.rz";
 connectAttr "bn_Mouth01.s" "be_Mouth01.is";
+connectAttr "bn_neck_c01.s" "bn_L_Tassle_a01.is";
+connectAttr "bn_L_Tassle_a01.s" "bn_L_Tassle_b01.is";
+connectAttr "bn_L_Tassle_b01.s" "bn_L_Tassle_c01.is";
+connectAttr "bn_neck_c01.s" "bn_R_Tassle_a01.is";
+connectAttr "bn_R_Tassle_a01.s" "bn_R_Tassle_b01.is";
+connectAttr "bn_R_Tassle_b01.s" "bn_R_Tassle_c01.is";
 connectAttr "bn_neck_b01.ro" "bn_neck_b01_orientConstraint1.cro";
 connectAttr "bn_neck_b01.pim" "bn_neck_b01_orientConstraint1.cpim";
 connectAttr "bn_neck_b01.jo" "bn_neck_b01_orientConstraint1.cjo";
@@ -52033,6 +52776,12 @@ connectAttr "be_R_Shoulder_Fixer01.msg" "bindPose2.m[77]";
 connectAttr "bn_L_elbowTwist_a01.msg" "bindPose2.m[78]";
 connectAttr "bn_L_ButtFixer01.msg" "bindPose2.m[79]";
 connectAttr "bn_R_ButtFixer01.msg" "bindPose2.m[80]";
+connectAttr "bn_L_Tassle_a01.msg" "bindPose2.m[81]";
+connectAttr "bn_L_Tassle_b01.msg" "bindPose2.m[82]";
+connectAttr "bn_L_Tassle_c01.msg" "bindPose2.m[83]";
+connectAttr "bn_R_Tassle_a01.msg" "bindPose2.m[84]";
+connectAttr "bn_R_Tassle_b01.msg" "bindPose2.m[85]";
+connectAttr "bn_R_Tassle_c01.msg" "bindPose2.m[86]";
 connectAttr "bindPose2.w" "bindPose2.p[0]";
 connectAttr "bindPose2.m[0]" "bindPose2.p[1]";
 connectAttr "bindPose2.m[1]" "bindPose2.p[2]";
@@ -52110,6 +52859,12 @@ connectAttr "bindPose2.m[21]" "bindPose2.p[77]";
 connectAttr "bindPose2.m[25]" "bindPose2.p[78]";
 connectAttr "be_L_ButtFixer01.msg" "bindPose2.p[79]";
 connectAttr "be_R_ButtFixer01.msg" "bindPose2.p[80]";
+connectAttr "bindPose2.m[60]" "bindPose2.p[81]";
+connectAttr "bindPose2.m[81]" "bindPose2.p[82]";
+connectAttr "bindPose2.m[82]" "bindPose2.p[83]";
+connectAttr "bindPose2.m[60]" "bindPose2.p[84]";
+connectAttr "bindPose2.m[84]" "bindPose2.p[85]";
+connectAttr "bindPose2.m[85]" "bindPose2.p[86]";
 connectAttr "bn_spine_a01.bps" "bindPose2.wm[3]";
 connectAttr "bn_L_Hib01.bps" "bindPose2.wm[4]";
 connectAttr "bn_L_Knee_a01.bps" "bindPose2.wm[5]";
@@ -52184,6 +52939,12 @@ connectAttr "be_R_Shoulder_Fixer01.bps" "bindPose2.wm[77]";
 connectAttr "bn_L_elbowTwist_a01.bps" "bindPose2.wm[78]";
 connectAttr "bn_L_ButtFixer01.bps" "bindPose2.wm[79]";
 connectAttr "bn_R_ButtFixer01.bps" "bindPose2.wm[80]";
+connectAttr "bn_L_Tassle_a01.bps" "bindPose2.wm[81]";
+connectAttr "bn_L_Tassle_b01.bps" "bindPose2.wm[82]";
+connectAttr "bn_L_Tassle_c01.bps" "bindPose2.wm[83]";
+connectAttr "bn_R_Tassle_a01.bps" "bindPose2.wm[84]";
+connectAttr "bn_R_Tassle_b01.bps" "bindPose2.wm[85]";
+connectAttr "bn_R_Tassle_c01.bps" "bindPose2.wm[86]";
 connectAttr "CC_Face01.Jaw" "unitConversion23.i";
 connectAttr "Lucy01.msg" "bindPose3.m[0]";
 connectAttr "GlobalControl01.msg" "bindPose3.m[1]";
@@ -52774,8 +53535,26 @@ connectAttr "SkinCluster_R_Ear_Tweak01.msg" "tweakSet17.ub[0]";
 connectAttr "skinCluster15GroupParts.og" "SkinCluster_Cap01.ip[0].ig";
 connectAttr "skinCluster15GroupId.id" "SkinCluster_Cap01.ip[0].gi";
 connectAttr "bn_neck_c01.wm" "SkinCluster_Cap01.ma[0]";
+connectAttr "bn_L_Tassle_a01.wm" "SkinCluster_Cap01.ma[1]";
+connectAttr "bn_L_Tassle_b01.wm" "SkinCluster_Cap01.ma[2]";
+connectAttr "bn_L_Tassle_c01.wm" "SkinCluster_Cap01.ma[3]";
+connectAttr "bn_R_Tassle_a01.wm" "SkinCluster_Cap01.ma[4]";
+connectAttr "bn_R_Tassle_b01.wm" "SkinCluster_Cap01.ma[5]";
+connectAttr "bn_R_Tassle_c01.wm" "SkinCluster_Cap01.ma[6]";
 connectAttr "bn_neck_c01.liw" "SkinCluster_Cap01.lw[0]";
+connectAttr "bn_L_Tassle_a01.liw" "SkinCluster_Cap01.lw[1]";
+connectAttr "bn_L_Tassle_b01.liw" "SkinCluster_Cap01.lw[2]";
+connectAttr "bn_L_Tassle_c01.liw" "SkinCluster_Cap01.lw[3]";
+connectAttr "bn_R_Tassle_a01.liw" "SkinCluster_Cap01.lw[4]";
+connectAttr "bn_R_Tassle_b01.liw" "SkinCluster_Cap01.lw[5]";
+connectAttr "bn_R_Tassle_c01.liw" "SkinCluster_Cap01.lw[6]";
 connectAttr "bn_neck_c01.obcc" "SkinCluster_Cap01.ifcl[0]";
+connectAttr "bn_L_Tassle_a01.obcc" "SkinCluster_Cap01.ifcl[1]";
+connectAttr "bn_L_Tassle_b01.obcc" "SkinCluster_Cap01.ifcl[2]";
+connectAttr "bn_L_Tassle_c01.obcc" "SkinCluster_Cap01.ifcl[3]";
+connectAttr "bn_R_Tassle_a01.obcc" "SkinCluster_Cap01.ifcl[4]";
+connectAttr "bn_R_Tassle_b01.obcc" "SkinCluster_Cap01.ifcl[5]";
+connectAttr "bn_R_Tassle_c01.obcc" "SkinCluster_Cap01.ifcl[6]";
 connectAttr "bindPose4.msg" "SkinCluster_Cap01.bp";
 connectAttr "SkinCluster_Cap_Tweak01.og[0]" "skinCluster15GroupParts.ig";
 connectAttr "skinCluster15GroupId.id" "skinCluster15GroupParts.gi";
@@ -53615,6 +54394,7 @@ connectAttr "tweak2.msg" "tweakSet48.ub[0]";
 connectAttr "groupParts123.og" "groupParts125.ig";
 connectAttr "groupId109.id" "groupParts125.gi";
 connectAttr "skinCluster48.msg" "ngSkinToolsData_skinCluster48.sc";
+connectAttr "SkinCluster_Cap01.msg" "ngSkinToolsData_SkinCluster_Cap01.sc";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
@@ -53636,6 +54416,6 @@ connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
 connectAttr "ikSplineSolver.msg" ":ikSystem.sol" -na;
 connectAttr "ikSCsolver.msg" ":ikSystem.sol" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"Lucy_AlbedoFile01\" \"fileTextureName\" \"D:/RavenHill/RavenHill/Maya/Textures/Lucy_Albedo.jpg\" 1160921151 \"\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"Lucy_AlbedoFile01\" \"fileTextureName\" \"D:/RavenHill/RavenHill/Maya/Textures/Lucy_Albedo.jpg\" 1160921151 \"D:/RavenHill/RavenHill/Maya/Textures/Lucy_Albedo.jpg\" \"sourceImages\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of Lucy_Rig02.ma

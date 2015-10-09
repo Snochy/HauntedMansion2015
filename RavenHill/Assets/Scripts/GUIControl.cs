@@ -45,8 +45,8 @@ public class GUIControl : MonoBehaviour {
 
             if (GamePause.isFrozen)
             {
-                currentSelection = Mathf.Clamp(currentSelection - (int)Input.GetAxisRaw("Vertical"), 0, 1);
-                int desiredChange = (int)Input.GetAxisRaw("Horizontal");
+                currentSelection = Mathf.Clamp(currentSelection - (int)Input.GetAxis("Vertical"), 0, 1);
+                int desiredChange = (int)Input.GetAxis("Horizontal");
                 switch (currentSelection)
                 {
                     case 0:
