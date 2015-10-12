@@ -41,7 +41,6 @@ public class CameraControl : MonoBehaviour {
 		Physics.IgnoreLayerCollision(9,2);
 		Physics.IgnoreLayerCollision(10,10);
 		Physics.IgnoreLayerCollision(10,6);
-		Physics.gravity = Vector3.down * 90f;
 
 	}
 
@@ -93,11 +92,11 @@ public class CameraControl : MonoBehaviour {
 		
 			//Camera Chaser, Also backups with character
 			if (Vector3.Dot (tarPlayer.transform.position - camera.transform.position, camera.transform.forward) < 0f) 
-				transform.position = tarPlayer.transform.position + Vector3.up * 16;
+				transform.position = tarPlayer.transform.position + Vector3.up;
 			else if (Input.GetAxis ("Vertical") >= 0)
-				transform.position = Vector3.Lerp (transform.position, tarPlayer.transform.position + tarPlayer.transform.up * 16, Time.deltaTime * 8f);
+                transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f, Time.deltaTime * 8f);
 			else
-				transform.position = Vector3.Lerp (transform.position, tarPlayer.transform.position + tarPlayer.transform.up * 16, .5f);		
+                transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f, .5f);		
 			transform.rotation = Quaternion.Euler (tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y, z);
 		
 			WallPenFixer ();
@@ -107,14 +106,14 @@ public class CameraControl : MonoBehaviour {
         {
             camera.transform.localRotation = Quaternion.Euler(camera.transform.localEulerAngles.x, angleAdjust, camera.transform.localEulerAngles.z);
             camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, desiredPosition, Time.deltaTime);
-            transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * 16, .5f);
+            transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f, .5f);
             transform.rotation = Quaternion.Euler(tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y, 180f);
         }
     }
 
     void WallPenFixer()
     {
-		if (Vector3.Distance(camera.transform.position, transform.position) > 5f) {
+		if (Vector3.Distance(camera.transform.position, transform.position) > .4f) {
 			RaycastHit hit;
 			if (Physics.Raycast (transform.position, camera.transform.position - transform.position, out hit, Mathf.Infinity, layerMask))
 			if (hit.transform.gameObject != camera)

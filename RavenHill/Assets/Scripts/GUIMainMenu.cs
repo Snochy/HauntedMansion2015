@@ -15,7 +15,6 @@ public class GUIMainMenu : MonoBehaviour {
     public bool isStarting;
 
     public Transform endPosition;
-    public Light backLight;
 
 	void LateUpdate () 
 	{
@@ -52,7 +51,6 @@ public class GUIMainMenu : MonoBehaviour {
     {
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, endPosition.position, Time.deltaTime);
         Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, endPosition.rotation, Time.deltaTime);
-        backLight.GetComponent<Light>().intensity = 0;
         yield return new WaitForSeconds(2);
         Application.LoadLevel(1);
     }

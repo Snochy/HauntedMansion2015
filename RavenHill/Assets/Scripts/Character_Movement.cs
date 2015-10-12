@@ -31,11 +31,9 @@ public class Character_Movement : MonoBehaviour {
 		{
 			if (isEnabled) {
 				if (Input.GetAxis ("Couch") <= 0)
-					speedMod = Input.GetAxis ("Run") * 3f * 16;
+					speedMod = Input.GetAxis ("Run") * 2.5f;
 				else
 					speedMod = defaultSpeed * -.55f;
-
-				transform.localScale = new Vector3 (16, 16 - Input.GetAxis ("Couch") * .5f * 16, 16);
 
 				currentSpeed = defaultSpeed + speedMod;
 				if (currentSpeed <= 0)
