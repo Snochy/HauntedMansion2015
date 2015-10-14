@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: b05a9297c1eca514ba8e6de3b1379451
-timeCreated: 1444675945
+guid: ae4c9795a81371941b59a0dc1a751bb2
+timeCreated: 1444754985
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: flame-sprite_0
-    21300002: flame-sprite_1
-    21300004: flame-sprite_2
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -33,55 +30,25 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
-  nPOTScale: 0
+    wrapMode: -1
+  nPOTScale: 1
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 0
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 1
-  textureType: 8
+  alphaIsTransparency: 0
+  textureType: -1
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: flame-sprite_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 90
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: flame-sprite_1
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 0
-        width: 90
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: flame-sprite_2
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 1
-        width: 91
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
