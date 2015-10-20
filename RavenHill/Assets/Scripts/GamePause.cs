@@ -1,6 +1,7 @@
 ﻿using System.Collections;
+using UnityEngine;
 
-public static class GamePause{
+public class GamePause : MonoBehaviour {
 
 	public static bool isFrozen = false;
     public static bool isLoading = true;

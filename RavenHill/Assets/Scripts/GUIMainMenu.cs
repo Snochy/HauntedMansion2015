@@ -14,6 +14,8 @@ public class GUIMainMenu : MonoBehaviour {
 
     public bool isStarting;
 
+    public AudioSource music;
+
     public Transform endPosition;
 
 	void LateUpdate () 
@@ -51,6 +53,7 @@ public class GUIMainMenu : MonoBehaviour {
     {
         Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, endPosition.position, Time.deltaTime);
         Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, endPosition.rotation, Time.deltaTime);
+        music.volume -= Time.deltaTime / 2;
         yield return new WaitForSeconds(2);
         Application.LoadLevel(1);
     }

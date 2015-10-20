@@ -7,11 +7,16 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: Mesh_CandleStand01
+    100004: Mesh_Chandle_Stand01
     400000: //RootNode
     400002: Mesh_CandleStand01
+    400004: Mesh_Chandle_Stand01
     2300000: Mesh_CandleStand01
+    2300002: Mesh_Chandle_Stand01
     3300000: Mesh_CandleStand01
+    3300002: Mesh_Chandle_Stand01
     4300000: Mesh_CandleStand01
+    4300002: Mesh_Chandle_Stand01
   materials:
     importMaterials: 0
     materialName: 0
