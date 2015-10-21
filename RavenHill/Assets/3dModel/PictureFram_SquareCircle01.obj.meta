@@ -1,22 +1,17 @@
 fileFormatVersion: 2
-guid: 91861a95f4b86234a8fdadfb56c567a5
-timeCreated: 1444678896
+guid: 4f8b5a8b699bd304c9aa8148a1ef7020
+timeCreated: 1445445308
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: pCube1
+    100000: Mesh_Picture_Frame_SquareCircle01
     100002: //RootNode
-    100004: Mesh_Rug01_group1
-    400000: pCube1
+    400000: Mesh_Picture_Frame_SquareCircle01
     400002: //RootNode
-    400004: Mesh_Rug01_group1
-    2300000: pCube1
-    2300002: Mesh_Rug01_group1
-    3300000: pCube1
-    3300002: Mesh_Rug01_group1
-    4300000: pCube1
-    4300002: Mesh_Rug01_group1
+    2300000: Mesh_Picture_Frame_SquareCircle01
+    3300000: Mesh_Picture_Frame_SquareCircle01
+    4300000: Mesh_Picture_Frame_SquareCircle01
   materials:
     importMaterials: 0
     materialName: 0
