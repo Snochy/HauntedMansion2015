@@ -50,7 +50,7 @@ public class Character_Movement : MonoBehaviour {
 						moveDirection.y -= jumpSpeed * Time.deltaTime;
 					}
 
-					moveDirection.y -= 160 * Time.deltaTime;
+					moveDirection.y -= 10 * Time.deltaTime;
 
 				}
                 if(rotationY)
