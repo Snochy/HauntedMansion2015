@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d58b21c2a4383fe479438db4f366db35
-timeCreated: 1445581482
+timeCreated: 1445897472
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -16,6 +16,41 @@ SubstanceImporter:
     - name: $randomseed
       value:
         scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Interstice_Width_Of_Bricks
+      value:
+        scalar[0]: .00999999978
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Edge_Smoothness_Thickness
+      value:
+        scalar[0]: .0900000036
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Tiling
+      value:
+        scalar[0]: 3.22000003
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: mortar_Color
+      value:
+        scalar[0]: .387793005
+        scalar[1]: .396077991
+        scalar[2]: .333943993
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Roughness_Mortar
+      value:
+        scalar[0]: .5
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -198,6 +233,62 @@ SubstanceImporter:
     - name: $randomseed
       value:
         scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Wear_Color
+      value:
+        scalar[0]: 1
+        scalar[1]: .883329988
+        scalar[2]: 0
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: WearAmount
+      value:
+        scalar[0]: .25999999
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Roughness_Wear
+      value:
+        scalar[0]: .142199993
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Brick_Tile_Interstice_Width
+      value:
+        scalar[0]: .00999999978
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Brick_Tile_Edge_Smoothness
+      value:
+        scalar[0]: .0900000036
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Brick_Tile_Tiling
+      value:
+        scalar[0]: 3.07999992
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Color_Mortar_Color
+      value:
+        scalar[0]: .387793005
+        scalar[1]: .396077991
+        scalar[2]: .333943993
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: Shine_Mortar_Shine
+      value:
+        scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
