@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4d25c46821966554b8c141f20eb77f2f
-timeCreated: 1445615964
+timeCreated: 1445999354
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -20,6 +20,13 @@ SubstanceImporter:
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
+    - name: WallPaperColor
+      value:
+        scalar[0]: 1
+        scalar[1]: .833341002
+        scalar[2]: 0
+        scalar[3]: 1
+        texture: {instanceID: 0}
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
@@ -34,14 +41,16 @@ SubstanceImporter:
           first:
             name: _MainTex
           second:
-            texture: {instanceID: 0}
+            texture: {fileID: -2022822057, guid: 4d25c46821966554b8c141f20eb77f2f,
+              type: 3}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
-            texture: {instanceID: 0}
+            texture: {fileID: -1228462456, guid: 4d25c46821966554b8c141f20eb77f2f,
+              type: 3}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
@@ -90,7 +99,8 @@ SubstanceImporter:
           first:
             name: _MetallicGlossMap
           second:
-            texture: {instanceID: 0}
+            texture: {fileID: -1395669672, guid: 4d25c46821966554b8c141f20eb77f2f,
+              type: 3}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
       floats:
@@ -202,6 +212,20 @@ SubstanceImporter:
         scalar[2]: 0
         scalar[3]: 0
         texture: {instanceID: 0}
+    - name: Color_Wallpaper_Color
+      value:
+        scalar[0]: 1
+        scalar[1]: .833341002
+        scalar[2]: 0
+        scalar[3]: 1
+        texture: {instanceID: 0}
+    - name: WearAmount
+      value:
+        scalar[0]: .270000011
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
@@ -216,14 +240,16 @@ SubstanceImporter:
           first:
             name: _MainTex
           second:
-            texture: {instanceID: 0}
+            texture: {fileID: -691331546, guid: 4d25c46821966554b8c141f20eb77f2f,
+              type: 3}
             scale: {x: 6, y: 2}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
-            texture: {instanceID: 0}
+            texture: {fileID: -1273236928, guid: 4d25c46821966554b8c141f20eb77f2f,
+              type: 3}
             scale: {x: 6, y: 2}
             offset: {x: 0, y: 0}
         data:
@@ -272,7 +298,8 @@ SubstanceImporter:
           first:
             name: _MetallicGlossMap
           second:
-            texture: {instanceID: 0}
+            texture: {fileID: 1537849959, guid: 4d25c46821966554b8c141f20eb77f2f,
+              type: 3}
             scale: {x: 6, y: 2}
             offset: {x: 0, y: 0}
       floats:
