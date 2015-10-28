@@ -27,6 +27,8 @@ public class GUIControl : MonoBehaviour {
 
     private bool isResettingMainMenu = false;
 
+	private float time;
+
     void Start()
     {
         mainPanel.SetActive(false);
@@ -123,16 +125,18 @@ public class GUIControl : MonoBehaviour {
 
     IEnumerator LoadingGame()
     {
-        FadeToClear();
+		time += Time.deltaTime;
+		time = time / 2.2f;
+        FadeToClear(time);
         yield return new WaitForSeconds(2.2f);
         fader.enabled = false;
         GamePause.isLoading = false;
     }
 
-    public void FadeToClear()
+    public void FadeToClear(float time)
     {
-        fader.color = Color.Lerp(fader.color, Color.clear, Time.deltaTime / 2);
-        guiColor = Color.Lerp(guiColor, Color.white, Time.deltaTime / 2);
+        fader.color = Color.Lerp(fader.color, Color.clear, time);
+        guiColor = Color.Lerp(guiColor, Color.white, time);
     }
 
     IEnumerator ResetMainMenu()
