@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4c8e2c6d32309e149994469730cc6b93
-timeCreated: 1446001735
+timeCreated: 1446003539
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -42,7 +42,7 @@ SubstanceImporter:
             name: _BumpMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 10, y: 1}
+            scale: {x: 10, y: 10}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -91,7 +91,7 @@ SubstanceImporter:
             name: _MetallicGlossMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 1, y: 1}
+            scale: {x: 10, y: 10}
             offset: {x: 0, y: 0}
       floats:
         data:
@@ -117,7 +117,7 @@ SubstanceImporter:
         data:
           first:
             name: _Glossiness
-          second: .5
+          second: .246000007
         data:
           first:
             name: _BumpScale

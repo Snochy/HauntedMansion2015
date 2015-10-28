@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 4d25c46821966554b8c141f20eb77f2f
-timeCreated: 1445999354
+timeCreated: 1446003521
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -41,16 +41,14 @@ SubstanceImporter:
           first:
             name: _MainTex
           second:
-            texture: {fileID: -2022822057, guid: 4d25c46821966554b8c141f20eb77f2f,
-              type: 3}
+            texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
-            texture: {fileID: -1228462456, guid: 4d25c46821966554b8c141f20eb77f2f,
-              type: 3}
+            texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
@@ -99,8 +97,7 @@ SubstanceImporter:
           first:
             name: _MetallicGlossMap
           second:
-            texture: {fileID: -1395669672, guid: 4d25c46821966554b8c141f20eb77f2f,
-              type: 3}
+            texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
       floats:
@@ -229,7 +226,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 6, y: 2}
+      scale: {x: 1, y: 1}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 42
@@ -240,17 +237,15 @@ SubstanceImporter:
           first:
             name: _MainTex
           second:
-            texture: {fileID: -691331546, guid: 4d25c46821966554b8c141f20eb77f2f,
-              type: 3}
-            scale: {x: 6, y: 2}
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
-            texture: {fileID: -1273236928, guid: 4d25c46821966554b8c141f20eb77f2f,
-              type: 3}
-            scale: {x: 6, y: 2}
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -278,7 +273,7 @@ SubstanceImporter:
             name: _EmissionMap
           second:
             texture: {instanceID: 0}
-            scale: {x: 6, y: 2}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
@@ -298,9 +293,8 @@ SubstanceImporter:
           first:
             name: _MetallicGlossMap
           second:
-            texture: {fileID: 1537849959, guid: 4d25c46821966554b8c141f20eb77f2f,
-              type: 3}
-            scale: {x: 6, y: 2}
+            texture: {instanceID: 0}
+            scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
       floats:
         data:
@@ -326,7 +320,7 @@ SubstanceImporter:
         data:
           first:
             name: _Glossiness
-          second: .5
+          second: 0
         data:
           first:
             name: _BumpScale
