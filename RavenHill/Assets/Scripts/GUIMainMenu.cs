@@ -20,6 +20,7 @@ public class GUIMainMenu : MonoBehaviour {
 
 	void LateUpdate () 
 	{
+		GameObject.Find ("Player").GetComponent<Character_Movement> ().isEnabled = false;
 			currentSelection = Mathf.Clamp (currentSelection - (int)Input.GetAxisRaw("Vertical"),0, 1);
             if (!isStarting)
             {

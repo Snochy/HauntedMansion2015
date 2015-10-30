@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f6587701ef8d4ed4dbde0827a263e7b0
-timeCreated: 1445962494
+guid: 9082cfa80e1466440ae8664c88803925
+timeCreated: 1446169236
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -16,67 +16,67 @@ ModelImporter:
     100016: be_R_LowerLid01
     100018: be_R_Shoulder_Fixer01
     100020: be_R_UpperLid01
-    100022: bn_Base01
-    100024: bn_Handle_Grip01
-    100026: bn_L_Ankle01
-    100028: bn_L_Ball01
-    100030: bn_L_Braid_a01
-    100032: bn_L_Braid_b01
-    100034: bn_L_Braid_c01
-    100036: bn_L_Braid_d01
-    100038: bn_L_Braid_e01
-    100040: bn_L_Braid_f01
-    100042: bn_L_Braid_g01
-    100044: bn_L_Braid_h01
-    100046: bn_L_Braid_i01
-    100048: bn_L_ButtFixer01
-    100050: bn_L_Clavicle01
-    100052: bn_L_elbow01
-    100054: bn_L_elbowTwist_a01
-    100056: bn_L_eye01
-    100058: bn_L_Hib01
-    100060: bn_L_Index_a01
-    100062: bn_L_Index_b01
-    100064: bn_L_Index_c01
-    100066: bn_L_Knee_a01
-    100068: bn_L_Knee_b01
-    100070: bn_L_LowerLid01
-    100072: bn_L_Middle_a01
-    100074: bn_L_Middle_b01
-    100076: bn_L_Middle_c01
-    100078: bn_L_pinky_a01
-    100080: bn_L_pinky_b01
-    100082: bn_L_pinky_c01
-    100084: bn_L_Ring_a01
-    100086: bn_L_Ring_b01
-    100088: bn_L_Ring_c01
-    100090: bn_L_shoulder01
-    100092: bn_L_Shoulder_Fixer01
-    100094: bn_L_thumb_a01
-    100096: bn_L_thumb_b01
-    100098: bn_L_thumb_c01
-    100100: bn_L_Toes01
-    100102: bn_L_UpperLid01
-    100104: bn_L_wrist01
-    100106: bn_Mouth01
-    100108: bn_neck_a01
-    100110: bn_neck_b01
-    100112: bn_neck_c01
-    100114: bn_R_Ankle01
-    100116: bn_R_Ball01
-    100118: bn_R_Braid_a01
-    100120: bn_R_Braid_b01
-    100122: bn_R_Braid_c01
-    100124: bn_R_Braid_d01
-    100126: bn_R_Braid_e01
-    100128: bn_R_Braid_f01
-    100130: bn_R_Braid_g01
-    100132: bn_R_Braid_h01
-    100134: bn_R_Braid_i01
-    100136: bn_R_ButtFixer01
-    100138: bn_R_Clavicle01
-    100140: bn_R_elbow01
-    100142: bn_R_elbowTwist_a01
+    100022: bn_L_Ankle01
+    100024: bn_L_Ball01
+    100026: bn_L_Braid_a01
+    100028: bn_L_Braid_b01
+    100030: bn_L_Braid_c01
+    100032: bn_L_Braid_d01
+    100034: bn_L_Braid_e01
+    100036: bn_L_Braid_f01
+    100038: bn_L_Braid_g01
+    100040: bn_L_Braid_h01
+    100042: bn_L_Braid_i01
+    100044: bn_L_ButtFixer01
+    100046: bn_L_Clavicle01
+    100048: bn_L_elbow01
+    100050: bn_L_elbowTwist_a01
+    100052: bn_L_elbowTwist_b01
+    100054: bn_L_eye01
+    100056: bn_L_Hib01
+    100058: bn_L_Index_a01
+    100060: bn_L_Index_b01
+    100062: bn_L_Index_c01
+    100064: bn_L_Knee_a01
+    100066: bn_L_Knee_b01
+    100068: bn_L_LowerLid01
+    100070: bn_L_Middle_a01
+    100072: bn_L_Middle_b01
+    100074: bn_L_Middle_c01
+    100076: bn_L_pinky_a01
+    100078: bn_L_pinky_b01
+    100080: bn_L_pinky_c01
+    100082: bn_L_Ring_a01
+    100084: bn_L_Ring_b01
+    100086: bn_L_Ring_c01
+    100088: bn_L_shoulder01
+    100090: bn_L_Shoulder_Fixer01
+    100092: bn_L_thumb_a01
+    100094: bn_L_thumb_b01
+    100096: bn_L_thumb_c01
+    100098: bn_L_Toes01
+    100100: bn_L_UpperLid01
+    100102: bn_L_wrist01
+    100104: bn_Mouth01
+    100106: bn_neck_a01
+    100108: bn_neck_b01
+    100110: bn_neck_c01
+    100112: bn_R_Ankle01
+    100114: bn_R_Ball01
+    100116: bn_R_Braid_a01
+    100118: bn_R_Braid_b01
+    100120: bn_R_Braid_c01
+    100122: bn_R_Braid_d01
+    100124: bn_R_Braid_e01
+    100126: bn_R_Braid_f01
+    100128: bn_R_Braid_g01
+    100130: bn_R_Braid_h01
+    100132: bn_R_Braid_i01
+    100134: bn_R_ButtFixer01
+    100136: bn_R_Clavicle01
+    100138: bn_R_elbow01
+    100140: bn_R_elbowTwist_a01
+    100142: bn_R_elbowTwist_b01
     100144: bn_R_eye01
     100146: bn_R_Hib01
     100148: bn_R_Index_a01
@@ -121,23 +121,18 @@ ModelImporter:
     100226: Mesh_L_Eye_Ball01
     100228: Mesh_L_Eye_Pupil01
     100230: Mesh_L_Eye_Shine01
-    100232: Mesh_Lantern01
-    100234: Mesh_Lashes01
-    100236: Mesh_Legs01
-    100238: Mesh_Lower_Gum01
-    100240: Mesh_R_Ear01
-    100242: Mesh_R_Eye_Ball01
-    100244: Mesh_R_Eye_Pupil01
-    100246: Mesh_R_Eye_Shine01
-    100248: Mesh_Shirt01
-    100250: Mesh_Shirt_Collar01
-    100252: Mesh_Skirt01
-    100254: Mesh_Tongue
-    100256: Mesh_Upper_Gum01
-    100258: be_Root01
-    100260: bn_L_elbowTwist_b01
-    100262: bn_R_elbowTwist_b01
-    100264: Mesh_R_Eye_Ball02
+    100232: Mesh_Lashes01
+    100234: Mesh_Legs01
+    100236: Mesh_Lower_Gum01
+    100238: Mesh_R_Ear01
+    100240: Mesh_R_Eye_Ball02
+    100242: Mesh_R_Eye_Pupil01
+    100244: Mesh_R_Eye_Shine01
+    100246: Mesh_Shirt01
+    100248: Mesh_Shirt_Collar01
+    100250: Mesh_Skirt01
+    100252: Mesh_Tongue
+    100254: Mesh_Upper_Gum01
     400000: be_L_ButtFixer01
     400002: be_L_eye01
     400004: be_L_LowerLid01
@@ -149,67 +144,67 @@ ModelImporter:
     400016: be_R_LowerLid01
     400018: be_R_Shoulder_Fixer01
     400020: be_R_UpperLid01
-    400022: bn_Base01
-    400024: bn_Handle_Grip01
-    400026: bn_L_Ankle01
-    400028: bn_L_Ball01
-    400030: bn_L_Braid_a01
-    400032: bn_L_Braid_b01
-    400034: bn_L_Braid_c01
-    400036: bn_L_Braid_d01
-    400038: bn_L_Braid_e01
-    400040: bn_L_Braid_f01
-    400042: bn_L_Braid_g01
-    400044: bn_L_Braid_h01
-    400046: bn_L_Braid_i01
-    400048: bn_L_ButtFixer01
-    400050: bn_L_Clavicle01
-    400052: bn_L_elbow01
-    400054: bn_L_elbowTwist_a01
-    400056: bn_L_eye01
-    400058: bn_L_Hib01
-    400060: bn_L_Index_a01
-    400062: bn_L_Index_b01
-    400064: bn_L_Index_c01
-    400066: bn_L_Knee_a01
-    400068: bn_L_Knee_b01
-    400070: bn_L_LowerLid01
-    400072: bn_L_Middle_a01
-    400074: bn_L_Middle_b01
-    400076: bn_L_Middle_c01
-    400078: bn_L_pinky_a01
-    400080: bn_L_pinky_b01
-    400082: bn_L_pinky_c01
-    400084: bn_L_Ring_a01
-    400086: bn_L_Ring_b01
-    400088: bn_L_Ring_c01
-    400090: bn_L_shoulder01
-    400092: bn_L_Shoulder_Fixer01
-    400094: bn_L_thumb_a01
-    400096: bn_L_thumb_b01
-    400098: bn_L_thumb_c01
-    400100: bn_L_Toes01
-    400102: bn_L_UpperLid01
-    400104: bn_L_wrist01
-    400106: bn_Mouth01
-    400108: bn_neck_a01
-    400110: bn_neck_b01
-    400112: bn_neck_c01
-    400114: bn_R_Ankle01
-    400116: bn_R_Ball01
-    400118: bn_R_Braid_a01
-    400120: bn_R_Braid_b01
-    400122: bn_R_Braid_c01
-    400124: bn_R_Braid_d01
-    400126: bn_R_Braid_e01
-    400128: bn_R_Braid_f01
-    400130: bn_R_Braid_g01
-    400132: bn_R_Braid_h01
-    400134: bn_R_Braid_i01
-    400136: bn_R_ButtFixer01
-    400138: bn_R_Clavicle01
-    400140: bn_R_elbow01
-    400142: bn_R_elbowTwist_a01
+    400022: bn_L_Ankle01
+    400024: bn_L_Ball01
+    400026: bn_L_Braid_a01
+    400028: bn_L_Braid_b01
+    400030: bn_L_Braid_c01
+    400032: bn_L_Braid_d01
+    400034: bn_L_Braid_e01
+    400036: bn_L_Braid_f01
+    400038: bn_L_Braid_g01
+    400040: bn_L_Braid_h01
+    400042: bn_L_Braid_i01
+    400044: bn_L_ButtFixer01
+    400046: bn_L_Clavicle01
+    400048: bn_L_elbow01
+    400050: bn_L_elbowTwist_a01
+    400052: bn_L_elbowTwist_b01
+    400054: bn_L_eye01
+    400056: bn_L_Hib01
+    400058: bn_L_Index_a01
+    400060: bn_L_Index_b01
+    400062: bn_L_Index_c01
+    400064: bn_L_Knee_a01
+    400066: bn_L_Knee_b01
+    400068: bn_L_LowerLid01
+    400070: bn_L_Middle_a01
+    400072: bn_L_Middle_b01
+    400074: bn_L_Middle_c01
+    400076: bn_L_pinky_a01
+    400078: bn_L_pinky_b01
+    400080: bn_L_pinky_c01
+    400082: bn_L_Ring_a01
+    400084: bn_L_Ring_b01
+    400086: bn_L_Ring_c01
+    400088: bn_L_shoulder01
+    400090: bn_L_Shoulder_Fixer01
+    400092: bn_L_thumb_a01
+    400094: bn_L_thumb_b01
+    400096: bn_L_thumb_c01
+    400098: bn_L_Toes01
+    400100: bn_L_UpperLid01
+    400102: bn_L_wrist01
+    400104: bn_Mouth01
+    400106: bn_neck_a01
+    400108: bn_neck_b01
+    400110: bn_neck_c01
+    400112: bn_R_Ankle01
+    400114: bn_R_Ball01
+    400116: bn_R_Braid_a01
+    400118: bn_R_Braid_b01
+    400120: bn_R_Braid_c01
+    400122: bn_R_Braid_d01
+    400124: bn_R_Braid_e01
+    400126: bn_R_Braid_f01
+    400128: bn_R_Braid_g01
+    400130: bn_R_Braid_h01
+    400132: bn_R_Braid_i01
+    400134: bn_R_ButtFixer01
+    400136: bn_R_Clavicle01
+    400138: bn_R_elbow01
+    400140: bn_R_elbowTwist_a01
+    400142: bn_R_elbowTwist_b01
     400144: bn_R_eye01
     400146: bn_R_Hib01
     400148: bn_R_Index_a01
@@ -254,67 +249,18 @@ ModelImporter:
     400226: Mesh_L_Eye_Ball01
     400228: Mesh_L_Eye_Pupil01
     400230: Mesh_L_Eye_Shine01
-    400232: Mesh_Lantern01
-    400234: Mesh_Lashes01
-    400236: Mesh_Legs01
-    400238: Mesh_Lower_Gum01
-    400240: Mesh_R_Ear01
-    400242: Mesh_R_Eye_Ball01
-    400244: Mesh_R_Eye_Pupil01
-    400246: Mesh_R_Eye_Shine01
-    400248: Mesh_Shirt01
-    400250: Mesh_Shirt_Collar01
-    400252: Mesh_Skirt01
-    400254: Mesh_Tongue
-    400256: Mesh_Upper_Gum01
-    400258: be_Root01
-    400260: bn_L_elbowTwist_b01
-    400262: bn_R_elbowTwist_b01
-    400264: Mesh_R_Eye_Ball02
-    2300000: Mesh_Arms01
-    2300002: Mesh_Braids01
-    2300004: Mesh_Cap01
-    2300006: Mesh_Eyebrows01
-    2300008: Mesh_Front_Bang01
-    2300010: Mesh_Head01
-    2300012: Mesh_L_Ear01
-    2300014: Mesh_L_Eye_Ball01
-    2300016: Mesh_L_Eye_Pupil01
-    2300018: Mesh_L_Eye_Shine01
-    2300020: Mesh_Lashes01
-    2300022: Mesh_Legs01
-    2300024: Mesh_Lower_Gum01
-    2300026: Mesh_R_Ear01
-    2300028: Mesh_R_Eye_Ball01
-    2300030: Mesh_R_Eye_Pupil01
-    2300032: Mesh_R_Eye_Shine01
-    2300034: Mesh_Shirt01
-    2300036: Mesh_Shirt_Collar01
-    2300038: Mesh_Skirt01
-    2300040: Mesh_Tongue
-    2300042: Mesh_Upper_Gum01
-    3300000: Mesh_Arms01
-    3300002: Mesh_Braids01
-    3300004: Mesh_Cap01
-    3300006: Mesh_Eyebrows01
-    3300008: Mesh_Front_Bang01
-    3300010: Mesh_Head01
-    3300012: Mesh_L_Ear01
-    3300014: Mesh_L_Eye_Ball01
-    3300016: Mesh_L_Eye_Pupil01
-    3300018: Mesh_L_Eye_Shine01
-    3300020: Mesh_Lashes01
-    3300022: Mesh_Legs01
-    3300024: Mesh_Lower_Gum01
-    3300026: Mesh_R_Ear01
-    3300028: Mesh_R_Eye_Ball01
-    3300030: Mesh_R_Eye_Pupil01
-    3300032: Mesh_R_Eye_Shine01
-    3300034: Mesh_Shirt01
-    3300036: Mesh_Shirt_Collar01
-    3300038: Mesh_Skirt01
-    3300040: Mesh_Tongue
-    3300042: Mesh_Upper_Gum01
+    400232: Mesh_Lashes01
+    400234: Mesh_Legs01
+    400236: Mesh_Lower_Gum01
+    400238: Mesh_R_Ear01
+    400240: Mesh_R_Eye_Ball02
+    400242: Mesh_R_Eye_Pupil01
+    400244: Mesh_R_Eye_Shine01
+    400246: Mesh_Shirt01
+    400248: Mesh_Shirt_Collar01
+    400250: Mesh_Skirt01
+    400252: Mesh_Tongue
+    400254: Mesh_Upper_Gum01
     4300000: Mesh_Legs01
     4300002: Mesh_Front_Bang01
     4300004: Mesh_L_Ear01
@@ -327,19 +273,18 @@ ModelImporter:
     4300018: Mesh_Shirt_Collar01
     4300020: Mesh_Shirt01
     4300022: Mesh_Head01
-    4300024: Mesh_L_Eye_Ball01
-    4300026: Mesh_L_Eye_Shine01
-    4300028: Mesh_L_Eye_Pupil01
-    4300030: Mesh_R_Eye_Ball01
-    4300032: Mesh_R_Eye_Shine01
-    4300034: Mesh_R_Eye_Pupil01
-    4300036: Mesh_Lashes01
-    4300038: Mesh_Braids01
-    4300040: Mesh_Skirt01
-    4300042: Mesh_Arms01
-    4300044: Mesh_Lantern01
-    4300046: Mesh_R_Eye_Ball02
-    7400000: Idle_b01
+    4300024: Mesh_L_Eye_Shine01
+    4300026: Mesh_L_Eye_Pupil01
+    4300028: Mesh_R_Eye_Shine01
+    4300030: Mesh_R_Eye_Pupil01
+    4300032: Mesh_Lashes01
+    4300034: Mesh_Braids01
+    4300036: Mesh_Skirt01
+    4300038: Mesh_Arms01
+    4300040: Mesh_L_Eye_Ball01
+    4300042: Mesh_R_Eye_Ball02
+    7400000: Idle_01
+    7400002: Idle_02
     9500000: //RootNode
     13700000: Mesh_Arms01
     13700002: Mesh_Braids01
@@ -351,20 +296,18 @@ ModelImporter:
     13700014: Mesh_L_Eye_Ball01
     13700016: Mesh_L_Eye_Pupil01
     13700018: Mesh_L_Eye_Shine01
-    13700020: Mesh_Lantern01
-    13700022: Mesh_Lashes01
-    13700024: Mesh_Legs01
-    13700026: Mesh_Lower_Gum01
-    13700028: Mesh_R_Ear01
-    13700030: Mesh_R_Eye_Ball01
-    13700032: Mesh_R_Eye_Pupil01
-    13700034: Mesh_R_Eye_Shine01
-    13700036: Mesh_Shirt01
-    13700038: Mesh_Shirt_Collar01
-    13700040: Mesh_Skirt01
-    13700042: Mesh_Tongue
-    13700044: Mesh_Upper_Gum01
-    13700046: Mesh_R_Eye_Ball02
+    13700020: Mesh_Lashes01
+    13700022: Mesh_Legs01
+    13700024: Mesh_Lower_Gum01
+    13700026: Mesh_R_Ear01
+    13700028: Mesh_R_Eye_Ball02
+    13700030: Mesh_R_Eye_Pupil01
+    13700032: Mesh_R_Eye_Shine01
+    13700034: Mesh_Shirt01
+    13700036: Mesh_Shirt_Collar01
+    13700038: Mesh_Skirt01
+    13700040: Mesh_Tongue
+    13700042: Mesh_Upper_Gum01
   materials:
     importMaterials: 0
     materialName: 0
@@ -375,80 +318,34 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 'MuscleClip ''Luc_Animation_a01'' conversion warning:
-      ''GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01''
+    animationImportWarnings: 'MuscleClip ''Luc_Idles'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01''
       is between humanoid transforms and has rotation animation. This might lower
       retargeting quality.
 
 
-      MuscleClip ''Luc_Animation_a01'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01''
+      MuscleClip ''Luc_Idles'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01''
       is between humanoid transforms and has rotation animation. This might lower
       retargeting quality.
 
 
-      MuscleClip ''Luc_Animation_a01'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01/bn_L_Knee_b01''
+      MuscleClip ''Luc_Idles'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01/bn_L_Knee_b01''
       is between humanoid transforms and has rotation animation. This might lower
       retargeting quality.
 
 
-      MuscleClip ''Luc_Animation_a01'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01/bn_R_Knee_b01''
+      MuscleClip ''Luc_Idles'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01/bn_R_Knee_b01''
       is between humanoid transforms and has rotation animation. This might lower
       retargeting quality.
 
 
-      MuscleClip ''Luc_Animation_a01'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01/bn_R_Knee_b01/bn_R_Ankle01/bn_R_Ball01''
+      MuscleClip ''Luc_Idles'' conversion warning: ''GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01/bn_R_Knee_b01/bn_R_Ankle01/bn_R_Ball01''
       is between humanoid transforms and has rotation animation. This might lower
       retargeting quality.
 
 
 '
-    animationRetargetingWarnings: 'MuscleClip ''Luc_Animation_a01''conversion warning:
-      LeftLowerLeg average position error 16.7 mm and maximum position error 35.7
-      mm at 51%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: LeftFoot average position
-      error 4.3 mm and maximum position error 14.4 mm at 51%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: RightLowerLeg average position
-      error 29.3 mm and maximum position error 49.1 mm at 2%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: RightFoot average position
-      error 12.0 mm and maximum position error 25.9 mm at 2%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: LeftUpperArm average position
-      error 7.0 mm and maximum position error 9.0 mm at 0%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: LeftLowerArm average position
-      error 4.4 mm and maximum position error 6.1 mm at 52%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: LeftHand average position
-      error 3.0 mm and maximum position error 5.9 mm at 52%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: RightUpperArm average position
-      error 9.3 mm and maximum position error 18.2 mm at 53%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: RightLowerArm average position
-      error 6.4 mm and maximum position error 10.5 mm at 58%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: RightHand average position
-      error 6.0 mm and maximum position error 10.0 mm at 55%
-
-
-      MuscleClip ''Luc_Animation_a01''conversion warning: Head average position error
-      9.1 mm and maximum position error 18.7 mm at 58%
-
-
-'
-    animationDoRetargetingWarnings: 1
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
@@ -457,7 +354,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle_b01
+      name: Idle_01
       takeName: Take 001
       firstFrame: 1
       lastFrame: 120
@@ -489,13 +386,13 @@ ModelImporter:
       - path: GlobalControl01/Joints/bn_spine_a01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/be_L_ButtFixer01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/be_L_ButtFixer01/bn_L_ButtFixer01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/be_R_ButtFixer01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/be_R_ButtFixer01/bn_R_ButtFixer01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01
@@ -531,17 +428,17 @@ ModelImporter:
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/be_L_Shoulder_Fixer01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/be_L_Shoulder_Fixer01/bn_L_Shoulder_Fixer01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_elbowTwist_a01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_elbowTwist_b01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Index_a01
@@ -581,83 +478,83 @@ ModelImporter:
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_LowerLid01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_LowerLid01/bn_L_LowerLid01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_UpperLid01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_UpperLid01/bn_L_UpperLid01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_LowerLid01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_LowerLid01/bn_R_LowerLid01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_UpperLid01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_UpperLid01/bn_R_UpperLid01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01/bn_L_Braid_h01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01/bn_L_Braid_h01/bn_L_Braid_i01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_eye01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_eye01/be_L_eye01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_Mouth01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_Mouth01/be_Mouth01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01/bn_R_Braid_h01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01/bn_R_Braid_h01/bn_R_Braid_i01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_eye01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_eye01/be_R_eye01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/be_R_Shoulder_Fixer01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/be_R_Shoulder_Fixer01/bn_R_Shoulder_Fixer01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_elbowTwist_a01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_elbowTwist_b01
-        weight: 1
+        weight: 0
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01
         weight: 1
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Index_a01
@@ -691,51 +588,333 @@ ModelImporter:
       - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_thumb_a01/bn_R_thumb_b01/bn_R_thumb_c01
         weight: 1
       - path: Mesh01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Arms01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Braids01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Cap01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Eyebrows01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Front_Bang01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Head01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_L_Ear01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_L_Eye_Ball01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_L_Eye_Pupil01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_L_Eye_Shine01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Lashes01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Legs01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Lower_Gum01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_R_Ear01
-        weight: 1
-      - path: Mesh01/Mesh_R_Eye_Ball01
-        weight: 1
+        weight: 0
+      - path: Mesh01/Mesh_R_Eye_Ball02
+        weight: 0
       - path: Mesh01/Mesh_R_Eye_Pupil01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_R_Eye_Shine01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Shirt01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Shirt_Collar01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Skirt01
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Tongue
-        weight: 1
+        weight: 0
       - path: Mesh01/Mesh_Upper_Gum01
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle_02
+      takeName: Take 001
+      firstFrame: 121
+      lastFrame: 295
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
         weight: 1
+      - path: GlobalControl01
+        weight: 1
+      - path: GlobalControl01/Joints
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/be_L_ButtFixer01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/be_L_ButtFixer01/bn_L_ButtFixer01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/be_R_ButtFixer01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/be_R_ButtFixer01/bn_R_ButtFixer01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01/bn_L_Knee_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01/bn_L_Knee_b01/bn_L_Ankle01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01/bn_L_Knee_b01/bn_L_Ankle01/bn_L_Ball01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_L_Hib01/bn_L_Knee_a01/bn_L_Knee_b01/bn_L_Ankle01/bn_L_Ball01/bn_L_Toes01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01/bn_R_Knee_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01/bn_R_Knee_b01/bn_R_Ankle01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01/bn_R_Knee_b01/bn_R_Ankle01/bn_R_Ball01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_R_Hib01/bn_R_Knee_a01/bn_R_Knee_b01/bn_R_Ankle01/bn_R_Ball01/bn_R_Toes01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/be_L_Shoulder_Fixer01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/be_L_Shoulder_Fixer01/bn_L_Shoulder_Fixer01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_elbowTwist_a01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_elbowTwist_b01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Index_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Index_a01/bn_L_Index_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Index_a01/bn_L_Index_b01/bn_L_Index_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Middle_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Middle_a01/bn_L_Middle_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Middle_a01/bn_L_Middle_b01/bn_L_Middle_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_pinky_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_pinky_a01/bn_L_pinky_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_pinky_a01/bn_L_pinky_b01/bn_L_pinky_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Ring_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Ring_a01/bn_L_Ring_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_Ring_a01/bn_L_Ring_b01/bn_L_Ring_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_thumb_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_thumb_a01/bn_L_thumb_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_L_Clavicle01/bn_L_shoulder01/bn_L_elbow01/bn_L_wrist01/bn_L_thumb_a01/bn_L_thumb_b01/bn_L_thumb_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_LowerLid01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_LowerLid01/bn_L_LowerLid01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_UpperLid01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_L_UpperLid01/bn_L_UpperLid01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_LowerLid01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_LowerLid01/bn_R_LowerLid01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_UpperLid01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/be_R_UpperLid01/bn_R_UpperLid01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01/bn_L_Braid_h01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_Braid_a01/bn_L_Braid_b01/bn_L_Braid_c01/bn_L_Braid_d01/bn_L_Braid_e01/bn_L_Braid_f01/bn_L_Braid_g01/bn_L_Braid_h01/bn_L_Braid_i01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_eye01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_L_eye01/be_L_eye01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_Mouth01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_Mouth01/be_Mouth01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01/bn_R_Braid_h01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_Braid_a01/bn_R_Braid_b01/bn_R_Braid_c01/bn_R_Braid_d01/bn_R_Braid_e01/bn_R_Braid_f01/bn_R_Braid_g01/bn_R_Braid_h01/bn_R_Braid_i01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_eye01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_neck_a01/bn_neck_b01/bn_neck_c01/bn_R_eye01/be_R_eye01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/be_R_Shoulder_Fixer01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/be_R_Shoulder_Fixer01/bn_R_Shoulder_Fixer01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_elbowTwist_a01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_elbowTwist_b01
+        weight: 0
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Index_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Index_a01/bn_R_Index_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Index_a01/bn_R_Index_b01/bn_R_Index_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Middle_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Middle_a01/bn_R_Middle_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Middle_a01/bn_R_Middle_b01/bn_R_Middle_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_pinky_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_pinky_a01/bn_R_pinky_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_pinky_a01/bn_R_pinky_b01/bn_R_pinky_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Ring_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Ring_a01/bn_R_Ring_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_Ring_a01/bn_R_Ring_b01/bn_R_Ring_c01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_thumb_a01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_thumb_a01/bn_R_thumb_b01
+        weight: 1
+      - path: GlobalControl01/Joints/bn_spine_a01/bn_spine_b01/bn_spine_c01/bn_spine_d01/bn_spine_e01/bn_R_Clavicle01/bn_R_shoulder01/bn_R_elbow01/bn_R_wrist01/bn_R_thumb_a01/bn_R_thumb_b01/bn_R_thumb_c01
+        weight: 1
+      - path: Mesh01
+        weight: 0
+      - path: Mesh01/Mesh_Arms01
+        weight: 0
+      - path: Mesh01/Mesh_Braids01
+        weight: 0
+      - path: Mesh01/Mesh_Cap01
+        weight: 0
+      - path: Mesh01/Mesh_Eyebrows01
+        weight: 0
+      - path: Mesh01/Mesh_Front_Bang01
+        weight: 0
+      - path: Mesh01/Mesh_Head01
+        weight: 0
+      - path: Mesh01/Mesh_L_Ear01
+        weight: 0
+      - path: Mesh01/Mesh_L_Eye_Ball01
+        weight: 0
+      - path: Mesh01/Mesh_L_Eye_Pupil01
+        weight: 0
+      - path: Mesh01/Mesh_L_Eye_Shine01
+        weight: 0
+      - path: Mesh01/Mesh_Lashes01
+        weight: 0
+      - path: Mesh01/Mesh_Legs01
+        weight: 0
+      - path: Mesh01/Mesh_Lower_Gum01
+        weight: 0
+      - path: Mesh01/Mesh_R_Ear01
+        weight: 0
+      - path: Mesh01/Mesh_R_Eye_Ball02
+        weight: 0
+      - path: Mesh01/Mesh_R_Eye_Pupil01
+        weight: 0
+      - path: Mesh01/Mesh_R_Eye_Shine01
+        weight: 0
+      - path: Mesh01/Mesh_Shirt01
+        weight: 0
+      - path: Mesh01/Mesh_Shirt_Collar01
+        weight: 0
+      - path: Mesh01/Mesh_Skirt01
+        weight: 0
+      - path: Mesh01/Mesh_Tongue
+        weight: 0
+      - path: Mesh01/Mesh_Upper_Gum01
+        weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
     isReadable: 1
@@ -762,7 +941,7 @@ ModelImporter:
     normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     human:
     - boneName: bn_spine_a01
@@ -1846,7 +2025,8 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f6587701ef8d4ed4dbde0827a263e7b0,
+    type: 3}
   animationType: 3
   additionalBone: 0
   userData: 

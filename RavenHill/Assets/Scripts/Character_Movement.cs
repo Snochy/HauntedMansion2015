@@ -19,13 +19,14 @@ public class Character_Movement : MonoBehaviour {
 
 	public Animator anim;
 
-    void Start()
-    {
-        rotationY = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamX");
-    }
+	void Start()
+	{
+		InvokeRepeating ("RandomIdle", Random.Range(5,10), Random.Range(20,25));
+	}
 
     void Update() {
-        rotationY = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamX");
+		if(GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>() != null)
+        	rotationY = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamX");
 
 		if (!GamePause.isFrozen) 
 		{
@@ -77,5 +78,17 @@ public class Character_Movement : MonoBehaviour {
             moveDirection.y -= 160 * Time.deltaTime;
             controller.Move(moveDirection * Time.deltaTime);
         }
+	}
+
+	void RandomIdle()
+	{
+		anim.SetInteger ("IdleNum", 1);
+		StartCoroutine(wait ());
+	}
+
+	IEnumerator wait()
+	{
+		yield return new WaitForSeconds(1);		
+		anim.SetInteger ("IdleNum", 0);
 	}
 }
