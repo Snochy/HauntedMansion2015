@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: Lucy_Animations_Idles.ma
-//Last modified: Thu, Oct 29, 2015 09:57:12 PM
+//Last modified: Tue, Nov 03, 2015 09:18:41 PM
 //Codeset: 1252
 file -rdi 1 -ns "Lucy_Rig02" -rfn "Lucy_Rig02RN" -op "v=0;" "E:/Digtal Media Projects/Projects/HauntedMansion9272015/RavenHill/Maya/Lucy/Maya Files/Lucy_Rig.ma";
 file -r -ns "Lucy_Rig02" -dr 1 -rfn "Lucy_Rig02RN" -op "v=0;" "E:/Digtal Media Projects/Projects/HauntedMansion9272015/RavenHill/Maya/Lucy/Maya Files/Lucy_Rig.ma";
@@ -17,12 +17,12 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 37.619936047169595 25.07768311468012 62.147589495975204 ;
-	setAttr ".r" -type "double3" -8.1383527245221234 -1764.9999999972522 -4.8534254167841759e-016 ;
+	setAttr ".t" -type "double3" -1.4625743934999307 68.261724097157483 3.7765257613717012 ;
+	setAttr ".r" -type "double3" -86.7383527245062 -1795.399999997112 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 72.315029186894776;
+	setAttr ".coi" 50.549516342326655;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -223,8 +223,8 @@ createNode mentalrayOptions -s -n "miDefaultOptions";
 	setAttr ".stringOptions[47].type" -type "string" "color";
 createNode mentalrayFramebuffer -s -n "miDefaultFramebuffer";
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 9 ".lnk";
-	setAttr -s 9 ".slnk";
+	setAttr -s 28 ".lnk";
+	setAttr -s 28 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -536,9 +536,9 @@ createNode reference -n "Lucy_Rig02RN";
 		1 |Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_bn_Handle_Grip01|Lucy_Rig02:CC_Lantern01 
 		"blendPoint2" "blendPoint2" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Iks01|Lucy_Rig02:IK_Spine01" 
-		"translate" " -type \"double3\" 0.0408368035980302 17.267457172102336 0"
+		"translate" " -type \"double3\" -8.3800311602967581e-005 17.206023431687512 0"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Iks01|Lucy_Rig02:IK_Spine01" 
-		"rotate" " -type \"double3\" -89.999999999999986 0 85.873868875735099"
+		"rotate" " -type \"double3\" -89.999999999999972 0 87.75448756733077"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_thumb_a01" 
 		"rotate" " -type \"double3\" -1.1416231273548367 6.5131772316942307 -8.9366530080598174"
 		
@@ -553,7 +553,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_thumb_a01" 
 		"JointB" " -av -k 1 -17.904657876908797"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Middle_a01" 
-		"rotate" " -type \"double3\" 0 0 -22.288029774088265"
+		"rotate" " -type \"double3\" 0 0 -29.92743207186399"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Middle_a01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Middle_a01" 
@@ -561,11 +561,11 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Middle_a01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Middle_a01" 
-		"JointA" " -av -k 1 -17.617994273922001"
+		"JointA" " -av -k 1 -17.884657876908797"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Middle_a01" 
-		"JointB" " -av -k 1 -17.617994273922001"
+		"JointB" " -av -k 1 -17.884657876908797"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Index_a01" 
-		"rotate" " -type \"double3\" 0 0 -22.288029774088265"
+		"rotate" " -type \"double3\" 0 0 -29.92743207186399"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Index_a01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Index_a01" 
@@ -573,11 +573,11 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Index_a01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Index_a01" 
-		"JointA" " -av -k 1 -17.617994273922001"
+		"JointA" " -av -k 1 -17.884657876908797"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Index_a01" 
-		"JointB" " -av -k 1 -17.617994273922001"
+		"JointB" " -av -k 1 -17.884657876908797"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Ring_a01" 
-		"rotate" " -type \"double3\" 0 0 -22.330780785892561"
+		"rotate" " -type \"double3\" 0 0 -28.153765822938638"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Ring_a01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Ring_a01" 
@@ -585,11 +585,11 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Ring_a01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Ring_a01" 
-		"JointA" " -av -k 1 -17.617994273922001"
+		"JointA" " -av -k 1 -17.884657876908797"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_Ring_a01" 
-		"JointB" " -av -k 1 -17.617994273922001"
+		"JointB" " -av -k 1 -17.884657876908797"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_pinky_a01" 
-		"rotate" " -type \"double3\" 0 0 8.7517802041272201"
+		"rotate" " -type \"double3\" 0 0 1.1123779063514938"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_pinky_a01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_pinky_a01" 
@@ -597,9 +597,9 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_pinky_a01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_pinky_a01" 
-		"JointA" " -av -k 1 2.6119588846972004"
+		"JointA" " -av -k 1 2.3452952817104027"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_L_Clavicle01|Lucy_Rig02:bn_L_shoulder01|Lucy_Rig02:bn_L_elbow01|Lucy_Rig02:bn_L_wrist01|Lucy_Rig02:bn_L_pinky_a01" 
-		"JointB" " -av -k 1 2.6119588846972004"
+		"JointB" " -av -k 1 2.3452952817104027"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_R_Clavicle01|Lucy_Rig02:bn_R_shoulder01|Lucy_Rig02:bn_R_elbow01|Lucy_Rig02:bn_R_wrist01|Lucy_Rig02:bn_R_thumb_a01" 
 		"rotate" " -type \"double3\" 0 0 -17.938410424648261"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:Joints|Lucy_Rig02:bn_spine_a01|Lucy_Rig02:bn_spine_b01|Lucy_Rig02:bn_spine_c01|Lucy_Rig02:bn_spine_d01|Lucy_Rig02:bn_spine_e01|Lucy_Rig02:bn_R_Clavicle01|Lucy_Rig02:bn_R_shoulder01|Lucy_Rig02:bn_R_elbow01|Lucy_Rig02:bn_R_wrist01|Lucy_Rig02:bn_R_thumb_a01" 
@@ -801,7 +801,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:cc_R_foot01|Lucy_Rig02:locOri_rl_R_Ball01|Lucy_Rig02:CC_R_Ball01" 
 		"rotateZ" " -av -7"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01" 
-		"translate" " -type \"double3\" -0.22671025171655645 0 0"
+		"translate" " -type \"double3\" -0.29183944113955013 0 0"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01" 
 		"translateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01" 
@@ -825,7 +825,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Hib01" 
 		"translateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Hib01" 
-		"rotate" " -type \"double3\" -5 -3.0000000000000004 0"
+		"rotate" " -type \"double3\" -5.3139212008688581 -3.0000000000000004 0"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Hib01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Hib01" 
@@ -841,7 +841,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01" 
 		"translateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01" 
-		"rotate" " -type \"double3\" -6.301127984731977 1.8892135143473017 0"
+		"rotate" " -type \"double3\" -17.402795000478942 0 0"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01" 
@@ -849,7 +849,8 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01" 
-		"rotate" " -type \"double3\" 20 67 22"
+		"rotate" " -type \"double3\" 10.992261098404731 67.171917147660736 12.240716458443627"
+		
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01" 
 		"rotateY" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01" 
@@ -857,7 +858,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01|Lucy_Rig02:locOri_FK_L_elbow01|Lucy_Rig02:CC_L_Elbow01" 
-		"rotate" " -type \"double3\" 0 0 -19.706906628166781"
+		"rotate" " -type \"double3\" 0 0 -19.833610337455617"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01|Lucy_Rig02:locOri_FK_L_elbow01|Lucy_Rig02:CC_L_Elbow01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01|Lucy_Rig02:locOri_FK_L_elbow01|Lucy_Rig02:CC_L_Elbow01" 
@@ -865,7 +866,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01|Lucy_Rig02:locOri_FK_L_elbow01|Lucy_Rig02:CC_L_Elbow01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01|Lucy_Rig02:locOri_FK_L_elbow01|Lucy_Rig02:CC_L_Elbow01|Lucy_Rig02:locOri_FK_L_wrist01|Lucy_Rig02:CC_L_Wrist01" 
-		"rotate" " -type \"double3\" 0 0 -5.37"
+		"rotate" " -type \"double3\" 4.4460169286813285 0 -5.37"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01|Lucy_Rig02:locOri_FK_L_elbow01|Lucy_Rig02:CC_L_Elbow01|Lucy_Rig02:locOri_FK_L_wrist01|Lucy_Rig02:CC_L_Wrist01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01|Lucy_Rig02:locOri_FK_L_elbow01|Lucy_Rig02:CC_L_Elbow01|Lucy_Rig02:locOri_FK_L_wrist01|Lucy_Rig02:CC_L_Wrist01" 
@@ -873,7 +874,8 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_L_shoulder01|Lucy_Rig02:CC_L_Shoulder01|Lucy_Rig02:locOri_FK_L_elbow01|Lucy_Rig02:CC_L_Elbow01|Lucy_Rig02:locOri_FK_L_wrist01|Lucy_Rig02:CC_L_Wrist01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_R_shoulder01|Lucy_Rig02:CC_R_Shoulder01" 
-		"rotate" " -type \"double3\" -27 54 -37"
+		"rotate" " -type \"double3\" -26.956378283615358 51.666362769424197 -35.549744964124066"
+		
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_R_shoulder01|Lucy_Rig02:CC_R_Shoulder01" 
 		"rotateY" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_R_shoulder01|Lucy_Rig02:CC_R_Shoulder01" 
@@ -881,7 +883,8 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_R_shoulder01|Lucy_Rig02:CC_R_Shoulder01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_R_shoulder01|Lucy_Rig02:CC_R_Shoulder01|Lucy_Rig02:locOri_FK_R_elbow01|Lucy_Rig02:CC_R_Elbow01" 
-		"rotate" " -type \"double3\" 0 0 -67"
+		"rotate" " -type \"double3\" -0.64157924148241696 0.87763115808455394 -68.243039222021551"
+		
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_R_shoulder01|Lucy_Rig02:CC_R_Shoulder01|Lucy_Rig02:locOri_FK_R_elbow01|Lucy_Rig02:CC_R_Elbow01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_R_shoulder01|Lucy_Rig02:CC_R_Shoulder01|Lucy_Rig02:locOri_FK_R_elbow01|Lucy_Rig02:CC_R_Elbow01" 
@@ -899,8 +902,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_FK_R_shoulder01|Lucy_Rig02:CC_R_Shoulder01|Lucy_Rig02:locOri_FK_R_elbow01|Lucy_Rig02:CC_R_Elbow01|Lucy_Rig02:locOri_FK_R_wrist01|Lucy_Rig02:CC_R_Wrist01|Lucy_Rig02:locOri_CC_R_Wrist01|Lucy_Rig02:locOri_CC_R_Wrist0Shape1" 
 		"lodVisibility" " 0"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01" 
-		"rotate" " -type \"double3\" 7.1296422614182937 -0.81682516848877429 -0.096065549960007449"
-		
+		"rotate" " -type \"double3\" -15.7 0.01509806778239221 -2.7964603567174406"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01" 
@@ -908,8 +910,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01" 
-		"rotate" " -type \"double3\" 7.145826876268532 -0.81682516848877429 -0.096065549960007449"
-		
+		"rotate" " -type \"double3\" -15.7 0.01509806778239221 -2.7964603567174406"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01" 
@@ -917,8 +918,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01" 
-		"rotate" " -type \"double3\" 7.145826876268532 -0.81682516848877429 -0.096065549960007449"
-		
+		"rotate" " -type \"double3\" -15.7 0.01509806778239221 -2.8120194836923531"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01" 
@@ -1070,11 +1070,11 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01|Lucy_Rig02:locOri_bn_R_Braid_a02|Lucy_Rig02:cc_R_Braid_a01|Lucy_Rig02:locOri_bn_R_Braid_b01|Lucy_Rig02:cc_R_Braid_b01|Lucy_Rig02:locOri_bn_R_Braid_c01|Lucy_Rig02:cc_R_Braid_c01|Lucy_Rig02:locOri_bn_R_Braid_d01|Lucy_Rig02:cc_R_Braid_d01|Lucy_Rig02:locOri_bn_R_Braid_e01|Lucy_Rig02:cc_R_Braid_e01|Lucy_Rig02:locOri_bn_R_Braid_f01|Lucy_Rig02:cc_R_Braid_f01|Lucy_Rig02:locOri_bn_R_Braid_g01|Lucy_Rig02:cc_R_Braid_g01|Lucy_Rig02:locOri_bn_R_Braid_h01|Lucy_Rig02:cc_R_Braid_h01|Lucy_Rig02:locOri_bn_R_Braid_i01|Lucy_Rig02:cc_R_Braid_i01" 
 		"rotateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01|Lucy_Rig02:CC_Face01" 
-		"lUpperLid" " -av -k 1 8.5185286799902808"
+		"lUpperLid" " -av -k 1 7.4818007473148676"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01|Lucy_Rig02:CC_Face01" 
 		"lLowerLid" " -av -k 1 2"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01|Lucy_Rig02:CC_Face01" 
-		"rUpperLid" " -av -k 1 8.5185286799902808"
+		"rUpperLid" " -av -k 1 7.4818007473148676"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01|Lucy_Rig02:CC_Face01" 
 		"rLowerLid" " -av -k 1 2"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_neck_a01|Lucy_Rig02:cc_Neck_a01|Lucy_Rig02:locOri_bn_neck_b01|Lucy_Rig02:cc_Neck_b01|Lucy_Rig02:locOri_bn_neck_c01|Lucy_Rig02:cc_Neck_c01|Lucy_Rig02:CC_Face01" 
@@ -1090,7 +1090,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_L_Clavicle01|Lucy_Rig02:CC_L_Clavicle01" 
 		"translateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_L_Clavicle01|Lucy_Rig02:CC_L_Clavicle01" 
-		"rotate" " -type \"double3\" 0 -5.222208701531339 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_L_Clavicle01|Lucy_Rig02:CC_L_Clavicle01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_L_Clavicle01|Lucy_Rig02:CC_L_Clavicle01" 
@@ -1116,7 +1116,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_R_Clavicle01|Lucy_Rig02:CC_R_Clavicle01" 
 		"translateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_R_Clavicle01|Lucy_Rig02:CC_R_Clavicle01" 
-		"rotate" " -type \"double3\" 0 -5.222208701531339 0"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_R_Clavicle01|Lucy_Rig02:CC_R_Clavicle01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_R_Clavicle01|Lucy_Rig02:CC_R_Clavicle01" 
@@ -1132,7 +1132,8 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:locOri_jntDrv_Hib01|Lucy_Rig02:cc_CoG01|Lucy_Rig02:cc_Chest01|Lucy_Rig02:locOri_bn_R_Clavicle01|Lucy_Rig02:CC_R_Clavicle01" 
 		"scaleZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:cc_R_Eyes01" 
-		"translate" " -type \"double3\" 2.4966237868533927 -0.3 -0.50477053732811528"
+		"translate" " -type \"double3\" -7.5867481017450311 -0.28620413662521693 -3.2746511860092653"
+		
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:cc_R_Eyes01" 
 		"translateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:cc_R_Eyes01" 
@@ -1140,7 +1141,7 @@ createNode reference -n "Lucy_Rig02RN";
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:cc_R_Eyes01" 
 		"translateZ" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:cc_R_Eyes01" 
-		"rotate" " -type \"double3\" 0 11.430051971212817 0"
+		"rotate" " -type \"double3\" 0 -70.036791943136535 0"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:cc_R_Eyes01" 
 		"rotateX" " -av"
 		2 "|Lucy_Rig02:Lucy01|Lucy_Rig02:GlobalControl01|Lucy_Rig02:ControlGrps01|Lucy_Rig02:cc_R_Eyes01" 
@@ -3827,23 +3828,23 @@ createNode animCurveTA -n "cc_Hib01_rotateZ";
 createNode animCurveTL -n "cc_Chest01_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 34 ".ktv[0:33]"  0 0 1 0 120 0 121 0 123 0 124 0 127 0 130 0
-		 133 0 136 0 139 0 141 0 142 0 145 0 149 0 152 0 155 0 158 0 170 0 173 0 177 0 189 0
-		 194 0 204 0 208 0 213 0 223 0 228 0 238 0 243 0 253 0 265 0 283 0 295 0;
-	setAttr -s 34 ".kit[2:33]"  1 18 18 18 18 18 18 18 
+	setAttr -s 32 ".ktv[0:31]"  0 0 1 0 120 0 121 0 127 0 130 0 133 0 136 0
+		 139 0 141 0 142 0 145 0 149 0 152 0 155 0 158 0 170 0 173 0 177 0 189 0 194 0 204 0
+		 208 0 213 0 223 0 228 0 238 0 243 0 253 0 265 0 283 0 295 0;
+	setAttr -s 32 ".kit[2:31]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 1 18;
-	setAttr -s 34 ".kot[2:33]"  1 18 18 18 18 18 18 18 
+		18 18 18 1 18;
+	setAttr -s 32 ".kot[2:31]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 
-		18 18 18 18 18 1 18;
-	setAttr -s 34 ".kix[2:33]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 34 ".kiy[2:33]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 34 ".kox[2:33]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 34 ".koy[2:33]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0;
+		18 18 18 1 18;
+	setAttr -s 32 ".kix[2:31]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 32 ".kiy[2:31]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 32 ".kox[2:31]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 32 ".koy[2:31]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "cc_Chest01_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -4153,7 +4154,7 @@ createNode animCurveTA -n "CC_R_Shoulder01_rotateY";
 	setAttr -s 34 ".ktv[0:33]"  0 0 1 54 120 54 121 54 123 54 124 54 127 54
 		 130 54 133 54 136 54 139 54 141 54 142 54 145 40.745057859475914 149 19.259824858147972
 		 152 19.259824858147972 155 19.259824858147972 158 18.986787150965366 170 20.337811657320731
-		 173 18.368206301688407 177 19.383268680577309 189 17.335388515106526 194 23.590560276757888
+		 173 18.36820630168841 177 19.383268680577309 189 17.335388515106526 194 23.590560276757888
 		 204 27.271307658979641 208 25.610212058456113 213 54.21283022496128 223 54.21283022496128
 		 228 54.21283022496128 238 54.21283022496128 243 56.239346653529658 253 43.883854207339525
 		 265 47.209285705542392 283 54 295 54;
@@ -4177,7 +4178,7 @@ createNode animCurveTA -n "CC_R_Shoulder01_rotateZ";
 	setAttr -s 34 ".ktv[0:33]"  0 0 1 -37 120 -37 121 -37 123 -37 124 -37
 		 127 -37 130 -37 133 -37 136 -37 139 -37 141 -37 142 -37 145 -28.496315100134513 149 -13.235612023688796
 		 152 -13.235612023688796 155 -13.235612023688796 158 -11.823085842059839 170 -13.99729876796977
-		 173 -13.235612023688796 177 -15.964585802243933 189 -15.777764299609055 194 -14.025158890979696
+		 173 -13.235612023688796 177 -15.964585802243933 189 -15.777764299609055 194 -14.025158890979698
 		 204 -15.505033474260959 208 -13.235612023688796 213 -13.235612023688796 223 -13.235612023688796
 		 228 -13.235612023688796 238 -13.235612023688796 243 -34.941279367063956 253 -58.71209086499583
 		 265 -48.745632846619522 283 -37 295 -37;
@@ -4317,32 +4318,29 @@ createNode animCurveTA -n "CC_R_Wrist01_rotateZ";
 createNode animCurveTA -n "cc_Neck_a01_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 33 ".ktv[0:32]"  0 0 1 2 120 2 121 2 123 2 124 5 127 7 130 7
-		 133 4.1520891482011573 136 -6.273059040546614 139 -13.040716651432643 142 -15.7 145 -15.7
-		 149 -17 152 -18.6 155 -19.2 158 -19.2 170 -19.2 173 -19.2 177 -19.2 189 -19.2 194 -19.2
-		 204 -19.2 208 -7 213 4 223 4 228 13.5 238 13.5 243 23 253 23 265 23 283 2 295 2;
-	setAttr -s 33 ".kit[2:32]"  1 18 18 18 1 1 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 1 1 18 
-		18 18 18 18 1 18;
-	setAttr -s 33 ".kot[2:32]"  1 18 18 18 1 1 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 1 1 18 
-		18 18 18 18 1 18;
-	setAttr -s 33 ".kix[2:32]"  1 1 1 0.88590806722640991 0.99664396047592163 
-		0.99680739641189575 0.7335016131401062 0.64009487628936768 0.83532893657684326 1 
-		1 0.98527449369430542 0.98840987682342529 1 1 1 1 1 1 1 1 0.67948353290557861 0.99617648124694824 
-		0.99677884578704834 1 1 1 1 1 1 1;
-	setAttr -s 33 ".kiy[2:32]"  0 0 0 0.46386080980300903 0.08185894787311554 
-		-0.079844266176223755 -0.6796877384185791 -0.76829582452774048 -0.54975056648254395 
-		0 0 -0.17098000645637512 -0.15180887281894684 0 0 0 0 0 0 0 0 0.73369073867797852 
-		0.087364248931407928 0.080199331045150757 0 0 0 0 0 0 0;
-	setAttr -s 33 ".kox[2:32]"  1 1 1 0.88590812683105469 0.99664396047592163 
-		0.99680739641189575 0.7335016131401062 0.64009487628936768 0.83532893657684326 1 
-		1 0.98527443408966064 0.98840987682342529 1 1 1 1 1 1 1 1 0.67948353290557861 0.99617648124694824 
-		0.99677884578704834 1 1 1 1 1 1 1;
-	setAttr -s 33 ".koy[2:32]"  0 0 0 0.46386083960533142 0.08185885101556778 
-		-0.079844288527965546 -0.6796877384185791 -0.76829582452774048 -0.54975056648254395 
-		0 0 -0.17098000645637512 -0.15180887281894684 0 0 0 0 0 0 0 0 0.73369073867797852 
-		0.087364241480827332 0.080199338495731354 0 0 0 0 0 0 0;
+	setAttr -s 30 ".ktv[0:29]"  0 0 1 2 120 2 121 2 123 2 124 5 131 7 133 7
+		 136 -6.273059040546614 139 -13.040716651432643 142 -15.7 145 -15.7 150 -6.5666733391348346
+		 155 -0.71775787874981811 158 -0.71775787874981811 170 -0.71775787874981811 173 -0.71775787874981811
+		 177 -0.71775787874981811 189 -0.71775787874981811 194 -0.71775787874981811 204 -0.71775787874981811
+		 213 4 223 4 228 13.5 238 13.5 243 23 253 23 265 23 283 2 295 2;
+	setAttr -s 30 ".kit[2:29]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 1 1 18 18 18 18 
+		18 1 18;
+	setAttr -s 30 ".kot[2:29]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 1 1 18 18 18 18 
+		18 1 18;
+	setAttr -s 30 ".kix[2:29]"  1 1 1 0.96739721298217773 1 1 0.58148407936096191 
+		0.83532893657684326 1 1 0.84701693058013916 1 1 1 1 1 1 1 1 0.99617648124694824 0.99677884578704834 
+		1 1 1 1 1 1 1;
+	setAttr -s 30 ".kiy[2:29]"  0 0 0 0.25326389074325562 0 0 -0.81355780363082886 
+		-0.54975056648254395 0 0 0.53156596422195435 0 0 0 0 0 0 0 0 0.087364248931407928 
+		0.080199331045150757 0 0 0 0 0 0 0;
+	setAttr -s 30 ".kox[2:29]"  1 1 1 0.96739727258682251 1 1 0.58148407936096191 
+		0.83532893657684326 1 1 0.84701693058013916 1 1 1 1 1 1 1 1 0.99617648124694824 0.99677884578704834 
+		1 1 1 1 1 1 1;
+	setAttr -s 30 ".koy[2:29]"  0 0 0 0.25326389074325562 0 0 -0.81355780363082886 
+		-0.54975056648254395 0 0 0.53156596422195435 0 0 0 0 0 0 0 0 0.087364241480827332 
+		0.080199338495731354 0 0 0 0 0 0 0;
 createNode animCurveTA -n "cc_Neck_a01_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -4363,7 +4361,7 @@ createNode animCurveTA -n "cc_Neck_a01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 30 ".ktv[0:29]"  0 0 1 0 60 -1 120 0 121 -0.1296287819199346
-		 123 -0.1296287819199346 125 -0.8 127 -0.1296287819199346 131 -0.071573705778830668
+		 123 -0.1296287819199346 125 -2.5589792711134338 131 -0.0056449499320814604 133 -0.0056449499320814587
 		 137 -4.5714326309193689 139 -4.5714326309193689 152 0.6 155 1.559311904404401 158 1.3
 		 162 0.78698110064099891 168 0.78698110064099891 174 2.3420669769352211 177 2.4036609967489633
 		 183 2.1714989220664007 189 2.3420669769352211 199 2.3420669769352211 205 0.74266204124792901
@@ -4375,49 +4373,44 @@ createNode animCurveTA -n "cc_Neck_a01_rotateZ";
 	setAttr -s 30 ".kot[3:29]"  1 18 18 18 18 18 1 1 
 		18 18 1 18 18 18 18 18 18 18 1 1 18 18 18 18 18 
 		1 18;
-	setAttr -s 30 ".kix[3:29]"  1 1 1 1 0.99983370304107666 1 0.96101683378219604 
-		0.97980880737304688 0.98736304044723511 1 0.98838591575622559 1 1 0.99966728687286377 
-		1 1 1 1 0.99975359439849854 0.99977719783782959 0.99928551912307739 1 1 1 1 1 1;
-	setAttr -s 30 ".kiy[3:29]"  0 0 0 0 0.018235472962260246 0 -0.27648985385894775 
-		0.19993682205677032 0.15847417712211609 0 -0.15196491777896881 0 0 0.02579185739159584 
-		0 0 0 0 -0.022200444713234901 0.021110029891133308 0.037795029580593109 0 0 0 0 0 
-		0;
-	setAttr -s 30 ".kox[3:29]"  1 1 1 1 0.99983370304107666 1 0.96101689338684082 
-		0.97980886697769165 0.98736315965652466 1 0.98838591575622559 1 1 0.99966728687286377 
-		1 1 1 1 0.99975359439849854 0.99977719783782959 0.99928551912307739 1 1 1 1 1 1;
-	setAttr -s 30 ".koy[3:29]"  0 0 0 0 0.018235472962260246 0 -0.27648967504501343 
-		0.19993667304515839 0.15847419202327728 0 -0.1519649475812912 0 0 0.02579185739159584 
-		0 0 0 0 -0.022200452163815498 0.021110028028488159 0.037795025855302811 0 0 0 0 0 
-		0;
+	setAttr -s 30 ".kix[3:29]"  1 1 1 1 1 1 0.96101683378219604 0.97980880737304688 
+		0.98736304044723511 1 0.98838591575622559 1 1 0.99966728687286377 1 1 1 1 0.99975359439849854 
+		0.99977719783782959 0.99928551912307739 1 1 1 1 1 1;
+	setAttr -s 30 ".kiy[3:29]"  0 0 0 0 0 0 -0.27648985385894775 0.19993682205677032 
+		0.15847417712211609 0 -0.15196491777896881 0 0 0.02579185739159584 0 0 0 0 -0.022200444713234901 
+		0.021110029891133308 0.037795029580593109 0 0 0 0 0 0;
+	setAttr -s 30 ".kox[3:29]"  1 1 1 1 1 1 0.96101689338684082 0.97980886697769165 
+		0.98736315965652466 1 0.98838591575622559 1 1 0.99966728687286377 1 1 1 1 0.99975359439849854 
+		0.99977719783782959 0.99928551912307739 1 1 1 1 1 1;
+	setAttr -s 30 ".koy[3:29]"  0 0 0 0 0 0 -0.27648967504501343 0.19993667304515839 
+		0.15847419202327728 0 -0.1519649475812912 0 0 0.02579185739159584 0 0 0 0 -0.022200452163815498 
+		0.021110028028488159 0.037795025855302811 0 0 0 0 0 0;
 createNode animCurveTA -n "cc_Neck_b01_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 33 ".ktv[0:32]"  0 0 1 2 120 2 121 2 123 2 124 5 127 7 130 7
-		 133 4.1520891482011573 136 -6.273059040546614 139 -13.048013847984173 142 -15.7 145 -15.7
-		 149 -17 152 -18.6 155 -19.2 158 -19.2 170 -19.2 173 -19.2 177 -19.2 189 -19.2 194 -19.2
-		 204 -19.2 208 -7 213 4 223 4 228 13.5 238 13.5 243 23 253 23 265 23 283 2 295 2;
-	setAttr -s 33 ".kit[2:32]"  1 18 18 18 1 1 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 1 1 18 
-		18 18 18 18 1 18;
-	setAttr -s 33 ".kot[2:32]"  1 18 18 18 1 1 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 1 1 18 
-		18 18 18 18 1 18;
-	setAttr -s 33 ".kix[2:32]"  1 1 1 0.88590806722640991 0.99566203355789185 
-		0.99615228176116943 0.7335016131401062 0.63993459939956665 0.83532893657684326 1 
-		1 0.98527449369430542 0.98840987682342529 1 1 1 1 1 1 1 1 0.67948353290557861 0.99617648124694824 
-		0.99677884578704834 1 1 1 1 1 1 1;
-	setAttr -s 33 ".kiy[2:32]"  0 0 0 0.46386080980300903 0.093043580651283264 
-		-0.087639816105365753 -0.6796877384185791 -0.7684294581413269 -0.54975056648254395 
-		0 0 -0.17098000645637512 -0.15180887281894684 0 0 0 0 0 0 0 0 0.73369073867797852 
-		0.087364248931407928 0.080199331045150757 0 0 0 0 0 0 0;
-	setAttr -s 33 ".kox[2:32]"  1 1 1 0.88590812683105469 0.99566209316253662 
-		0.99615228176116943 0.7335016131401062 0.63993459939956665 0.83532893657684326 1 
-		1 0.98527443408966064 0.98840987682342529 1 1 1 1 1 1 1 1 0.67948353290557861 0.99617648124694824 
-		0.99677884578704834 1 1 1 1 1 1 1;
-	setAttr -s 33 ".koy[2:32]"  0 0 0 0.46386083960533142 0.093043550848960876 
-		-0.087639816105365753 -0.6796877384185791 -0.7684294581413269 -0.54975056648254395 
-		0 0 -0.17098000645637512 -0.15180887281894684 0 0 0 0 0 0 0 0 0.73369073867797852 
-		0.087364241480827332 0.080199338495731354 0 0 0 0 0 0 0;
+	setAttr -s 30 ".ktv[0:29]"  0 0 1 2 120 2 121 2 123 2 124 5 131 7 133 7
+		 136 -6.273059040546614 139 -13.048013847984173 142 -15.7 145 -15.7 150 -6.5666733391348346
+		 155 -0.71775787874981811 158 -0.71775787874981811 170 -0.71775787874981811 173 -0.71775787874981811
+		 177 -0.71775787874981811 189 -0.71775787874981811 194 -0.71775787874981811 204 -0.71775787874981811
+		 213 4 223 4 228 13.5 238 13.5 243 23 253 23 265 23 283 2 295 2;
+	setAttr -s 30 ".kit[2:29]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 1 1 18 18 18 18 
+		18 1 18;
+	setAttr -s 30 ".kot[2:29]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 1 1 18 18 18 18 
+		18 1 18;
+	setAttr -s 30 ".kix[2:29]"  1 1 1 0.96739721298217773 1 1 0.58134394884109497 
+		0.83532893657684326 1 1 0.84701693058013916 1 1 1 1 1 1 1 1 0.99617648124694824 0.99677884578704834 
+		1 1 1 1 1 1 1;
+	setAttr -s 30 ".kiy[2:29]"  0 0 0 0.25326389074325562 0 0 -0.81365793943405151 
+		-0.54975056648254395 0 0 0.53156596422195435 0 0 0 0 0 0 0 0 0.087364248931407928 
+		0.080199331045150757 0 0 0 0 0 0 0;
+	setAttr -s 30 ".kox[2:29]"  1 1 1 0.96739727258682251 1 1 0.58134394884109497 
+		0.83532893657684326 1 1 0.84701693058013916 1 1 1 1 1 1 1 1 0.99617648124694824 0.99677884578704834 
+		1 1 1 1 1 1 1;
+	setAttr -s 30 ".koy[2:29]"  0 0 0 0.25326389074325562 0 0 -0.81365793943405151 
+		-0.54975056648254395 0 0 0.53156596422195435 0 0 0 0 0 0 0 0 0.087364241480827332 
+		0.080199338495731354 0 0 0 0 0 0 0;
 createNode animCurveTA -n "cc_Neck_b01_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -4438,9 +4431,9 @@ createNode animCurveTA -n "cc_Neck_b01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 30 ".ktv[0:29]"  0 0 1 0 60 -1 120 0 121 -0.1296287819199346
-		 123 -0.1296287819199346 125 -0.8 127 -0.1296287819199346 131 -0.071573705778830668
+		 123 -0.1296287819199346 125 -2.5589792711134338 131 -0.0056449499320814604 133 -0.0056449499320814587
 		 137 -4.5714326309193689 139 -4.5714326309193689 152 0.6 155 1.559311904404401 158 1.3
-		 162 0.79066086609464814 168 0.79066086609464814 174 2.3420669769352211 177 2.4036609967489633
+		 162 0.79066086609464825 168 0.79066086609464825 174 2.3420669769352211 177 2.4036609967489633
 		 183 2.1714989220664007 189 2.3420669769352211 199 2.3420669769352211 205 0.74297749721187323
 		 213 0.74297749721187323 223 2.2393756541454786 238 3.0000000000000004 243 3.0000000000000004
 		 253 3.2893667270815046 265 3.2893667270815046 283 0 295 0;
@@ -4450,49 +4443,44 @@ createNode animCurveTA -n "cc_Neck_b01_rotateZ";
 	setAttr -s 30 ".kot[3:29]"  1 18 18 18 18 18 1 1 
 		18 18 1 18 18 18 18 18 18 18 1 1 18 18 18 18 18 
 		1 18;
-	setAttr -s 30 ".kix[3:29]"  1 1 1 1 0.99983370304107666 1 0.96101683378219604 
-		0.97980880737304688 0.98736304044723511 1 0.98838591575622559 1 1 0.99966728687286377 
-		1 1 1 1 0.99975275993347168 0.99977797269821167 0.99928575754165649 1 1 1 1 1 1;
-	setAttr -s 30 ".kiy[3:29]"  0 0 0 0 0.018235472962260246 0 -0.27648985385894775 
-		0.19993682205677032 0.15847417712211609 0 -0.15196491777896881 0 0 0.02579185739159584 
-		0 0 0 0 -0.022237977012991905 0.021072966977953911 0.037789750844240189 0 0 0 0 0 
-		0;
-	setAttr -s 30 ".kox[3:29]"  1 1 1 1 0.99983370304107666 1 0.96101689338684082 
-		0.97980886697769165 0.98736315965652466 1 0.98838591575622559 1 1 0.99966728687286377 
-		1 1 1 1 0.99975275993347168 0.99977797269821167 0.99928575754165649 1 1 1 1 1 1;
-	setAttr -s 30 ".koy[3:29]"  0 0 0 0 0.018235472962260246 0 -0.27648967504501343 
-		0.19993667304515839 0.15847419202327728 0 -0.1519649475812912 0 0 0.02579185739159584 
-		0 0 0 0 -0.022237977012991905 0.021072963252663612 0.037789750844240189 0 0 0 0 0 
-		0;
+	setAttr -s 30 ".kix[3:29]"  1 1 1 1 1 1 0.96101683378219604 0.97980880737304688 
+		0.98736304044723511 1 0.98838591575622559 1 1 0.99966728687286377 1 1 1 1 0.99975275993347168 
+		0.99977797269821167 0.99928575754165649 1 1 1 1 1 1;
+	setAttr -s 30 ".kiy[3:29]"  0 0 0 0 0 0 -0.27648985385894775 0.19993682205677032 
+		0.15847417712211609 0 -0.15196491777896881 0 0 0.02579185739159584 0 0 0 0 -0.022237977012991905 
+		0.021072966977953911 0.037789750844240189 0 0 0 0 0 0;
+	setAttr -s 30 ".kox[3:29]"  1 1 1 1 1 1 0.96101689338684082 0.97980886697769165 
+		0.98736315965652466 1 0.98838591575622559 1 1 0.99966728687286377 1 1 1 1 0.99975275993347168 
+		0.99977797269821167 0.99928575754165649 1 1 1 1 1 1;
+	setAttr -s 30 ".koy[3:29]"  0 0 0 0 0 0 -0.27648967504501343 0.19993667304515839 
+		0.15847419202327728 0 -0.1519649475812912 0 0 0.02579185739159584 0 0 0 0 -0.022237977012991905 
+		0.021072963252663612 0.037789750844240189 0 0 0 0 0 0;
 createNode animCurveTA -n "cc_Neck_c01_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 33 ".ktv[0:32]"  0 0 1 2 120 2 121 2 123 2 124 5 127 7 130 7
-		 133 4.152 136 -6.261946100745253 139 -13.029115635220482 142 -15.7 145 -15.7 149 -17
-		 152 -18.6 155 -19.2 158 -19.2 170 -19.2 173 -19.2 177 -19.2 189 -19.2 194 -19.2 204 -19.2
-		 208 -7 213 4 223 4 228 13.5 238 13.5 243 23 253 23 265 23 283 2 295 2;
-	setAttr -s 33 ".kit[2:32]"  1 18 18 18 1 1 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 1 1 18 
-		18 18 18 18 1 18;
-	setAttr -s 33 ".kot[2:32]"  1 18 18 18 1 1 18 18 
-		18 18 18 18 18 18 18 18 18 18 18 18 18 18 1 1 18 
-		18 18 18 18 1 18;
-	setAttr -s 33 ".kix[2:32]"  1 1 1 0.88590806722640991 0.99566203355789185 
-		0.99615228176116943 0.73378533124923706 0.64035189151763916 0.83503127098083496 1 
-		1 0.98527449369430542 0.98840987682342529 1 1 1 1 1 1 1 1 0.67948353290557861 0.99617648124694824 
-		0.99677884578704834 1 1 1 1 1 1 1;
-	setAttr -s 33 ".kiy[2:32]"  0 0 0 0.46386080980300903 0.093043580651283264 
-		-0.087639816105365753 -0.67938137054443359 -0.76808172464370728 -0.55020248889923096 
-		0 0 -0.17098000645637512 -0.15180887281894684 0 0 0 0 0 0 0 0 0.73369073867797852 
-		0.087364248931407928 0.080199331045150757 0 0 0 0 0 0 0;
-	setAttr -s 33 ".kox[2:32]"  1 1 1 0.88590812683105469 0.99566209316253662 
-		0.99615228176116943 0.73378533124923706 0.64035189151763916 0.83503127098083496 1 
-		1 0.98527443408966064 0.98840987682342529 1 1 1 1 1 1 1 1 0.67948353290557861 0.99617648124694824 
-		0.99677884578704834 1 1 1 1 1 1 1;
-	setAttr -s 33 ".koy[2:32]"  0 0 0 0.46386083960533142 0.093043550848960876 
-		-0.087639816105365753 -0.67938137054443359 -0.76808172464370728 -0.55020248889923096 
-		0 0 -0.17098000645637512 -0.15180887281894684 0 0 0 0 0 0 0 0 0.73369073867797852 
-		0.087364241480827332 0.080199338495731354 0 0 0 0 0 0 0;
+	setAttr -s 30 ".ktv[0:29]"  0 0 1 2 120 2 121 2 123 2 124 5 131 7 133 7
+		 136 -6.261946100745253 139 -13.029115635220482 142 -15.7 145 -15.7 150 -6.5666733391348346
+		 155 -0.71775787874981811 158 -0.71775787874981811 170 -0.71775787874981811 173 -0.71775787874981811
+		 177 -0.71775787874981811 189 -0.71775787874981811 194 -0.71775787874981811 204 -0.71775787874981811
+		 213 4 223 4 228 13.5 238 13.5 243 23 253 23 265 23 283 2 295 2;
+	setAttr -s 30 ".kit[2:29]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 1 1 18 18 18 18 
+		18 1 18;
+	setAttr -s 30 ".kot[2:29]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18 18 18 18 18 1 1 18 18 18 18 
+		18 1 18;
+	setAttr -s 30 ".kix[2:29]"  1 1 1 0.96739721298217773 1 1 0.58170688152313232 
+		0.83503127098083496 1 1 0.84701693058013916 1 1 1 1 1 1 1 1 0.99617648124694824 0.99677884578704834 
+		1 1 1 1 1 1 1;
+	setAttr -s 30 ".kiy[2:29]"  0 0 0 0.25326389074325562 0 0 -0.81339842081069946 
+		-0.55020248889923096 0 0 0.53156596422195435 0 0 0 0 0 0 0 0 0.087364248931407928 
+		0.080199331045150757 0 0 0 0 0 0 0;
+	setAttr -s 30 ".kox[2:29]"  1 1 1 0.96739727258682251 1 1 0.58170688152313232 
+		0.83503127098083496 1 1 0.84701693058013916 1 1 1 1 1 1 1 1 0.99617648124694824 0.99677884578704834 
+		1 1 1 1 1 1 1;
+	setAttr -s 30 ".koy[2:29]"  0 0 0 0.25326389074325562 0 0 -0.81339842081069946 
+		-0.55020248889923096 0 0 0.53156596422195435 0 0 0 0 0 0 0 0 0.087364241480827332 
+		0.080199338495731354 0 0 0 0 0 0 0;
 createNode animCurveTA -n "cc_Neck_c01_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -4513,7 +4501,7 @@ createNode animCurveTA -n "cc_Neck_c01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 30 ".ktv[0:29]"  0 0 1 0 60 -1 120 0 121 -0.1296287819199346
-		 123 -0.1296287819199346 125 -0.8 127 -0.1296287819199346 131 -0.071573705778830668
+		 123 -0.1296287819199346 125 -2.5589792711134338 131 -0.0056449499320814604 133 -0.0056449499320814587
 		 137 -4.5762786512229043 139 -4.5762786512229043 152 0.6 155 1.559311904404401 158 1.3
 		 162 0.79295718450767883 168 0.79295718450767883 174 2.3420669769352211 177 2.4036609967489633
 		 183 2.1714989220664007 189 2.3420669769352211 199 2.3420669769352211 205 0.74297749721187323
@@ -4525,20 +4513,18 @@ createNode animCurveTA -n "cc_Neck_c01_rotateZ";
 	setAttr -s 30 ".kot[3:29]"  1 18 18 18 18 18 1 1 
 		18 18 1 18 18 18 18 18 18 18 1 1 18 18 18 18 18 
 		1 18;
-	setAttr -s 30 ".kix[3:29]"  1 1 1 1 0.99983370304107666 1 0.96154981851577759 
-		0.98029059171676636 0.98734354972839355 1 0.98838591575622559 1 1 0.99966728687286377 
-		1 1 1 1 0.99975275993347168 0.99977797269821167 0.99928575754165649 1 1 1 1 1 1;
-	setAttr -s 30 ".kiy[3:29]"  0 0 0 0 0.018235472962260246 0 -0.27463054656982422 
-		0.19756120443344116 0.15859630703926086 0 -0.15196491777896881 0 0 0.02579185739159584 
-		0 0 0 0 -0.022237977012991905 0.021072966977953911 0.037789750844240189 0 0 0 0 0 
-		0;
-	setAttr -s 30 ".kox[3:29]"  1 1 1 1 0.99983370304107666 1 0.96154987812042236 
-		0.98029059171676636 0.98734354972839355 1 0.98838591575622559 1 1 0.99966728687286377 
-		1 1 1 1 0.99975275993347168 0.99977797269821167 0.99928575754165649 1 1 1 1 1 1;
-	setAttr -s 30 ".koy[3:29]"  0 0 0 0 0.018235472962260246 0 -0.27463051676750183 
-		0.1975613534450531 0.15859630703926086 0 -0.1519649475812912 0 0 0.02579185739159584 
-		0 0 0 0 -0.022237977012991905 0.021072963252663612 0.037789750844240189 0 0 0 0 0 
-		0;
+	setAttr -s 30 ".kix[3:29]"  1 1 1 1 1 1 0.96154981851577759 0.98029059171676636 
+		0.98734354972839355 1 0.98838591575622559 1 1 0.99966728687286377 1 1 1 1 0.99975275993347168 
+		0.99977797269821167 0.99928575754165649 1 1 1 1 1 1;
+	setAttr -s 30 ".kiy[3:29]"  0 0 0 0 0 0 -0.27463054656982422 0.19756120443344116 
+		0.15859630703926086 0 -0.15196491777896881 0 0 0.02579185739159584 0 0 0 0 -0.022237977012991905 
+		0.021072966977953911 0.037789750844240189 0 0 0 0 0 0;
+	setAttr -s 30 ".kox[3:29]"  1 1 1 1 1 1 0.96154987812042236 0.98029059171676636 
+		0.98734354972839355 1 0.98838591575622559 1 1 0.99966728687286377 1 1 1 1 0.99975275993347168 
+		0.99977797269821167 0.99928575754165649 1 1 1 1 1 1;
+	setAttr -s 30 ".koy[3:29]"  0 0 0 0 0 0 -0.27463051676750183 0.1975613534450531 
+		0.15859630703926086 0 -0.1519649475812912 0 0 0.02579185739159584 0 0 0 0 -0.022237977012991905 
+		0.021072963252663612 0.037789750844240189 0 0 0 0 0 0;
 createNode animCurveTA -n "cc_L_Braid_a01_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -5350,20 +5336,15 @@ createNode animCurveTA -n "CC_L_Clavicle01_rotateX";
 createNode animCurveTA -n "CC_L_Clavicle01_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 34 ".ktv[0:33]"  0 0 1 0 120 0 121 0 123 0 124 -13 127 -7
-		 130 -3.0000000000000004 133 -3.0000000000000004 136 -3.0000000000000004 139 -3.0000000000000004
-		 141 -3.0000000000000004 142 -3.0000000000000004 145 -3.0000000000000004 149 -3.0000000000000004
-		 152 -3.0000000000000004 155 -3.0000000000000004 158 -3.0000000000000004 170 -3.0000000000000004
-		 173 -3.0000000000000004 177 -3.0000000000000004 189 -3.0000000000000004 194 -3.0000000000000004
-		 204 -3.0000000000000004 208 -3.0000000000000004 213 -3.0000000000000004 223 -3.0000000000000004
-		 228 -3.0000000000000004 238 -3.0000000000000004 243 -3.0000000000000004 253 -3.0000000000000004
-		 265 -3.0000000000000004 283 0 295 0;
-	setAttr -s 34 ".kit[32:33]"  1 18;
-	setAttr -s 34 ".kot[32:33]"  1 18;
-	setAttr -s 34 ".kix[32:33]"  1 1;
-	setAttr -s 34 ".kiy[32:33]"  0 0;
-	setAttr -s 34 ".kox[32:33]"  1 1;
-	setAttr -s 34 ".koy[32:33]"  0 0;
+	setAttr -s 30 ".ktv[0:29]"  0 0 1 0 120 0 121 0 125 0 127 -4.8978538176291897
+		 139 0 141 0 142 0 145 0 149 0 152 0 155 0 158 0 170 0 173 0 177 0 189 0 194 0 204 0
+		 208 0 213 0 223 0 228 0 238 0 243 0 253 0 265 0 283 0 295 0;
+	setAttr -s 30 ".kit[28:29]"  1 18;
+	setAttr -s 30 ".kot[28:29]"  1 18;
+	setAttr -s 30 ".kix[28:29]"  1 1;
+	setAttr -s 30 ".kiy[28:29]"  0 0;
+	setAttr -s 30 ".kox[28:29]"  1 1;
+	setAttr -s 30 ".koy[28:29]"  0 0;
 createNode animCurveTA -n "CC_L_Clavicle01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -5479,21 +5460,16 @@ createNode animCurveTA -n "CC_R_Clavicle01_rotateX";
 createNode animCurveTA -n "CC_R_Clavicle01_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 35 ".ktv[0:34]"  0 0 1 -3.0000000000000004 60 0 120 -3.0000000000000004
-		 121 -3.0000000000000004 123 -3.0000000000000004 124 -13 127 -7 130 -3.0000000000000004
-		 133 -3.0000000000000004 136 -3.0000000000000004 139 -3.0000000000000004 141 -3.0000000000000004
-		 142 -3.0000000000000004 145 -3.0000000000000004 149 -3.0000000000000004 152 -3.0000000000000004
-		 155 -3.0000000000000004 158 -3.0000000000000004 170 -3.0000000000000004 173 -3.0000000000000004
-		 177 -3.0000000000000004 189 -3.0000000000000004 194 -3.0000000000000004 204 -3.0000000000000004
-		 208 -3.0000000000000004 213 -3.0000000000000004 223 -3.0000000000000004 228 -3.0000000000000004
-		 238 -3.0000000000000004 243 -3.0000000000000004 253 -3.0000000000000004 265 -3.0000000000000004
+	setAttr -s 31 ".ktv[0:30]"  0 0 1 -3.0000000000000004 60 0 120 -3.0000000000000004
+		 121 0 125 0 127 -4.8978538176291897 139 0 141 0 142 0 145 0 149 0 152 0 155 0 158 0
+		 170 0 173 0 177 0 189 0 194 0 204 0 208 0 213 0 223 0 228 0 238 0 243 0 253 0 265 0
 		 283 -3.0000000000000004 295 -3.0000000000000004;
-	setAttr -s 35 ".kit[33:34]"  1 18;
-	setAttr -s 35 ".kot[33:34]"  1 18;
-	setAttr -s 35 ".kix[33:34]"  1 1;
-	setAttr -s 35 ".kiy[33:34]"  0 0;
-	setAttr -s 35 ".kox[33:34]"  1 1;
-	setAttr -s 35 ".koy[33:34]"  0 0;
+	setAttr -s 31 ".kit[29:30]"  1 18;
+	setAttr -s 31 ".kot[29:30]"  1 18;
+	setAttr -s 31 ".kix[29:30]"  1 1;
+	setAttr -s 31 ".kiy[29:30]"  0 0;
+	setAttr -s 31 ".kox[29:30]"  1 1;
+	setAttr -s 31 ".koy[29:30]"  0 0;
 createNode animCurveTA -n "CC_R_Clavicle01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -5574,7 +5550,7 @@ createNode animCurveTL -n "cc_R_Eyes01_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 34 ".ktv[0:33]"  0 0 1 0 120 0 121 0 123 0 124 0 127 2.4966237868533927
-		 130 2.4966237868533927 133 -1.3148815249334493 136 -1.3148815249334493 142 -7.420413304293346
+		 131 2.4966237868533927 134 -1.3148815249334493 136 -1.3148815249334493 142 -7.420413304293346
 		 145 -7.7129677449043559 149 -8.6658423762838392 152 -6.9333059508680517 155 -6.3459458376549698
 		 158 -5.9523071612245548 170 -6.6230741636482104 173 -6.6230741636482104 177 -6.2591207829217117
 		 189 -6.2591207829217117 194 -8.8279270416128934 204 -8.8279270416128934 208 -3.0833015236967243
@@ -5597,7 +5573,7 @@ createNode animCurveTL -n "cc_R_Eyes01_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 37 ".ktv[0:36]"  0 0 1 -0.3 60 -0.15 120 -0.3 121 -0.3 123 -0.3
-		 124 -0.3 127 -0.3 130 -0.3 133 -0.3 136 -0.3 139 -0.3 141 -0.3 142 -0.3892177062871795
+		 124 -0.3 127 -0.3 131 -0.3 134 -0.3 136 -0.3 139 -0.3 141 -0.3 142 -0.3892177062871795
 		 145 0.10011448863325328 149 0.36211229310059156 152 0.63523100387404074 155 0.58323289226630681
 		 158 0.2641266403606517 170 1.2629307184043137 173 4.0499205639380955 177 2.0567850137429931
 		 189 2.0567850137429931 194 2.107220340989099 204 2.107220340989099 208 2.107220340989099
@@ -5620,7 +5596,7 @@ createNode animCurveTL -n "cc_R_Eyes01_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 34 ".ktv[0:33]"  0 0 1 0 120 0 121 0 123 0 124 0 127 -0.50477053732811528
-		 130 -0.50477053732811528 133 0.26584440048933972 136 0.26584440048933972 142 -2.9666115253502827
+		 131 -0.50477053732811528 134 0.26584440048933972 136 0.26584440048933972 142 -2.9666115253502827
 		 145 -3.7720070386237308 149 -6.1219143933608242 152 -11.018576772937674 155 -11.436315253299108
 		 158 -9.7751406480033474 170 -10.951723064391899 173 -10.951723064391899 177 -13.842909496189911
 		 189 -13.842909496189911 194 -7.353072176716906 204 -7.353072176716906 208 0.52248284263054579
@@ -5642,8 +5618,8 @@ createNode animCurveTL -n "cc_R_Eyes01_translateZ";
 createNode animCurveTA -n "cc_R_Eyes01_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 36 ".ktv[0:35]"  0 0 1 0 120 0 121 0 123 0 124 0 127 0 130 0
-		 133 0 136 0 139 0 141 0 142 0 145 0 149 0 152 0 155 0 158 0 170 0 173 0 177 0 189 0
+	setAttr -s 36 ".ktv[0:35]"  0 0 1 0 120 0 121 0 123 0 124 0 127 0 131 0
+		 134 0 136 0 139 0 141 0 142 0 145 0 149 0 152 0 155 0 158 0 170 0 173 0 177 0 189 0
 		 194 0 204 0 208 0 213 0 218 0 223 0 228 0 238 0 243 0 253 0 261 0 269 0 283 0 295 0;
 	setAttr -s 36 ".kit[25:35]"  1 1 18 18 18 18 1 1 
 		18 1 18;
@@ -5657,7 +5633,7 @@ createNode animCurveTA -n "cc_R_Eyes01_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 34 ".ktv[0:33]"  0 0 1 0 120 0 121 0 123 0 124 0 127 11.430051971212817
-		 130 11.430051971212817 133 -18.459366402063921 136 -18.459366402063921 142 -70.036791943136535
+		 131 11.430051971212817 134 -18.459366402063921 136 -18.459366402063921 142 -70.036791943136535
 		 145 -70.036791943136535 149 -68.835962617323844 152 -97.174866876415138 155 -97.174866876415138
 		 158 -97.174866876415138 170 -97.174866876415138 173 -97.174866876415138 177 -97.174866876415138
 		 189 -97.174866876415138 194 -97.174866876415138 204 -97.174866876415138 208 -19.593912132926963
@@ -5679,8 +5655,8 @@ createNode animCurveTA -n "cc_R_Eyes01_rotateY";
 createNode animCurveTA -n "cc_R_Eyes01_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 36 ".ktv[0:35]"  0 0 1 0 120 0 121 0 123 0 124 0 127 0 130 0
-		 133 0 136 0 139 0 141 0 142 0 145 0 149 0 152 0 155 0 158 0 170 0 173 0 177 0 189 0
+	setAttr -s 36 ".ktv[0:35]"  0 0 1 0 120 0 121 0 123 0 124 0 127 0 131 0
+		 134 0 136 0 139 0 141 0 142 0 145 0 149 0 152 0 155 0 158 0 170 0 173 0 177 0 189 0
 		 194 0 204 0 208 0 213 0 218 0 223 0 228 0 238 0 243 0 253 0 261 0 269 0 283 0 295 0;
 	setAttr -s 36 ".kit[25:35]"  1 1 18 18 18 18 1 1 
 		18 1 18;
@@ -5913,18 +5889,18 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
 		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n"
 		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n"
-		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n"
-		+ "                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
-		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
-		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
-		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
-		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n"
-		+ "                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
+		+ "                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n"
+		+ "                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n"
+		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n"
+		+ "                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
+		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
+		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
 		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n"
 		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
@@ -6084,8 +6060,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 128;
-	setAttr -av ".unw" 128;
+	setAttr ".o" 143;
+	setAttr -av ".unw" 143;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";

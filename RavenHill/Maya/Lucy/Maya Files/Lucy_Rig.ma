@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: Lucy_Rig.ma
-//Last modified: Mon, Nov 02, 2015 02:45:38 PM
+//Last modified: Tue, Nov 03, 2015 10:05:09 PM
 //Codeset: 1252
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -15,15 +15,15 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 21.844655401226987 20.630393855751322 -7.1726429894744514 ;
-	setAttr ".r" -type "double3" 2152.4616466644757 -976.59999999961417 0 ;
+	setAttr ".t" -type "double3" -7.4152885754725641 23.805405508917016 -8.4693320499588296 ;
+	setAttr ".r" -type "double3" 2141.6616466634782 -1579.7999999991359 0 ;
 	setAttr ".rp" -type "double3" 1.7763568394002505e-015 0 -1.7763568394002505e-015 ;
 	setAttr ".rpt" -type "double3" -1.6884878252596137e-015 -2.8823943824091392e-016 
 		4.2703665234962448e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 30.359128567773016;
+	setAttr ".coi" 12.473645249131811;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -27009,7 +27009,7 @@ createNode orientConstraint -n "bn_L_Braid_h01_orientConstraint1" -p "bn_L_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.013801804716496e-014 2.9848760243031637e-015 1.8045920604788122e-015 ;
+	setAttr ".lr" -type "double3" 9.665904461635219e-015 6.9807584439348182e-015 -5.5131685152321638e-016 ;
 	setAttr ".rsrr" -type "double3" 4.7521959596085752e-015 6.2182328830956641e-015 
 		1.3063879873276907e-014 ;
 	setAttr -k on ".w0";
@@ -27027,7 +27027,7 @@ createNode orientConstraint -n "bn_L_Braid_g01_orientConstraint1" -p "bn_L_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 2.1877184471570585e-014 2.4050227019440606e-015 6.8168678622804252e-015 ;
+	setAttr ".lr" -type "double3" 2.1489709670288775e-014 7.0832567881616682e-015 6.4154402797650842e-015 ;
 	setAttr ".rsrr" -type "double3" 1.5859289261281949e-014 4.7382189126685477e-015 
 		1.6340842206637507e-014 ;
 	setAttr -k on ".w0";
@@ -27045,7 +27045,7 @@ createNode orientConstraint -n "bn_L_Braid_f01_orientConstraint1" -p "bn_L_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.0032413692506991e-014 -1.1981823489336621e-014 1.108530269724257e-014 ;
+	setAttr ".lr" -type "double3" 9.6410563781862853e-015 -7.0696679925255357e-015 1.1090252901367164e-014 ;
 	setAttr ".rsrr" -type "double3" 4.9789347210800947e-015 -6.0804036702148621e-015 
 		1.9855462869391521e-014 ;
 	setAttr -k on ".w0";
@@ -27063,8 +27063,7 @@ createNode orientConstraint -n "bn_L_Braid_e01_orientConstraint1" -p "bn_L_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -9.3304553350746126e-015 -8.2122915798725971e-015 
-		-2.1596090527554527e-014 ;
+	setAttr ".lr" -type "double3" -9.5727241487017187e-015 -2.643214876880327e-015 -2.2816752626983396e-014 ;
 	setAttr ".rsrr" -type "double3" -1.4728701464355466e-014 -1.6958816953897284e-015 
 		-1.3759626209847047e-014 ;
 	setAttr -k on ".w0";
@@ -27082,7 +27081,7 @@ createNode orientConstraint -n "bn_L_Braid_d01_orientConstraint1" -p "bn_L_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.273876793768236e-015 2.9843725108934319e-015 8.1338526836336524e-015 ;
+	setAttr ".lr" -type "double3" -1.6748190621537157e-015 7.705247509846038e-015 8.1682857211473611e-015 ;
 	setAttr ".rsrr" -type "double3" -6.864452912713392e-015 5.5184038414080568e-015 
 		1.6084948198814527e-014 ;
 	setAttr -k on ".w0";
@@ -27100,7 +27099,7 @@ createNode orientConstraint -n "bn_L_Braid_c01_orientConstraint1" -p "bn_L_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -7.2556403670886485e-015 1.43544272074059e-014 -1.2517222037400366e-014 ;
+	setAttr ".lr" -type "double3" -7.8892664950364583e-015 1.9114388193092269e-014 -1.2063744514457325e-014 ;
 	setAttr ".rsrr" -type "double3" -1.2156924827390827e-014 1.9789945461860153e-014 
 		-4.3049304575277701e-015 ;
 	setAttr -k on ".w0";
@@ -27118,7 +27117,7 @@ createNode orientConstraint -n "bn_L_Braid_b01_orientConstraint1" -p "bn_L_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.2303862071809673e-015 1.7077621852887482e-014 6.7695497346188814e-015 ;
+	setAttr ".lr" -type "double3" 4.3608386452878699e-015 1.946070835616178e-014 6.3611093629270351e-015 ;
 	setAttr ".rsrr" -type "double3" -1.7890620083232256e-015 1.9174955396499044e-014 
 		1.4779950636468892e-014 ;
 	setAttr -k on ".w0";
@@ -27136,23 +27135,8 @@ createNode orientConstraint -n "bn_L_Braid_a01_orientConstraint1" -p "bn_L_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 9.665904461635219e-015 0 ;
+	setAttr ".lr" -type "double3" 0 1.2858883184823202e-014 0 ;
 	setAttr ".rsrr" -type "double3" 1.987846675914698e-016 1.2858883184823202e-014 2.2306606535556218e-032 ;
-	setAttr -k on ".w0";
-createNode orientConstraint -n "bn_neck_c01_orientConstraint1" -p "bn_neck_c01";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "cc_Neck_c01W0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode joint -n "bn_R_eye01" -p "bn_neck_c01";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -27348,8 +27332,8 @@ createNode orientConstraint -n "bn_R_Braid_h01_orientConstraint1" -p "bn_R_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -5.8301679398319419e-013 -1.9112835187876531e-014 
-		3.5195757200199157e-014 ;
+	setAttr ".lr" -type "double3" -5.8427783421822764e-013 -2.2268541785891115e-014 
+		3.4807505896309585e-014 ;
 	setAttr ".rsrr" -type "double3" -5.7399072767036901e-013 -2.0940722326588642e-014 
 		5.0919935007727534e-014 ;
 	setAttr -k on ".w0";
@@ -27367,7 +27351,7 @@ createNode orientConstraint -n "bn_R_Braid_g01_orientConstraint1" -p "bn_R_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -5.7473384066601371e-013 3.3391359265372712e-014 1.0238048569041447e-013 ;
+	setAttr ".lr" -type "double3" -5.7512985699598111e-013 3.0216240102163645e-014 1.0238131072443523e-013 ;
 	setAttr ".rsrr" -type "double3" -5.6459271660841766e-013 3.2149537469881901e-014 
 		1.1354086648354669e-013 ;
 	setAttr -k on ".w0";
@@ -27385,7 +27369,8 @@ createNode orientConstraint -n "bn_R_Braid_f01_orientConstraint1" -p "bn_R_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -6.3389386604697208e-012 -9.589030703470735e-015 -1.0222923754184259e-013 ;
+	setAttr ".lr" -type "double3" -6.3393548658674907e-012 -1.2784338934482142e-014 
+		-1.0382024285376897e-013 ;
 	setAttr ".rsrr" -type "double3" -6.328199629404136e-012 -9.2648408647221268e-015 
 		-8.7957265205100268e-014 ;
 	setAttr -k on ".w0";
@@ -27403,7 +27388,8 @@ createNode orientConstraint -n "bn_R_Braid_e01_orientConstraint1" -p "bn_R_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -2.5399027579205206e-012 4.3950047600233402e-016 -3.0733973215899911e-014 ;
+	setAttr ".lr" -type "double3" -2.5403251753391525e-012 -2.7332891793833909e-015 
+		-3.0727761195037602e-014 ;
 	setAttr ".rsrr" -type "double3" -2.5308829036285577e-012 -2.5096564283427004e-015 
 		-1.7845582931981034e-014 ;
 	setAttr -k on ".w0";
@@ -27421,7 +27407,7 @@ createNode orientConstraint -n "bn_R_Braid_d01_orientConstraint1" -p "bn_R_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 6.624242219248207e-012 -6.1707024305030276e-015 1.2499944854376917e-014 ;
+	setAttr ".lr" -type "double3" 6.6238468823580209e-012 -9.3515301011645905e-015 1.2500478699919581e-014 ;
 	setAttr ".rsrr" -type "double3" 6.6336215699818651e-012 -7.3514292434716157e-015 
 		2.5217468166024496e-014 ;
 	setAttr -k on ".w0";
@@ -27439,7 +27425,7 @@ createNode orientConstraint -n "bn_R_Braid_c01_orientConstraint1" -p "bn_R_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -8.1824738797338751e-013 3.1665776345232999e-015 -2.6904262354333013e-014 ;
+	setAttr ".lr" -type "double3" -8.1861389720425929e-013 7.7650260777898669e-016 -2.6916686396057463e-014 ;
 	setAttr ".rsrr" -type "double3" -8.0671166523222013e-013 3.9555042840270486e-015 
 		-1.2641462454645063e-014 ;
 	setAttr -k on ".w0";
@@ -27457,7 +27443,7 @@ createNode orientConstraint -n "bn_R_Braid_b01_orientConstraint1" -p "bn_R_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 2.0316600590560302e-012 1.4113090196908029e-013 5.863371191340829e-014 ;
+	setAttr ".lr" -type "double3" 2.0316414229934436e-012 1.3954062462834853e-013 5.8641476939486059e-014 ;
 	setAttr ".rsrr" -type "double3" 2.0410402105580029e-012 1.4029460866050181e-013 
 		7.4357889720936668e-014 ;
 	setAttr -k on ".w0";
@@ -27475,7 +27461,7 @@ createNode orientConstraint -n "bn_R_Braid_a01_orientConstraint1" -p "bn_R_Braid
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 7.070770626228581e-013 3.6576378836830612e-014 -2.7034714792439667e-014 ;
+	setAttr ".lr" -type "double3" 7.070770626228581e-013 3.4986101496098852e-014 -2.7034714792439676e-014 ;
 	setAttr ".rsrr" -type "double3" 7.0946247863395569e-013 3.816665617756229e-014 -1.4312496066585587e-014 ;
 	setAttr -k on ".w0";
 createNode joint -n "bn_Mouth01" -p "bn_neck_c01";
@@ -27496,7 +27482,159 @@ createNode joint -n "be_Mouth01" -p "bn_Mouth01";
 	setAttr ".jo" -type "double3" -29.744881296942204 89.999999999999972 0 ;
 	setAttr ".ssc" no;
 	setAttr ".radi" 0.62295509369133351;
+createNode orientConstraint -n "bn_neck_c01_orientConstraint1" -p "bn_neck_c01";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "drv_IK_neck_c01W0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "drv_FK_neck_c01W1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
 createNode orientConstraint -n "bn_neck_b01_orientConstraint1" -p "bn_neck_b01";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "drv_IK_neck_b01W0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "drv_FK_neck_b01W1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode orientConstraint -n "bn_neck_a01_orientConstraint1" -p "bn_neck_a01";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "drv_IK_neck_a01W0" -dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "drv_FK_neck_a01W1" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode joint -n "drv_IK_neck_a01" -p "bn_spine_e01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 2.0217631014387472 0.030139920008442893 2.0196618120706895e-015 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 4.4408920985006262e-016 1 -1.110223024625156e-016 0
+		 -3.3306690738754681e-016 0 -1 0 -1 3.3306690738754681e-016 4.4408920985006262e-016 0
+		 5.9164567891575885e-031 19.521763101438754 -0.030139920008443118 1;
+createNode joint -n "drv_IK_neck_b01" -p "bn_spine_e01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 2.9640572020343114 0.030139920008442945 2.0196618120706895e-015 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 4.4408920985006262e-016 1 -1.110223024625156e-016 0
+		 -3.3306690738754681e-016 0 -1 0 -1 3.3306690738754681e-016 4.4408920985006262e-016 0
+		 4.1846264257986005e-016 20.464057202034319 -0.030139920008443274 1;
+createNode joint -n "drv_IK_neck_c01" -p "bn_spine_e01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr -s 2 ".iog";
+	setAttr ".t" -type "double3" 3.7044311382165418 0.030139920008443028 2.3895528979225291e-015 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 4.4408920985006262e-016 1 -1.110223024625156e-016 0
+		 -3.3306690738754681e-016 0 -1 0 -1 3.3306690738754681e-016 4.4408920985006262e-016 0
+		 3.7736363304076654e-016 21.204431138216549 -0.030139920008443438 1;
+createNode aimConstraint -n "drv_neck_c01_aimConstraint1" -p "drv_IK_neck_c01";
+	addAttr -dcb 0 -ci true -sn "w0" -ln "drv_neck_c02W0" -dv 1 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".a" -type "double3" 0 -1 0 ;
+	setAttr ".u" -type "double3" 1 0 0 ;
+	setAttr ".wut" 4;
+	setAttr -k on ".w0";
+createNode joint -n "drv_FK_neck_a01" -p "bn_spine_e01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 2.0217631014387472 0.030139920008442893 2.0196618120706895e-015 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 4.4408920985006262e-016 1 -1.110223024625156e-016 0
+		 -3.3306690738754681e-016 0 -1 0 -1 3.3306690738754681e-016 4.4408920985006262e-016 0
+		 5.9164567891575885e-031 19.521763101438754 -0.030139920008443118 1;
+	setAttr ".radi" 0.75;
+createNode joint -n "drv_FK_neck_b01" -p "drv_FK_neck_a01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".t" -type "double3" 0.94229410059556429 5.2041704279304213e-017 -1.5777218104420236e-030 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 4.4408920985006262e-016 1 -1.110223024625156e-016 0
+		 -3.3306690738754681e-016 0 -1 0 -1 3.3306690738754681e-016 4.4408920985006262e-016 0
+		 4.1846264257986005e-016 20.464057202034319 -0.030139920008443274 1;
+	setAttr ".radi" 0.75;
+createNode joint -n "drv_FK_neck_c01" -p "drv_FK_neck_b01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr -s 2 ".iog";
+	setAttr ".t" -type "double3" 0.74037393618223035 8.3266726846886741e-017 3.698910858518396e-016 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 4.4408920985006262e-016 1 -1.110223024625156e-016 0
+		 -3.3306690738754681e-016 0 -1 0 -1 3.3306690738754681e-016 4.4408920985006262e-016 0
+		 3.7736363304076654e-016 21.204431138216549 -0.030139920008443438 1;
+	setAttr ".radi" 0.75;
+createNode orientConstraint -n "drv_FK_neck_c01_orientConstraint1" -p "drv_FK_neck_c01";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "cc_Neck_c01W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode orientConstraint -n "drv_FK_neck_b01_orientConstraint1" -p "drv_FK_neck_b01";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "cc_Neck_b01W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -27511,7 +27649,7 @@ createNode orientConstraint -n "bn_neck_b01_orientConstraint1" -p "bn_neck_b01";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
-createNode orientConstraint -n "bn_neck_a01_orientConstraint1" -p "bn_neck_a01";
+createNode orientConstraint -n "drv_FK_neck_a01_orientConstraint1" -p "drv_FK_neck_a01";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "cc_Neck_a01W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -27525,6 +27663,7 @@ createNode orientConstraint -n "bn_neck_a01_orientConstraint1" -p "bn_neck_a01";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".rsrr" -type "double3" -3.6146461540133048 0 0 ;
 	setAttr -k on ".w0";
 createNode aimConstraint -n "bn_spine_d01_aimConstraint1" -p "bn_spine_d01";
 	addAttr -dcb 0 -ci true -sn "w0" -ln "locAim_bn_spine_d01W0" -dv 1 -at "double";
@@ -29381,911 +29520,6 @@ createNode transform -n "locOri_CC_R_Wrist01" -p "CC_R_Wrist01";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000004 1 ;
 createNode locator -n "locOri_CC_R_Wrist0Shape1" -p "locOri_CC_R_Wrist01";
 	setAttr -k off ".v";
-createNode transform -n "locOri_bn_neck_a01" -p "cc_Chest01";
-	setAttr ".t" -type "double3" 7.0217631014387543 0.030139920008443118 3.1049044142107672e-015 ;
-createNode locator -n "locOri_bn_neck_a0Shape1" -p "locOri_bn_neck_a01";
-	setAttr -k off ".v";
-	setAttr ".lodv" no;
-createNode transform -n "cc_Neck_a01" -p "locOri_bn_neck_a01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 17;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_Neck_a0Shape1" -p "cc_Neck_a01";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.47239586229727071 3.4829815053371593 -3.8816688525073463e-016
-		0.34982558408629544 3.7788923333379403 -3.5718281629925313e-016
-		0.47239586229727049 4.0748031613387203 -2.5675607945779043e-016
-		0.76830669029805054 4.1973734395496951 -1.4571529514320122e-016
-		1.0642175182988307 4.0748031613387203 -8.9106648830426459e-017
-		1.1867877965098059 3.7788923333379403 -1.2009071778190769e-016
-		1.0642175182988307 3.4829815053371602 -2.2051745462337054e-016
-		0.76830669029805088 3.3604112271261846 -3.3155823893795975e-016
-		0.47239586229727071 3.4829815053371593 -3.8816688525073463e-016
-		0.34982558408629544 3.7788923333379403 -3.5718281629925313e-016
-		0.47239586229727049 4.0748031613387203 -2.5675607945779043e-016
-		;
-createNode transform -n "locOri_bn_neck_b01" -p "cc_Neck_a01";
-	setAttr ".t" -type "double3" 0.94229410059556429 1.5612511283791264e-016 0 ;
-createNode locator -n "locOri_bn_neck_b0Shape1" -p "locOri_bn_neck_b01";
-	setAttr -k off ".v";
-	setAttr ".lodv" no;
-createNode transform -n "cc_Neck_b01" -p "locOri_bn_neck_b01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 17;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_Neck_b0Shape1" -p "cc_Neck_b01";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.60789799697310276 2.8749601738672155 -1.4953011821015565e-016
-		0.48532771876212749 3.1708710018679955 -1.1854604925867422e-016
-		0.60789799697310254 3.4667818298687756 -1.8119312417211491e-017
-		0.9038088249738826 3.5893521080797512 9.2921471897377674e-017
-		1.1997196529746628 3.4667818298687756 1.4953011821015245e-016
-		1.322289931185638 3.1708710018679955 1.1854604925867121e-016
-		1.1997196529746628 2.8749601738672164 1.8119312417208388e-017
-		0.90380882497388293 2.7523898956562407 -9.2921471897380781e-017
-		0.60789799697310276 2.8749601738672155 -1.4953011821015565e-016
-		0.48532771876212749 3.1708710018679955 -1.1854604925867422e-016
-		0.60789799697310254 3.4667818298687756 -1.8119312417211491e-017
-		;
-createNode transform -n "locOri_bn_neck_c01" -p "cc_Neck_b01";
-	setAttr ".t" -type "double3" 0.74037393618223035 1.6306400674181987e-016 3.698910858518396e-016 ;
-createNode locator -n "locOri_bn_neck_c0Shape1" -p "locOri_bn_neck_c01";
-	setAttr -k off ".v";
-	setAttr ".lodv" no;
-createNode transform -n "cc_Neck_c01" -p "locOri_bn_neck_c01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 17;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_Neck_c0Shape1" -p "cc_Neck_c01";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.136817462744107 2.7691224303962541 -1.4953011821015565e-016
-		1.0142471845331316 3.0650332583970341 -1.1854604925867422e-016
-		1.1368174627441068 3.3609440863978142 -1.8119312417211491e-017
-		1.4327282907448868 3.4835143646087898 9.2921471897377674e-017
-		1.7286391187456669 3.3609440863978142 1.4953011821015245e-016
-		1.8512093969566421 3.0650332583970341 1.1854604925867121e-016
-		1.7286391187456669 2.7691224303962549 1.8119312417208388e-017
-		1.4327282907448868 2.6465521521852793 -9.2921471897380781e-017
-		1.136817462744107 2.7691224303962541 -1.4953011821015565e-016
-		1.0142471845331316 3.0650332583970341 -1.1854604925867422e-016
-		1.1368174627441068 3.3609440863978142 -1.8119312417211491e-017
-		;
-createNode transform -n "locOri_bn_L_Braid_a01" -p "cc_Neck_c01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 1.4915124450376851 1.0828623307082912 -0.76263810615040906 ;
-	setAttr ".r" -type "double3" 177.820707530666 10.537052345851796 168.24492837353961 ;
-	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 0.99999999999999989 ;
-createNode locator -n "locOri_bn_L_Braid_a0Shape1" -p "locOri_bn_L_Braid_a01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_a01" -p "locOri_bn_L_Braid_a01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_a0Shape1" -p "cc_L_Braid_a01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_L_Braid_b01" -p "cc_L_Braid_a01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 1.1845887727246058 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" 0.58327151286080037 2.5394394381703913 1.3860671627328007 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
-createNode locator -n "locOri_bn_L_Braid_b0Shape1" -p "locOri_bn_L_Braid_b01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_b01" -p "locOri_bn_L_Braid_b01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_b0Shape1" -p "cc_L_Braid_b01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_L_Braid_c01" -p "cc_L_Braid_b01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 1.7874553834776243 8.8817841970012523e-016 8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" -0.9750157389745534 -4.730397587514009 -1.2667178576864226 ;
-	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
-createNode locator -n "locOri_bn_L_Braid_c0Shape1" -p "locOri_bn_L_Braid_c01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_c01" -p "locOri_bn_L_Braid_c01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_c0Shape1" -p "cc_L_Braid_c01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_L_Braid_d01" -p "cc_L_Braid_c01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 2.0184438414958379 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" 0.048838803915763333 0.23918513392209781 -0.079713809548593681 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
-createNode locator -n "locOri_bn_L_Braid_d0Shape1" -p "locOri_bn_L_Braid_d01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_d01" -p "locOri_bn_L_Braid_d01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000004 1.0000000000000002 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_d0Shape1" -p "cc_L_Braid_d01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_L_Braid_e01" -p "cc_L_Braid_d01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 1.9802526555436248 -2.4868995751603507e-014 -7.0166095156309893e-014 ;
-	setAttr ".r" -type "double3" 0.48185550590035203 1.9065979539706011 2.6458059820208746 ;
-	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 1.0000000000000002 ;
-createNode locator -n "locOri_bn_L_Braid_e0Shape1" -p "locOri_bn_L_Braid_e01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_e01" -p "locOri_bn_L_Braid_e01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 0.99999999999999989 1.0000000000000002 0.99999999999999989 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_e0Shape1" -p "cc_L_Braid_e01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_L_Braid_f01" -p "cc_L_Braid_e01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 2.0132734487600086 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" -0.081660820350608024 -0.43758938942961417 -3.6074287837178582 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999978 ;
-createNode locator -n "locOri_bn_L_Braid_f0Shape1" -p "locOri_bn_L_Braid_f01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_f01" -p "locOri_bn_L_Braid_f01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_f0Shape1" -p "cc_L_Braid_f01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_L_Braid_g01" -p "cc_L_Braid_f01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 1.9556477749318582 8.8817841970012523e-016 0 ;
-	setAttr ".r" -type "double3" 0.068092910852298114 0.31199791441214486 1.7412301961433894 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999967 1 ;
-createNode locator -n "locOri_bn_L_Braid_g0Shape1" -p "locOri_bn_L_Braid_g01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_g01" -p "locOri_bn_L_Braid_g01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_g0Shape1" -p "cc_L_Braid_g01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_L_Braid_h01" -p "cc_L_Braid_g01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 1.9139438427241942 2.6645352591003757e-015 -8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" -0.57864655801943243 -2.2463019672992695 2.1378225958852077 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
-createNode locator -n "locOri_bn_L_Braid_h0Shape1" -p "locOri_bn_L_Braid_h01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_h01" -p "locOri_bn_L_Braid_h01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999989 0.99999999999999956 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_h0Shape1" -p "cc_L_Braid_h01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_L_Braid_i01" -p "cc_L_Braid_h01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".t" -type "double3" 1.6556380203988681 8.8817841970012523e-016 8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" -4.7121616925796605e-015 1.9462840046992595e-014 -7.9513867036587903e-015 ;
-	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000004 ;
-createNode locator -n "locOri_bn_L_Braid_i0Shape1" -p "locOri_bn_L_Braid_i01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".lodv" no;
-createNode transform -n "cc_L_Braid_i01" -p "locOri_bn_L_Braid_i01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 0.99999999999999967 0.99999999999999989 0.99999999999999967 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_L_Braid_i0Shape1" -p "cc_L_Braid_i01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 6;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_a02" -p "cc_Neck_c01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 1.4915124450376851 1.0828623307082921 0.76263810615041028 ;
-	setAttr ".r" -type "double3" -177.82070753066594 -10.53705234585172 168.24492837353961 ;
-	setAttr ".s" -type "double3" 1.0000000000000004 0.99999999999999989 -1.0000000000000004 ;
-createNode locator -n "locOri_bn_R_Braid_a0Shape2" -p "locOri_bn_R_Braid_a02";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_a01" -p "locOri_bn_R_Braid_a02";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_a0Shape1" -p "cc_R_Braid_a01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_b01" -p "cc_R_Braid_a01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 1.1845887727246058 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" 0.58327151286080037 2.5394394381703913 1.3860671627328007 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
-createNode locator -n "locOri_bn_R_Braid_b0Shape1" -p "locOri_bn_R_Braid_b01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_b01" -p "locOri_bn_R_Braid_b01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_b0Shape1" -p "cc_R_Braid_b01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_c01" -p "cc_R_Braid_b01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 1.7874553834776243 8.8817841970012523e-016 8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" -0.9750157389745534 -4.730397587514009 -1.2667178576864226 ;
-	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
-createNode locator -n "locOri_bn_R_Braid_c0Shape1" -p "locOri_bn_R_Braid_c01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_c01" -p "locOri_bn_R_Braid_c01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_c0Shape1" -p "cc_R_Braid_c01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_d01" -p "cc_R_Braid_c01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 2.0184438414958379 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" 0.048838803915763333 0.23918513392209781 -0.079713809548593681 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
-createNode locator -n "locOri_bn_R_Braid_d0Shape1" -p "locOri_bn_R_Braid_d01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_d01" -p "locOri_bn_R_Braid_d01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000004 1.0000000000000002 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_d0Shape1" -p "cc_R_Braid_d01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_e01" -p "cc_R_Braid_d01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 1.9802526555436248 -2.4868995751603507e-014 -7.0166095156309893e-014 ;
-	setAttr ".r" -type "double3" 0.48185550590035203 1.9065979539706011 2.6458059820208746 ;
-	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 1.0000000000000002 ;
-createNode locator -n "locOri_bn_R_Braid_e0Shape1" -p "locOri_bn_R_Braid_e01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_e01" -p "locOri_bn_R_Braid_e01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 0.99999999999999989 1.0000000000000002 0.99999999999999989 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_e0Shape1" -p "cc_R_Braid_e01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_f01" -p "cc_R_Braid_e01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 2.0132734487600086 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" -0.081660820350608024 -0.43758938942961417 -3.6074287837178582 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999978 ;
-createNode locator -n "locOri_bn_R_Braid_f0Shape1" -p "locOri_bn_R_Braid_f01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_f01" -p "locOri_bn_R_Braid_f01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_f0Shape1" -p "cc_R_Braid_f01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_g01" -p "cc_R_Braid_f01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 1.9556477749318582 8.8817841970012523e-016 0 ;
-	setAttr ".r" -type "double3" 0.068092910852298114 0.31199791441214486 1.7412301961433894 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999967 1 ;
-createNode locator -n "locOri_bn_R_Braid_g0Shape1" -p "locOri_bn_R_Braid_g01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_g01" -p "locOri_bn_R_Braid_g01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_g0Shape1" -p "cc_R_Braid_g01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_h01" -p "cc_R_Braid_g01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 1.9139438427241942 2.6645352591003757e-015 -8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" -0.57864655801943243 -2.2463019672992695 2.1378225958852077 ;
-	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
-createNode locator -n "locOri_bn_R_Braid_h0Shape1" -p "locOri_bn_R_Braid_h01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_h01" -p "locOri_bn_R_Braid_h01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999989 0.99999999999999956 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_h0Shape1" -p "cc_R_Braid_h01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "locOri_bn_R_Braid_i01" -p "cc_R_Braid_h01";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".t" -type "double3" 1.6556380203988681 8.8817841970012523e-016 8.8817841970012523e-016 ;
-	setAttr ".r" -type "double3" -4.7121616925796605e-015 1.9462840046992595e-014 -7.9513867036587903e-015 ;
-	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000004 ;
-createNode locator -n "locOri_bn_R_Braid_i0Shape1" -p "locOri_bn_R_Braid_i01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".lodv" no;
-createNode transform -n "cc_R_Braid_i01" -p "locOri_bn_R_Braid_i01";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".s" -type "double3" 0.99999999999999967 0.99999999999999989 0.99999999999999967 ;
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-createNode nurbsCurve -n "cc_R_Braid_i0Shape1" -p "cc_R_Braid_i01";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
-		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
-		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
-		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
-		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
-		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
-		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
-		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
-		;
-createNode transform -n "CC_Face01" -p "cc_Neck_c01";
-	addAttr -ci true -sn "EyeLids" -ln "EyeLids" -min 0 -max 0 -en "Controls" -at "enum";
-	addAttr -ci true -sn "lUpperLid" -ln "lUpperLid" -min 0 -max 10 -at "double";
-	addAttr -ci true -sn "lLowerLid" -ln "lLowerLid" -min 0 -max 10 -at "double";
-	addAttr -ci true -sn "rUpperLid" -ln "rUpperLid" -min 0 -max 10 -at "double";
-	addAttr -ci true -sn "rLowerLid" -ln "rLowerLid" -min 0 -max 10 -at "double";
-	addAttr -ci true -sn "Mouth" -ln "Mouth" -min 0 -max 0 -en "Control" -at "enum";
-	addAttr -ci true -sn "Jaw" -ln "Jaw" -at "double";
-	setAttr -l on -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 18;
-	setAttr ".t" -type "double3" -21.204431138216549 -0.030139920008443438 -9.0259106231883895e-015 ;
-	setAttr -l on -k off ".tx";
-	setAttr -l on -k off ".ty";
-	setAttr -l on -k off ".tz";
-	setAttr ".r" -type "double3" 90 89.999999999999957 0 ;
-	setAttr -l on -k off ".rx";
-	setAttr -l on -k off ".ry";
-	setAttr -l on -k off ".rz";
-	setAttr -l on -k off ".sx";
-	setAttr -l on -k off ".sy";
-	setAttr -l on -k off ".sz";
-	setAttr ".rp" -type "double3" 3.7736363304076659e-016 21.204431138216549 -0.030139920008443438 ;
-	setAttr ".rpt" -type "double3" 21.204431138216549 -21.174291218208101 0.030139920008459532 ;
-	setAttr ".sp" -type "double3" 3.7736363304076659e-016 21.204431138216549 -0.030139920008443438 ;
-	setAttr -cb on ".EyeLids";
-	setAttr -k on ".lUpperLid";
-	setAttr -k on ".lLowerLid";
-	setAttr -k on ".rUpperLid";
-	setAttr -k on ".rLowerLid";
-	setAttr -cb on ".Mouth";
-	setAttr -k on ".Jaw";
-createNode nurbsCurve -n "CC_Face0Shape1" -p "CC_Face01";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		2.4281822997808771 27.348525638691576 -5.4517894257077434e-016
-		-3.8944012798185853e-016 28.752774947526611 -7.7099945450381231e-016
-		-2.4281822997808744 27.348525638691576 -5.4517894257077454e-016
-		-3.4339683402644043 24.479989055755205 -2.2341635303182094e-031
-		-2.4281822997808749 24.469381528430354 5.4517894257077444e-016
-		-1.0347216786541904e-015 24.464987746749156 7.7099945450381251e-016
-		2.4281822997808726 24.469381528430354 5.4517894257077474e-016
-		3.4339683402644043 24.479989055755205 4.1410531102920677e-031
-		2.4281822997808771 27.348525638691576 -5.4517894257077434e-016
-		-3.8944012798185853e-016 28.752774947526611 -7.7099945450381231e-016
-		-2.4281822997808744 27.348525638691576 -5.4517894257077454e-016
-		;
 createNode transform -n "locOri_bn_L_Clavicle01" -p "cc_Chest01";
 	setAttr ".t" -type "double3" 6.2345854727462964 0.25779964505117364 -0.30376700091814168 ;
 	setAttr ".r" -type "double3" 27.146800391696196 83.758106526035732 27.285357537352141 ;
@@ -30418,6 +29652,105 @@ createNode nurbsCurve -n "CC_R_Clavicle01Shape2" -p "CC_R_Clavicle01";
 		-1.5354902234900734 3.8063740664791368 -0.46996243158938716
 		-1.5153123190751159 3.6952328362724574 -0.20565105936560363
 		-1.4841693168575394 3.8038129186601086 0.058660312858183468
+		;
+createNode transform -n "locOri_bn_neck_a01" -p "cc_Chest01";
+	setAttr ".t" -type "double3" 7.0217631014387543 0.030079961010343614 -0.0019001904461284731 ;
+createNode locator -n "locOri_bn_neck_a0Shape1" -p "locOri_bn_neck_a01";
+	setAttr -k off ".v";
+	setAttr ".lodv" no;
+createNode transform -n "cc_Neck_a01" -p "locOri_bn_neck_a01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 17;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_Neck_a0Shape1" -p "cc_Neck_a01";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.47239586229727071 3.4829815053371593 -3.8816688525073463e-016
+		0.34982558408629544 3.7788923333379403 -3.5718281629925313e-016
+		0.47239586229727049 4.0748031613387203 -2.5675607945779043e-016
+		0.76830669029805054 4.1973734395496951 -1.4571529514320122e-016
+		1.0642175182988307 4.0748031613387203 -8.9106648830426459e-017
+		1.1867877965098059 3.7788923333379403 -1.2009071778190769e-016
+		1.0642175182988307 3.4829815053371602 -2.2051745462337054e-016
+		0.76830669029805088 3.3604112271261846 -3.3155823893795975e-016
+		0.47239586229727071 3.4829815053371593 -3.8816688525073463e-016
+		0.34982558408629544 3.7788923333379403 -3.5718281629925313e-016
+		0.47239586229727049 4.0748031613387203 -2.5675607945779043e-016
+		;
+createNode transform -n "locOri_bn_neck_b01" -p "cc_Neck_a01";
+	setAttr ".t" -type "double3" 0.94229410059556429 1.5612511283791264e-016 -9.9746599868666408e-018 ;
+createNode locator -n "locOri_bn_neck_b0Shape1" -p "locOri_bn_neck_b01";
+	setAttr -k off ".v";
+	setAttr ".lodv" no;
+createNode transform -n "cc_Neck_b01" -p "locOri_bn_neck_b01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 17;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_Neck_b0Shape1" -p "cc_Neck_b01";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		0.60789799697310276 2.8749601738672155 -1.4953011821015565e-016
+		0.48532771876212749 3.1708710018679955 -1.1854604925867422e-016
+		0.60789799697310254 3.4667818298687756 -1.8119312417211491e-017
+		0.9038088249738826 3.5893521080797512 9.2921471897377674e-017
+		1.1997196529746628 3.4667818298687756 1.4953011821015245e-016
+		1.322289931185638 3.1708710018679955 1.1854604925867121e-016
+		1.1997196529746628 2.8749601738672164 1.8119312417208388e-017
+		0.90380882497388293 2.7523898956562407 -9.2921471897380781e-017
+		0.60789799697310276 2.8749601738672155 -1.4953011821015565e-016
+		0.48532771876212749 3.1708710018679955 -1.1854604925867422e-016
+		0.60789799697310254 3.4667818298687756 -1.8119312417211491e-017
+		;
+createNode transform -n "locOri_bn_neck_c01" -p "cc_Neck_b01";
+	setAttr ".t" -type "double3" 0.74037393618223035 1.8735013540549517e-016 3.5930459996169617e-016 ;
+createNode locator -n "locOri_bn_neck_c0Shape1" -p "locOri_bn_neck_c01";
+	setAttr -k off ".v";
+	setAttr ".lodv" no;
+createNode transform -n "cc_Neck_c01" -p "locOri_bn_neck_c01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 17;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_Neck_c0Shape1" -p "cc_Neck_c01";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		1.136817462744107 2.7690598000726774 0.018624128036515947
+		1.0142471845331316 3.0649639353426834 0.02061431853426493
+		1.1368174627441068 3.3608680706126894 0.022604509032013942
+		1.4327282907448868 3.4834355766038092 0.023428872927887728
+		1.7286391187456669 3.3608680706126894 0.022604509032014108
+		1.8512093969566421 3.0649639353426834 0.020614318534265152
+		1.7286391187456669 2.7690598000726783 0.018624128036516141
+		1.4327282907448868 2.6464922940815589 0.017799764140642355
+		1.136817462744107 2.7690598000726774 0.018624128036515947
+		1.0142471845331316 3.0649639353426834 0.02061431853426493
+		1.1368174627441068 3.3608680706126894 0.022604509032013942
 		;
 createNode transform -n "locOri_IK_L_Arm01" -p "ControlGrps01";
 	setAttr ".t" -type "double3" 8.9357159616797333 18.908811271371217 -0.34766787392416221 ;
@@ -30942,6 +30275,847 @@ createNode pointConstraint -n "CC_Lantern01_pointConstraint2" -p "CC_Lantern01";
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -8.692122997452147 -0.28728748941078308 10.579678325923901 ;
 	setAttr -k on ".w0";
+createNode transform -n "headControls01" -p "ControlGrps01";
+createNode transform -n "locOri_bn_L_Braid_a01" -p "headControls01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 1.4915124450376851 1.0828623307082912 -0.76263810615040895 ;
+	setAttr ".r" -type "double3" 177.820707530666 10.537052345851793 168.24492837353961 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 0.99999999999999989 1.0000000000000002 ;
+createNode locator -n "locOri_bn_L_Braid_a0Shape1" -p "locOri_bn_L_Braid_a01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_a01" -p "locOri_bn_L_Braid_a01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_a0Shape1" -p "cc_L_Braid_a01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_L_Braid_b01" -p "cc_L_Braid_a01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 1.1845887727246058 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" 0.58327151286080037 2.5394394381703913 1.3860671627328007 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
+createNode locator -n "locOri_bn_L_Braid_b0Shape1" -p "locOri_bn_L_Braid_b01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_b01" -p "locOri_bn_L_Braid_b01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_b0Shape1" -p "cc_L_Braid_b01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_L_Braid_c01" -p "cc_L_Braid_b01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 1.7874553834776243 8.8817841970012523e-016 8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" -0.9750157389745534 -4.730397587514009 -1.2667178576864226 ;
+	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
+createNode locator -n "locOri_bn_L_Braid_c0Shape1" -p "locOri_bn_L_Braid_c01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_c01" -p "locOri_bn_L_Braid_c01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_c0Shape1" -p "cc_L_Braid_c01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_L_Braid_d01" -p "cc_L_Braid_c01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 2.0184438414958379 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" 0.048838803915763333 0.23918513392209781 -0.079713809548593681 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
+createNode locator -n "locOri_bn_L_Braid_d0Shape1" -p "locOri_bn_L_Braid_d01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_d01" -p "locOri_bn_L_Braid_d01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000004 1.0000000000000002 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_d0Shape1" -p "cc_L_Braid_d01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_L_Braid_e01" -p "cc_L_Braid_d01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 1.9802526555436248 -2.4868995751603507e-014 -7.0166095156309893e-014 ;
+	setAttr ".r" -type "double3" 0.48185550590035203 1.9065979539706011 2.6458059820208746 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 1.0000000000000002 ;
+createNode locator -n "locOri_bn_L_Braid_e0Shape1" -p "locOri_bn_L_Braid_e01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_e01" -p "locOri_bn_L_Braid_e01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 0.99999999999999989 1.0000000000000002 0.99999999999999989 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_e0Shape1" -p "cc_L_Braid_e01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_L_Braid_f01" -p "cc_L_Braid_e01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 2.0132734487600086 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" -0.081660820350608024 -0.43758938942961417 -3.6074287837178582 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999978 ;
+createNode locator -n "locOri_bn_L_Braid_f0Shape1" -p "locOri_bn_L_Braid_f01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_f01" -p "locOri_bn_L_Braid_f01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_f0Shape1" -p "cc_L_Braid_f01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_L_Braid_g01" -p "cc_L_Braid_f01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 1.9556477749318582 8.8817841970012523e-016 0 ;
+	setAttr ".r" -type "double3" 0.068092910852298114 0.31199791441214486 1.7412301961433894 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999967 1 ;
+createNode locator -n "locOri_bn_L_Braid_g0Shape1" -p "locOri_bn_L_Braid_g01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_g01" -p "locOri_bn_L_Braid_g01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_g0Shape1" -p "cc_L_Braid_g01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_L_Braid_h01" -p "cc_L_Braid_g01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 1.9139438427241942 2.6645352591003757e-015 -8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" -0.57864655801943243 -2.2463019672992695 2.1378225958852077 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
+createNode locator -n "locOri_bn_L_Braid_h0Shape1" -p "locOri_bn_L_Braid_h01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_h01" -p "locOri_bn_L_Braid_h01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999989 0.99999999999999956 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_h0Shape1" -p "cc_L_Braid_h01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_L_Braid_i01" -p "cc_L_Braid_h01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".t" -type "double3" 1.6556380203988681 8.8817841970012523e-016 8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" -4.7121616925796605e-015 1.9462840046992595e-014 -7.9513867036587903e-015 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000004 ;
+createNode locator -n "locOri_bn_L_Braid_i0Shape1" -p "locOri_bn_L_Braid_i01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".lodv" no;
+createNode transform -n "cc_L_Braid_i01" -p "locOri_bn_L_Braid_i01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 0.99999999999999967 0.99999999999999989 0.99999999999999967 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_L_Braid_i0Shape1" -p "cc_L_Braid_i01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 6;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_a02" -p "headControls01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 1.4915124450376851 1.0828623307082921 0.76263810615041039 ;
+	setAttr ".r" -type "double3" -177.82070753066594 -10.537052345851722 168.24492837353961 ;
+	setAttr ".s" -type "double3" 1.0000000000000004 0.99999999999999989 -1.0000000000000007 ;
+createNode locator -n "locOri_bn_R_Braid_a0Shape2" -p "locOri_bn_R_Braid_a02";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_a01" -p "locOri_bn_R_Braid_a02";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_a0Shape1" -p "cc_R_Braid_a01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_b01" -p "cc_R_Braid_a01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 1.1845887727246058 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" 0.58327151286080037 2.5394394381703913 1.3860671627328007 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
+createNode locator -n "locOri_bn_R_Braid_b0Shape1" -p "locOri_bn_R_Braid_b01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_b01" -p "locOri_bn_R_Braid_b01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_b0Shape1" -p "cc_R_Braid_b01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_c01" -p "cc_R_Braid_b01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 1.7874553834776243 8.8817841970012523e-016 8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" -0.9750157389745534 -4.730397587514009 -1.2667178576864226 ;
+	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
+createNode locator -n "locOri_bn_R_Braid_c0Shape1" -p "locOri_bn_R_Braid_c01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_c01" -p "locOri_bn_R_Braid_c01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_c0Shape1" -p "cc_R_Braid_c01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_d01" -p "cc_R_Braid_c01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 2.0184438414958379 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" 0.048838803915763333 0.23918513392209781 -0.079713809548593681 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999989 ;
+createNode locator -n "locOri_bn_R_Braid_d0Shape1" -p "locOri_bn_R_Braid_d01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_d01" -p "locOri_bn_R_Braid_d01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000004 1.0000000000000002 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_d0Shape1" -p "cc_R_Braid_d01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_e01" -p "cc_R_Braid_d01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 1.9802526555436248 -2.4868995751603507e-014 -7.0166095156309893e-014 ;
+	setAttr ".r" -type "double3" 0.48185550590035203 1.9065979539706011 2.6458059820208746 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 1.0000000000000002 ;
+createNode locator -n "locOri_bn_R_Braid_e0Shape1" -p "locOri_bn_R_Braid_e01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_e01" -p "locOri_bn_R_Braid_e01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 0.99999999999999989 1.0000000000000002 0.99999999999999989 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_e0Shape1" -p "cc_R_Braid_e01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_f01" -p "cc_R_Braid_e01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 2.0132734487600086 -8.8817841970012523e-016 -8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" -0.081660820350608024 -0.43758938942961417 -3.6074287837178582 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999978 ;
+createNode locator -n "locOri_bn_R_Braid_f0Shape1" -p "locOri_bn_R_Braid_f01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_f01" -p "locOri_bn_R_Braid_f01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_f0Shape1" -p "cc_R_Braid_f01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_g01" -p "cc_R_Braid_f01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 1.9556477749318582 8.8817841970012523e-016 0 ;
+	setAttr ".r" -type "double3" 0.068092910852298114 0.31199791441214486 1.7412301961433894 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999967 1 ;
+createNode locator -n "locOri_bn_R_Braid_g0Shape1" -p "locOri_bn_R_Braid_g01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_g01" -p "locOri_bn_R_Braid_g01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999989 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_g0Shape1" -p "cc_R_Braid_g01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_h01" -p "cc_R_Braid_g01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 1.9139438427241942 2.6645352591003757e-015 -8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" -0.57864655801943243 -2.2463019672992695 2.1378225958852077 ;
+	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
+createNode locator -n "locOri_bn_R_Braid_h0Shape1" -p "locOri_bn_R_Braid_h01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_h01" -p "locOri_bn_R_Braid_h01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 0.99999999999999978 0.99999999999999989 0.99999999999999956 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_h0Shape1" -p "cc_R_Braid_h01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "locOri_bn_R_Braid_i01" -p "cc_R_Braid_h01";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" 1.6556380203988681 8.8817841970012523e-016 8.8817841970012523e-016 ;
+	setAttr ".r" -type "double3" -4.7121616925796605e-015 1.9462840046992595e-014 -7.9513867036587903e-015 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000004 ;
+createNode locator -n "locOri_bn_R_Braid_i0Shape1" -p "locOri_bn_R_Braid_i01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".lodv" no;
+createNode transform -n "cc_R_Braid_i01" -p "locOri_bn_R_Braid_i01";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".s" -type "double3" 0.99999999999999967 0.99999999999999989 0.99999999999999967 ;
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+createNode nurbsCurve -n "cc_R_Braid_i0Shape1" -p "cc_R_Braid_i01";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		6.9841620025914971e-015 1.2870705515205159 -1.6834353675028752e-015
+		0.29591082800078722 1.1645002733095406 -1.6268267211901005e-015
+		0.41848110621176232 0.8685894453087607 -1.6578107901415817e-015
+		0.29591082800078733 0.57267861730798086 -1.7582375269830445e-015
+		7.3301943760928714e-015 0.45010833909700554 -1.8692783112976334e-015
+		-0.29591082800077279 0.5726786173079802 -1.9258869576104086e-015
+		-0.41848110621174811 0.8685894453087607 -1.8949028886589266e-015
+		-0.29591082800077306 1.1645002733095406 -1.7944761518174644e-015
+		;
+createNode transform -n "CC_Face01" -p "headControls01";
+	addAttr -ci true -sn "EyeLids" -ln "EyeLids" -min 0 -max 0 -en "Controls" -at "enum";
+	addAttr -ci true -sn "lUpperLid" -ln "lUpperLid" -min 0 -max 10 -at "double";
+	addAttr -ci true -sn "lLowerLid" -ln "lLowerLid" -min 0 -max 10 -at "double";
+	addAttr -ci true -sn "rUpperLid" -ln "rUpperLid" -min 0 -max 10 -at "double";
+	addAttr -ci true -sn "rLowerLid" -ln "rLowerLid" -min 0 -max 10 -at "double";
+	addAttr -ci true -sn "Mouth" -ln "Mouth" -min 0 -max 0 -en "Control" -at "enum";
+	addAttr -ci true -sn "Jaw" -ln "Jaw" -at "double";
+	addAttr -ci true -sn "HeadIkFk" -ln "HeadIkFk" -dv 1 -min 0 -max 1 -at "double";
+	setAttr -l on -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 18;
+	setAttr ".t" -type "double3" -21.204431138216549 -0.030139920008443438 -9.0259106231883895e-015 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr ".r" -type "double3" 90 89.999999999999957 0 ;
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
+	setAttr ".rp" -type "double3" 3.7736363304076659e-016 21.204431138216549 -0.030139920008443438 ;
+	setAttr ".rpt" -type "double3" 21.204431138216549 -21.174291218208101 0.030139920008459532 ;
+	setAttr ".sp" -type "double3" 3.7736363304076659e-016 21.204431138216549 -0.030139920008443438 ;
+	setAttr -cb on ".EyeLids";
+	setAttr -k on ".lUpperLid";
+	setAttr -k on ".lLowerLid";
+	setAttr -k on ".rUpperLid";
+	setAttr -k on ".rLowerLid";
+	setAttr -cb on ".Mouth";
+	setAttr -k on ".Jaw";
+	setAttr -k on ".HeadIkFk";
+createNode nurbsCurve -n "CC_Face0Shape1" -p "CC_Face01";
+	setAttr -k off ".v";
+	setAttr ".cc" -type "nurbsCurve" 
+		3 8 2 no 3
+		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
+		11
+		2.4281822997808771 27.348525638691576 -5.4517894257077434e-016
+		-3.8944012798185853e-016 28.752774947526611 -7.7099945450381231e-016
+		-2.4281822997808744 27.348525638691576 -5.4517894257077454e-016
+		-3.4339683402644043 24.479989055755205 -2.2341635303182094e-031
+		-2.4281822997808749 24.469381528430354 5.4517894257077444e-016
+		-1.0347216786541904e-015 24.464987746749156 7.7099945450381251e-016
+		2.4281822997808726 24.469381528430354 5.4517894257077474e-016
+		3.4339683402644043 24.479989055755205 4.1410531102920677e-031
+		2.4281822997808771 27.348525638691576 -5.4517894257077434e-016
+		-3.8944012798185853e-016 28.752774947526611 -7.7099945450381231e-016
+		-2.4281822997808744 27.348525638691576 -5.4517894257077454e-016
+		;
+createNode parentConstraint -n "headControls01_parentConstraint1" -p "headControls01";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "bn_neck_c01W0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 4.0939474033052647e-016 -3.3462033153759388e-018 ;
+	setAttr ".lr" -type "double3" -89.999999999999972 0 89.999999999999972 ;
+	setAttr ".rst" -type "double3" 0 0 -1.5777218104420236e-030 ;
+	setAttr -k on ".w0";
+createNode transform -n "grp_Head_Target01" -p "ControlGrps01";
+	setAttr ".t" -type "double3" 3.0234548633929576e-015 21.204431138216549 5.9358627994949043 ;
+	setAttr ".r" -type "double3" -89.999999999999972 0 89.999999999999972 ;
+createNode joint -n "Head_Target01" -p "grp_Head_Target01";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr -s 2 ".iog";
+	setAttr ".t" -type "double3" 0 1.7763568394002505e-015 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".ssc" no;
+	setAttr ".bps" -type "matrix" 4.4408920985006262e-016 1 -1.110223024625156e-016 0
+		 -3.3306690738754681e-016 0 -1 0 -1 3.3306690738754681e-016 4.4408920985006262e-016 0
+		 3.7736363304076654e-016 21.204431138216549 -0.030139920008443438 1;
 createNode pointConstraint -n "GlobalControl01_pointConstraint1" -p "GlobalControl01";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "CC_Global01W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -31231,30 +31405,33 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\toutlinerPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n"
 		+ "                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
-		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n"
-		+ "                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n"
-		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n"
-		+ "                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n"
-		+ "                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
-		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
-		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
-		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
-		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n"
-		+ "\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n"
-		+ "                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
-		+ "                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n"
-		+ "                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n"
-		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n"
-		+ "        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
+		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n"
+		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
+		+ "                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n"
+		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
+		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n"
+		+ "                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n"
+		+ "                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
+		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n"
+		+ "                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n"
+		+ "                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperShadePanel\" -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"visorPanel\" -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n"
+		+ "            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"createNodePanel\" -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Texture Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"polyTexturePlacementPanel\" -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Texture Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"renderWindowPanel\" -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n"
+		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel2Info`) nodeEditor -e -restoreInfo nodeEditorPanel2Info $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -defaultPinnedState 0\n                -ignoreAssets 1\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
+		+ "                -keyReleaseCommand \"nodeEdKeyReleaseCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                $editorName;\n\t\t\tif (`objExists nodeEditorPanel2Info`) nodeEditor -e -restoreInfo nodeEditorPanel2Info $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -35694,7 +35871,7 @@ createNode objectSet -n "tweakSet9";
 	setAttr ".vo" yes;
 createNode objectSet -n "BoundJoints";
 	setAttr ".ihi" 0;
-	setAttr -s 103 ".dsm";
+	setAttr -s 110 ".dsm";
 	setAttr -s 35 ".dnsm";
 	setAttr ".an" -type "string" "gCharacterSet";
 createNode nodeGraphEditorBookmarks -n "MayaNodeEditorBookmarks";
@@ -49466,26 +49643,57 @@ createNode hyperLayout -n "hyperLayout1";
 	setAttr ".hyp[8].nvs" 1920;
 	setAttr ".anf" yes;
 createNode hyperView -n "hyperView2";
-	setAttr ".vl" -type "double2" -723.80952380952385 -432.14285714285717 ;
-	setAttr ".vh" -type "double2" 920.23809523809541 361.90476190476193 ;
+	setAttr ".vl" -type "double2" -979.73697096851379 -568.65713505537997 ;
+	setAttr ".vh" -type "double2" 715.40917107253506 250.07021957270072 ;
 	setAttr ".dag" no;
 createNode hyperLayout -n "hyperLayout2";
 	setAttr ".ihi" 0;
-	setAttr -s 14 ".hyp";
+	setAttr -s 15 ".hyp";
+	setAttr ".hyp[0].x" 233.39985656738281;
+	setAttr ".hyp[0].y" -54.501853942871094;
 	setAttr ".hyp[0].nvs" 1920;
+	setAttr ".hyp[1].x" 226.8419189453125;
+	setAttr ".hyp[1].y" 180.58529663085937;
 	setAttr ".hyp[1].nvs" 1920;
+	setAttr ".hyp[2].x" -299.4708251953125;
+	setAttr ".hyp[2].y" 164.71781921386719;
 	setAttr ".hyp[2].nvs" 1920;
+	setAttr ".hyp[3].x" -76.333786010742188;
+	setAttr ".hyp[3].y" 219.47882080078125;
 	setAttr ".hyp[3].nvs" 1920;
+	setAttr ".hyp[4].x" -68.576591491699219;
+	setAttr ".hyp[4].y" -15.861570358276367;
 	setAttr ".hyp[4].nvs" 1920;
+	setAttr ".hyp[5].x" -960.51617431640625;
+	setAttr ".hyp[5].y" 32.686431884765625;
 	setAttr ".hyp[5].nvs" 1920;
+	setAttr ".hyp[6].x" -316.01446533203125;
+	setAttr ".hyp[6].y" -38.481372833251953;
 	setAttr ".hyp[6].nvs" 1920;
+	setAttr ".hyp[7].x" -599.83038330078125;
+	setAttr ".hyp[7].y" 98.1959228515625;
 	setAttr ".hyp[7].nvs" 1920;
+	setAttr ".hyp[8].x" -597.4705810546875;
+	setAttr ".hyp[8].y" -15.383598327636719;
 	setAttr ".hyp[8].nvs" 1920;
+	setAttr ".hyp[9].x" -69.152046203613281;
+	setAttr ".hyp[9].y" -118.34982299804687;
 	setAttr ".hyp[9].nvs" 1920;
+	setAttr ".hyp[10].x" -79.376754760742188;
+	setAttr ".hyp[10].y" 126.52458190917969;
 	setAttr ".hyp[10].nvs" 1920;
+	setAttr ".hyp[11].x" -786.4093017578125;
+	setAttr ".hyp[11].y" -269.35528564453125;
 	setAttr ".hyp[11].nvs" 1920;
+	setAttr ".hyp[12].x" -364.42910766601562;
+	setAttr ".hyp[12].y" -208.17726135253906;
 	setAttr ".hyp[12].nvs" 1920;
+	setAttr ".hyp[13].x" -343.550048828125;
+	setAttr ".hyp[13].y" -416.71401977539062;
 	setAttr ".hyp[13].nvs" 1920;
+	setAttr ".hyp[14].x" -346.85003662109375;
+	setAttr ".hyp[14].y" -303.38870239257812;
+	setAttr ".hyp[14].nvs" 1920;
 	setAttr ".anf" yes;
 createNode blinn -n "blinn1";
 	setAttr ".it" -type "float3" 1 1 1 ;
@@ -53082,6 +53290,21 @@ createNode groupId -n "groupId130";
 createNode groupParts -n "groupParts146";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "f[0:359]";
+createNode blendColors -n "blendColors1";
+	setAttr ".b" 0.25;
+createNode unitConversion -n "unitConversion33";
+	setAttr ".cf" 0.017453292519943295;
+createNode unitConversion -n "unitConversion34";
+	setAttr ".cf" 0.017453292519943295;
+createNode blendColors -n "blendColors2";
+createNode unitConversion -n "unitConversion35";
+	setAttr ".cf" 57.295779513082323;
+createNode unitConversion -n "unitConversion36";
+	setAttr ".cf" 57.295779513082323;
+createNode unitConversion -n "unitConversion37";
+	setAttr ".cf" 0.017453292519943295;
+createNode unitConversion -n "unitConversion38";
+	setAttr ".cf" 0.017453292519943295;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -53115,7 +53338,7 @@ select -ne :postProcessList1;
 	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 11 ".u";
+	setAttr -s 13 ".u";
 select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 2 ".tx";
@@ -53201,7 +53424,7 @@ select -ne :hardwareRenderingGlobals;
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
 select -ne :ikSystem;
-	setAttr -s 3 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "skinCluster2Set.mwc" "Mesh_Legs01Shape.iog.og[0].gco";
 connectAttr "skinCluster2GroupId.id" "Mesh_Legs01Shape.iog.og[0].gid";
 connectAttr "tweakSet2.mwc" "Mesh_Legs01Shape.iog.og[1].gco";
@@ -53959,15 +54182,6 @@ connectAttr "cc_L_Braid_a01.ro" "bn_L_Braid_a01_orientConstraint1.tg[0].tro";
 connectAttr "cc_L_Braid_a01.pm" "bn_L_Braid_a01_orientConstraint1.tg[0].tpm";
 connectAttr "bn_L_Braid_a01_orientConstraint1.w0" "bn_L_Braid_a01_orientConstraint1.tg[0].tw"
 		;
-connectAttr "bn_neck_c01.ro" "bn_neck_c01_orientConstraint1.cro";
-connectAttr "bn_neck_c01.pim" "bn_neck_c01_orientConstraint1.cpim";
-connectAttr "bn_neck_c01.jo" "bn_neck_c01_orientConstraint1.cjo";
-connectAttr "bn_neck_c01.is" "bn_neck_c01_orientConstraint1.is";
-connectAttr "cc_Neck_c01.r" "bn_neck_c01_orientConstraint1.tg[0].tr";
-connectAttr "cc_Neck_c01.ro" "bn_neck_c01_orientConstraint1.tg[0].tro";
-connectAttr "cc_Neck_c01.pm" "bn_neck_c01_orientConstraint1.tg[0].tpm";
-connectAttr "bn_neck_c01_orientConstraint1.w0" "bn_neck_c01_orientConstraint1.tg[0].tw"
-		;
 connectAttr "bn_neck_c01.s" "bn_R_eye01.is";
 connectAttr "bn_R_eye01.s" "be_R_eye01.is";
 connectAttr "bn_neck_c01.s" "be_R_UpperLid01.is";
@@ -54104,23 +54318,113 @@ connectAttr "bn_R_Braid_a01_orientConstraint1.w0" "bn_R_Braid_a01_orientConstrai
 connectAttr "bn_neck_c01.s" "bn_Mouth01.is";
 connectAttr "unitConversion23.o" "bn_Mouth01.rz";
 connectAttr "bn_Mouth01.s" "be_Mouth01.is";
+connectAttr "bn_neck_c01.ro" "bn_neck_c01_orientConstraint1.cro";
+connectAttr "bn_neck_c01.pim" "bn_neck_c01_orientConstraint1.cpim";
+connectAttr "bn_neck_c01.jo" "bn_neck_c01_orientConstraint1.cjo";
+connectAttr "bn_neck_c01.is" "bn_neck_c01_orientConstraint1.is";
+connectAttr "drv_IK_neck_c01.r" "bn_neck_c01_orientConstraint1.tg[0].tr";
+connectAttr "drv_IK_neck_c01.ro" "bn_neck_c01_orientConstraint1.tg[0].tro";
+connectAttr "drv_IK_neck_c01.pm" "bn_neck_c01_orientConstraint1.tg[0].tpm";
+connectAttr "drv_IK_neck_c01.jo" "bn_neck_c01_orientConstraint1.tg[0].tjo";
+connectAttr "bn_neck_c01_orientConstraint1.w0" "bn_neck_c01_orientConstraint1.tg[0].tw"
+		;
+connectAttr "drv_FK_neck_c01.r" "bn_neck_c01_orientConstraint1.tg[1].tr";
+connectAttr "drv_FK_neck_c01.ro" "bn_neck_c01_orientConstraint1.tg[1].tro";
+connectAttr "drv_FK_neck_c01.pm" "bn_neck_c01_orientConstraint1.tg[1].tpm";
+connectAttr "drv_FK_neck_c01.jo" "bn_neck_c01_orientConstraint1.tg[1].tjo";
+connectAttr "bn_neck_c01_orientConstraint1.w1" "bn_neck_c01_orientConstraint1.tg[1].tw"
+		;
 connectAttr "bn_neck_b01.ro" "bn_neck_b01_orientConstraint1.cro";
 connectAttr "bn_neck_b01.pim" "bn_neck_b01_orientConstraint1.cpim";
 connectAttr "bn_neck_b01.jo" "bn_neck_b01_orientConstraint1.cjo";
 connectAttr "bn_neck_b01.is" "bn_neck_b01_orientConstraint1.is";
-connectAttr "cc_Neck_b01.r" "bn_neck_b01_orientConstraint1.tg[0].tr";
-connectAttr "cc_Neck_b01.ro" "bn_neck_b01_orientConstraint1.tg[0].tro";
-connectAttr "cc_Neck_b01.pm" "bn_neck_b01_orientConstraint1.tg[0].tpm";
+connectAttr "drv_IK_neck_b01.r" "bn_neck_b01_orientConstraint1.tg[0].tr";
+connectAttr "drv_IK_neck_b01.ro" "bn_neck_b01_orientConstraint1.tg[0].tro";
+connectAttr "drv_IK_neck_b01.pm" "bn_neck_b01_orientConstraint1.tg[0].tpm";
+connectAttr "drv_IK_neck_b01.jo" "bn_neck_b01_orientConstraint1.tg[0].tjo";
 connectAttr "bn_neck_b01_orientConstraint1.w0" "bn_neck_b01_orientConstraint1.tg[0].tw"
+		;
+connectAttr "drv_FK_neck_b01.r" "bn_neck_b01_orientConstraint1.tg[1].tr";
+connectAttr "drv_FK_neck_b01.ro" "bn_neck_b01_orientConstraint1.tg[1].tro";
+connectAttr "drv_FK_neck_b01.pm" "bn_neck_b01_orientConstraint1.tg[1].tpm";
+connectAttr "drv_FK_neck_b01.jo" "bn_neck_b01_orientConstraint1.tg[1].tjo";
+connectAttr "bn_neck_b01_orientConstraint1.w1" "bn_neck_b01_orientConstraint1.tg[1].tw"
 		;
 connectAttr "bn_neck_a01.ro" "bn_neck_a01_orientConstraint1.cro";
 connectAttr "bn_neck_a01.pim" "bn_neck_a01_orientConstraint1.cpim";
 connectAttr "bn_neck_a01.jo" "bn_neck_a01_orientConstraint1.cjo";
 connectAttr "bn_neck_a01.is" "bn_neck_a01_orientConstraint1.is";
-connectAttr "cc_Neck_a01.r" "bn_neck_a01_orientConstraint1.tg[0].tr";
-connectAttr "cc_Neck_a01.ro" "bn_neck_a01_orientConstraint1.tg[0].tro";
-connectAttr "cc_Neck_a01.pm" "bn_neck_a01_orientConstraint1.tg[0].tpm";
+connectAttr "drv_IK_neck_a01.r" "bn_neck_a01_orientConstraint1.tg[0].tr";
+connectAttr "drv_IK_neck_a01.ro" "bn_neck_a01_orientConstraint1.tg[0].tro";
+connectAttr "drv_IK_neck_a01.pm" "bn_neck_a01_orientConstraint1.tg[0].tpm";
+connectAttr "drv_IK_neck_a01.jo" "bn_neck_a01_orientConstraint1.tg[0].tjo";
 connectAttr "bn_neck_a01_orientConstraint1.w0" "bn_neck_a01_orientConstraint1.tg[0].tw"
+		;
+connectAttr "drv_FK_neck_a01.r" "bn_neck_a01_orientConstraint1.tg[1].tr";
+connectAttr "drv_FK_neck_a01.ro" "bn_neck_a01_orientConstraint1.tg[1].tro";
+connectAttr "drv_FK_neck_a01.pm" "bn_neck_a01_orientConstraint1.tg[1].tpm";
+connectAttr "drv_FK_neck_a01.jo" "bn_neck_a01_orientConstraint1.tg[1].tjo";
+connectAttr "bn_neck_a01_orientConstraint1.w1" "bn_neck_a01_orientConstraint1.tg[1].tw"
+		;
+connectAttr "bn_spine_e01.s" "drv_IK_neck_a01.is";
+connectAttr "unitConversion33.o" "drv_IK_neck_a01.rx";
+connectAttr "unitConversion38.o" "drv_IK_neck_a01.rz";
+connectAttr "bn_spine_e01.s" "drv_IK_neck_b01.is";
+connectAttr "unitConversion34.o" "drv_IK_neck_b01.rx";
+connectAttr "unitConversion37.o" "drv_IK_neck_b01.rz";
+connectAttr "drv_neck_c01_aimConstraint1.crx" "drv_IK_neck_c01.rx";
+connectAttr "drv_neck_c01_aimConstraint1.cry" "drv_IK_neck_c01.ry";
+connectAttr "drv_neck_c01_aimConstraint1.crz" "drv_IK_neck_c01.rz";
+connectAttr "drv_IK_neck_c01.pim" "drv_neck_c01_aimConstraint1.cpim";
+connectAttr "drv_IK_neck_c01.t" "drv_neck_c01_aimConstraint1.ct";
+connectAttr "drv_IK_neck_c01.rp" "drv_neck_c01_aimConstraint1.crp";
+connectAttr "drv_IK_neck_c01.rpt" "drv_neck_c01_aimConstraint1.crt";
+connectAttr "drv_IK_neck_c01.ro" "drv_neck_c01_aimConstraint1.cro";
+connectAttr "drv_IK_neck_c01.jo" "drv_neck_c01_aimConstraint1.cjo";
+connectAttr "drv_IK_neck_c01.is" "drv_neck_c01_aimConstraint1.is";
+connectAttr "Head_Target01.t" "drv_neck_c01_aimConstraint1.tg[0].tt";
+connectAttr "Head_Target01.rp" "drv_neck_c01_aimConstraint1.tg[0].trp";
+connectAttr "Head_Target01.rpt" "drv_neck_c01_aimConstraint1.tg[0].trt";
+connectAttr "Head_Target01.pm" "drv_neck_c01_aimConstraint1.tg[0].tpm";
+connectAttr "drv_neck_c01_aimConstraint1.w0" "drv_neck_c01_aimConstraint1.tg[0].tw"
+		;
+connectAttr "bn_spine_e01.s" "drv_FK_neck_a01.is";
+connectAttr "drv_FK_neck_a01_orientConstraint1.crx" "drv_FK_neck_a01.rx";
+connectAttr "drv_FK_neck_a01_orientConstraint1.cry" "drv_FK_neck_a01.ry";
+connectAttr "drv_FK_neck_a01_orientConstraint1.crz" "drv_FK_neck_a01.rz";
+connectAttr "drv_FK_neck_b01_orientConstraint1.crx" "drv_FK_neck_b01.rx";
+connectAttr "drv_FK_neck_b01_orientConstraint1.cry" "drv_FK_neck_b01.ry";
+connectAttr "drv_FK_neck_b01_orientConstraint1.crz" "drv_FK_neck_b01.rz";
+connectAttr "drv_FK_neck_b01.s" "drv_FK_neck_c01.is";
+connectAttr "drv_FK_neck_c01_orientConstraint1.crx" "drv_FK_neck_c01.rx";
+connectAttr "drv_FK_neck_c01_orientConstraint1.cry" "drv_FK_neck_c01.ry";
+connectAttr "drv_FK_neck_c01_orientConstraint1.crz" "drv_FK_neck_c01.rz";
+connectAttr "drv_FK_neck_c01.ro" "drv_FK_neck_c01_orientConstraint1.cro";
+connectAttr "drv_FK_neck_c01.pim" "drv_FK_neck_c01_orientConstraint1.cpim";
+connectAttr "drv_FK_neck_c01.jo" "drv_FK_neck_c01_orientConstraint1.cjo";
+connectAttr "drv_FK_neck_c01.is" "drv_FK_neck_c01_orientConstraint1.is";
+connectAttr "cc_Neck_c01.r" "drv_FK_neck_c01_orientConstraint1.tg[0].tr";
+connectAttr "cc_Neck_c01.ro" "drv_FK_neck_c01_orientConstraint1.tg[0].tro";
+connectAttr "cc_Neck_c01.pm" "drv_FK_neck_c01_orientConstraint1.tg[0].tpm";
+connectAttr "drv_FK_neck_c01_orientConstraint1.w0" "drv_FK_neck_c01_orientConstraint1.tg[0].tw"
+		;
+connectAttr "drv_FK_neck_b01.ro" "drv_FK_neck_b01_orientConstraint1.cro";
+connectAttr "drv_FK_neck_b01.pim" "drv_FK_neck_b01_orientConstraint1.cpim";
+connectAttr "drv_FK_neck_b01.jo" "drv_FK_neck_b01_orientConstraint1.cjo";
+connectAttr "drv_FK_neck_b01.is" "drv_FK_neck_b01_orientConstraint1.is";
+connectAttr "cc_Neck_b01.r" "drv_FK_neck_b01_orientConstraint1.tg[0].tr";
+connectAttr "cc_Neck_b01.ro" "drv_FK_neck_b01_orientConstraint1.tg[0].tro";
+connectAttr "cc_Neck_b01.pm" "drv_FK_neck_b01_orientConstraint1.tg[0].tpm";
+connectAttr "drv_FK_neck_b01_orientConstraint1.w0" "drv_FK_neck_b01_orientConstraint1.tg[0].tw"
+		;
+connectAttr "drv_FK_neck_a01.ro" "drv_FK_neck_a01_orientConstraint1.cro";
+connectAttr "drv_FK_neck_a01.pim" "drv_FK_neck_a01_orientConstraint1.cpim";
+connectAttr "drv_FK_neck_a01.jo" "drv_FK_neck_a01_orientConstraint1.cjo";
+connectAttr "drv_FK_neck_a01.is" "drv_FK_neck_a01_orientConstraint1.is";
+connectAttr "cc_Neck_a01.r" "drv_FK_neck_a01_orientConstraint1.tg[0].tr";
+connectAttr "cc_Neck_a01.ro" "drv_FK_neck_a01_orientConstraint1.tg[0].tro";
+connectAttr "cc_Neck_a01.pm" "drv_FK_neck_a01_orientConstraint1.tg[0].tpm";
+connectAttr "drv_FK_neck_a01_orientConstraint1.w0" "drv_FK_neck_a01_orientConstraint1.tg[0].tw"
 		;
 connectAttr "bn_spine_d01.pim" "bn_spine_d01_aimConstraint1.cpim";
 connectAttr "bn_spine_d01.t" "bn_spine_d01_aimConstraint1.ct";
@@ -54510,6 +54814,28 @@ connectAttr "locOri_CC_R_Wrist01.rp" "CC_Lantern01_pointConstraint2.tg[0].trp";
 connectAttr "locOri_CC_R_Wrist01.rpt" "CC_Lantern01_pointConstraint2.tg[0].trt";
 connectAttr "locOri_CC_R_Wrist01.pm" "CC_Lantern01_pointConstraint2.tg[0].tpm";
 connectAttr "CC_Lantern01_pointConstraint2.w0" "CC_Lantern01_pointConstraint2.tg[0].tw"
+		;
+connectAttr "headControls01_parentConstraint1.ctx" "headControls01.tx";
+connectAttr "headControls01_parentConstraint1.cty" "headControls01.ty";
+connectAttr "headControls01_parentConstraint1.ctz" "headControls01.tz";
+connectAttr "headControls01_parentConstraint1.crx" "headControls01.rx";
+connectAttr "headControls01_parentConstraint1.cry" "headControls01.ry";
+connectAttr "headControls01_parentConstraint1.crz" "headControls01.rz";
+connectAttr "headControls01.ro" "headControls01_parentConstraint1.cro";
+connectAttr "headControls01.pim" "headControls01_parentConstraint1.cpim";
+connectAttr "headControls01.rp" "headControls01_parentConstraint1.crp";
+connectAttr "headControls01.rpt" "headControls01_parentConstraint1.crt";
+connectAttr "bn_neck_c01.t" "headControls01_parentConstraint1.tg[0].tt";
+connectAttr "bn_neck_c01.rp" "headControls01_parentConstraint1.tg[0].trp";
+connectAttr "bn_neck_c01.rpt" "headControls01_parentConstraint1.tg[0].trt";
+connectAttr "bn_neck_c01.r" "headControls01_parentConstraint1.tg[0].tr";
+connectAttr "bn_neck_c01.ro" "headControls01_parentConstraint1.tg[0].tro";
+connectAttr "bn_neck_c01.s" "headControls01_parentConstraint1.tg[0].ts";
+connectAttr "bn_neck_c01.pm" "headControls01_parentConstraint1.tg[0].tpm";
+connectAttr "bn_neck_c01.jo" "headControls01_parentConstraint1.tg[0].tjo";
+connectAttr "bn_neck_c01.ssc" "headControls01_parentConstraint1.tg[0].tsc";
+connectAttr "bn_neck_c01.is" "headControls01_parentConstraint1.tg[0].tis";
+connectAttr "headControls01_parentConstraint1.w0" "headControls01_parentConstraint1.tg[0].tw"
 		;
 connectAttr "GlobalControl01.pim" "GlobalControl01_pointConstraint1.cpim";
 connectAttr "GlobalControl01.rp" "GlobalControl01_pointConstraint1.crp";
@@ -55724,6 +56050,13 @@ connectAttr "be_R_ButtFixer01.iog" "BoundJoints.dsm" -na;
 connectAttr "bn_R_ButtFixer01.iog" "BoundJoints.dsm" -na;
 connectAttr "bn_L_elbowTwist_b01.iog" "BoundJoints.dsm" -na;
 connectAttr "bn_R_elbowTwist_b01.iog" "BoundJoints.dsm" -na;
+connectAttr "drv_IK_neck_a01.iog" "BoundJoints.dsm" -na;
+connectAttr "drv_IK_neck_b01.iog" "BoundJoints.dsm" -na;
+connectAttr "drv_IK_neck_c01.iog" "BoundJoints.dsm" -na;
+connectAttr "Head_Target01.iog" "BoundJoints.dsm" -na;
+connectAttr "drv_FK_neck_a01.iog" "BoundJoints.dsm" -na;
+connectAttr "drv_FK_neck_b01.iog" "BoundJoints.dsm" -na;
+connectAttr "drv_FK_neck_c01.iog" "BoundJoints.dsm" -na;
 connectAttr "bn_L_LowerLid01_rotateX.msg" "BoundJoints.dnsm" -na;
 connectAttr "bn_L_LowerLid01_rotateY.msg" "BoundJoints.dnsm" -na;
 connectAttr "bn_L_LowerLid01_rotateZ.msg" "BoundJoints.dnsm" -na;
@@ -56154,7 +56487,21 @@ connectAttr "bn_L_wrist01.msg" "hyperLayout1.hyp[3].dn";
 connectAttr "Multi_Arm_R_Twist01.msg" "hyperLayout1.hyp[4].dn";
 connectAttr "Convert_Bn_R_wrist_to_Multi01.msg" "hyperLayout1.hyp[7].dn";
 connectAttr "hyperLayout2.msg" "hyperView2.hl";
-connectAttr "bn_L_elbowTwist_b01.msg" "hyperLayout2.hyp[0].dn";
+connectAttr "drv_IK_neck_b01.msg" "hyperLayout2.hyp[0].dn";
+connectAttr "drv_IK_neck_a01.msg" "hyperLayout2.hyp[1].dn";
+connectAttr "blendColors1.msg" "hyperLayout2.hyp[2].dn";
+connectAttr "unitConversion33.msg" "hyperLayout2.hyp[3].dn";
+connectAttr "unitConversion34.msg" "hyperLayout2.hyp[4].dn";
+connectAttr "drv_IK_neck_c01.msg" "hyperLayout2.hyp[5].dn";
+connectAttr "blendColors2.msg" "hyperLayout2.hyp[6].dn";
+connectAttr "unitConversion35.msg" "hyperLayout2.hyp[7].dn";
+connectAttr "unitConversion36.msg" "hyperLayout2.hyp[8].dn";
+connectAttr "unitConversion37.msg" "hyperLayout2.hyp[9].dn";
+connectAttr "unitConversion38.msg" "hyperLayout2.hyp[10].dn";
+connectAttr "CC_Face01.msg" "hyperLayout2.hyp[11].dn";
+connectAttr "bn_neck_c01_orientConstraint1.msg" "hyperLayout2.hyp[12].dn";
+connectAttr "bn_neck_b01_orientConstraint1.msg" "hyperLayout2.hyp[13].dn";
+connectAttr "bn_neck_a01_orientConstraint1.msg" "hyperLayout2.hyp[14].dn";
 connectAttr "blinn1.oc" "blinn1SG.ss";
 connectAttr "Mesh_L_Eye_Shine01Shape.iog" "blinn1SG.dsm" -na;
 connectAttr "Mesh_R_Eye_Shine01Shape.iog" "blinn1SG.dsm" -na;
@@ -56441,6 +56788,16 @@ connectAttr "SkinCluser_R_EyeBall01.og[0]" "groupParts144.ig";
 connectAttr "groupParts144.og" "groupParts145.ig";
 connectAttr "groupParts145.og" "groupParts146.ig";
 connectAttr "groupId130.id" "groupParts146.gi";
+connectAttr "unitConversion35.o" "blendColors1.c1r";
+connectAttr "unitConversion36.o" "blendColors1.c1g";
+connectAttr "blendColors1.opr" "unitConversion33.i";
+connectAttr "blendColors2.opr" "unitConversion34.i";
+connectAttr "unitConversion35.o" "blendColors2.c1r";
+connectAttr "unitConversion36.o" "blendColors2.c1g";
+connectAttr "drv_IK_neck_c01.rx" "unitConversion35.i";
+connectAttr "drv_IK_neck_c01.rz" "unitConversion36.i";
+connectAttr "blendColors2.opg" "unitConversion37.i";
+connectAttr "blendColors1.opg" "unitConversion38.i";
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
@@ -56466,6 +56823,8 @@ connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Multi_Arm_R_Twist01.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Lantern:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Multi_Arm_L_Twist01.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "blendColors1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "blendColors2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Lucy_AlbedoFile01.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Lantern:file1.msg" ":defaultTextureList1.tx" -na;
