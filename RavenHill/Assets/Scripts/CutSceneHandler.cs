@@ -94,8 +94,7 @@ public class CutSceneHandler : MonoBehaviour {
 
     private void SpawnDopple()
     {
-        GameObject clone;
-        clone = Instantiate(doppler, dopplerSpawn.position, dopplerSpawn.rotation) as GameObject;
+        GameObject clone = Instantiate(doppler, dopplerSpawn.position, dopplerSpawn.rotation) as GameObject;
         hasSpawnDopple = true;
     }
     

@@ -5,7 +5,7 @@ public class CameraControl : MonoBehaviour
 {
 
     GameObject tarPlayer;
-    private GameObject camera;
+    GameObject mainCamera;
     private Vector3 desiredPosition;
     float distance;
     LayerMask layerMask = ~(1 << 2);
@@ -31,14 +31,14 @@ public class CameraControl : MonoBehaviour
 
     void Start()
     {
-        camera = transform.FindChild("Main Camera").gameObject;
-        Physics.IgnoreCollision(GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>(), camera.GetComponent<Collider>());
+        mainCamera = transform.FindChild("Main Camera").gameObject;
+        Physics.IgnoreCollision(GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>(), mainCamera.GetComponent<Collider>());
 
         if (GameObject.FindGameObjectWithTag("Player"))
             tarPlayer = GameObject.FindGameObjectWithTag("Player");
 
-        desiredPosition = camera.transform.localPosition;
-        baseZ = camera.transform.localPosition.z;
+        desiredPosition = mainCamera.transform.localPosition;
+        baseZ = mainCamera.transform.localPosition.z;
         CamYAxis = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamY");
 
         Physics.IgnoreLayerCollision(9, 2);
@@ -67,15 +67,15 @@ public class CameraControl : MonoBehaviour
             if (Input.GetAxis("Horizontal") == 0 || Input.GetAxis("RotateCamUPDWN") != 0 || Input.GetAxis("LookSidetoSide") != 0)
             {
                 float targetRotationAngle = 270;
-                float currentRotationAngle = camera.transform.localEulerAngles.y;
+                float currentRotationAngle = mainCamera.transform.localEulerAngles.y;
                 angleAdjust = Mathf.LerpAngle(currentRotationAngle, targetRotationAngle, rotationDampening * Time.deltaTime);
             }
             else
-                angleAdjust = Mathf.LerpAngle(camera.transform.localEulerAngles.y, angleAdjust, Time.deltaTime * 20f);
+                angleAdjust = Mathf.LerpAngle(mainCamera.transform.localEulerAngles.y, angleAdjust, Time.deltaTime * 20f);
 
             //Adjust camera to desired position and rotation
-            camera.transform.localRotation = Quaternion.Euler(camera.transform.localEulerAngles.x, angleAdjust, camera.transform.localEulerAngles.z);
-            camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, desiredPosition, Time.deltaTime);
+            mainCamera.transform.localRotation = Quaternion.Euler(mainCamera.transform.localEulerAngles.x, angleAdjust, mainCamera.transform.localEulerAngles.z);
+            mainCamera.transform.localPosition = Vector3.Lerp(mainCamera.transform.localPosition, desiredPosition, Time.deltaTime);
 
             //Camera up and down looking
             z = ClampAngle(z, zMinLimit, zMaxLimit);
@@ -99,7 +99,7 @@ public class CameraControl : MonoBehaviour
             }
 
             //Camera Chaser, Also backups with character
-            if (Vector3.Dot(tarPlayer.transform.position - camera.transform.position, camera.transform.forward) < 0f)
+            if (Vector3.Dot(tarPlayer.transform.position - mainCamera.transform.position, mainCamera.transform.forward) < 0f)
                 transform.position = tarPlayer.transform.position + Vector3.up;
             else if (Input.GetAxis("Vertical") >= 0)
                 transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f, Time.deltaTime * 8f);
@@ -112,8 +112,8 @@ public class CameraControl : MonoBehaviour
 
         if (GamePause.isLoading || !playerControl)
         {
-            camera.transform.localRotation = Quaternion.Euler(camera.transform.localEulerAngles.x, angleAdjust, camera.transform.localEulerAngles.z);
-            camera.transform.localPosition = Vector3.Lerp(camera.transform.localPosition, desiredPosition, Time.deltaTime);
+            mainCamera.transform.localRotation = Quaternion.Euler(mainCamera.transform.localEulerAngles.x, angleAdjust, mainCamera.transform.localEulerAngles.z);
+            mainCamera.transform.localPosition = Vector3.Lerp(mainCamera.transform.localPosition, desiredPosition, Time.deltaTime);
             transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f, .5f);
             transform.rotation = Quaternion.Euler(tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y - 90, 180f);
         }
@@ -121,12 +121,12 @@ public class CameraControl : MonoBehaviour
 
     void WallPenFixer()
     {
-        if (Vector3.Distance(camera.transform.position, transform.position) > .4f)
+        if (Vector3.Distance(mainCamera.transform.position, transform.position) > .4f)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, camera.transform.position - transform.position, out hit, Mathf.Infinity, layerMask))
-                if (hit.transform.gameObject != camera)
-                    camera.transform.position = hit.point;
+            if (Physics.Raycast(transform.position, mainCamera.transform.position - transform.position, out hit, Mathf.Infinity, layerMask))
+                if (hit.transform.gameObject != mainCamera)
+                    mainCamera.transform.position = hit.point;
         }
     }
 
