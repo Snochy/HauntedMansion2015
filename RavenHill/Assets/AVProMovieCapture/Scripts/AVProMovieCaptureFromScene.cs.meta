@@ -5,9 +5,6 @@ MonoImporter:
   defaultReferences:
   - _audioCapture: {instanceID: 0}
   - _shaderSwapRedBlue: {fileID: 4800000, guid: f8dc701632c759e4a8f2ee16201149cd,
-      type: 3}
+      type: 1}
   executionOrder: 300
   icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 

@@ -42,7 +42,7 @@ public class Character_Movement : MonoBehaviour {
 
 				CharacterController controller = GetComponent<CharacterController> ();
 				if (controller.isGrounded) {
-					moveDirection = new Vector3 (Input.GetAxis ("Vertical"), 0, -Input.GetAxis ("Horizontal"));
+					moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
 					moveDirection = transform.TransformDirection (moveDirection);
 					moveDirection *= (float)currentSpeed;
 				} else {
@@ -64,12 +64,13 @@ public class Character_Movement : MonoBehaviour {
 					}
 				}
 				controller.Move (moveDirection * Time.deltaTime);
+
+                anim.SetFloat("Direction", Input.GetAxis("Vertical"));
+                if (Input.GetAxis("Run") != 0)
+                    anim.SetBool("Running", true);
+                else anim.SetBool("Running", false);
 			}
 
-			anim.SetFloat("Direction", Input.GetAxis ("Vertical"));
-			if(Input.GetAxis ("Run") != 0)
-				anim.SetBool("Running", true);
-			else anim.SetBool("Running", false);
 		}
 
         if (GamePause.isLoading)
@@ -82,8 +83,11 @@ public class Character_Movement : MonoBehaviour {
 
 	void RandomIdle()
 	{
-		anim.SetInteger ("IdleNum", 1);
-		StartCoroutine(wait ());
+        if (isEnabled)
+        {
+            anim.SetInteger("IdleNum", 1);
+            StartCoroutine(wait());
+        }
 	}
 
 	IEnumerator wait()

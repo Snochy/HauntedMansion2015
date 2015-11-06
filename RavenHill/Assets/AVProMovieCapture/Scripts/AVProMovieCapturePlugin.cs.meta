@@ -1,4 +1,4 @@
-fileFormatVersion: 2
+fileFormatVersion: 1
 guid: c5965e183120558449c685d71b5a41b9
 labels:
 - capture
@@ -13,11 +13,3 @@ labels:
 - fraps
 - camstudio
 - recorder
-MonoImporter:
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
