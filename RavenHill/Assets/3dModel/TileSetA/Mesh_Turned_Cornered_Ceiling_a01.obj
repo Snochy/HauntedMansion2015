@@ -1,0 +1,17 @@
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib Mesh_Turned_Cornered_Ceiling_a01.mtl
+g default
+v 12.000000 38.570034 -12.000000
+v 12.000000 38.570034 0.000000
+v 0.000000 38.570034 -12.000000
+vt 0.500000 0.000000
+vt 1.000000 0.500000
+vt 1.000000 0.000000
+vn 0.000000 -1.000000 0.000000
+vn 0.000000 -1.000000 0.000000
+vn 0.000000 -1.000000 0.000000
+s off
+g Mesh_Turned_Cornered_Ceiling_a01
+usemtl lambert3SG
+f 2/1/1 3/2/2 1/3/3
