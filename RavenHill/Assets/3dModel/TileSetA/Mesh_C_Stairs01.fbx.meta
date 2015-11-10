@@ -10,6 +10,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh_Stairs01
+    4300002: Mesh_C_Stairs01
     9500000: //RootNode
   materials:
     importMaterials: 0
