@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f70678ceaddd75844a26d6cb9b4e63f5
-timeCreated: 1447174182
+guid: 69801e11a863e02438ac8054db5b9bf1
+timeCreated: 1447187033
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Mesh_Railing_Wear_a01
+    4300000: Mesh_Paper_Scattered01
     9500000: //RootNode
   materials:
     importMaterials: 0

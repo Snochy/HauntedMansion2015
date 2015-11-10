@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: d58b21c2a4383fe479438db4f366db35
-timeCreated: 1447185616
+guid: 4a01cf3d96799d54ba7b014bcee8aa31
+timeCreated: 1447185627
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 16
-    name: Marble_Wear
+    name: Marble_Wear_Low01
     prototypeName: Wear
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
     shaderKeywords: _METALLICGLOSSMAP _NORMALMAP
@@ -100,7 +100,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 20, y: 20}
+      scale: {x: 1, y: 1}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 42
@@ -229,17 +229,17 @@ SubstanceImporter:
             name: _Color
           second: {r: 1, g: 1, b: 1, a: 1}
     textureParameters:
-    - name: Marble_Wear_basecolor
+    - name: Marble_Wear_Low01_basecolor
       alphaSource: 6
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: Marble_Wear_normal
+    - name: Marble_Wear_Low01_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: Marble_Wear_metallic
+    - name: Marble_Wear_Low01_metallic
       alphaSource: 7
       filterMode: 1
       aniso: 1

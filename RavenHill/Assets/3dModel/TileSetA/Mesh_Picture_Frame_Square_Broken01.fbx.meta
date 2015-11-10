@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f70678ceaddd75844a26d6cb9b4e63f5
-timeCreated: 1447174182
+guid: 0b2a1e54b50d0b94ca8d047f91e662f4
+timeCreated: 1447187547
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Mesh_Railing_Wear_a01
+    4300000: Mesh_Picture_Frame_Square_Broken01
     9500000: //RootNode
   materials:
     importMaterials: 0
