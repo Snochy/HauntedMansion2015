@@ -25,7 +25,7 @@ public class Character_Movement : MonoBehaviour {
 	}
 
     void Update() {
-		if(GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>() != null)
+		if(GameObject.FindGameObjectWithTag("EventSystem") != null)
         	rotationY = GameObject.FindGameObjectWithTag("EventSystem").GetComponent<GameConditions>().GetPlayerPref("CamX");
 
 		if (!GamePause.isFrozen) 
