@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f54fe33fe5c6f8843871610bc8339132
-timeCreated: 1447114481
+guid: d01b9dace7b63914c8f9d5cd673df3ea
+timeCreated: 1447299337
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Mesh_Railing01
-    4300002: Mesh_Railing_a01
+    4300000: Wall_Decor_Window_a01
     9500000: //RootNode
   materials:
     importMaterials: 0

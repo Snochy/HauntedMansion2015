@@ -10,6 +10,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh_Half_Beam_a01
+    4300002: Mesh_Half_Beam_b01
     9500000: //RootNode
   materials:
     importMaterials: 0
