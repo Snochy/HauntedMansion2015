@@ -18,6 +18,10 @@ public class FreeCameraMovement : MonoBehaviour
 
     private bool rotationY;
 
+    void OnEnable()
+    {
+        transform.rotation = Quaternion.Euler(0, transform.rotation.y, 0);
+    }
     void Update()
     {
             if (isEnabled)
