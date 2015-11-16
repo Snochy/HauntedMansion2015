@@ -12,6 +12,7 @@ ModelImporter:
     4300000: Mesh_Triple_Beam01
     4300002: Mesh_Pillar_Triple_a01
     4300004: Mesh_Triple_Pilalr_a01
+    4300006: Mesh_Triple_Pillar_a01
     9500000: //RootNode
   materials:
     importMaterials: 0
