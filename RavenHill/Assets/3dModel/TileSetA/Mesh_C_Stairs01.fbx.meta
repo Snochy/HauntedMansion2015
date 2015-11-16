@@ -11,6 +11,7 @@ ModelImporter:
     3300000: //RootNode
     4300000: Mesh_Stairs01
     4300002: Mesh_C_Stairs01
+    4300004: Mesh_Stair_C_a01
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -68,10 +69,8 @@ ModelImporter:
     legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
-    hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
-  humanoidOversampling: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
