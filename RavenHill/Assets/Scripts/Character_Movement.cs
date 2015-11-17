@@ -18,6 +18,7 @@ public class Character_Movement : MonoBehaviour {
     private bool rotationY;
 
 	public Animator anim;
+    public float scaleMod = 1f;
 
 	void Start()
 	{
@@ -36,7 +37,7 @@ public class Character_Movement : MonoBehaviour {
 				else
 					speedMod = defaultSpeed * -.55f;
 
-				currentSpeed = defaultSpeed + speedMod;
+				currentSpeed = defaultSpeed + speedMod * scaleMod;
 				if (currentSpeed <= 0)
 					currentSpeed = 0;
 

@@ -29,6 +29,8 @@ public class CameraControl : MonoBehaviour
 
     public bool playerControl = true;
 
+    public float scaler;
+
     void Start()
     {
         mainCamera = transform.FindChild("Main Camera").gameObject;
@@ -44,6 +46,12 @@ public class CameraControl : MonoBehaviour
         Physics.IgnoreLayerCollision(9, 2);
         Physics.IgnoreLayerCollision(10, 10);
         Physics.IgnoreLayerCollision(10, 6);
+
+        scaler = tarPlayer.transform.localScale.y;
+        transform.localScale = tarPlayer.transform.localScale;
+        tarPlayer.GetComponent<Character_Movement>().scaleMod = scaler;
+
+        Physics.gravity = Physics.gravity * scaler;
 
     }
 
@@ -102,9 +110,9 @@ public class CameraControl : MonoBehaviour
             if (Vector3.Dot(tarPlayer.transform.position - mainCamera.transform.position, mainCamera.transform.forward) < 0f)
                 transform.position = tarPlayer.transform.position + Vector3.up;
             else if (Input.GetAxis("Vertical") >= 0)
-                transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f, Time.deltaTime * 8f);
+                transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f * scaler, Time.deltaTime * 8f);
             else
-                transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f, .5f);
+                transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f * scaler, .5f);
             transform.rotation = Quaternion.Euler(tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y - 90, z);
 
             WallPenFixer();
@@ -114,7 +122,7 @@ public class CameraControl : MonoBehaviour
         {
             mainCamera.transform.localRotation = Quaternion.Euler(mainCamera.transform.localEulerAngles.x, angleAdjust, mainCamera.transform.localEulerAngles.z);
             mainCamera.transform.localPosition = Vector3.Lerp(mainCamera.transform.localPosition, desiredPosition, Time.deltaTime);
-            transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f, .5f);
+            transform.position = Vector3.Lerp(transform.position, tarPlayer.transform.position + tarPlayer.transform.up * .5f * scaler, .5f);
             transform.rotation = Quaternion.Euler(tarPlayer.transform.eulerAngles.x, tarPlayer.transform.eulerAngles.y + y - 90, 180f);
         }
     }
