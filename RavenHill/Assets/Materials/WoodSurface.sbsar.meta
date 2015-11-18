@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: a3e1018513bb89045a916eb174e40836
-timeCreated: 1447705486
+timeCreated: 1447779424
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 16
-    name: WoodLighterEdges4
-    prototypeName: WoodLighterEdges4
+    name: WoodLighterEdges
+    prototypeName: WoodLighterEdges
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
     shaderKeywords: 
     renderQueue: -1
@@ -24,7 +24,7 @@ SubstanceImporter:
       serializedVersion: 5
       offset: {x: 0, y: 0}
       scale: {x: 1, y: 1}
-      generateMipmaps: 1
+      generateMipmaps: 0
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
@@ -152,12 +152,12 @@ SubstanceImporter:
             name: _Color
           second: {r: 1, g: 1, b: 1, a: 1}
     textureParameters:
-    - name: WoodLighterEdges4_basecolor
+    - name: WoodLighterEdges_basecolor
       alphaSource: 6
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: WoodLighterEdges4_normal
+    - name: WoodLighterEdges_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
@@ -166,11 +166,11 @@ SubstanceImporter:
     - shaderProp:
         name: _MainTex
       material: {instanceID: 0}
-      baseUID: 1360276024
+      baseUID: 21126453
     - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
-      baseUID: 1360276026
+      baseUID: 21126455
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
@@ -197,7 +197,7 @@ SubstanceImporter:
       serializedVersion: 5
       offset: {x: 0, y: 0}
       scale: {x: 1, y: 1}
-      generateMipmaps: 1
+      generateMipmaps: 0
       generateAllOutputs: 0
       animationUpdateRate: 42
     materialProperties:
@@ -357,8 +357,8 @@ SubstanceImporter:
       textureFormat: 0
       loadingBehavior: 1
   - serializedVersion: 16
-    name: WoodLighterEdges
-    prototypeName: WoodLighterEdges
+    name: WoodLighterEdges4
+    prototypeName: WoodLighterEdges4
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
     shaderKeywords: 
     renderQueue: -1
@@ -375,7 +375,7 @@ SubstanceImporter:
       serializedVersion: 5
       offset: {x: 0, y: 0}
       scale: {x: 1, y: 1}
-      generateMipmaps: 1
+      generateMipmaps: 0
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
@@ -503,12 +503,12 @@ SubstanceImporter:
             name: _Color
           second: {r: 1, g: 1, b: 1, a: 1}
     textureParameters:
-    - name: WoodLighterEdges_basecolor
+    - name: WoodLighterEdges4_basecolor
       alphaSource: 6
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: WoodLighterEdges_normal
+    - name: WoodLighterEdges4_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
@@ -517,11 +517,11 @@ SubstanceImporter:
     - shaderProp:
         name: _MainTex
       material: {instanceID: 0}
-      baseUID: 21126453
+      baseUID: 1360276024
     - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
-      baseUID: 21126455
+      baseUID: 1360276026
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 

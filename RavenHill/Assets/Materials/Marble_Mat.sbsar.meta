@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: d58b21c2a4383fe479438db4f366db35
-timeCreated: 1447452880
+timeCreated: 1447815111
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
   - serializedVersion: 16
-    name: Marble_Mat_No_Bricks
-    prototypeName: Marble_Mat_No_Bricks
+    name: Marble_Mat
+    prototypeName: Marble_Mat
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
     shaderKeywords: 
     renderQueue: -1
@@ -16,6 +16,27 @@ SubstanceImporter:
     - name: $randomseed
       value:
         scalar[0]: 0
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Interstice_Width_Of_Bricks
+      value:
+        scalar[0]: .00999999978
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Edge_Smoothness_Thickness
+      value:
+        scalar[0]: .0900000036
+        scalar[1]: 0
+        scalar[2]: 0
+        scalar[3]: 0
+        texture: {instanceID: 0}
+    - name: Tiling
+      value:
+        scalar[0]: 3.22000003
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -29,7 +50,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Roughness_Mortar
       value:
-        scalar[0]: 1
+        scalar[0]: .5
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -38,7 +59,7 @@ SubstanceImporter:
       serializedVersion: 5
       offset: {x: 0, y: 0}
       scale: {x: 1, y: 1}
-      generateMipmaps: 1
+      generateMipmaps: 0
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
@@ -166,17 +187,17 @@ SubstanceImporter:
             name: _Color
           second: {r: 1, g: 1, b: 1, a: 1}
     textureParameters:
-    - name: Marble_Mat_No_Bricks_basecolor
+    - name: Marble_Mat_basecolor
       alphaSource: 6
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: Marble_Mat_No_Bricks_normal
+    - name: Marble_Mat_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: Marble_Mat_No_Bricks_metallic
+    - name: Marble_Mat_metallic
       alphaSource: 7
       filterMode: 1
       aniso: 1
@@ -185,15 +206,11 @@ SubstanceImporter:
     - shaderProp:
         name: _MainTex
       material: {instanceID: 0}
-      baseUID: 1360802726
+      baseUID: 1895284407
     - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
-      baseUID: 1360802724
-    - shaderProp:
-        name: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 1360802720
+      baseUID: 1895284405
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
@@ -225,7 +242,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: WearAmount
       value:
-        scalar[0]: .272000015
+        scalar[0]: .188999996
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -297,7 +314,7 @@ SubstanceImporter:
       serializedVersion: 5
       offset: {x: 0, y: 0}
       scale: {x: 1, y: 1}
-      generateMipmaps: 1
+      generateMipmaps: 0
       generateAllOutputs: 0
       animationUpdateRate: 42
     materialProperties:
@@ -454,10 +471,6 @@ SubstanceImporter:
         name: _BumpMap
       material: {instanceID: 0}
       baseUID: 987358667
-    - shaderProp:
-        name: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 987358671
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
@@ -466,8 +479,8 @@ SubstanceImporter:
       textureFormat: 0
       loadingBehavior: 1
   - serializedVersion: 16
-    name: Marble_Mat
-    prototypeName: Marble_Mat
+    name: Marble_Mat_No_Bricks
+    prototypeName: Marble_Mat_No_Bricks
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
     shaderKeywords: 
     renderQueue: -1
@@ -476,27 +489,6 @@ SubstanceImporter:
     - name: $randomseed
       value:
         scalar[0]: 0
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Interstice_Width_Of_Bricks
-      value:
-        scalar[0]: .00999999978
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Edge_Smoothness_Thickness
-      value:
-        scalar[0]: .0900000036
-        scalar[1]: 0
-        scalar[2]: 0
-        scalar[3]: 0
-        texture: {instanceID: 0}
-    - name: Tiling
-      value:
-        scalar[0]: 3.22000003
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -510,7 +502,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Roughness_Mortar
       value:
-        scalar[0]: .5
+        scalar[0]: 1
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -519,7 +511,7 @@ SubstanceImporter:
       serializedVersion: 5
       offset: {x: 0, y: 0}
       scale: {x: 1, y: 1}
-      generateMipmaps: 1
+      generateMipmaps: 0
       generateAllOutputs: 0
       animationUpdateRate: 0
     materialProperties:
@@ -647,17 +639,17 @@ SubstanceImporter:
             name: _Color
           second: {r: 1, g: 1, b: 1, a: 1}
     textureParameters:
-    - name: Marble_Mat_basecolor
+    - name: Marble_Mat_No_Bricks_basecolor
       alphaSource: 6
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: Marble_Mat_normal
+    - name: Marble_Mat_No_Bricks_normal
       alphaSource: 0
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    - name: Marble_Mat_metallic
+    - name: Marble_Mat_No_Bricks_metallic
       alphaSource: 7
       filterMode: 1
       aniso: 1
@@ -666,15 +658,11 @@ SubstanceImporter:
     - shaderProp:
         name: _MainTex
       material: {instanceID: 0}
-      baseUID: 1895284407
+      baseUID: 1360802726
     - shaderProp:
         name: _BumpMap
       material: {instanceID: 0}
-      baseUID: 1895284405
-    - shaderProp:
-        name: _MetallicGlossMap
-      material: {instanceID: 0}
-      baseUID: 1895284401
+      baseUID: 1360802724
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
